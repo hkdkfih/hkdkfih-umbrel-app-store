@@ -30,7 +30,10 @@ def make_icon(src: bytes, size: int = ICON_SIZE, padding: float = 0.12, backgrou
         if bbox:
             img = img.crop(bbox)
         inner = round(size * (1 - 2 * padding))
-        return _fit(img, (size, size), (inner, inner), WHITE)
+        icon = _fit(img, (size, size), (inner, inner), WHITE)
+        if icon.convert("L").getextrema()[0] > 235:
+            raise ValueError("logo would be invisible on a white background; use a different icon source")
+        return icon
     return _fit(img, (size, size), (size, size), img.convert("RGB").getpixel((0, 0)))
 
 

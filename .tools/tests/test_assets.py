@@ -69,3 +69,12 @@ def test_build_reads_local_capture_files(tmp_path):
     written = assets.build(tmp_path, cfg)
     assert [p.name for p in written] == ["1.jpg"]
     assert Image.open(tmp_path / "gallery/hkdkfih-x/1.jpg").size == (1440, 900)
+
+
+def test_white_logo_on_transparent_is_rejected():
+    import pytest
+
+    src = Image.new("RGBA", (100, 100), (0, 0, 0, 0))
+    src.paste((255, 255, 255, 255), (20, 20, 80, 80))
+    with pytest.raises(ValueError, match="invisible"):
+        assets.make_icon(png(src))
