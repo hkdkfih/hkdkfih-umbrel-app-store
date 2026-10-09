@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-traccar_server_1
+      APP_PORT: 8082
+
+  server:
+    image: traccar/traccar:6.16.0@sha256:03ebb7ed2b219d4f25c326873bd022f5062f80bcae622a9d9422846b51951eda
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - "15055:5055" # OsmAnd protocol, used by the Traccar Client phone app
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/opt/traccar/data
+      - ${APP_DATA_DIR}/data/media:/opt/traccar/media
+      - ${APP_DATA_DIR}/data/logs:/opt/traccar/logs

@@ -1,0 +1,56 @@
+manifestVersion: 1
+id: hkdkfih-traccar
+storage:
+  dataRoot: data
+category: networking
+name: Traccar
+version: "6.16.0"
+tagline: Modern GPS tracking platform
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/icon.png
+description: >-
+  On first launch, register an account in the browser. The first account becomes the administrator.
+
+
+  Traccar is an open source GPS tracking system that supports more than 200 GPS protocols and 2,000 models of
+  tracking devices. Track vehicles, people, pets and assets on a live map, look back at trips and stops, and get
+  notified when something happens.
+
+
+  - Live map with device status, history playback and route reports
+
+  - Geofences with enter and exit alerts
+
+  - Reports for trips, stops, summaries and events, exportable to Excel
+
+  - Notifications by web, email, SMS or push
+
+  - Multiple users, groups and permissions
+
+  - Free Traccar Client apps for Android and iOS turn any phone into a tracker
+
+
+  Phones with the Traccar Client app connect to http://umbrel.local:15055. Dedicated GPS trackers that use other
+  protocols need their protocol port published, which this package does not do by default.
+releaseNotes: ""
+
+developer: Anton Tananaev
+website: https://www.traccar.org/
+dependencies: []
+repo: https://github.com/traccar/traccar
+support: https://github.com/traccar/traccar/issues
+
+port: 8283
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/logs/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
