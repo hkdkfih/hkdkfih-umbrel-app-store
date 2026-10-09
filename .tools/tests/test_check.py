@@ -53,7 +53,7 @@ def test_valid_store(tmp_path):
     (lambda r: edit(r, "category: developer", "category: Home & Automation"), "category"),
     (lambda r: edit(r, "  dataRoot: data\n", "  dataRoot: stuff\n"), "dataRoot"),
     (lambda r: edit(r, "id: hkdkfih-x", "id: hkdkfih-y"), "id"),
-    (lambda r: edit(r, f"  - {BASE}gallery/hkdkfih-x/2.jpg\n  - {BASE}gallery/hkdkfih-x/3.jpg\n", ""), "at least 2"),
+    (lambda r: edit(r, f"  - {BASE}gallery/hkdkfih-x/1.jpg\n  - {BASE}gallery/hkdkfih-x/2.jpg\n  - {BASE}gallery/hkdkfih-x/3.jpg\n", ""), "at least 1"),
     (lambda r: (r / "apps.yml").write_text("{}\n"), "apps.yml"),
 ])
 def test_detects_problem(tmp_path, mutate, expected):
@@ -126,3 +126,13 @@ def test_app_with_data_mount_needs_storage(tmp_path):
         "services:\n  web:\n    image: o/x:1@sha256:aa\n    volumes:\n      - ${APP_DATA_DIR}/data/db:/db\n"
     )
     assert any("dataRoot" in p for p in check.problems(root, official_ports=set()))
+
+
+def test_few_screenshots_is_a_notice_not_a_problem(tmp_path):
+    root = make_store(tmp_path)
+    edit(root, f"  - {BASE}gallery/hkdkfih-x/2.jpg\n  - {BASE}gallery/hkdkfih-x/3.jpg\n", "")
+    assert check.problems(root, official_ports=set()) == []
+    assert any("hkdkfih-x" in n and "1 screenshot" in n for n in check.notices(root))
+    full = tmp_path / "full"
+    full.mkdir()
+    assert check.notices(make_store(full)) == []

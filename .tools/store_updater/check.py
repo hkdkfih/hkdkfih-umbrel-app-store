@@ -62,8 +62,8 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
 
         _check_asset(say, root, app_id, "icon", manifest.get("icon"))
         gallery = manifest.get("gallery") or []
-        if len(gallery) < 2:
-            say(f"gallery needs at least 2 screenshots (has {len(gallery)})")
+        if not gallery:
+            say("gallery needs at least 1 screenshot")
         for url in gallery:
             _check_asset(say, root, app_id, "gallery image", url)
 
@@ -83,6 +83,16 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
                 say(f"{label} {number} is used by an app in the official Umbrel App Store")
             else:
                 ports[number] = app_id
+    return found
+
+
+def notices(root: Path) -> list[str]:
+    """Non-blocking suggestions, e.g. apps with fewer than 3 screenshots."""
+    found = []
+    for app_dir in app_dirs(root):
+        gallery = yaml.safe_load((app_dir / "umbrel-app.yml").read_text()).get("gallery") or []
+        if len(gallery) < 3:
+            found.append(f"{app_dir.name}: only {len(gallery)} screenshot(s); 3 or more is recommended")
     return found
 
 
@@ -137,6 +147,8 @@ def main(argv=None) -> int:
     found = problems(args.root, None if args.offline else official_ports())
     for problem in found:
         print(problem)
+    for notice in notices(args.root):
+        print(f"notice: {notice}")
     print(f"{len(app_dirs(args.root))} apps checked, {len(found)} problem(s)")
     return 1 if found else 0
 
