@@ -1,0 +1,49 @@
+manifestVersion: 1
+id: hkdkfih-ezbookkeeping
+storage:
+  dataRoot: data
+category: finance
+name: ezBookkeeping
+version: "2.0.1"
+tagline: A lightweight personal bookkeeping app
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/icon.png
+description: >-
+  On first launch, click "Sign up" to create your account.
+
+
+  ezBookkeeping is a lightweight, self-hosted personal finance app with a friendly interface for both desktop
+  and mobile. Track income and expenses across all your accounts and see where your money goes.
+
+
+  - Multiple accounts and currencies with automatic exchange rates
+
+  - Categories, tags, transaction pictures and locations on a map
+
+  - Rich statistics and trend analysis
+
+  - Import from CSV, OFX, QIF, Excel and other apps' exports
+
+  - Two-factor authentication and app lock
+
+  - Installable as a mobile web app (PWA)
+releaseNotes: ""
+
+developer: MaysWind
+website: https://ezbookkeeping.mayswind.net/
+dependencies: []
+repo: https://github.com/mayswind/ezbookkeeping
+support: https://github.com/mayswind/ezbookkeeping/issues
+
+port: 8486
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
