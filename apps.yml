@@ -18,3 +18,58 @@ hkdkfih-scrypted:
     - https://docs.scrypted.app/img/install-plugin.png
     - https://docs.scrypted.app/img/scrypted-nvr/face-recognition.png
     - https://docs.scrypted.app/img/scrypted-nvr/lpr.png
+
+hkdkfih-linkding:
+  repo: sissbruecker/linkding
+  images:
+    - image: sissbruecker/linkding
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/sissbruecker/linkding/master/bookmarks/static/logo-512.png
+  screenshots:
+    - https://linkding.link/linkding-screenshot.png
+    - https://linkding.link/linkding-screenshot-dark.png
+
+hkdkfih-cyberchef:
+  repo: gchq/CyberChef
+  images:
+    - image: ghcr.io/gchq/cyberchef
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/gchq/CyberChef/master/src/web/static/images/logo/cyberchef_512.png
+  screenshots:  # captured from the official instance at gchq.github.io/CyberChef
+    - .tools/captures/hkdkfih-cyberchef/1.png
+    - .tools/captures/hkdkfih-cyberchef/2.png
+    - .tools/captures/hkdkfih-cyberchef/3.png
+
+hkdkfih-feishin:
+  repo: jeffvli/feishin
+  images:
+    - image: ghcr.io/jeffvli/feishin
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/jeffvli/feishin/development/assets/icons/icon.png
+  screenshots:
+    - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_home.png
+    - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_album_detail.png
+    - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_full_screen_player.png
+    - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_smart_playlist.png
+
+hkdkfih-komga:
+  repo: gotson/komga
+  images:
+    - image: gotson/komga
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
+  screenshots:
+    - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/collections/series-collection-expanded.png
+    - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/duplicate-pages/duplicate-pages-new.png
+    - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/edit-metadata/edit-series-general-1.png
+
+hkdkfih-backrest:
+  repo: garethgeorge/backrest
+  images:
+    - image: garethgeorge/backrest
+      tag: "{tag}"
+  icon: https://raw.githubusercontent.com/garethgeorge/backrest/main/webui/assets/logo.svg
+  screenshots:
+    - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-dashboard.png
+    - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-browse-snapshot.png
+    - https://media.githubusercontent.com/media/garethgeorge/backrest/main/docs/src/public/screenshots/add-plan-view.png
