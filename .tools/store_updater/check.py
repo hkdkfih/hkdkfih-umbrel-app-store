@@ -53,8 +53,12 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
             say("missing apps.yml entry (updater and asset config)")
         if manifest.get("category") not in CATEGORIES:
             say(f"category {manifest.get('category')!r} is not one of {sorted(CATEGORIES)}")
-        if (manifest.get("storage") or {}).get("dataRoot") != "data":
-            say("storage.dataRoot must be 'data'")
+        compose_path = app_dir / "docker-compose.yml"
+        compose_text = compose_path.read_text() if compose_path.exists() else ""
+        storage = manifest.get("storage")
+        if storage is not None or "${APP_DATA_DIR}/data" in compose_text:
+            if (storage or {}).get("dataRoot") != "data":
+                say("storage.dataRoot must be 'data' (required when the app keeps data)")
 
         _check_asset(say, root, app_id, "icon", manifest.get("icon"))
         gallery = manifest.get("gallery") or []
@@ -65,9 +69,8 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
 
         port = manifest.get("port")
         claims = [(port, "port")]
-        compose_path = app_dir / "docker-compose.yml"
-        if compose_path.exists():
-            compose = yaml.safe_load(compose_path.read_text()) or {}
+        if compose_text:
+            compose = yaml.safe_load(compose_text) or {}
             claims += [(p, "published port") for p in sorted(published_ports(compose))]
         for number, label in claims:
             if not isinstance(number, int):

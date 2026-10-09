@@ -110,3 +110,19 @@ def test_raw_port_conflicts_with_manifest_port(tmp_path):
 def test_published_ports_parsing():
     compose = {"services": {"a": {"ports": ["1:2", "127.0.0.1:3:4/udp", {"published": 5, "target": 6}, "7"]}}}
     assert check.published_ports(compose) == {1, 3, 5}
+
+
+def test_stateless_app_may_omit_storage(tmp_path):
+    root = make_store(tmp_path)
+    edit(root, "storage:\n  dataRoot: data\n", "")
+    (root / "hkdkfih-x" / "docker-compose.yml").write_text("services:\n  web:\n    image: o/x:1@sha256:aa\n")
+    assert check.problems(root, official_ports=set()) == []
+
+
+def test_app_with_data_mount_needs_storage(tmp_path):
+    root = make_store(tmp_path)
+    edit(root, "storage:\n  dataRoot: data\n", "")
+    (root / "hkdkfih-x" / "docker-compose.yml").write_text(
+        "services:\n  web:\n    image: o/x:1@sha256:aa\n    volumes:\n      - ${APP_DATA_DIR}/data/db:/db\n"
+    )
+    assert any("dataRoot" in p for p in check.problems(root, official_ports=set()))
