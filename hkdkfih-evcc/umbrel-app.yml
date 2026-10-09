@@ -1,0 +1,60 @@
+manifestVersion: 1
+id: hkdkfih-evcc
+storage:
+  dataRoot: data
+environment:
+  - name: TZ
+    services:
+      - server
+    default: Europe/Berlin
+    note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
+category: automation
+name: evcc
+version: "0.317.0"
+tagline: Solar charging for your electric vehicle
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
+description: >-
+  On first launch, set an admin password and add your devices in the browser. Set your time zone in the app's
+  settings in umbrelOS.
+
+
+  evcc is an extensible EV charge controller and home energy management system. It charges your electric car
+  with surplus solar power, uses cheap or green grid electricity when it matters, and shows the energy flow of
+  your whole home in a clean, live dashboard.
+
+
+  - Supports wallboxes, smart plugs, inverters, batteries, heat pumps and vehicles from hundreds of manufacturers
+
+  - Charging modes: solar only, min + solar, and fast, plus departure-time charging plans
+
+  - Dynamic tariffs and CO2-aware charging
+
+  - Charging session history and statistics
+
+  - Integrations with Home Assistant, MQTT and a REST API
+
+
+  Devices are added by IP address. OCPP wallboxes connect to ws://umbrel.local:18887/<station-id>. Discovery and
+  devices that need UDP broadcasts (such as SMA Home Manager) are not available, because the app does not use
+  host networking.
+releaseNotes: ""
+
+developer: evcc.io
+website: https://evcc.io/
+dependencies: []
+repo: https://github.com/evcc-io/evcc
+support: https://github.com/evcc-io/evcc/issues
+
+port: 7071
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
