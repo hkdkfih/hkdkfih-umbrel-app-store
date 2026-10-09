@@ -1,0 +1,41 @@
+name: Lint
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint apps and test tooling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y --no-install-recommends libcairo2 > /dev/null
+          python -m pip install -r requirements.txt
+          npm ci --ignore-scripts
+          bash .tools/fetch-linter.sh
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Store checks (ports, icons, screenshots, apps.yml)
+        run: PYTHONPATH=.tools python -m store_updater.check
+      - name: README is up to date
+        run: PYTHONPATH=.tools python -m store_updater.readme --check
+      - name: Official Umbrel app linter
+        run: node .lint/lint-apps.mjs --all --check-images --format github --root .
