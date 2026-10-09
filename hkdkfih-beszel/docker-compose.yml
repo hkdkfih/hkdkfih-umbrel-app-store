@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-beszel_hub_1
+      APP_PORT: 8090
+      # Agents in WebSocket mode cannot send Umbrel login cookies; they authenticate with
+      # their own token and the hub's key.
+      PROXY_AUTH_WHITELIST: "/api/beszel/agent-connect"
+
+  hub:
+    image: henrygd/beszel:0.21.0@sha256:6b39a8b64f9b15d00a25e7683e31a93c46161182a54f62713525107064e10599
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      USER_EMAIL: umbrel@umbrel.local
+      USER_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/beszel:/beszel_data

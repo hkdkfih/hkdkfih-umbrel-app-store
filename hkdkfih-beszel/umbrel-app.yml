@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: hkdkfih-beszel
+storage:
+  dataRoot: data
+category: networking
+name: Beszel
+version: "0.21.0"
+tagline: Lightweight server monitoring with history and alerts
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/icon.png
+description: >-
+  Beszel on Umbrel is a monitoring hub for your other computers. Click "Add System" and install the small
+  Beszel agent on each server, PC or Raspberry Pi you want to watch. Your Umbrel's own CPU, memory and storage
+  are already shown on the Umbrel dashboard.
+
+
+  Beszel is a lightweight server monitoring platform with Docker statistics, historical data and alert
+  functions. It has a friendly web interface, simple configuration and is ready to use out of the box.
+
+
+  - CPU, memory, disk, network, temperature and GPU usage over time
+
+  - Per-container CPU, memory and network statistics
+
+  - Alerts for CPU, memory, disk, bandwidth, temperature and system status
+
+  - Multiple users, with systems shared between them
+
+  - Agents connect over WebSocket to http://umbrel.local:8490, or the hub connects to them over SSH
+releaseNotes: ""
+
+developer: henrygd
+website: https://beszel.dev/
+dependencies: []
+repo: https://github.com/henrygd/beszel
+support: https://github.com/henrygd/beszel/issues
+
+port: 8490
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/3.jpg
+path: ""
+
+defaultUsername: "umbrel@umbrel.local"
+deterministicPassword: true
+
+backupIgnore:
+  - data/beszel/auxiliary.db*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
