@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-feishin_web_1
+      APP_PORT: 9180
+
+  web:
+    image: ghcr.io/jeffvli/feishin:1.17.0@sha256:6c75a4d3b99065ac245e2eb2b693fde3e5f2a6fe41c9e255da4fcb8948071965
+    # static web client served by nginx-unprivileged; settings are stored in the browser
+    restart: on-failure
+    environment:
+      # Pre-fill the official Navidrome app on this Umbrel; users can still pick any server.
+      SERVER_NAME: Navidrome
+      SERVER_TYPE: navidrome
+      SERVER_URL: http://${DEVICE_DOMAIN_NAME}:4533
+      SERVER_LOCK: "false"
+      ANALYTICS_DISABLED: "true"
