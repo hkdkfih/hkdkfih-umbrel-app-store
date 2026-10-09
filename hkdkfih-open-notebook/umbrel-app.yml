@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-open-notebook
+storage:
+  dataRoot: data
+category: ai
+name: Open Notebook
+version: "1.15.0"
+tagline: A private, open source alternative to Google NotebookLM
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-open-notebook/icon.png
+description: >-
+  Open Notebook needs an AI provider. After launching it, open Manage → Models and add a provider key
+  (OpenAI, Anthropic, Google, OpenRouter and more) or connect Ollama running on your Umbrel.
+
+
+  Open Notebook is a privacy-focused research assistant inspired by Google NotebookLM. Collect PDFs, web pages,
+  videos, audio and notes into notebooks, then chat with them, generate summaries and insights, and turn them
+  into multi-speaker podcasts, all on your own server.
+
+
+  - Supports 16+ AI providers, including fully local models through Ollama
+
+  - Add PDFs, web pages, YouTube videos, audio, Office documents and plain text
+
+  - Chat with your sources with citations, and full-text and vector search
+
+  - Transformations to summarise, extract key points or build your own prompts
+
+  - Podcast generation with one to four speakers
+
+  - REST API for automations
+
+
+  Your provider keys are stored encrypted in the app's database on your Umbrel.
+releaseNotes: ""
+
+developer: Luis Novo
+website: https://www.open-notebook.ai/
+dependencies: []
+repo: https://github.com/lfnovo/open-notebook
+support: https://github.com/lfnovo/open-notebook/issues
+
+port: 8502
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-open-notebook/1.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/notebook/.cache/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
