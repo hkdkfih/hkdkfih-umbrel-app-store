@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-go2rtc_server_1
+      APP_PORT: 1984
+
+  server:
+    image: alexxit/go2rtc:1.9.14@sha256:675c318b23c06fd862a61d262240c9a63436b4050d177ffc68a32710d9e05bae
+    user: "1000:1000"
+    restart: on-failure
+    # The first config file is yours and is editable in the web UI. The inline config pins the
+    # RTSP and WebRTC listeners to the ports published below and advertises the Umbrel's LAN IP
+    # to WebRTC clients.
+    command:
+      - go2rtc
+      - -config
+      - /config/go2rtc.yaml
+      - -config
+      - '{"rtsp":{"listen":":18554"},"webrtc":{"listen":":18555","candidates":["${APP_HKDKFIH_GO2RTC_LAN_IP}:18555","stun:18555"]}}'
+    ports:
+      - "18554:18554" # RTSP restreams for VLC, Home Assistant and NVRs
+      - "18555:18555/tcp" # WebRTC
+      - "18555:18555/udp" # WebRTC
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
