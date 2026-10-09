@@ -1,0 +1,50 @@
+manifestVersion: 1
+id: hkdkfih-grist
+storage:
+  dataRoot: data
+category: files
+name: Grist
+version: "1.7.20"
+tagline: The evolution of spreadsheets
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/icon.png
+description: >-
+  Grist is a modern relational spreadsheet. It combines the flexibility of a spreadsheet with the robustness of
+  a database, so you can organise your data, build custom tools and collaborate without writing an app.
+
+
+  - Columns have types, and tables link to each other like a database
+
+  - Formulas in Python, with the full standard library and an AI formula assistant (bring your own key)
+
+  - Custom layouts with cards, charts, forms, calendars and custom widgets
+
+  - Fine-grained access rules down to individual rows and columns
+
+  - Import from and export to Excel, CSV and Google Sheets
+
+  - Hundreds of templates for CRMs, inventories, budgets and project trackers
+
+
+  Grist opens as a single-user workspace protected by your Umbrel login. Formulas run in a WebAssembly
+  sandbox. To invite other people with their own accounts, configure authentication in Grist's Admin Panel.
+releaseNotes: ""
+
+developer: Grist Labs
+website: https://www.getgrist.com/
+dependencies: []
+repo: https://github.com/gristlabs/grist-core
+support: https://github.com/gristlabs/grist-core/issues
+
+port: 8484
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
