@@ -68,8 +68,53 @@ hkdkfih-backrest:
   images:
     - image: garethgeorge/backrest
       tag: "{tag}"
-  icon: https://raw.githubusercontent.com/garethgeorge/backrest/main/webui/assets/logo.svg
+  icon: https://raw.githubusercontent.com/garethgeorge/backrest/main/build/darwin/icon.png
   screenshots:
     - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-dashboard.png
     - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-browse-snapshot.png
     - https://media.githubusercontent.com/media/garethgeorge/backrest/main/docs/src/public/screenshots/add-plan-view.png
+
+hkdkfih-go2rtc:
+  repo: AlexxIT/go2rtc
+  images:
+    - image: alexxit/go2rtc
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/AlexxIT/go2rtc/v1.9.14/website/icons/android-chrome-512x512.png
+  screenshots:
+    - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-net.png
+    - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-config.png
+
+hkdkfih-evcc:
+  repo: evcc-io/evcc
+  images:
+    - image: evcc/evcc
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/evcc-io/evcc/0.317.0/assets/public/meta/apple-touch-icon.png
+  screenshots:
+    - https://evcc.io/img/screenshots/7_large_main_energyflow_light.webp
+    - https://evcc.io/img/screenshots/8_large_sessions_light.webp
+    - https://evcc.io/img/screenshots/9_large_session_detail_light.webp
+    - https://evcc.io/img/screenshots/6_large_total_solar_light.webp
+
+hkdkfih-traccar:
+  repo: traccar/traccar
+  images:
+    - image: traccar/traccar
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/traccar/traccar-web/v6.16.0/public/pwa-512x512.png
+  screenshots:
+    - https://raw.githubusercontent.com/traccar/traccar-web/v6.16.0/.github/screenshot.png
+    - https://www.traccar.org/images/documentation/geofences/colors.png
+    - https://www.traccar.org/images/documentation/geofences/route.png
+
+hkdkfih-sillytavern:
+  repo: SillyTavern/SillyTavern
+  images:
+    - image: ghcr.io/sillytavern/sillytavern
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/SillyTavern/SillyTavern/1.19.0/public/img/logo.png
+  screenshots:
+    - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot1.jpg
+    - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot2.jpg
+    - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot3.jpg
+    - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg
