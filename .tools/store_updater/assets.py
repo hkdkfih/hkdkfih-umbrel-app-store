@@ -63,10 +63,13 @@ def _fit(img: Image.Image, canvas_size, box, background) -> Image.Image:
     return canvas
 
 
-def _download(url: str) -> bytes:
-    response = http.get(url)
+def _read_source(root: Path, ref: str) -> bytes:
+    """Fetch an http(s) URL, or read a path relative to the repo root (own captures)."""
+    if not ref.startswith(("http://", "https://")):
+        return (root / ref).read_bytes()
+    response = http.get(ref)
     if response.status != 200:
-        raise RuntimeError(f"download failed ({response.status}): {url}")
+        raise RuntimeError(f"download failed ({response.status}): {ref}")
     return response.body
 
 
@@ -76,11 +79,11 @@ def build(root: Path, cfg: config.AppConfig) -> list[Path]:
     written = []
     if cfg.icon:
         path = out_dir / "icon.png"
-        make_icon(_download(cfg.icon), background=cfg.icon_background).save(path, "PNG", optimize=True)
+        make_icon(_read_source(root, cfg.icon), background=cfg.icon_background).save(path, "PNG", optimize=True)
         written.append(path)
     for index, url in enumerate(cfg.screenshots, start=1):
         path = out_dir / f"{index}.jpg"
-        make_screenshot(_download(url)).save(path, "JPEG", quality=88, optimize=True, progressive=True)
+        make_screenshot(_read_source(root, url)).save(path, "JPEG", quality=88, optimize=True, progressive=True)
         written.append(path)
     for stale in out_dir.glob("*.jpg"):
         if stale.stem.isdigit() and int(stale.stem) > len(cfg.screenshots):
