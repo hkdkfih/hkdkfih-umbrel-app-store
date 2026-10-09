@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: hkdkfih-sillytavern
+storage:
+  dataRoot: data
+category: ai
+name: SillyTavern
+version: "1.19.0"
+tagline: LLM frontend for power users
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/icon.png
+description: >-
+  SillyTavern is protected by your Umbrel login. If you turn off "Require Umbrel login" in the app's settings,
+  enable user accounts or basic authentication in SillyTavern first.
+
+
+  SillyTavern is a locally installed interface for chatting and roleplaying with text generation models,
+  image generators and TTS voices. It connects to the AI provider of your choice, including Ollama on your
+  Umbrel, OpenAI, Claude, Gemini, OpenRouter, KoboldCpp and many more.
+
+
+  - Character cards, group chats, personas and world info (lorebooks)
+
+  - Fine-grained prompt control with presets, instruct and context templates
+
+  - Chat branching, swipes, bookmarks and message editing
+
+  - Image generation, text-to-speech, translation and vector-storage extensions
+
+  - Visual novel mode, themes and a highly customisable UI
+releaseNotes: ""
+
+developer: SillyTavern
+website: https://sillytavern.app/
+dependencies: []
+repo: https://github.com/SillyTavern/SillyTavern
+support: https://github.com/SillyTavern/SillyTavern/issues
+
+port: 8007
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/data/_cache/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
