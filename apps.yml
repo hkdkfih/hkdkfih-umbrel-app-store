@@ -118,3 +118,62 @@ hkdkfih-sillytavern:
     - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot2.jpg
     - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot3.jpg
     - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg
+
+hkdkfih-siyuan:
+  repo: siyuan-note/siyuan
+  images:
+    - image: b3log/siyuan
+      tag: "{tag}"
+  icon: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/app/src/assets/icon.png
+  screenshots:
+    - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0.png
+    - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0-1.png
+    - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature3-1.png
+    - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature5-1.png
+
+hkdkfih-silverbullet:
+  repo: silverbulletmd/silverbullet
+  images:
+    - image: ghcr.io/silverbulletmd/silverbullet
+      tag: "{version}-slim"
+  icon: https://raw.githubusercontent.com/silverbulletmd/silverbullet/2.12.0/client/images/logo-dock.png
+  screenshots:
+    - https://silverbullet.md/media/stills/tour-personal-home.webp
+    - https://silverbullet.md/media/stills/tour-personal-journal.webp
+    - https://silverbullet.md/media/stills/tour-docs-navigation.webp
+    - https://silverbullet.md/media/stills/tour-team-architecture.webp
+
+hkdkfih-grist:
+  repo: gristlabs/grist-core
+  images:
+    - image: gristlabs/grist
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/gristlabs/grist-core/v1.7.20/static/icons/grist.png
+  screenshots:
+    - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm1.png
+    - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm2.png
+    - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/investment-research/1-overview-page.png
+    - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/widget_chart_examples.png
+
+hkdkfih-ezbookkeeping:
+  repo: mayswind/ezbookkeeping
+  images:
+    - image: mayswind/ezbookkeeping
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/v2.0.1/public/img/ezbookkeeping-512.png
+  screenshots:  # cropped from ezbookkeeping.mayswind.net/images/en/desktop_screenshot_light.png
+    - .tools/captures/hkdkfih-ezbookkeeping/1.png
+    - .tools/captures/hkdkfih-ezbookkeeping/2.png
+    - .tools/captures/hkdkfih-ezbookkeeping/3.png
+    - .tools/captures/hkdkfih-ezbookkeeping/4.png
+
+hkdkfih-beszel:
+  repo: henrygd/beszel
+  images:
+    - image: henrygd/beszel
+      tag: "{version}"
+  icon: https://raw.githubusercontent.com/henrygd/beszel/v0.21.0/internal/site/public/static/icon.png
+  screenshots:
+    - https://beszel.dev/image/dashboard.png
+    - https://henrygd-assets.b-cdn.net/beszel/screenshot-new.png
+    - https://beszel.dev/image/settings-notifications.png
