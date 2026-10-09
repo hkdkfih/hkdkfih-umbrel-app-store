@@ -1,2 +1,20 @@
-# Per-app updater and asset configuration. See storekit/config.py.
-{}
+# Per-app updater and asset configuration (see .tools/store_updater/config.py).
+#
+#   repo:        GitHub "owner/name" whose stable releases drive the version
+#   source:      "release" (default) or "tag"
+#   tag_regex:   optional; group 1 is the version (default: v1.2.3 / 1.2.3)
+#   images:      images bumped on update; tag is a template ({version}, {tag})
+#   icon:        upstream logo; transparent logos get a white background
+#   screenshots: upstream screenshots, rendered to 1440x900
+
+hkdkfih-scrypted:
+  repo: koush/scrypted
+  images:
+    - image: koush/scrypted
+      tag: "v{version}-noble-full"
+  icon: https://raw.githubusercontent.com/koush/scrypted/main/install/icon.png
+  screenshots:
+    - https://github.com/koush/scrypted/assets/73924/57e1d556-cd3d-4448-81f9-a6c51b6513de
+    - https://docs.scrypted.app/img/install-plugin.png
+    - https://docs.scrypted.app/img/scrypted-nvr/face-recognition.png
+    - https://docs.scrypted.app/img/scrypted-nvr/lpr.png

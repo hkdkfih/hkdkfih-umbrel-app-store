@@ -14,7 +14,7 @@ and is **updated automatically** when a new upstream version is released.
 
 | | App | Description | Version |
 | --- | --- | --- | --- |
-
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/icon.png" width="40" height="40" alt=""> | [Scrypted](https://github.com/koush/scrypted) | Bring any camera to HomeKit, Google Home and Alexa | 0.147.0 |
 
 ## How updates work
 
