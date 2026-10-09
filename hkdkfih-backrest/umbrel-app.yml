@@ -1,0 +1,67 @@
+manifestVersion: 1
+id: hkdkfih-backrest
+storage:
+  dataRoot: data
+folderAccess:
+  - id: backup-source
+    name: Folders to back up
+    note: Select the folder you want to back up. It is available inside Backrest at /userdata (read-only).
+    mounts:
+      - service: server
+        targetPath: /userdata
+        readOnly: true
+  - id: backup-repository
+    name: Backup destination
+    note: Optional local destination, for example an external drive. Use /repos as the repository path in Backrest. Cloud destinations (S3, B2, SFTP, rclone) need no folder.
+    mounts:
+      - service: server
+        targetPath: /repos
+category: files
+name: Backrest
+version: "1.14.1"
+tagline: A web UI and orchestrator for restic backups
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/icon.png
+description: >-
+  On first launch, Backrest asks you to name this instance and create an admin user. Choose the folders to back
+  up and an optional local backup destination in the app's settings in umbrelOS.
+
+
+  Backrest is a web-accessible backup solution built on top of restic, the fast, secure and efficient backup
+  program. It gives you a friendly interface to create repositories, schedule backup plans, browse snapshots
+  and restore files, while restic does the heavy lifting.
+
+
+  - Back up to local disks, S3, Backblaze B2, SFTP and any rclone remote
+
+  - Encrypted, deduplicated and compressed snapshots
+
+  - Cron-style schedules with retention policies (keep daily, weekly, monthly…)
+
+  - Browse snapshots and restore single files or whole folders from the browser
+
+  - Health checks, pruning and notifications (Discord, Slack, Gotify, healthchecks.io, …)
+
+  - Import existing restic repositories
+releaseNotes: ""
+
+developer: Gareth George
+website: https://garethgeorge.github.io/backrest/
+dependencies: []
+repo: https://github.com/garethgeorge/backrest
+support: https://github.com/garethgeorge/backrest/issues
+
+port: 9898
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/cache/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
