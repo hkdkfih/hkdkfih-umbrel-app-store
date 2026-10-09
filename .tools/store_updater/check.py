@@ -4,7 +4,8 @@
 
 Checks app ids/prefix, apps.yml coverage, icon + gallery files, categories,
 storage.dataRoot, and that every manifest port is unique in this store, not
-reserved by umbrelOS, and not used by any app in the official Umbrel App Store.
+reserved by umbrelOS, and not used by any app in the official Umbrel App Store;
+the same applies to host ports published with compose `ports:`.
 """
 
 import argparse
@@ -63,16 +64,22 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
             _check_asset(say, root, app_id, "gallery image", url)
 
         port = manifest.get("port")
-        if not isinstance(port, int):
-            say(f"port {port!r} must be an integer")
-        elif port in RESERVED_PORTS or 40000 <= port <= 49999:
-            say(f"port {port} is reserved by umbrelOS")
-        elif port in ports:
-            say(f"port {port} is already used by {ports[port]}")
-        elif official_ports and port in official_ports:
-            say(f"port {port} is used by an app in the official Umbrel App Store")
-        else:
-            ports[port] = app_id
+        claims = [(port, "port")]
+        compose_path = app_dir / "docker-compose.yml"
+        if compose_path.exists():
+            compose = yaml.safe_load(compose_path.read_text()) or {}
+            claims += [(p, "published port") for p in sorted(published_ports(compose))]
+        for number, label in claims:
+            if not isinstance(number, int):
+                say(f"{label} {number!r} must be an integer")
+            elif number in RESERVED_PORTS or 40000 <= number <= 49999:
+                say(f"{label} {number} is reserved by umbrelOS")
+            elif number in ports:
+                say(f"{label} {number} is already used by {ports[number]}")
+            elif official_ports and number in official_ports:
+                say(f"{label} {number} is used by an app in the official Umbrel App Store")
+            else:
+                ports[number] = app_id
     return found
 
 
@@ -82,6 +89,21 @@ def _check_asset(say, root: Path, app_id: str, label: str, url):
         say(f"{label} URL must start with {prefix} (got {url!r})")
     elif not (root / url[len(ASSET_BASE):]).is_file():
         say(f"{label} file {url[len(ASSET_BASE):]} does not exist")
+
+
+def published_ports(compose: dict) -> set[int]:
+    """Host ports a compose file publishes with `ports:` (literal numbers only)."""
+    found = set()
+    for service in (compose.get("services") or {}).values():
+        for entry in (service or {}).get("ports") or []:
+            if isinstance(entry, dict):
+                host = entry.get("published")
+            else:
+                parts = str(entry).split("/")[0].split(":")
+                host = parts[-2] if len(parts) >= 2 else None
+            if host is not None and str(host).isdigit():
+                found.add(int(host))
+    return found
 
 
 def official_ports() -> set[int]:
@@ -96,6 +118,11 @@ def official_ports() -> set[int]:
                 manifest = yaml.safe_load(archive.extractfile(member).read()) or {}
                 if isinstance(manifest.get("port"), int):
                     ports.add(manifest["port"])
+            elif len(parts) == 3 and parts[2] == "docker-compose.yml":
+                try:
+                    ports |= published_ports(yaml.safe_load(archive.extractfile(member).read()) or {})
+                except yaml.YAMLError:
+                    pass
     return ports
 
 

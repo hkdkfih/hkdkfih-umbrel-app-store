@@ -85,3 +85,28 @@ def test_readme_lists_apps(tmp_path):
     assert f'<img src="{BASE}gallery/hkdkfih-x/icon.png"' in text
     assert "[X App](https://github.com/o/x)" in text and "Does X things" in text and "1.2.3" in text
     assert "https://github.com/hkdkfih/hkdkfih-umbrel-app-store" in text
+
+
+def add_compose(root, ports_yaml):
+    (root / "hkdkfih-x" / "docker-compose.yml").write_text(
+        "services:\n  web:\n    image: o/x:1@sha256:aa\n    ports:\n" + ports_yaml
+    )
+
+
+def test_raw_port_conflicts_with_official(tmp_path):
+    root = make_store(tmp_path)
+    add_compose(root, '      - "8554:8554"\n      - "8555:8555/udp"\n')
+    found = check.problems(root, official_ports={8555})
+    assert any("8555" in p and "official" in p for p in found), found
+    assert not any("8554" in p for p in found)
+
+
+def test_raw_port_conflicts_with_manifest_port(tmp_path):
+    root = make_store(tmp_path)
+    add_compose(root, "      - 8123:80\n")
+    assert any("8123" in p for p in check.problems(root, official_ports=set()))
+
+
+def test_published_ports_parsing():
+    compose = {"services": {"a": {"ports": ["1:2", "127.0.0.1:3:4/udp", {"published": 5, "target": 6}, "7"]}}}
+    assert check.published_ports(compose) == {1, 3, 5}
