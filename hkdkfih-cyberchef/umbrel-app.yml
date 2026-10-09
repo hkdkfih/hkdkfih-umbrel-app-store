@@ -1,0 +1,41 @@
+manifestVersion: 1
+id: hkdkfih-cyberchef
+category: developer
+name: CyberChef
+version: "11.5.0"
+tagline: The Cyber Swiss Army Knife for encoding, decoding and data analysis
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/icon.png
+description: >-
+  CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web
+  browser. Built by GCHQ, it has more than 450 operations: encoding and decoding (Base64, hex, URL), encryption
+  and hashing, compression, data format conversion, parsing of network data, regular expressions, date and
+  time conversion and much more.
+
+
+  Operations are dragged into a recipe and applied to your input as you type, so you can build up complex
+  transformations step by step and see the result instantly. The "Magic" operation can even detect the
+  encoding of unknown data for you.
+
+
+  Everything runs locally in your browser: the data you paste into CyberChef is never sent to the server, which
+  makes running your own copy on Umbrel a great way to analyse sensitive data privately.
+releaseNotes: ""
+
+developer: GCHQ
+website: https://gchq.github.io/CyberChef/
+dependencies: []
+repo: https://github.com/gchq/CyberChef
+support: https://github.com/gchq/CyberChef/issues
+
+port: 8417
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

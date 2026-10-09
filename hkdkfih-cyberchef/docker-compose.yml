@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-cyberchef_web_1
+      APP_PORT: 8080
+
+  web:
+    image: ghcr.io/gchq/cyberchef:11.5.0@sha256:f04a39926344faf8e4cbbc8c92fb125d2b466f9be62db09aff23c7c406101a51
+    # static site served by nginx-unprivileged; recipes and data stay in the browser
+    restart: on-failure
