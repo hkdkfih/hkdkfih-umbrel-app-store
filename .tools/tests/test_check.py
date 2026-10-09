@@ -53,7 +53,7 @@ def test_valid_store(tmp_path):
     (lambda r: edit(r, "category: developer", "category: Home & Automation"), "category"),
     (lambda r: edit(r, "  dataRoot: data\n", "  dataRoot: stuff\n"), "dataRoot"),
     (lambda r: edit(r, "id: hkdkfih-x", "id: hkdkfih-y"), "id"),
-    (lambda r: edit(r, f"  - {BASE}gallery/hkdkfih-x/3.jpg\n", ""), "at least 3"),
+    (lambda r: edit(r, f"  - {BASE}gallery/hkdkfih-x/2.jpg\n  - {BASE}gallery/hkdkfih-x/3.jpg\n", ""), "at least 2"),
     (lambda r: (r / "apps.yml").write_text("{}\n"), "apps.yml"),
 ])
 def test_detects_problem(tmp_path, mutate, expected):

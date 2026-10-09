@@ -58,8 +58,8 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
 
         _check_asset(say, root, app_id, "icon", manifest.get("icon"))
         gallery = manifest.get("gallery") or []
-        if len(gallery) < 3:
-            say(f"gallery needs at least 3 screenshots (has {len(gallery)})")
+        if len(gallery) < 2:
+            say(f"gallery needs at least 2 screenshots (has {len(gallery)})")
         for url in gallery:
             _check_asset(say, root, app_id, "gallery image", url)
 
