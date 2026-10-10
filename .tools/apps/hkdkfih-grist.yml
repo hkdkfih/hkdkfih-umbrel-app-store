@@ -1,0 +1,10 @@
+repo: gristlabs/grist-core
+images:
+  - image: gristlabs/grist
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/gristlabs/grist-core/v1.7.20/static/icons/grist.png
+screenshots:
+  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm1.png
+  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm2.png
+  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/investment-research/1-overview-page.png
+  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/widget_chart_examples.png

@@ -1,0 +1,9 @@
+repo: henrygd/beszel
+images:
+  - image: henrygd/beszel
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/henrygd/beszel/v0.21.0/internal/site/public/static/icon.png
+screenshots:
+  - https://beszel.dev/image/dashboard.png
+  - https://henrygd-assets.b-cdn.net/beszel/screenshot-new.png
+  - https://beszel.dev/image/settings-notifications.png

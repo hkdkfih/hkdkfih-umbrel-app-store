@@ -1,0 +1,8 @@
+repo: sissbruecker/linkding
+images:
+  - image: sissbruecker/linkding
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/sissbruecker/linkding/master/bookmarks/static/logo-512.png
+screenshots:
+  - https://linkding.link/linkding-screenshot.png
+  - https://linkding.link/linkding-screenshot-dark.png

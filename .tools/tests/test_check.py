@@ -9,7 +9,8 @@ BASE = check.ASSET_BASE
 
 def make_store(tmp_path: Path, port=8123) -> Path:
     (tmp_path / "umbrel-app-store.yml").write_text('id: "hkdkfih"\nname: "hkdkfih\'s"\n')
-    (tmp_path / "apps.yml").write_text("hkdkfih-x:\n  repo: o/x\n  images: [{image: o/x, tag: 'v{version}'}]\n")
+    (tmp_path / ".tools" / "apps").mkdir(parents=True)
+    (tmp_path / ".tools" / "apps" / "hkdkfih-x.yml").write_text("repo: o/x\nimages: [{image: o/x, tag: 'v{version}'}]\n")
     app = tmp_path / "hkdkfih-x"
     app.mkdir()
     gallery = tmp_path / "gallery" / "hkdkfih-x"
@@ -54,7 +55,7 @@ def test_valid_store(tmp_path):
     (lambda r: edit(r, "  dataRoot: data\n", "  dataRoot: stuff\n"), "dataRoot"),
     (lambda r: edit(r, "id: hkdkfih-x", "id: hkdkfih-y"), "id"),
     (lambda r: edit(r, f"  - {BASE}gallery/hkdkfih-x/1.jpg\n  - {BASE}gallery/hkdkfih-x/2.jpg\n  - {BASE}gallery/hkdkfih-x/3.jpg\n", ""), "at least 1"),
-    (lambda r: (r / "apps.yml").write_text("{}\n"), "apps.yml"),
+    (lambda r: (r / ".tools/apps/hkdkfih-x.yml").unlink(), "app config"),
 ])
 def test_detects_problem(tmp_path, mutate, expected):
     root = make_store(tmp_path)
@@ -68,7 +69,7 @@ def test_duplicate_port_within_store(tmp_path):
     clone = root / "hkdkfih-y"
     clone.mkdir()
     (clone / "umbrel-app.yml").write_text((root / "hkdkfih-x/umbrel-app.yml").read_text().replace("hkdkfih-x", "hkdkfih-y"))
-    (root / "apps.yml").write_text((root / "apps.yml").read_text() + "hkdkfih-y:\n  repo: o/y\n")
+    (root / ".tools/apps/hkdkfih-y.yml").write_text("repo: o/y\n")
     import shutil
     shutil.copytree(root / "gallery/hkdkfih-x", root / "gallery/hkdkfih-y")
     assert any("8123" in p and "hkdkfih-x" in p for p in check.problems(root, official_ports=set()))

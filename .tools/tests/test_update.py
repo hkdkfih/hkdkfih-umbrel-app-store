@@ -80,22 +80,32 @@ def test_image_not_found_in_compose_fails_without_writing(tmp_path):
     assert (d / "umbrel-app.yml").read_text() == before
 
 
-def test_config_load(tmp_path):
-    p = tmp_path / "apps.yml"
-    p.write_text(
-        "hkdkfih-x:\n  repo: o/x\n  images:\n    - image: o/x\n      tag: 'v{version}'\n"
-        "  icon: https://i/icon.svg\n  screenshots: [https://s/1.png]\n"
+def test_config_load_per_app_files(tmp_path):
+    d = tmp_path / ".tools" / "apps"
+    d.mkdir(parents=True)
+    (d / "hkdkfih-x.yml").write_text(
+        "repo: o/x\nimages:\n  - image: o/x\n    tag: 'v{version}'\n"
+        "icon: https://i/icon.svg\n"
+        "screenshots:\n"
+        "  - https://s/0.png\n"
+        "  - src: https://s/1.png\n    caption: Your notes, everywhere.\n"
+        "  - src: https://s/2.png\n    caption: Framed already.\n    frame: none\n"
     )
-    apps = config.load(p)
+    (d / "README.md").write_text("not an app")
+    apps = config.load(tmp_path)
     cfg = apps["hkdkfih-x"]
+    assert list(apps) == ["hkdkfih-x"]
     assert cfg.repo == "o/x" and cfg.source == "release" and cfg.images == [ImageSpec("o/x", "v{version}")]
-    assert cfg.icon == "https://i/icon.svg" and cfg.screenshots == ["https://s/1.png"] and cfg.icon_background == "auto"
+    assert cfg.icon == "https://i/icon.svg" and cfg.icon_background == "auto"
+    assert cfg.screenshots == [
+        config.Screenshot("https://s/0.png"),
+        config.Screenshot("https://s/1.png", "Your notes, everywhere."),
+        config.Screenshot("https://s/2.png", "Framed already.", "none"),
+    ]
 
 
-def test_config_load_empty(tmp_path):
-    p = tmp_path / "apps.yml"
-    p.write_text("# nothing yet\n{}\n")
-    assert config.load(p) == {}
+def test_config_load_no_apps(tmp_path):
+    assert config.load(tmp_path) == {}
 
 
 def lint_cmd(code):

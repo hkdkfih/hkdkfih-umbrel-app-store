@@ -2,7 +2,7 @@
 
     python -m store_updater.update [--app ID ...] [--dry-run] [--commit] [--no-lint]
 
-For each app in apps.yml: find the newest stable upstream version, require every
+For each app in .tools/apps/: find the newest stable upstream version, require every
 image tag to exist for linux/amd64 + linux/arm64, then pin tag@digest in
 docker-compose.yml and set version + releaseNotes in umbrel-app.yml. Each updated
 app must pass the official Umbrel linter or its files are restored.
@@ -111,7 +111,7 @@ def main(argv=None) -> int:
     parser.add_argument("--root", default=".", type=Path)
     args = parser.parse_args(argv)
 
-    apps = config.load(args.root / "apps.yml")
+    apps = config.load(args.root)
     wanted = {a for value in args.app for a in value.split()}
     if wanted:
         unknown = wanted - apps.keys()

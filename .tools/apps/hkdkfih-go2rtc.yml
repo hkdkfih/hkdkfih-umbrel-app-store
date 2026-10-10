@@ -1,0 +1,8 @@
+repo: AlexxIT/go2rtc
+images:
+  - image: alexxit/go2rtc
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/AlexxIT/go2rtc/v1.9.14/website/icons/android-chrome-512x512.png
+screenshots:
+  - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-net.png
+  - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-config.png

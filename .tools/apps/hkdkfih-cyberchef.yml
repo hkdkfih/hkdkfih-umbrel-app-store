@@ -1,0 +1,9 @@
+repo: gchq/CyberChef
+images:
+  - image: ghcr.io/gchq/cyberchef
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/gchq/CyberChef/master/src/web/static/images/logo/cyberchef_512.png
+screenshots:  # captured from the official instance at gchq.github.io/CyberChef
+  - .tools/captures/hkdkfih-cyberchef/1.png
+  - .tools/captures/hkdkfih-cyberchef/2.png
+  - .tools/captures/hkdkfih-cyberchef/3.png

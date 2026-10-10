@@ -1,0 +1,10 @@
+repo: mayswind/ezbookkeeping
+images:
+  - image: mayswind/ezbookkeeping
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/v2.0.1/public/img/ezbookkeeping-512.png
+screenshots:  # cropped from ezbookkeeping.mayswind.net/images/en/desktop_screenshot_light.png
+  - .tools/captures/hkdkfih-ezbookkeeping/1.png
+  - .tools/captures/hkdkfih-ezbookkeeping/2.png
+  - .tools/captures/hkdkfih-ezbookkeeping/3.png
+  - .tools/captures/hkdkfih-ezbookkeeping/4.png

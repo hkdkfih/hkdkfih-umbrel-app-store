@@ -1,0 +1,10 @@
+repo: SillyTavern/SillyTavern
+images:
+  - image: ghcr.io/sillytavern/sillytavern
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/SillyTavern/SillyTavern/1.19.0/public/img/logo.png
+screenshots:
+  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot1.jpg
+  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot2.jpg
+  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot3.jpg
+  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg

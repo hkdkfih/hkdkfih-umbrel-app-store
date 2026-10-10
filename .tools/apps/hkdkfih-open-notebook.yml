@@ -1,0 +1,7 @@
+repo: lfnovo/open-notebook
+images:
+  - image: lfnovo/open_notebook
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/lfnovo/open-notebook/v1.15.0/docs/assets/hero.svg
+screenshots:
+  - https://raw.githubusercontent.com/lfnovo/open-notebook/v1.15.0/docs/assets/asset_list.png

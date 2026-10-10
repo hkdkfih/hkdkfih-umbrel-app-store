@@ -84,9 +84,9 @@ def build(root: Path, cfg: config.AppConfig) -> list[Path]:
         path = out_dir / "icon.png"
         make_icon(_read_source(root, cfg.icon), background=cfg.icon_background).save(path, "PNG", optimize=True)
         written.append(path)
-    for index, url in enumerate(cfg.screenshots, start=1):
+    for index, shot in enumerate(cfg.screenshots, start=1):
         path = out_dir / f"{index}.jpg"
-        make_screenshot(_read_source(root, url)).save(path, "JPEG", quality=88, optimize=True, progressive=True)
+        make_screenshot(_read_source(root, shot.src)).save(path, "JPEG", quality=88, optimize=True, progressive=True)
         written.append(path)
     for stale in out_dir.glob("*.jpg"):
         if stale.stem.isdigit() and int(stale.stem) > len(cfg.screenshots):
@@ -99,7 +99,7 @@ def main(argv=None) -> int:
     parser.add_argument("--app", action="append", default=[], help="only these app ids (repeatable)")
     parser.add_argument("--root", default=".", type=Path)
     args = parser.parse_args(argv)
-    apps = config.load(args.root / "apps.yml")
+    apps = config.load(args.root)
     wanted = {a for value in args.app for a in value.split()} or set(apps)
     failed = False
     for app_id in sorted(wanted):

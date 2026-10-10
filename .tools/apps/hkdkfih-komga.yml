@@ -1,0 +1,9 @@
+repo: gotson/komga
+images:
+  - image: gotson/komga
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
+screenshots:
+  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/collections/series-collection-expanded.png
+  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/duplicate-pages/duplicate-pages-new.png
+  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/edit-metadata/edit-series-general-1.png

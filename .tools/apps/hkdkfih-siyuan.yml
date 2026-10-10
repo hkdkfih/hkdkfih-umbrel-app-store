@@ -1,0 +1,10 @@
+repo: siyuan-note/siyuan
+images:
+  - image: b3log/siyuan
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/app/src/assets/icon.png
+screenshots:
+  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0.png
+  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0-1.png
+  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature3-1.png
+  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature5-1.png

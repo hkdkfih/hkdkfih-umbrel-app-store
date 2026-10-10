@@ -47,7 +47,7 @@ versions of them can need manual data migration.
 npm install && npm run setup     # linter + Python deps
 npm test                         # updater unit tests
 npm run lint:apps -- --all --check-images
-npm run check                    # ports, icons, screenshots, apps.yml
+npm run check                    # ports, icons, screenshots, app configs
 npm run update:apps -- --dry-run
 ```
 

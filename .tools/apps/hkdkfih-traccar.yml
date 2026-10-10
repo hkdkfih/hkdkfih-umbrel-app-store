@@ -1,0 +1,9 @@
+repo: traccar/traccar
+images:
+  - image: traccar/traccar
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/traccar/traccar-web/v6.16.0/public/pwa-512x512.png
+screenshots:
+  - https://raw.githubusercontent.com/traccar/traccar-web/v6.16.0/.github/screenshot.png
+  - https://www.traccar.org/images/documentation/geofences/colors.png
+  - https://www.traccar.org/images/documentation/geofences/route.png

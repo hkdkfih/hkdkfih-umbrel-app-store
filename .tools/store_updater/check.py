@@ -2,7 +2,7 @@
 
     python -m store_updater.check [--offline]
 
-Checks app ids/prefix, apps.yml coverage, icon + gallery files, categories,
+Checks app ids/prefix, .tools/apps coverage, icon + gallery files, categories,
 storage.dataRoot, and that every manifest port is unique in this store, not
 reserved by umbrelOS, and not used by any app in the official Umbrel App Store;
 the same applies to host ports published with compose `ports:`.
@@ -33,12 +33,12 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
     root = Path(root)
     found = []
     store_id = yaml.safe_load((root / "umbrel-app-store.yml").read_text())["id"]
-    apps = config.load(root / "apps.yml")
+    apps = config.load(root)
     dirs = app_dirs(root)
     ports: dict[int, str] = {}
 
     for missing in sorted(apps.keys() - {d.name for d in dirs}):
-        found.append(f"{missing}: apps.yml entry has no app folder")
+        found.append(f"{missing}: app config .tools/apps/{missing}.yml has no app folder")
 
     for app_dir in dirs:
         app_id = app_dir.name
@@ -50,7 +50,7 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
         if manifest.get("id") != app_id:
             say(f"manifest id {manifest.get('id')!r} must equal the folder name")
         if app_id not in apps:
-            say("missing apps.yml entry (updater and asset config)")
+            say(f"missing app config .tools/apps/{app_id}.yml (updater and assets)")
         if manifest.get("category") not in CATEGORIES:
             say(f"category {manifest.get('category')!r} is not one of {sorted(CATEGORIES)}")
         compose_path = app_dir / "docker-compose.yml"

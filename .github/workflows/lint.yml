@@ -33,7 +33,7 @@ jobs:
           bash .tools/fetch-linter.sh
       - name: Unit tests
         run: python -m pytest -q
-      - name: Store checks (ports, icons, screenshots, apps.yml)
+      - name: Store checks (ports, icons, screenshots, app configs)
         run: PYTHONPATH=.tools python -m store_updater.check
       - name: README is up to date
         run: PYTHONPATH=.tools python -m store_updater.readme --check

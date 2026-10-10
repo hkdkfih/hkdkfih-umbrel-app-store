@@ -1,0 +1,10 @@
+repo: jeffvli/feishin
+images:
+  - image: ghcr.io/jeffvli/feishin
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/jeffvli/feishin/development/assets/icons/icon.png
+screenshots:
+  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_home.png
+  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_album_detail.png
+  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_full_screen_player.png
+  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_smart_playlist.png

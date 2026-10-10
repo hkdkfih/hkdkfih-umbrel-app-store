@@ -1,0 +1,10 @@
+repo: silverbulletmd/silverbullet
+images:
+  - image: ghcr.io/silverbulletmd/silverbullet
+    tag: "{version}-slim"
+icon: https://raw.githubusercontent.com/silverbulletmd/silverbullet/2.12.0/client/images/logo-dock.png
+screenshots:
+  - https://silverbullet.md/media/stills/tour-personal-home.webp
+  - https://silverbullet.md/media/stills/tour-personal-journal.webp
+  - https://silverbullet.md/media/stills/tour-docs-navigation.webp
+  - https://silverbullet.md/media/stills/tour-team-architecture.webp

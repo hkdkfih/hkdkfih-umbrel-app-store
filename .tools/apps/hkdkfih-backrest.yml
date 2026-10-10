@@ -1,0 +1,9 @@
+repo: garethgeorge/backrest
+images:
+  - image: garethgeorge/backrest
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/garethgeorge/backrest/main/build/darwin/icon.png
+screenshots:
+  - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-dashboard.png
+  - https://f000.backblazeb2.com/file/gshare/screenshots/backrest-1.11.1-browse-snapshot.png
+  - https://media.githubusercontent.com/media/garethgeorge/backrest/main/docs/src/public/screenshots/add-plan-view.png

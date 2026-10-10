@@ -65,7 +65,9 @@ def test_build_reads_local_capture_files(tmp_path):
     capture = tmp_path / ".tools" / "captures" / "hkdkfih-x"
     capture.mkdir(parents=True)
     (capture / "1.png").write_bytes(png(Image.new("RGB", (1440, 900), (10, 20, 30))))
-    cfg = AppConfig(app_id="hkdkfih-x", repo="o/x", screenshots=[".tools/captures/hkdkfih-x/1.png"])
+    from store_updater.config import Screenshot
+
+    cfg = AppConfig(app_id="hkdkfih-x", repo="o/x", screenshots=[Screenshot(".tools/captures/hkdkfih-x/1.png", frame="none")])
     written = assets.build(tmp_path, cfg)
     assert [p.name for p in written] == ["1.jpg"]
     assert Image.open(tmp_path / "gallery/hkdkfih-x/1.jpg").size == (1440, 900)
