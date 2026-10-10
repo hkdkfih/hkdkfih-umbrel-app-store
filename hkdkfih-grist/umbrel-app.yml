@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Grist
-version: "1.7.20"
+version: "1.7.21"
 tagline: The evolution of spreadsheets
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/icon.png
 description: >-
@@ -27,7 +27,38 @@ description: >-
 
   Grist opens as a single-user workspace protected by your Umbrel login. Formulas run in a WebAssembly
   sandbox. To invite other people with their own accounts, configure authentication in Grist's Admin Panel.
-releaseNotes: ""
+releaseNotes: >-
+  Improvements
+
+
+  - Imports
+
+  - The home page's "Import document" file picker now offers .json files, which could already be imported by choosing "any file type"
+
+  - Sharing
+
+  - The "Invite multiple" dialog accepts emails separated by commas, semicolons, or spaces as well as one per line, and checks each address the way the server will
+
+  - Custom widgets
+
+  - getAccessToken() accepts a route option that limits the token to one endpoint, method, and set of query parameters
+
+  - Documentation
+
+  - The README explains the difference between the Docker images and the Grist editions
+
+  - Internal / infrastructure
+
+  - Locale files are split into layers for core and the full edition, merged by the server when it serves translations
+
+
+  Fixes
+
+
+  - …
+
+
+  Full release notes: https://github.com/gristlabs/grist-core/releases/tag/v1.7.21
 
 developer: Grist Labs
 website: https://www.getgrist.com/
