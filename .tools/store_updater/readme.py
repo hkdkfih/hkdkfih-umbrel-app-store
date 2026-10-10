@@ -52,7 +52,7 @@ npm run update:apps -- --dry-run
 ```
 
 Packaging follows the official Umbrel guidelines in
-[getumbrel/umbrel-apps](https://github.com/getumbrel/umbrel-apps). Apps are packaged by the community and
+[getumbrel/umbrel-apps](https://github.com/getumbrel/umbrel-apps); see [docs/PACKAGING.md](docs/PACKAGING.md) to add an app. Apps are packaged by the community and
 not affiliated with or endorsed by their upstream developers or Umbrel.
 """
 

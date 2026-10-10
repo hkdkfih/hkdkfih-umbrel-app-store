@@ -69,3 +69,23 @@ def _token(challenge: str, get) -> str:
         raise RuntimeError(f"registry token request failed with HTTP {response.status}")
     data = response.json()
     return data.get("token") or data["access_token"]
+
+
+def main(argv=None) -> int:
+    """python -m store_updater.registry IMAGE:TAG ... — print pinned references."""
+    import sys
+
+    status = 0
+    for ref in (argv if argv is not None else sys.argv[1:]):
+        image, _, tag = ref.rpartition(":")
+        info = fetch_index(image, tag)
+        if info is None or not REQUIRED_PLATFORMS <= info.platforms:
+            print(f"{ref}: missing or not multi-arch ({sorted(info.platforms) if info else 'tag not found'})")
+            status = 1
+        else:
+            print(f"{image}:{tag}@{info.digest}")
+    return status
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
