@@ -56,7 +56,10 @@ def fetch_index(image: str, tag: str, get=http.get) -> IndexInfo | None:
         os_name, arch = platform.get("os"), platform.get("architecture")
         if os_name and arch and "unknown" not in (os_name, arch):
             platforms.add(f"{os_name}/{arch}")
-    return IndexInfo(response.headers.get("docker-content-digest", ""), platforms)
+    digest = response.headers.get("docker-content-digest", "")
+    if not re.fullmatch(r"sha256:[0-9a-f]{64}", digest):
+        raise RuntimeError(f"{image}:{tag}: registry returned no valid digest ({digest!r})")
+    return IndexInfo(digest, platforms)
 
 
 def _token(challenge: str, get) -> str:

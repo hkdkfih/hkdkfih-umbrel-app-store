@@ -60,3 +60,29 @@ def test_folded_yaml_round_trips():
 def test_empty_body():
     assert notes.clean("", "https://u") == "Full release notes: https://u"
     assert yaml.safe_load(notes.to_folded_yaml("Full release notes: https://u"))["releaseNotes"] == "Full release notes: https://u"
+
+
+def test_control_characters_are_stripped():
+    out = notes.clean("* colour \x1b[31mred\x1b[0m output\x0c and \x85 more\x7f", "https://u")
+    assert not any(ord(c) < 32 and c != "\n" or 0x7f <= ord(c) <= 0x9f for c in out)
+    yaml.safe_load(notes.to_folded_yaml(out))
+
+
+def test_truncation_never_ends_on_a_heading():
+    body = "## Improvements\n" + "\n".join(f"* change {i} " + "x" * 60 for i in range(12)) + "\n## Fixes\n* fixed " + "y" * 400
+    out = notes.clean(body, "https://u", limit=900)
+    lines = out.splitlines()
+    assert lines[-2] == "- …" and not lines[-3].startswith("Fixes")
+
+
+def test_long_single_paragraph_is_cut_at_a_word():
+    out = notes.clean("A " + "word " * 400, "https://u", limit=200)
+    first = out.splitlines()[0]
+    assert first.startswith("- A word") and first.endswith("…") and len(first) <= 205
+
+
+def test_bare_sha_prefix_and_heading_links_and_escapes():
+    body = "## [1.14.1](https://github.com/o/r/compare/a...b)\n" + "0123456789abcdef0123456789abcdef01234567 fix the thing\n* \\[Breaking\\] new API"
+    out = notes.clean(body, "https://u")
+    assert "1.14.1\n" in out + "\n" and "compare" not in out
+    assert "- fix the thing" in out and "- [Breaking] new API" in out

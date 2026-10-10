@@ -53,6 +53,6 @@ jobs:
           if ! git diff --quiet README.md; then
             git commit -q -m "docs: refresh README app versions" README.md
           fi
-          git pull --rebase -q
+          git pull --rebase --autostash -q
           git push -q
           exit $status

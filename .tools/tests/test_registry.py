@@ -60,3 +60,13 @@ def test_unexpected_status_raises():
 
     with pytest.raises(RuntimeError):
         registry.fetch_index("koush/scrypted", "v1", get=fake_get_factory(status=500))
+
+
+def test_missing_digest_header_raises():
+    import pytest
+
+    def get(url, headers=None):
+        return Response(200, {}, json.dumps(INDEX).encode())
+
+    with pytest.raises(RuntimeError):
+        registry.fetch_index("koush/scrypted", "v1", get=get)

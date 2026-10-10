@@ -17,7 +17,9 @@ NOISE_PATTERNS = [
 
 
 def clean(body: str, url: str, limit: int = 900) -> str:
-    body = re.sub(r"<!--.*?-->", "", body or "", flags=re.S)
+    body = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", body or "")           # ANSI colour codes
+    body = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]", "", body)  # other control characters
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
     body = re.sub(r"<details>.*?</details>", "", body, flags=re.S | re.I)
     body = re.sub(r"<[^>]+>", "", body)
 
@@ -28,13 +30,20 @@ def clean(body: str, url: str, limit: int = 900) -> str:
             seen.add(line)
             lines.append(line)
 
-    kept, used = [], 0
+    kept, used, truncated = [], 0, False
     for line in lines:
         if used + len(line) + 1 > limit:
-            kept.append("- …")
+            if not kept:  # a single huge paragraph: cut it at a word boundary
+                kept.append(line[:limit].rsplit(" ", 1)[0] + " …")
+            truncated = True
             break
         kept.append(line)
         used += len(line) + 1
+    if truncated:
+        while kept and not kept[-1].startswith("- "):  # don't end on a heading with nothing under it
+            kept.pop()
+        if not kept or not kept[-1].endswith("…"):
+            kept.append("- …")
     kept.append(f"Full release notes: {url}")
     return "\n".join(kept)
 
@@ -45,18 +54,17 @@ def _clean_line(raw: str) -> str | None:
         return None
     heading = re.match(r"^#+\s*(.*)$", text)
     if heading:
-        title = _strip_markup(heading.group(1)).strip(" :")
+        title = _strip_markup(_strip_links(heading.group(1))).strip(" :")
         return None if title.lower() in GENERIC_HEADINGS or not title else title
 
     text = re.sub(r"^([-*+]|\d+\.)\s+", "", text)
-    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)              # images
     text = re.sub(r"\(\[[^\]]*\]\([^)]*\)\)", "", text)          # ([author](commit-url))
     text = re.sub(r"\[#\d+\]\([^)]*\)", "", text)                 # [#123](pr-url)
-    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)          # [text](url) -> text
+    text = _strip_links(text)
     text = re.sub(r"\s+by\s+@[\w-]+(\s+in\s+\S+)?", "", text)     # "by @user in <pr-url>"
     text = re.sub(r"\(#\d+\)", "", text)
     text = re.sub(r"https?://\S+", "", text)
-    sha_prefix = re.match(r"^[0-9a-f]{7,40}:\s+", text)
+    sha_prefix = re.match(r"^(?:[0-9a-f]{7,40}:|[0-9a-f]{40})\s+", text)
     if sha_prefix:
         # "<sha>: message (Author)" commit-list format
         text = text[sha_prefix.end():]
@@ -69,7 +77,13 @@ def _clean_line(raw: str) -> str | None:
     return f"- {text}"
 
 
+def _strip_links(text: str) -> str:
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)               # images
+    return re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)           # [text](url) -> text
+
+
 def _strip_markup(text: str) -> str:
+    text = re.sub(r"\\([\\`*_{}\[\]()#+\-.!])", r"\1", text)      # markdown escapes
     return re.sub(r"\*\*|__|`|~~", "", text)
 
 

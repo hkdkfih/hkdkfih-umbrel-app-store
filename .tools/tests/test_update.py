@@ -148,3 +148,27 @@ def test_dry_run_writes_nothing(tmp_path):
     results = update.run(tmp_path, {"hkdkfih-x": CFG}, latest=lambda *a, **k: REL,
                          fetch_index=lambda *a, **k: MULTI, lint=None, dry_run=True)
     assert results[0].status == "updated" and {p: p.read_text() for p in d.iterdir()} == before
+
+
+def test_stale_skip_becomes_failure(tmp_path):
+    make_app(tmp_path)
+    old = Release("1.1.0", "v1.1.0", "", "u", published_at="2020-01-01T00:00:00Z")
+    r = update.update_app(tmp_path, CFG, latest=lambda *a, **k: old, fetch_index=lambda *a, **k: None)
+    assert r.status == "failed" and "stalled" in r.reason
+
+
+def test_rewritten_files_are_validated(tmp_path, monkeypatch):
+    d = make_app(tmp_path)
+    before = (d / "umbrel-app.yml").read_text()
+    monkeypatch.setattr(update.notes, "to_folded_yaml", lambda text: "releaseNotes: [unclosed\n")
+    r = update.update_app(tmp_path, CFG, latest=lambda *a, **k: REL, fetch_index=lambda *a, **k: MULTI)
+    assert r.status == "failed" and (d / "umbrel-app.yml").read_text() == before
+
+
+def test_run_survives_a_crashing_lint_command(tmp_path):
+    d = make_app(tmp_path)
+    before = {p: p.read_text() for p in d.iterdir()}
+    results = update.run(tmp_path, {"hkdkfih-x": CFG}, latest=lambda *a, **k: REL,
+                         fetch_index=lambda *a, **k: MULTI, lint="/nonexistent/binary {app}")
+    assert results[0].status == "failed"
+    assert {p: p.read_text() for p in d.iterdir()} == before
