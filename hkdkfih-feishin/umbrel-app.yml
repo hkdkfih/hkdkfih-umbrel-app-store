@@ -23,7 +23,8 @@ description: >-
 
 
   Feishin is pre-configured for the Navidrome app on your Umbrel: just log in with your Navidrome username and
-  password. To use Jellyfin or another server instead, choose it on the login screen. Feishin itself stores no
+  password. To use Jellyfin or another server instead, choose it on the login screen. When you open Feishin over
+  https or remotely, change the server address to one your browser can reach the same way. Feishin itself stores no
   data; your library stays on your music server.
 releaseNotes: ""
 

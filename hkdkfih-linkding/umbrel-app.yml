@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: linkding
-version: "1.47.0"
+version: "1.47.0-patch.1"
 tagline: A minimal, fast bookmark manager
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/icon.png
 description: >-
@@ -30,7 +30,8 @@ description: >-
 
   Log in with the username and password shown by Umbrel. You can change the password and add more users in
   linkding's settings.
-releaseNotes: ""
+releaseNotes: >-
+  The linkding browser extensions and apps can now reach the REST API with your linkding API token.
 
 developer: Sascha Ißbrücker
 website: https://linkding.link/

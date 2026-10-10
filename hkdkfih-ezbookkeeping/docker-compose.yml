@@ -14,7 +14,7 @@ services:
     environment:
       EBK_SECURITY_SECRET_KEY: ${APP_HKDKFIH_EZBOOKKEEPING_SECRET_KEY}
       # Used to build avatar and transaction picture URLs.
-      EBK_SERVER_ROOT_URL: http://${DEVICE_DOMAIN_NAME}:8486/
+      EBK_SERVER_ROOT_URL: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}/
       EBK_LOG_MODE: console
     volumes:
       - ${APP_DATA_DIR}/data/data:/ezbookkeeping/data

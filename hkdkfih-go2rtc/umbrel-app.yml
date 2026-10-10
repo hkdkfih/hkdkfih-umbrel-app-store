@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: go2rtc
-version: "1.9.14"
+version: "1.9.14-patch.1"
 tagline: Ultimate camera streaming application
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/icon.png
 description: >-
@@ -22,9 +22,11 @@ description: >-
   - Zero-delay streaming to many clients at once
 
 
-  RTSP restreams are available at rtsp://umbrel.local:18554/<stream-name>, and WebRTC uses port 18555 (TCP and
-  UDP). HomeKit camera discovery is not available, because the app does not use host networking.
-releaseNotes: ""
+  RTSP restreams are available at rtsp://admin:<password>@umbrel.local:18554/<stream-name>, using the password
+  shown by Umbrel. WebRTC uses port 18555 (TCP and UDP). HomeKit camera discovery is not available, because the app does not use host networking.
+releaseNotes: >-
+  RTSP restreams now require a username and password (shown by Umbrel), and exec: sources are limited to
+  ffmpeg.
 
 developer: Alexey Khit
 website: https://go2rtc.org/
@@ -38,8 +40,8 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/2.jpg
 path: ""
 
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+deterministicPassword: true
 
 submitter: hkdkfih
 submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

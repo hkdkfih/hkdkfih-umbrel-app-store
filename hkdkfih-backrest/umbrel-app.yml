@@ -1,4 +1,4 @@
-manifestVersion: 1
+manifestVersion: "2.0"
 id: hkdkfih-backrest
 storage:
   dataRoot: data
