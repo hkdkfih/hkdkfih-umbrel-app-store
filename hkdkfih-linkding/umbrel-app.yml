@@ -1,0 +1,55 @@
+manifestVersion: 1
+id: hkdkfih-linkding
+storage:
+  dataRoot: data
+category: files
+name: linkding
+version: "1.47.0"
+tagline: A minimal, fast bookmark manager
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/icon.png
+description: >-
+  linkding is a bookmark manager that is designed to be minimal, fast and easy to set up. Save links with tags
+  and notes, find them again with a fast full-text search, and keep a private archive of the web pages that
+  matter to you.
+
+
+  - Clean, distraction-free UI with light and dark themes
+
+  - Tags, bulk editing, notes and "read later" lists
+
+  - Automatic titles, descriptions, favicons and preview images
+
+  - Browser extensions for Firefox and Chrome, plus a bookmarklet
+
+  - Import and export in the standard Netscape HTML format
+
+  - Share bookmarks with other users or publicly
+
+  - REST API for apps and integrations
+
+
+  Log in with the username and password shown by Umbrel. You can change the password and add more users in
+  linkding's settings.
+releaseNotes: ""
+
+developer: Sascha Ißbrücker
+website: https://linkding.link/
+dependencies: []
+repo: https://github.com/sissbruecker/linkding
+support: https://github.com/sissbruecker/linkding/issues
+
+port: 9095
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/2.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+backupIgnore:
+  - data/linkding/favicons/*
+  - data/linkding/previews/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

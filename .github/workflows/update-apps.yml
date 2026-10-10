@@ -1,0 +1,58 @@
+name: Update apps
+
+on:
+  schedule:
+    - cron: "17 5 * * *" # daily, 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: "Space-separated app ids to update (empty = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-apps
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update apps to the latest upstream release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          npm ci --ignore-scripts
+          bash .tools/fetch-linter.sh
+      - name: Update apps
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPS: ${{ inputs.apps }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          args=()
+          for app in $APPS; do args+=(--app "$app"); done
+          set +e
+          PYTHONPATH=.tools python -m store_updater.update --commit "${args[@]}"
+          status=$?
+          set -e
+          PYTHONPATH=.tools python -m store_updater.readme
+          if ! git diff --quiet README.md; then
+            git commit -q -m "docs: refresh README app versions" README.md
+          fi
+          git pull --rebase -q
+          git push -q
+          exit $status

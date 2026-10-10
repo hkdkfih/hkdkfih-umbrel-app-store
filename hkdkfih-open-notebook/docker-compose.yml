@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-open-notebook_web_1
+      APP_PORT: 8502
+
+  web:
+    image: lfnovo/open_notebook:1.15.0@sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # A blank API_URL makes the browser call the API on this same origin (/api is proxied to
+      # the backend inside the container), so http, https and any hostname work.
+      API_URL: " "
+      OPEN_NOTEBOOK_ENCRYPTION_KEY: ${APP_HKDKFIH_OPEN_NOTEBOOK_ENCRYPTION_KEY}
+      SURREAL_URL: ws://hkdkfih-open-notebook_db_1:8000/rpc
+      SURREAL_USER: root
+      SURREAL_PASSWORD: ${APP_HKDKFIH_OPEN_NOTEBOOK_DB_PASSWORD}
+      SURREAL_NAMESPACE: open_notebook
+      SURREAL_DATABASE: open_notebook
+    volumes:
+      - ${APP_DATA_DIR}/data/notebook:/app/data
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: surrealdb/surrealdb:v2.7.0@sha256:e5d7387e3727bbe2f7cd6d869e48cd34777272258572ead37c9656b25f745723
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    command: start --log info --user root --pass ${APP_HKDKFIH_OPEN_NOTEBOOK_DB_PASSWORD} rocksdb:/mydata/mydatabase.db
+    volumes:
+      - ${APP_DATA_DIR}/data/surrealdb:/mydata
+    healthcheck:
+      test: ["CMD", "/surreal", "is-ready", "--endpoint", "http://localhost:8000"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s

@@ -1,0 +1,70 @@
+manifestVersion: 1
+id: hkdkfih-komga
+storage:
+  dataRoot: data
+folderAccess:
+  - id: umbrel-downloads
+    name: Downloads
+    note: Comics, manga and ebooks in this folder are available inside Komga at /downloads. Add it as a library folder in Komga.
+    mounts:
+      - service: server
+        targetPath: /downloads
+  - id: comics-library
+    name: Comics Library
+    note: Select an additional folder with comics, manga or ebooks, then add /library as a library folder in Komga. Access is read-only to protect your files.
+    mounts:
+      - service: server
+        targetPath: /library
+        readOnly: true
+category: media
+name: Komga
+version: "1.28.1"
+tagline: A media server for your comics, mangas, BDs and ebooks
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
+description: >-
+  On first launch, create your Komga administrator account in the browser. Then add a library that points to
+  /downloads or to a folder you choose in the app's settings in umbrelOS.
+
+
+  Komga is a free and open source media server for your comics, mangas, BDs, magazines and eBooks. It organises
+  your CBZ, CBR, PDF and EPUB files into libraries, series and books, and lets you read them from any browser or
+  from your favourite reader app.
+
+
+  - Browse libraries, series, collections and read lists
+
+  - Web reader with paged, continuous (webtoon) and double-page modes
+
+  - Edit metadata or import it from ComicInfo.xml and EPUB files
+
+  - OPDS v1 and v2 feeds for reader apps, and Kobo and KOReader sync
+
+  - Multiple users with per-library access and age restrictions
+
+  - Duplicate file and page detection
+releaseNotes: ""
+
+developer: Gauthier Roebroeck
+website: https://komga.org/
+dependencies: []
+repo: https://github.com/gotson/komga
+support: https://github.com/gotson/komga/issues
+
+port: 25600
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+permissions:
+  - STORAGE_DOWNLOADS
+
+backupIgnore:
+  - data/config/lucene/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

@@ -1,0 +1,48 @@
+manifestVersion: 1
+id: hkdkfih-feishin
+category: media
+name: Feishin
+version: "1.17.0"
+tagline: A modern music player for Navidrome, Jellyfin and Subsonic
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/icon.png
+description: >-
+  Feishin is a beautiful, modern player for your self-hosted music library. It connects to Navidrome, Jellyfin
+  or any OpenSubsonic-compatible server and gives you a fast, desktop-class listening experience right in the
+  browser.
+
+
+  - Home page with recently played, most played and new music
+
+  - Full-screen player with synced lyrics and album art
+
+  - Smart playlists, queue management and gapless playback
+
+  - Fast search across artists, albums and tracks
+
+  - Light and dark themes, plus extensive customisation
+
+
+  Feishin is pre-configured for the Navidrome app on your Umbrel: just log in with your Navidrome username and
+  password. To use Jellyfin or another server instead, choose it on the login screen. Feishin itself stores no
+  data; your library stays on your music server.
+releaseNotes: ""
+
+developer: jeffvli
+website: https://github.com/jeffvli/feishin
+dependencies: []
+repo: https://github.com/jeffvli/feishin
+support: https://github.com/jeffvli/feishin/issues
+
+port: 9180
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

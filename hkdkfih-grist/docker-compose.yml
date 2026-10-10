@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-grist_server_1
+      APP_PORT: 8484
+
+  server:
+    image: gristlabs/grist:1.7.20@sha256:c862d4c1ffa2a36009d69b72e7ab319155c3529da7df2de0a4e437e994cfe7f1
+    # entrypoint starts as root, chowns /persist and drops privileges to the grist user
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      GRIST_SESSION_SECRET: ${APP_HKDKFIH_GRIST_SESSION_SECRET}
+      # Single-user setup protected by the Umbrel login; skips the boot-key wizard.
+      GRIST_IN_SERVICE: "true"
+      GRIST_DEFAULT_EMAIL: umbrel@umbrel.local
+      GRIST_ADMIN_EMAIL: umbrel@umbrel.local
+      # The WebAssembly sandbox isolates formulas without extra container privileges.
+      GRIST_SANDBOX_FLAVOR: pyodide
+      GRIST_TELEMETRY_LEVEL: "off"
+    volumes:
+      - ${APP_DATA_DIR}/data/persist:/persist

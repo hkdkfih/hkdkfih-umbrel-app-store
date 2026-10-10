@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-linkding_web_1
+      APP_PORT: 9090
+
+  web:
+    image: sissbruecker/linkding:1.47.0@sha256:e35cb50e0581178f245125ffaa909c565416c94c9f22ace305a7d234a4345522
+    # container starts as root, fixes ownership of its data dir and serves as www-data
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      LD_SUPERUSER_NAME: umbrel
+      LD_SUPERUSER_PASSWORD: ${APP_PASSWORD}
+      LD_CSRF_TRUSTED_ORIGINS: "http://${DEVICE_DOMAIN_NAME}:${APP_HKDKFIH_LINKDING_PORT},https://${DEVICE_DOMAIN_NAME}:${APP_HKDKFIH_LINKDING_PORT},http://${DEVICE_HOSTNAME}:${APP_HKDKFIH_LINKDING_PORT},https://${DEVICE_HOSTNAME}:${APP_HKDKFIH_LINKDING_PORT},http://*.ts.net:${APP_HKDKFIH_LINKDING_PORT},https://*.ts.net:${APP_HKDKFIH_LINKDING_PORT},${APP_HKDKFIH_LINKDING_LOCAL_ORIGINS}"
+    volumes:
+      - ${APP_DATA_DIR}/data/linkding:/etc/linkding/data

@@ -1,0 +1,63 @@
+manifestVersion: 1
+id: hkdkfih-siyuan
+storage:
+  dataRoot: data
+environment:
+  - name: TZ
+    services:
+      - server
+    default: Etc/UTC
+    note: IANA time zone used for daily notes and timestamps, such as Europe/London or America/New_York.
+category: files
+name: SiYuan
+version: "3.8.6"
+tagline: A privacy-first, self-hosted personal knowledge base
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png
+description: >-
+  On first launch, unlock SiYuan with the access code shown by Umbrel as the password.
+
+
+  SiYuan is a privacy-first personal knowledge management system with fine-grained block-level references and
+  Markdown WYSIWYG editing. Write notes, link ideas together and build your own knowledge graph, all stored on
+  your Umbrel.
+
+
+  - Block-level references and embeds, bidirectional links and a graph view
+
+  - WYSIWYG Markdown editor with tables, math, diagrams and code blocks
+
+  - Databases (attribute views) with tables, filters and sorting
+
+  - Flashcards with spaced repetition
+
+  - Templates, daily notes, tags and powerful search with SQL queries
+
+  - Snapshots and history to restore earlier versions of your notes
+
+
+  The Docker version runs in the browser only; exporting to PDF, HTML and Word and importing Markdown are not
+  available.
+releaseNotes: ""
+
+developer: SiYuan
+website: https://b3log.org/siyuan/en/
+dependencies: []
+repo: https://github.com/siyuan-note/siyuan
+support: https://github.com/siyuan-note/siyuan/issues
+
+port: 6806
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/4.jpg
+path: ""
+
+defaultUsername: ""
+deterministicPassword: true
+
+backupIgnore:
+  - data/workspace/temp/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

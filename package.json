@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "bash .tools/fetch-linter.sh && python3 -m pip install -r requirements.txt",
+    "lint:apps": "node .lint/lint-apps.mjs --root .",
+    "check": "PYTHONPATH=.tools python3 -m store_updater.check",
+    "update:apps": "PYTHONPATH=.tools python3 -m store_updater.update",
+    "build:assets": "PYTHONPATH=.tools python3 -m store_updater.assets",
+    "build:readme": "PYTHONPATH=.tools python3 -m store_updater.readme",
+    "test": "python3 -m pytest"
+  },
+  "dependencies": {
+    "yaml": "2.8.1"
+  }
+}

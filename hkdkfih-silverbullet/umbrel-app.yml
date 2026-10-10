@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: hkdkfih-silverbullet
+storage:
+  dataRoot: data
+category: files
+name: SilverBullet
+version: "2.12.0"
+tagline: Programmable, private, personal knowledge in Markdown
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/icon.png
+description: >-
+  On first launch, the setup wizard asks you to create an admin account and your first space.
+
+
+  SilverBullet is a note-taking app for people who like to tinker. Your notes are plain Markdown files, and
+  every page can be turned into a little application with live queries, templates, widgets and Space Lua
+  scripting.
+
+
+  - Fast, keyboard-driven Markdown editor with live preview
+
+  - Links, backlinks, tags, tasks and a page index
+
+  - Live queries that turn your notes into dashboards, task lists and tables
+
+  - Extend and customise everything with Space Lua and plugs
+
+  - Multiple spaces and users from one installation
+
+
+  Over plain http, SilverBullet works online-only. Open it over https to enable offline mode.
+releaseNotes: ""
+
+developer: Zef Hemel
+website: https://silverbullet.md/
+dependencies: []
+repo: https://github.com/silverbulletmd/silverbullet
+support: https://github.com/silverbulletmd/silverbullet/issues
+
+port: 3033
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

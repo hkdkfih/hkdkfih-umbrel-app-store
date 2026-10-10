@@ -1,0 +1,45 @@
+manifestVersion: 1
+id: hkdkfih-go2rtc
+storage:
+  dataRoot: data
+category: automation
+name: go2rtc
+version: "1.9.14"
+tagline: Ultimate camera streaming application
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/icon.png
+description: >-
+  go2rtc connects to almost any camera or stream and re-streams it with very low latency to browsers, smart
+  home platforms and video players. Add your streams in the web UI (Config tab), then watch them in the browser
+  or use them from Home Assistant, Frigate, Scrypted or VLC.
+
+
+  - Sources: RTSP, RTMP, HTTP/MJPEG, ONVIF, HomeKit, USB cameras via FFmpeg, Tapo, Ring, Roborock and more
+
+  - Outputs: WebRTC, MSE, HLS, MJPEG and RTSP, with on-the-fly transcoding through FFmpeg
+
+  - Two-way audio for supported cameras
+
+  - Zero-delay streaming to many clients at once
+
+
+  RTSP restreams are available at rtsp://umbrel.local:18554/<stream-name>, and WebRTC uses port 18555 (TCP and
+  UDP). HomeKit camera discovery is not available, because the app does not use host networking.
+releaseNotes: ""
+
+developer: Alexey Khit
+website: https://go2rtc.org/
+dependencies: []
+repo: https://github.com/AlexxIT/go2rtc
+support: https://github.com/AlexxIT/go2rtc/issues
+
+port: 1985
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/2.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

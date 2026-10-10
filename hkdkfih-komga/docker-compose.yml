@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-komga_server_1
+      APP_PORT: 25600
+
+  server:
+    image: gotson/komga:1.28.1@sha256:d8f772dce7b3dcd8baa0ce7481bd890e68446065ab6c8eb2cb5b24df62fb3c4f
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      TZ: Etc/UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${UMBREL_ROOT}/data/storage/downloads:/downloads

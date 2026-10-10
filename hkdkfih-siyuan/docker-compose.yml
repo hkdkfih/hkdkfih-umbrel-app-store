@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-siyuan_server_1
+      APP_PORT: 6806
+
+  server:
+    image: b3log/siyuan:v3.8.6@sha256:b528a08f75936f19ee647c46c55c4d6924bdd93e30941128e468187bcfbc772d
+    # entrypoint starts as root, chowns the workspace to PUID/PGID and drops privileges
+    restart: on-failure
+    stop_grace_period: 1m
+    command:
+      - serve
+      - --workspace=/siyuan/workspace/
+      - --accessAuthCode=${APP_PASSWORD}
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Etc/UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/workspace:/siyuan/workspace
+      - ${APP_DATA_DIR}/data/config:/home/siyuan/.config/siyuan

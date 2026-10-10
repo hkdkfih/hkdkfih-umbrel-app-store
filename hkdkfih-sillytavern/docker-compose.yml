@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-sillytavern_server_1
+      APP_PORT: 8000
+
+  server:
+    image: ghcr.io/sillytavern/sillytavern:1.19.0@sha256:eef27ff0c7961f1a2f488400f581f48ff38f8b910c5d3b8d389138d71791bb14
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # Requests arrive through Umbrel's proxy, which SillyTavern's IP whitelist would reject.
+      # Access stays protected by Umbrel's login.
+      SILLYTAVERN_WHITELISTMODE: "false"
+      SILLYTAVERN_SECURITYOVERRIDE: "true"
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/home/node/app/config
+      - ${APP_DATA_DIR}/data/data:/home/node/app/data
+      - ${APP_DATA_DIR}/data/plugins:/home/node/app/plugins
+      - ${APP_DATA_DIR}/data/extensions:/home/node/app/public/scripts/extensions/third-party

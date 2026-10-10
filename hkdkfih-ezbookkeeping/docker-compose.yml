@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-ezbookkeeping_server_1
+      APP_PORT: 8080
+
+  server:
+    image: mayswind/ezbookkeeping:2.0.1@sha256:2b79aaeb95d5ae2f86b92dd5696d8a094502f520083ea3b43c48d5123f5f340e
+    # image runs as 1000:1000
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      EBK_SECURITY_SECRET_KEY: ${APP_HKDKFIH_EZBOOKKEEPING_SECRET_KEY}
+      # Used to build avatar and transaction picture URLs.
+      EBK_SERVER_ROOT_URL: http://${DEVICE_DOMAIN_NAME}:8486/
+      EBK_LOG_MODE: console
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/ezbookkeeping/data
+      - ${APP_DATA_DIR}/data/storage:/ezbookkeeping/storage

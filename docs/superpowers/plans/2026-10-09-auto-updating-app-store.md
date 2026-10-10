@@ -4,7 +4,7 @@
 
 **Goal:** Turn the fork into a working umbrelOS community app store (Scrypted + ~15 apps) whose apps auto-update daily, each with an icon and screenshots.
 
-**Architecture:** Standard Umbrel package folders (`hkdkfih-<app>/`) plus a small Python package `storekit/` that (a) checks upstream GitHub releases and registry manifests, (b) rewrites compose/manifest files textually, (c) builds icons/screenshots into `gallery/`, (d) validates the store and generates the README. GitHub Actions runs the updater daily and gates every change with the official Umbrel linter fetched at a pinned commit.
+**Architecture:** Standard Umbrel package folders (`hkdkfih-<app>/`) plus a small Python package `.tools/store_updater/` that (a) checks upstream GitHub releases and registry manifests, (b) rewrites compose/manifest files textually, (c) builds icons/screenshots into `gallery/`, (d) validates the store and generates the README. GitHub Actions runs the updater daily and gates every change with the official Umbrel linter fetched at a pinned commit.
 
 **Tech Stack:** Python 3.12 (stdlib `urllib`, PyYAML, Pillow, CairoSVG, pytest), Node 22 (official `lint-apps.mjs` + `yaml`), GitHub Actions.
 
@@ -44,20 +44,20 @@ hkdkfih-<app>/docker-compose.yml     Umbrel compose
 hkdkfih-<app>/exports.sh             only when secrets/derived values needed
 hkdkfih-<app>/data/**/.gitkeep       bind-mount scaffolding
 gallery/<app-id>/icon.png, 1.jpg…    generated assets
-storekit/__init__.py
-storekit/http.py                     tiny urllib wrapper (injectable for tests)
-storekit/config.py                   load apps.yml → AppConfig
-storekit/versions.py                 version extraction/compare, tag templating
-storekit/registry.py                 OCI registry index lookup (anon bearer auth)
-storekit/upstream.py                 latest stable GitHub release/tag
-storekit/rewrite.py                  compose image + manifest version/notes edits
-storekit/notes.py                    release-note cleaning → folded YAML text
-storekit/update.py                   updater CLI (python -m storekit.update)
-storekit/assets.py                   icon/screenshot builder (python -m storekit.assets)
-storekit/check.py                    store consistency checks (python -m storekit.check)
-storekit/readme.py                   README generator (python -m storekit.readme)
-tests/test_*.py                      pytest
-tools/fetch-linter.sh                downloads pinned official linter into .lint/
+.tools/store_updater/__init__.py
+.tools/store_updater/http.py                     tiny urllib wrapper (injectable for tests)
+.tools/store_updater/config.py                   load apps.yml → AppConfig
+.tools/store_updater/versions.py                 version extraction/compare, tag templating
+.tools/store_updater/registry.py                 OCI registry index lookup (anon bearer auth)
+.tools/store_updater/upstream.py                 latest stable GitHub release/tag
+.tools/store_updater/rewrite.py                  compose image + manifest version/notes edits
+.tools/store_updater/notes.py                    release-note cleaning → folded YAML text
+.tools/store_updater/update.py                   updater CLI (python -m store_updater.update)
+.tools/store_updater/assets.py                   icon/screenshot builder (python -m store_updater.assets)
+.tools/store_updater/check.py                    store consistency checks (python -m store_updater.check)
+.tools/store_updater/readme.py                   README generator (python -m store_updater.readme)
+.tools/tests/test_*.py                      pytest
+.tools/fetch-linter.sh                downloads pinned official linter into .lint/
 package.json                         node deps for the linter (yaml)
 requirements.txt
 .github/workflows/lint.yml
@@ -71,7 +71,7 @@ requirements.txt
 **Files:**
 - Modify: `umbrel-app-store.yml`, `.gitignore`, `README.md`
 - Delete: `sparkles-hello-world/`
-- Create: `requirements.txt`, `package.json`, `pyproject.toml`, `tools/fetch-linter.sh`, `storekit/__init__.py`, `apps.yml`
+- Create: `requirements.txt`, `package.json`, `pyproject.toml`, `.tools/fetch-linter.sh`, `.tools/store_updater/__init__.py`, `apps.yml`
 
 **Interfaces:** Produces: `.lint/lint-apps.mjs` runnable as `node .lint/lint-apps.mjs --all --check-images --root .`
 
@@ -88,7 +88,7 @@ name: "hkdkfih's"
 `.gitignore` adds `.lint/`, `node_modules/`, `__pycache__/`, `.pytest_cache/`, `.venv/`.
 `apps.yml`: `{}` (populated per app).
 
-`tools/fetch-linter.sh`:
+`.tools/fetch-linter.sh`:
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -97,12 +97,12 @@ mkdir -p .lint
 curl -fsSL "https://raw.githubusercontent.com/getumbrel/umbrel-apps/${LINTER_COMMIT}/.tools/lint-apps.mjs" -o .lint/lint-apps.mjs
 ```
 
-- [ ] **Step 2: Verify** — `bash tools/fetch-linter.sh && npm install && node .lint/lint-apps.mjs --all --root .` exits 0 (no apps yet).
+- [ ] **Step 2: Verify** — `bash .tools/fetch-linter.sh && npm install && node .lint/lint-apps.mjs --all --root .` exits 0 (no apps yet).
 - [ ] **Step 3: Commit** `chore: scaffold hkdkfih store and tooling`.
 
 ### Task 2: Versions
 
-**Files:** Create `storekit/versions.py`, `tests/test_versions.py`
+**Files:** Create `.tools/store_updater/versions.py`, `.tools/.tools/tests/test_versions.py`
 
 **Interfaces:** Produces
 - `DEFAULT_TAG_REGEX = r"^v?(\d+(?:\.\d+){1,3})$"`
@@ -113,7 +113,7 @@ curl -fsSL "https://raw.githubusercontent.com/getumbrel/umbrel-apps/${LINTER_COM
 
 - [ ] **Step 1: Failing tests**
 ```python
-from storekit.versions import extract_version, is_newer, render_tag
+from store_updater.versions import extract_version, is_newer, render_tag
 
 def test_extract_plain_and_v_prefix():
     assert extract_version("v0.147.0") == "0.147.0"
@@ -139,7 +139,7 @@ def test_render_tag():
     assert render_tag("v{version}-noble-full", "0.147.0", "v0.147.0") == "v0.147.0-noble-full"
     assert render_tag("{tag}", "1.0.0", "v1.0.0") == "v1.0.0"
 ```
-- [ ] **Step 2: Run** `pytest tests/test_versions.py -v` → FAIL (module missing).
+- [ ] **Step 2: Run** `pytest .tools/tests/test_versions.py -v` → FAIL (module missing).
 - [ ] **Step 3: Implement**
 ```python
 import re
@@ -160,11 +160,11 @@ def is_newer(candidate: str, current: str) -> bool:
 def render_tag(template: str, version: str, tag: str) -> str:
     return template.replace("{version}", version).replace("{tag}", tag)
 ```
-- [ ] **Step 4: Run** → PASS. **Step 5: Commit** `feat(storekit): version parsing and comparison`.
+- [ ] **Step 4: Run** → PASS. **Step 5: Commit** `feat(store_updater): version parsing and comparison`.
 
 ### Task 3: HTTP + registry lookup
 
-**Files:** Create `storekit/http.py`, `storekit/registry.py`, `tests/test_registry.py`
+**Files:** Create `.tools/store_updater/http.py`, `.tools/store_updater/registry.py`, `.tools/.tools/tests/test_registry.py`
 
 **Interfaces:**
 - `http.Response(status: int, headers: dict[str,str] (lower-case keys), body: bytes)`; `.json()`
@@ -177,8 +177,8 @@ def render_tag(template: str, version: str, tag: str) -> str:
 - [ ] **Step 1: Failing tests** (fake `get` serving a 401 challenge then token then index):
 ```python
 import json
-from storekit import registry
-from storekit.http import Response
+from store_updater import registry
+from store_updater.http import Response
 
 INDEX = {"mediaType": "application/vnd.oci.image.index.v1+json", "manifests": [
     {"platform": {"os": "linux", "architecture": "amd64"}},
@@ -214,11 +214,11 @@ def test_single_arch_manifest_has_no_platforms():
 ```
 - [ ] **Step 2: Run** → FAIL.
 - [ ] **Step 3: Implement** — `http.get` via `urllib.request` catching `HTTPError` into `Response`. `fetch_index`: GET `https://{host}/v2/{repo}/manifests/{tag}` with the four-type Accept header (OCI index, OCI manifest, Docker list, Docker v2); on 401 parse `www-authenticate` (`realm`, `service`, `scope`), GET `{realm}?service=..&scope=..`, read `token` or `access_token`, retry with bearer; 404 → `None`; other non-200 → raise `RuntimeError`. Platforms = `{f"{os}/{arch}"}` from `manifests[].platform`, excluding `unknown`.
-- [ ] **Step 4: Run** → PASS. **Step 5: Commit** `feat(storekit): registry index lookup`.
+- [ ] **Step 4: Run** → PASS. **Step 5: Commit** `feat(store_updater): registry index lookup`.
 
 ### Task 4: Upstream releases
 
-**Files:** Create `storekit/upstream.py`, `tests/test_upstream.py`
+**Files:** Create `.tools/store_updater/upstream.py`, `.tools/.tools/tests/test_upstream.py`
 
 **Interfaces:**
 - `upstream.Release(version: str, tag: str, body: str, url: str)`
@@ -227,8 +227,8 @@ def test_single_arch_manifest_has_no_platforms():
 - [ ] **Step 1: Failing tests**
 ```python
 import json
-from storekit import upstream
-from storekit.http import Response
+from store_updater import upstream
+from store_updater.http import Response
 
 def get_releases(rels):
     return lambda url, headers=None: Response(200, {}, json.dumps(rels).encode())
@@ -252,11 +252,11 @@ def test_tag_source():
     r = upstream.latest("o/r", source="tag", get=get_releases(tags))
     assert r.version == "3.1.0" and r.body == ""
 ```
-- [ ] **Step 2–4:** run → FAIL, implement, run → PASS. **Step 5: Commit** `feat(storekit): upstream release discovery`.
+- [ ] **Step 2–4:** run → FAIL, implement, run → PASS. **Step 5: Commit** `feat(store_updater): upstream release discovery`.
 
 ### Task 5: Release-note cleaning
 
-**Files:** Create `storekit/notes.py`, `tests/test_notes.py`
+**Files:** Create `.tools/store_updater/notes.py`, `.tools/.tools/tests/test_notes.py`
 
 **Interfaces:** `notes.clean(body: str, url: str, limit: int = 900) -> str` — returns plain text: drops images, HTML tags/comments, `<details>` blocks, headings markers, link syntax → link text, commit SHAs/PR refs in parentheses, lines matching `(?i)\b(chore|ci|build|deps?|bump|renovate|dependabot)\b`, collapses to bullet lines `- …`; truncates on a line boundary to `limit` chars adding `- …`; always ends with `Full release notes: <url>`. Empty body → only the link line.
 `notes.to_folded_yaml(text: str, indent: int = 2) -> str` — returns the `releaseNotes: >-` block: each bullet/paragraph separated by one blank line (two blank lines between paragraphs), indented.
@@ -264,7 +264,7 @@ def test_tag_source():
 - [ ] **Step 1: Failing tests**
 ```python
 import yaml
-from storekit import notes
+from store_updater import notes
 
 BODY = """## What's Changed
 * feat: add dark mode by @a in https://github.com/o/r/pull/12
@@ -295,11 +295,11 @@ def test_folded_yaml_round_trips():
 def test_empty_body():
     assert notes.clean("", "https://u") == "Full release notes: https://u"
 ```
-- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(storekit): release note cleaning`.
+- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(store_updater): release note cleaning`.
 
 ### Task 6: File rewriting
 
-**Files:** Create `storekit/rewrite.py`, `tests/test_rewrite.py`
+**Files:** Create `.tools/store_updater/rewrite.py`, `.tools/.tools/tests/test_rewrite.py`
 
 **Interfaces:**
 - `rewrite.set_image(compose: str, image: str, tag: str, digest: str) -> tuple[str, int]` — replaces every `image: <image>:<anything>` (exact repo match, optional quotes, keeps indentation and trailing comments) with `image: <image>:<tag>@<digest>`; returns `(text, count)`.
@@ -310,7 +310,7 @@ def test_empty_body():
 - [ ] **Step 1: Failing tests**
 ```python
 import yaml
-from storekit import rewrite
+from store_updater import rewrite
 
 COMPOSE = """services:
   app_proxy:
@@ -351,26 +351,26 @@ def test_set_version_and_notes():
     assert doc["version"] == "1.1.0" and doc["releaseNotes"] == "new: notes" and doc["developer"] == "X"
     assert rewrite.current_version(out) == "1.1.0"
 ```
-- [ ] **Step 2–4:** FAIL → implement (line-based regex, `re.MULTILINE`) → PASS. **Step 5: Commit** `feat(storekit): compose and manifest rewriting`.
+- [ ] **Step 2–4:** FAIL → implement (line-based regex, `re.MULTILINE`) → PASS. **Step 5: Commit** `feat(store_updater): compose and manifest rewriting`.
 
 ### Task 7: Config loader + updater CLI
 
-**Files:** Create `storekit/config.py`, `storekit/update.py`, `tests/test_update.py`
+**Files:** Create `.tools/store_updater/config.py`, `.tools/store_updater/update.py`, `.tools/.tools/tests/test_update.py`
 
 **Interfaces:**
 - `config.ImageSpec(image: str, tag: str)`; `config.AppConfig(app_id, repo, source="release", tag_regex=DEFAULT_TAG_REGEX, images: list[ImageSpec], icon: str | None, screenshots: list[str], icon_background: str = "auto")`
 - `config.load(path="apps.yml") -> dict[str, AppConfig]`
 - `update.Result(app_id, status: Literal["updated","current","skipped","failed"], old: str, new: str | None, reason: str)`
 - `update.update_app(root: Path, cfg: AppConfig, latest=upstream.latest, fetch_index=registry.fetch_index) -> Result` — writes files only when status is `updated`.
-- CLI `python -m storekit.update [--app ID ...] [--dry-run] [--commit] [--lint "node .lint/lint-apps.mjs {app} --check-images --root ."]`: for each updated app run lint; on failure `git checkout -- <app>` and mark `failed`; with `--commit`, `git commit -m "<app>: <old> → <new>" -- <app> README.md`; append a markdown table to `$GITHUB_STEP_SUMMARY` when set; exit 0 unless an unexpected exception occurred (lint failures are reported, not fatal).
+- CLI `python -m store_updater.update [--app ID ...] [--dry-run] [--commit] [--lint "node .lint/lint-apps.mjs {app} --check-images --root ."]`: for each updated app run lint; on failure `git checkout -- <app>` and mark `failed`; with `--commit`, `git commit -m "<app>: <old> → <new>" -- <app> README.md`; append a markdown table to `$GITHUB_STEP_SUMMARY` when set; exit 0 unless an unexpected exception occurred (lint failures are reported, not fatal).
 
 - [ ] **Step 1: Failing tests** (tmp_path app with fake latest/fetch_index):
 ```python
 from pathlib import Path
-from storekit import update
-from storekit.config import AppConfig, ImageSpec
-from storekit.registry import IndexInfo
-from storekit.upstream import Release
+from store_updater import update
+from store_updater.config import AppConfig, ImageSpec
+from store_updater.registry import IndexInfo
+from store_updater.upstream import Release
 
 def make_app(tmp_path: Path) -> Path:
     d = tmp_path / "hkdkfih-x"; d.mkdir()
@@ -411,22 +411,22 @@ def test_image_not_found_in_compose_fails(tmp_path):
     assert r.status == "failed"
 ```
 - [ ] **Step 2–4:** FAIL → implement → PASS (all images resolved before any write; any miss → no writes).
-- [ ] **Step 5: Commit** `feat(storekit): updater CLI`.
+- [ ] **Step 5: Commit** `feat(store_updater): updater CLI`.
 
 ### Task 8: Assets builder
 
-**Files:** Create `storekit/assets.py`, `tests/test_assets.py`
+**Files:** Create `.tools/store_updater/assets.py`, `.tools/.tools/tests/test_assets.py`
 
 **Interfaces:**
 - `assets.make_icon(src: bytes, size: int = 512, padding: float = 0.12, background: str = "auto") -> PIL.Image` — SVG (sniff `<svg`) rendered with CairoSVG at 4× size; ICO/PNG/JPG/WebP via Pillow. `auto`: if any alpha < 255 → paste centered (padding) on white RGB square; else cover-fit to square. `"white"` forces white.
 - `assets.make_screenshot(src: bytes, size=(1440, 900), bg=(245,245,247)) -> PIL.Image` — contain-fit, letterbox.
-- CLI `python -m storekit.assets [--app ID ...]` downloads `icon`/`screenshots` from `apps.yml`, writes `gallery/<id>/icon.png` and `1.jpg…` (JPEG q=88, optimize).
+- CLI `python -m store_updater.assets [--app ID ...]` downloads `icon`/`screenshots` from `apps.yml`, writes `gallery/<id>/icon.png` and `1.jpg…` (JPEG q=88, optimize).
 
 - [ ] **Step 1: Failing tests**
 ```python
 import io
 from PIL import Image
-from storekit import assets
+from store_updater import assets
 
 def png(img):
     b = io.BytesIO(); img.save(b, "PNG"); return b.getvalue()
@@ -451,27 +451,27 @@ def test_screenshot_letterbox():
     out = assets.make_screenshot(png(Image.new("RGB", (1000, 1000), (0, 0, 0))))
     assert out.size == (1440, 900) and out.getpixel((5, 450)) == (245, 245, 247)
 ```
-- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(storekit): icon and screenshot builder`.
+- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(store_updater): icon and screenshot builder`.
 
 ### Task 9: Store checks + README generator
 
-**Files:** Create `storekit/check.py`, `storekit/readme.py`, `tests/test_check.py`
+**Files:** Create `.tools/store_updater/check.py`, `.tools/store_updater/readme.py`, `.tools/.tools/tests/test_check.py`
 
 **Interfaces:**
 - `check.problems(root: Path, official_ports: set[int] | None) -> list[str]`: every `hkdkfih-*` dir has an `apps.yml` entry and vice versa; manifest `id` == dir; `icon` and each `gallery` URL is the master raw URL of an existing file in `gallery/<id>/`; ≥3 gallery images; `port` unique within store, not in `official_ports`, not 80/443/2000/40000–49999; category in the allowed set; `storage.dataRoot == "data"`.
 - `check.official_ports() -> set[int]` — downloads `https://codeload.github.com/getumbrel/umbrel-apps/tar.gz/refs/heads/master`, reads every `*/umbrel-app.yml` `port`.
-- CLI `python -m storekit.check [--offline]` prints problems, exit 1 if any.
+- CLI `python -m store_updater.check [--offline]` prints problems, exit 1 if any.
 - `readme.render(root: Path) -> str` — header, "Add this store" instructions (Umbrel → App Store → ⋯ → Community App Stores → paste repo URL), table: icon (`<img width=40>`), name→repo link, tagline, version; footer about auto-updates. CLI writes `README.md`; `--check` exits 1 if stale.
 
 - [ ] **Step 1: Failing tests** — build a tmp store with one valid app; assert `problems()==[]`; then break one rule at a time (missing gallery file, duplicate port, port 443, port in official set, bad category, missing apps.yml entry) and assert a matching message.
-- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(storekit): store checks and README generator`.
+- [ ] **Step 2–4:** FAIL → implement → PASS. **Step 5: Commit** `feat(store_updater): store checks and README generator`.
 
 ### Task 10: Workflows
 
 **Files:** Create `.github/workflows/lint.yml`, `.github/workflows/update-apps.yml`
 
-- [ ] **Step 1: lint.yml** — on `push` (master) and `pull_request`; `permissions: contents: read`; steps: checkout (pinned SHA), setup-python 3.12 + pip install, setup-node 22, `npm install`, `bash tools/fetch-linter.sh`, `pytest -q`, `python -m storekit.check`, `python -m storekit.readme --check`, `node .lint/lint-apps.mjs --all --check-images --root .`, `git diff --check`.
-- [ ] **Step 2: update-apps.yml** — `on: schedule: cron "17 5 * * *"` + `workflow_dispatch` (input `apps`, default empty = all); `permissions: contents: write`; `concurrency: {group: update-apps, cancel-in-progress: false}`; same setup; configure git as `github-actions[bot]`; run `python -m storekit.update --commit ${{ inputs.apps && format('--app {0}', inputs.apps) || '' }}` then `python -m storekit.readme` and amend README into a `docs: refresh README` commit if changed; `git push`.
+- [ ] **Step 1: lint.yml** — on `push` (master) and `pull_request`; `permissions: contents: read`; steps: checkout (pinned SHA), setup-python 3.12 + pip install, setup-node 22, `npm install`, `bash .tools/fetch-linter.sh`, `pytest -q`, `python -m store_updater.check`, `python -m store_updater.readme --check`, `node .lint/lint-apps.mjs --all --check-images --root .`, `git diff --check`.
+- [ ] **Step 2: update-apps.yml** — `on: schedule: cron "17 5 * * *"` + `workflow_dispatch` (input `apps`, default empty = all); `permissions: contents: write`; `concurrency: {group: update-apps, cancel-in-progress: false}`; same setup; configure git as `github-actions[bot]`; run `python -m store_updater.update --commit ${{ inputs.apps && format('--app {0}', inputs.apps) || '' }}` then `python -m store_updater.readme` and amend README into a `docs: refresh README` commit if changed; `git push`.
 - [ ] **Step 3: Verify** — `actionlint` if available, else YAML parse; push and confirm lint.yml runs green on GitHub (`gh run watch`).
 - [ ] **Step 4: Commit** `ci: lint and daily auto-update workflows`.
 
@@ -488,13 +488,13 @@ Facts: repo `koush/scrypted` (latest stable `v0.147.0`), image `koush/scrypted`,
 
 1. Re-verify hard criteria with `gh api repos/<repo> --jq '{stargazers_count,pushed_at,created_at,license:.license.spdx_id,archived}'`.
 2. Read upstream Docker docs/compose; list services, internal port, persistent paths, env, secrets, first-run flow.
-3. Resolve images: `python -c "from storekit.registry import fetch_index; print(fetch_index('<image>','<tag>'))"` → must include amd64+arm64; pin `image:tag@digest` for every service (helpers too).
-4. Choose a manifest `port`: `python -m storekit.check` must report no conflict.
+3. Resolve images: `python -c "from store_updater.registry import fetch_index; print(fetch_index('<image>','<tag>'))"` → must include amd64+arm64; pin `image:tag@digest` for every service (helpers too).
+4. Choose a manifest `port`: `python -m store_updater.check` must report no conflict.
 5. Write `umbrel-app.yml` in the official field order with `icon:`/`gallery:` URLs, `releaseNotes: ""`, `submitter: hkdkfih`, `submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store`.
 6. Write `docker-compose.yml` per Global Constraints; `exports.sh` with `derive_entropy` for any DB passwords/secrets; `.gitkeep` for every bind-mount source dir.
 7. Add the `apps.yml` entry (repo, source, tag_regex if non-default, images, icon source URL, ≥3 screenshot URLs).
-8. `python -m storekit.assets --app <id>`; open `gallery/<id>/icon.png` and screenshots and eyeball them.
-9. `node .lint/lint-apps.mjs <id> --check-images --root .` (0 errors), `python -m storekit.check`, `python -m storekit.readme`, `git diff --check`.
+8. `python -m store_updater.assets --app <id>`; open `gallery/<id>/icon.png` and screenshots and eyeball them.
+9. `node .lint/lint-apps.mjs <id> --check-images --root .` (0 errors), `python -m store_updater.check`, `python -m store_updater.readme`, `git diff --check`.
 10. Commit `feat: add <Name>`.
 
 ### Task 12.x: Package each selected app

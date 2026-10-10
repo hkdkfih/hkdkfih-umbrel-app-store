@@ -1,0 +1,64 @@
+manifestVersion: 1
+id: hkdkfih-scrypted
+storage:
+  dataRoot: data
+folderAccess:
+  - id: nvr-recordings
+    name: NVR Recordings
+    note: Optional storage for Scrypted NVR recordings. After selecting a folder, set the NVR plugin's recording storage path to /nvr.
+    mounts:
+      - service: server
+        targetPath: /nvr
+category: automation
+name: Scrypted
+version: "0.147.0"
+tagline: Bring any camera to HomeKit, Google Home and Alexa
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/icon.png
+description: >-
+  ⚠️ On first launch, create your Scrypted admin account in the browser. Scrypted uses host networking so
+  HomeKit and camera discovery work on your local network.
+
+
+  Scrypted is a high-performance video integration and automation platform. It connects cameras from
+  almost any brand (ONVIF, RTSP, Amcrest, Hikvision, Reolink, UniFi Protect, Ring, Nest, Wyze and many more)
+  and streams them with very low latency to the smart-home ecosystem you already use.
+
+
+  - HomeKit Secure Video with motion and smart detections, viewable in the Apple Home app
+
+  - Google Home and Alexa streaming to Nest Hubs, Chromecasts and Echo Show devices
+
+  - Home Assistant integration with low-latency camera cards
+
+  - Local object detection (people, cars, animals) with hardware acceleration on supported GPUs
+
+  - A plugin ecosystem for cameras, doorbells, sensors, locks and automations
+
+
+  The optional Scrypted NVR plugin (a paid upstream add-on) adds 24/7 recording, a timeline, face
+  recognition and license plate search. Recordings can be stored in a folder of your choice from the app's
+  settings in umbrelOS.
+releaseNotes: ""
+
+developer: Koushik Dutta
+website: https://www.scrypted.app/
+dependencies: []
+repo: https://github.com/koush/scrypted
+support: https://github.com/koush/scrypted/issues
+
+port: 11080
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+permissions:
+  - GPU
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
