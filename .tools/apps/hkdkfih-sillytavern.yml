@@ -4,7 +4,11 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/SillyTavern/SillyTavern/1.19.0/public/img/logo.png
 screenshots:
-  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot1.jpg
-  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot2.jpg
-  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot3.jpg
-  - https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg
+  - src: https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot1.jpg
+    caption: "Chat with any AI model, your way."
+  - src: https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot2.jpg
+    caption: "Characters, personas and lore."
+  - src: https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot3.jpg
+    caption: "Fine-tune every prompt."
+  - src: https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg
+    caption: "Make it look exactly how you like."

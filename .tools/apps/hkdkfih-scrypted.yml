@@ -4,7 +4,11 @@ images:
     tag: "v{version}-noble-full"
 icon: https://raw.githubusercontent.com/koush/scrypted/main/install/icon.png
 screenshots:
-  - https://github.com/koush/scrypted/assets/73924/57e1d556-cd3d-4448-81f9-a6c51b6513de
-  - https://docs.scrypted.app/img/install-plugin.png
-  - https://docs.scrypted.app/img/scrypted-nvr/face-recognition.png
-  - https://docs.scrypted.app/img/scrypted-nvr/lpr.png
+  - src: https://github.com/koush/scrypted/assets/73924/57e1d556-cd3d-4448-81f9-a6c51b6513de
+    caption: "Every camera, one smart home."
+  - src: https://docs.scrypted.app/img/install-plugin.png
+    caption: "Hundreds of plugins for your devices."
+  - src: https://docs.scrypted.app/img/scrypted-nvr/face-recognition.png
+    caption: "Know who's at the door."
+  - src: https://docs.scrypted.app/img/scrypted-nvr/lpr.png
+    caption: "Spot cars and number plates automatically."

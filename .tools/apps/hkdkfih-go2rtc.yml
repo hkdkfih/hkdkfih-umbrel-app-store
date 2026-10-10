@@ -4,5 +4,9 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/AlexxIT/go2rtc/v1.9.14/website/icons/android-chrome-512x512.png
 screenshots:
-  - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-net.png
-  - https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-config.png
+  - src: https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-net.png
+    caption: "Stream any camera, anywhere."
+    frame: none
+  - src: https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-config.png
+    caption: "Configure everything in the browser."
+    frame: none

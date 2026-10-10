@@ -4,7 +4,11 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/v2.0.1/public/img/ezbookkeeping-512.png
 screenshots:  # cropped from ezbookkeeping.mayswind.net/images/en/desktop_screenshot_light.png
-  - .tools/captures/hkdkfih-ezbookkeeping/1.png
-  - .tools/captures/hkdkfih-ezbookkeeping/2.png
-  - .tools/captures/hkdkfih-ezbookkeeping/3.png
-  - .tools/captures/hkdkfih-ezbookkeeping/4.png
+  - src: .tools/captures/hkdkfih-ezbookkeeping/1.png
+    caption: "Know where your money goes."
+  - src: .tools/captures/hkdkfih-ezbookkeeping/2.png
+    caption: "Every transaction, in order."
+  - src: .tools/captures/hkdkfih-ezbookkeeping/3.png
+    caption: "Spending at a glance."
+  - src: .tools/captures/hkdkfih-ezbookkeeping/4.png
+    caption: "Dig deep into your finances."

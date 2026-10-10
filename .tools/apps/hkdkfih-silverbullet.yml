@@ -4,7 +4,11 @@ images:
     tag: "{version}-slim"
 icon: https://raw.githubusercontent.com/silverbulletmd/silverbullet/2.12.0/client/images/logo-dock.png
 screenshots:
-  - https://silverbullet.md/media/stills/tour-personal-home.webp
-  - https://silverbullet.md/media/stills/tour-personal-journal.webp
-  - https://silverbullet.md/media/stills/tour-docs-navigation.webp
-  - https://silverbullet.md/media/stills/tour-team-architecture.webp
+  - src: https://silverbullet.md/media/stills/tour-personal-home.webp
+    caption: "Notes you can program."
+  - src: https://silverbullet.md/media/stills/tour-personal-journal.webp
+    caption: "Journal every day in Markdown."
+  - src: https://silverbullet.md/media/stills/tour-docs-navigation.webp
+    caption: "Live queries turn notes into views."
+  - src: https://silverbullet.md/media/stills/tour-team-architecture.webp
+    caption: "Map out anything, together."

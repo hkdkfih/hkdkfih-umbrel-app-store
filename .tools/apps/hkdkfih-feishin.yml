@@ -4,7 +4,11 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/jeffvli/feishin/development/assets/icons/icon.png
 screenshots:
-  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_home.png
-  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_album_detail.png
-  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_full_screen_player.png
-  - https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_smart_playlist.png
+  - src: https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_home.png
+    caption: "Your music library, beautifully presented."
+  - src: https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_album_detail.png
+    caption: "Every album at a glance."
+  - src: https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_full_screen_player.png
+    caption: "Lyrics that follow along."
+  - src: https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_smart_playlist.png
+    caption: "Playlists that build themselves."

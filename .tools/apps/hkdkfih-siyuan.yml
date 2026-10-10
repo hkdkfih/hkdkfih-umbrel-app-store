@@ -4,7 +4,11 @@ images:
     tag: "{tag}"
 icon: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/app/src/assets/icon.png
 screenshots:
-  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0.png
-  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0-1.png
-  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature3-1.png
-  - https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature5-1.png
+  - src: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0.png
+    caption: "Your second brain, on your Umbrel."
+  - src: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature0-1.png
+    caption: "Link every idea, block by block."
+  - src: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature3-1.png
+    caption: "Organise knowledge your way."
+  - src: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature5-1.png
+    caption: "Write, reference and remember."

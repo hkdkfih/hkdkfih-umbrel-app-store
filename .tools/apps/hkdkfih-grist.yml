@@ -4,7 +4,11 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/gristlabs/grist-core/v1.7.20/static/icons/grist.png
 screenshots:
-  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm1.png
-  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm2.png
-  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/investment-research/1-overview-page.png
-  - https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/widget_chart_examples.png
+  - src: https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm1.png
+    caption: "The spreadsheet that thinks like a database."
+  - src: https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/lightweight-crm/grist-crm2.png
+    caption: "Build your own CRM in minutes."
+  - src: https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/investment-research/1-overview-page.png
+    caption: "Dashboards for every portfolio."
+  - src: https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/widget_chart_examples.png
+    caption: "Charts that update themselves."

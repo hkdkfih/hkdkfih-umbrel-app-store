@@ -4,7 +4,8 @@
 
 Icons: 512x512 PNG. Logos with any transparency are trimmed and centred on a
 white square (Umbrel rounds the corners itself); opaque logos are fitted whole.
-Screenshots: 1440x900 JPEG (Umbrel's 16:10 gallery), letterboxed, never cropped.
+Screenshots: 1440x900 JPEG in the official App Store style (see frames.py): brand-colour
+gradient from the icon, the caption as a headline, the screenshot in a Safari window.
 """
 
 import argparse
@@ -14,11 +15,9 @@ from pathlib import Path
 
 from PIL import Image
 
-from . import config, http
+from . import config, frames, http
 
 ICON_SIZE = 512
-SCREENSHOT_SIZE = (1440, 900)
-SCREENSHOT_BG = (245, 245, 247)
 WHITE = (255, 255, 255)
 
 
@@ -35,14 +34,6 @@ def make_icon(src: bytes, size: int = ICON_SIZE, padding: float = 0.12, backgrou
             raise ValueError("logo would be invisible on a white background; use a different icon source")
         return icon
     return _fit(img, (size, size), (size, size), img.convert("RGB").getpixel((0, 0)))
-
-
-def make_screenshot(src: bytes, size=SCREENSHOT_SIZE, bg=SCREENSHOT_BG) -> Image.Image:
-    img = _open(src, render_width=size[0])
-    if img.getchannel("A").getextrema()[0] < 255:
-        flat = Image.new("RGBA", img.size, WHITE + (255,))
-        img = Image.alpha_composite(flat, img)
-    return _fit(img, size, size, bg)
 
 
 def _open(src: bytes, render_width: int) -> Image.Image:
@@ -80,13 +71,18 @@ def build(root: Path, cfg: config.AppConfig) -> list[Path]:
     out_dir = root / "gallery" / cfg.app_id
     out_dir.mkdir(parents=True, exist_ok=True)
     written = []
+    brand = frames.FALLBACK_BRAND
     if cfg.icon:
         path = out_dir / "icon.png"
-        make_icon(_read_source(root, cfg.icon), background=cfg.icon_background).save(path, "PNG", optimize=True)
+        icon = make_icon(_read_source(root, cfg.icon), background=cfg.icon_background)
+        icon.save(path, "PNG", optimize=True)
+        brand = frames.brand_colour(icon)
         written.append(path)
     for index, shot in enumerate(cfg.screenshots, start=1):
         path = out_dir / f"{index}.jpg"
-        make_screenshot(_read_source(root, shot.src)).save(path, "JPEG", quality=88, optimize=True, progressive=True)
+        source = Image.open(io.BytesIO(_read_source(root, shot.src)))
+        source.seek(0)
+        frames.render(source, shot.caption, brand, shot.frame).save(path, "JPEG", quality=90, optimize=True, progressive=True)
         written.append(path)
     for stale in out_dir.glob("*.jpg"):
         if stale.stem.isdigit() and int(stale.stem) > len(cfg.screenshots):

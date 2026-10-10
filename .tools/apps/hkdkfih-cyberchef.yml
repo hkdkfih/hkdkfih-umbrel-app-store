@@ -4,6 +4,9 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/gchq/CyberChef/master/src/web/static/images/logo/cyberchef_512.png
 screenshots:  # captured from the official instance at gchq.github.io/CyberChef
-  - .tools/captures/hkdkfih-cyberchef/1.png
-  - .tools/captures/hkdkfih-cyberchef/2.png
-  - .tools/captures/hkdkfih-cyberchef/3.png
+  - src: .tools/captures/hkdkfih-cyberchef/1.png
+    caption: "The Cyber Swiss Army Knife."
+  - src: .tools/captures/hkdkfih-cyberchef/2.png
+    caption: "Look inside any data, byte by byte."
+  - src: .tools/captures/hkdkfih-cyberchef/3.png
+    caption: "Hash, encode and decode in a click."

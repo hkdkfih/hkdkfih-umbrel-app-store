@@ -47,18 +47,6 @@ def test_svg_with_xml_prolog():
     assert out.getpixel((256, 256)) == (0, 0, 255)
 
 
-def test_screenshot_letterbox():
-    out = assets.make_screenshot(png(Image.new("RGB", (1000, 1000), (0, 0, 0))))
-    assert out.size == (1440, 900) and out.mode == "RGB"
-    assert out.getpixel((5, 450)) == (245, 245, 247)
-    assert out.getpixel((720, 450)) == (0, 0, 0)
-
-
-def test_screenshot_transparent_png_flattened():
-    out = assets.make_screenshot(png(Image.new("RGBA", (1440, 900), (0, 0, 0, 0))))
-    assert out.getpixel((720, 450)) == (255, 255, 255)
-
-
 def test_build_reads_local_capture_files(tmp_path):
     from store_updater.config import AppConfig
 

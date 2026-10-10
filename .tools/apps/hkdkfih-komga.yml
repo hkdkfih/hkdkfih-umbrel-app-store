@@ -4,6 +4,9 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
 screenshots:
-  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/collections/series-collection-expanded.png
-  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/duplicate-pages/duplicate-pages-new.png
-  - https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/edit-metadata/edit-series-general-1.png
+  - src: https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/collections/series-collection-expanded.png
+    caption: "Your comics and manga, all in one place."
+  - src: https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/duplicate-pages/duplicate-pages-new.png
+    caption: "Find and clean up duplicate pages."
+  - src: https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/edit-metadata/edit-series-general-1.png
+    caption: "Perfect metadata for every series."

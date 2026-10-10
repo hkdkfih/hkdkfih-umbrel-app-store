@@ -4,7 +4,15 @@ images:
     tag: "{version}"
 icon: https://raw.githubusercontent.com/evcc-io/evcc/0.317.0/assets/public/meta/apple-touch-icon.png
 screenshots:
-  - https://evcc.io/img/screenshots/7_large_main_energyflow_light.webp
-  - https://evcc.io/img/screenshots/8_large_sessions_light.webp
-  - https://evcc.io/img/screenshots/9_large_session_detail_light.webp
-  - https://evcc.io/img/screenshots/6_large_total_solar_light.webp
+  - src: https://evcc.io/img/screenshots/7_large_main_energyflow_light.webp
+    caption: "Charge your car with sunshine."
+    frame: none
+  - src: https://evcc.io/img/screenshots/8_large_sessions_light.webp
+    caption: "Every charging session, tracked."
+    frame: none
+  - src: https://evcc.io/img/screenshots/9_large_session_detail_light.webp
+    caption: "Know exactly what each charge cost."
+    frame: none
+  - src: https://evcc.io/img/screenshots/6_large_total_solar_light.webp
+    caption: "See how much solar you really use."
+    frame: none
