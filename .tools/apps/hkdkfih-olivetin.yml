@@ -1,0 +1,14 @@
+repo: OliveTin/OliveTin
+images:
+  - image: jamesread/olivetin
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/OliveTin/OliveTin/main/docs/modules/ROOT/images/icons/OliveTinLogo.png
+screenshots:
+  - src: https://raw.githubusercontent.com/OliveTin/OliveTin/main/var/marketing/screenshots/mainpage-laptop.png
+    caption: "Your scripts, one click away."
+  - src: https://raw.githubusercontent.com/OliveTin/OliveTin/main/var/marketing/screenshots/mainpage-darkop.png
+    caption: "Run actions and watch the output."
+# Estimate: small Go binary
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}

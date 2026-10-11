@@ -1,0 +1,16 @@
+# OliveTin configuration: https://docs.olivetin.app/
+# Commands run inside the OliveTin container.
+actions:
+  - title: Say hello
+    icon: "&#x1F44B;"
+    shell: echo "Hello from your Umbrel!"
+  - title: Ping a host
+    icon: ping
+    shell: ping -c 3 {{ host }}
+    arguments:
+      - name: host
+        default: 1.1.1.1
+        type: ascii_identifier
+  - title: Current date and time
+    icon: clock
+    shell: date

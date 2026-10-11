@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: hkdkfih-olivetin
+storage:
+  dataRoot: data
+category: automation
+name: OliveTin
+version: "3000.20.0"
+tagline: Safe, simple buttons for your shell commands
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/icon.png
+description: >-
+  Edit config.yaml in the app's data folder (Files → Apps) to add your own actions. Commands run inside the OliveTin container, not on your Umbrel itself.
+
+
+  OliveTin gives you a clean web interface with buttons that run predefined shell commands, so you (or your family) can trigger scripts without a terminal.
+
+
+  - Define actions with arguments, dropdowns and confirmations
+
+  - Run actions on a schedule, on startup or from webhooks
+
+  - See output and history of every run
+
+  - Dashboards, themes and access control
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 500 MB
+releaseNotes: ""
+
+developer: James Read
+website: https://www.olivetin.app/
+dependencies: []
+repo: https://github.com/OliveTin/OliveTin
+support: https://github.com/OliveTin/OliveTin/issues
+
+port: 22004
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

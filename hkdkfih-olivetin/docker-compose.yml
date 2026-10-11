@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-olivetin_server_1
+      APP_PORT: 1337
+
+  server:
+    image: jamesread/olivetin:3000.20.0@sha256:f3066e207efd35ab8f9ffd71cf7e2abb78d2b1edaf77ea924113bdbe6ef4f989
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
