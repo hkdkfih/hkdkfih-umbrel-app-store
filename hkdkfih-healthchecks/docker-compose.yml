@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-healthchecks_web_1
+      APP_PORT: 8000
+      # Cron jobs and scripts ping without an Umbrel login. Ping URLs contain the check's secret
+      # UUID or the project's ping key, badge URLs are unguessable, and the REST API requires a
+      # Healthchecks API key.
+      PROXY_AUTH_WHITELIST: "/ping/*,/badge/*,/api/*"
+
+  web:
+    image: healthchecks/healthchecks:v4.4@sha256:aa08a61b0dcfd83f1332eab195d5cec1b595ae076eb8388cadf8a3d597114f9b
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    # Creates the Umbrel admin account on first start (the command fails harmlessly once the
+    # account exists), then starts upstream's uWSGI server.
+    command:
+      - sh
+      - -c
+      - ./manage.py migrate --no-input && { ./manage.py createsuperuser --email "$$HC_ADMIN_EMAIL" --password "$$HC_ADMIN_PASSWORD" < /dev/null || true; } && exec uwsgi /opt/healthchecks/docker/uwsgi.ini
+    environment:
+      DEBUG: "False"
+      SECRET_KEY: ${APP_HKDKFIH_HEALTHCHECKS_SECRET_KEY}
+      SITE_ROOT: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      SITE_NAME: Healthchecks
+      # umbrelOS serves the app under any hostname or IP. Healthchecks builds every absolute URL
+      # from SITE_ROOT, not from the Host header, and Django's CSRF check compares the Origin with
+      # the forwarded Host and X-Forwarded-Proto, so no trusted-origin list is needed.
+      ALLOWED_HOSTS: "*"
+      DB_NAME: /data/hc.sqlite
+      REGISTRATION_OPEN: "False"
+      # Lets webhook, ntfy or Gotify integrations reach services on your home network.
+      INTEGRATIONS_ALLOW_PRIVATE_IPS: "True"
+      UWSGI_PROCESSES: "2"
+      HC_ADMIN_EMAIL: umbrel@umbrel.local
+      HC_ADMIN_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/data

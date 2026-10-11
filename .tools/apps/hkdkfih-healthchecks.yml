@@ -1,0 +1,24 @@
+repo: healthchecks/healthchecks
+images:
+  - image: healthchecks/healthchecks
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/healthchecks/healthchecks/v4.4/static/img/favicon.svg
+screenshots:  # from the upstream README; they already include a browser window
+  - src: https://raw.githubusercontent.com/healthchecks/healthchecks/v4.4/static/img/my_checks.png
+    caption: "Know when a job didn't run."
+    frame: none
+  - src: https://raw.githubusercontent.com/healthchecks/healthchecks/v4.4/static/img/check_details.png
+    caption: "Every ping, logged and explained."
+    frame: none
+  - src: https://raw.githubusercontent.com/healthchecks/healthchecks/v4.4/static/img/cron.png
+    caption: "Cron schedules, made readable."
+    frame: none
+  - src: https://raw.githubusercontent.com/healthchecks/healthchecks/v4.4/static/img/badges.png
+    caption: "Status badges for anywhere."
+    frame: none
+# Upstream documents no hardware requirements; estimate for a Django + uWSGI app with SQLite
+# (2 uWSGI workers configured here).
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Storage grows with the number of checks and stored pings"]

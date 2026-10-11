@@ -1,0 +1,62 @@
+manifestVersion: 1
+id: hkdkfih-healthchecks
+storage:
+  dataRoot: data
+environment:
+  - name: SITE_ROOT
+    services:
+      - web
+    default: http://umbrel.local:21106
+    note: Base URL used in ping URLs, badges and links. Only change it if your Umbrel is reachable under your own address, for example https://hc.example.com (no trailing slash).
+category: developer
+name: Healthchecks
+version: "4.4"
+tagline: Get notified when your cron jobs and scheduled tasks fail
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/icon.png
+description: >-
+  Log in with the email address and password shown by Umbrel. Then create a check for each cron job or
+  scheduled task and add a ping to the end of the job, for example
+  curl -fsS -m 10 --retry 5 http://umbrel.local:21106/ping/<uuid>.
+
+
+  Healthchecks is a cron job monitoring service. It listens for HTTP requests ("pings") from your cron jobs and
+  scheduled tasks, and alerts you when a ping does not arrive on time. It works like a dead man's switch for
+  backups, scripts, sync jobs and anything else that runs on a schedule.
+
+
+  - Simple periods or full cron expressions with time zones and grace times
+
+  - Start and fail signals, run durations and logged output
+
+  - Alerts by email, ntfy, Gotify, Telegram, Signal, Discord, Slack, Matrix, webhooks and many more
+
+  - Public status badges for your checks
+
+  - Projects and team access
+
+  - REST API for automation
+
+
+  Ping URLs, badges and the API work without an Umbrel login, so your servers and scripts can reach them. Email
+  alerts need an SMTP server; see the Healthchecks documentation for the settings.
+releaseNotes: ""
+
+developer: Healthchecks
+website: https://healthchecks.io/
+dependencies: []
+repo: https://github.com/healthchecks/healthchecks
+support: https://github.com/healthchecks/healthchecks/issues
+
+port: 21106
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/4.jpg
+path: ""
+
+defaultUsername: "umbrel@umbrel.local"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
