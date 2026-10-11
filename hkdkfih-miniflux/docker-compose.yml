@@ -1,0 +1,49 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-miniflux_web_1
+      APP_PORT: 8080
+      # Native and mobile readers use Miniflux's own API keys / credentials on these paths.
+      # /proxy/* serves HMAC-signed media URLs and /feed-icon/* feed icons for those clients.
+      PROXY_AUTH_WHITELIST: "/v1/*,/fever/*,/accounts/ClientLogin,/reader/api/0/*,/proxy/*,/feed-icon/*"
+
+  web:
+    image: miniflux/miniflux:2.3.3@sha256:49d7b60987616387c306a8023087b31f2c9b7b21288b523026cb04058e8b6dbb
+    # image runs as 65534 (nobody); all state lives in Postgres
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      DATABASE_URL: postgres://miniflux:${APP_HKDKFIH_MINIFLUX_DB_PASSWORD}@hkdkfih-miniflux_db_1/miniflux?sslmode=disable
+      RUN_MIGRATIONS: "1"
+      # Creates the admin account on first start only; later password changes are kept.
+      CREATE_ADMIN: "1"
+      ADMIN_USERNAME: umbrel
+      ADMIN_PASSWORD: ${APP_PASSWORD}
+      # Used for the bookmarklet, API endpoint hints and passkeys. Links inside the UI are
+      # relative, so the app also works over https and any hostname or IP.
+      BASE_URL: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      # Keeps proxied image URLs valid across restarts.
+      MEDIA_PROXY_PRIVATE_KEY: ${APP_HKDKFIH_MINIFLUX_MEDIA_PROXY_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:18.6-alpine@sha256:77f585114c32fbca283dc835b0596f4e52b51b4c6662d7810b2f4084f60a1873
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      POSTGRES_USER: miniflux
+      POSTGRES_PASSWORD: ${APP_HKDKFIH_MINIFLUX_DB_PASSWORD}
+      POSTGRES_DB: miniflux
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U miniflux -d miniflux"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s

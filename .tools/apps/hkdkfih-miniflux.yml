@@ -1,0 +1,16 @@
+repo: miniflux/v2
+images:
+  - image: miniflux/miniflux
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/miniflux/v2/2.3.3/internal/ui/static/bin/icon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/miniflux/website/main/static/images/overview.png
+    caption: "Your feeds, without the noise."
+  - src: https://raw.githubusercontent.com/miniflux/website/main/static/images/entry_view.png
+    caption: "Distraction-free reading."
+# No hardware requirements are documented upstream; estimate for a single user with a few
+# hundred feeds (Miniflux is a small Go binary, most memory goes to Postgres).
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Storage grows with the number of feeds and how long entries are kept"]

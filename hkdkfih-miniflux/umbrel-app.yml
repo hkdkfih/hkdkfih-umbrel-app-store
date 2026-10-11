@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-miniflux
+storage:
+  dataRoot: data
+environment:
+  - name: FETCHER_ALLOW_PRIVATE_NETWORKS
+    services:
+      - web
+    default: "0"
+    note: Set to 1 to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
+category: social
+name: Miniflux
+version: "2.3.3"
+tagline: A minimalist and opinionated feed reader
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/icon.png
+description: >-
+  Log in with the username and password shown by Umbrel. You can change the password and add more users in
+  Miniflux's settings.
+
+
+  Miniflux is a fast, lightweight feed reader that focuses on what matters: reading. It has a clean,
+  keyboard-friendly interface, no tracking and no clutter, and it keeps up with hundreds of feeds on very
+  little hardware.
+
+
+  - Supports RSS, Atom, JSON Feed and OPML import and export
+
+  - Fetches full article content and removes tracking pixels and parameters
+
+  - Filtering and rewrite rules, categories, starring and full-text search
+
+  - Light and dark themes, works great as an installable web app on phones
+
+  - Send articles to wallabag, linkding, Notion, Telegram and 25+ other services
+
+  - Fever and Google Reader APIs for native apps such as Reeder, NetNewsWire, ReadYou and FeedMe
+
+
+  Native apps connect with Miniflux's own credentials or API keys; their API paths stay reachable without the
+  Umbrel login, while the web interface remains protected by it.
+releaseNotes: ""
+
+developer: Frédéric Guillot
+website: https://miniflux.app/
+dependencies: []
+repo: https://github.com/miniflux/v2
+support: https://github.com/miniflux/v2/issues
+
+port: 21501
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/2.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
