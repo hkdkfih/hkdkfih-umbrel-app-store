@@ -1,0 +1,18 @@
+repo: semaphoreui/semaphore
+images:
+  - image: semaphoreui/semaphore
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/semaphoreui/semaphore/v2.19.16/web/public/favicon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/semaphoreui/semaphore-docs/5a6b92fcf9907d8c8e1ba97a53d0ce7ec853bbf3/static/assets/project-dashboard-history.webp
+    caption: "Every playbook run, in one place."
+  - src: https://raw.githubusercontent.com/semaphoreui/semaphore-docs/5a6b92fcf9907d8c8e1ba97a53d0ce7ec853bbf3/static/assets/task-log.webp
+    caption: "Watch your deployments live."
+  - src: https://raw.githubusercontent.com/semaphoreui/semaphore-docs/5a6b92fcf9907d8c8e1ba97a53d0ce7ec853bbf3/static/assets/project-activity.webp
+    caption: "Know who changed what, and when."
+# Upstream gives no figures (semaphore-docs docs/introduction/prerequisites.md: size the host for the
+# playbooks you run, not for Semaphore); estimate for a home lab running a few tasks at a time.
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}
+  notes: ["CPU and memory scale with the tasks you run in parallel"]

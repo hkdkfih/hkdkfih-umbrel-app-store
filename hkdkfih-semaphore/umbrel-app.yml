@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-semaphore
+storage:
+  dataRoot: data
+category: developer
+name: Semaphore UI
+version: "2.19.16"
+tagline: A modern web UI for Ansible, Terraform, OpenTofu and scripts
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/icon.png
+description: >-
+  Log in with the username and password shown by Umbrel. You can change the password and invite more users
+  under Users in Semaphore.
+
+
+  Semaphore UI is a modern web interface for running your infrastructure code. Connect a Git repository, add
+  your SSH keys and inventories, and run Ansible playbooks, Terraform and OpenTofu plans or shell scripts with
+  one click, on a schedule or from a webhook, with a full history of every run.
+
+
+  - Run Ansible, Terraform, OpenTofu, Terragrunt, Bash, Python and PowerShell tasks
+
+  - Live task logs, run history and statistics for every project
+
+  - Cron schedules and webhook integrations for GitHub, GitLab, Gitea and more
+
+  - Encrypted key store for SSH keys, passwords and secrets
+
+  - Inventories, variable groups and survey variables
+
+  - Teams with project roles, and notifications by email, Slack, Telegram and more
+
+  - REST API with personal API tokens
+
+
+  Webhook integrations are reachable at http://umbrel.local:21600/api/integrations/… without the Umbrel login,
+  so protect each integration with a token or signature in Semaphore.
+releaseNotes: ""
+
+developer: Semaphore UI
+website: https://semaphoreui.com/
+dependencies: []
+repo: https://github.com/semaphoreui/semaphore
+support: https://github.com/semaphoreui/semaphore/issues
+
+port: 21600
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/3.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+backupIgnore:
+  - data/semaphore/tmp/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

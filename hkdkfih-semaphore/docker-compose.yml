@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-semaphore_server_1
+      APP_PORT: 3000
+      # Webhooks from GitHub, GitLab, Gitea etc. cannot send Umbrel login cookies. Each integration
+      # URL contains a random alias and can additionally require a token or HMAC signature.
+      PROXY_AUTH_WHITELIST: "/api/integrations/*"
+
+  server:
+    image: semaphoreui/semaphore:v2.19.16@sha256:3707a971a57fdc5ac99a184bf83f2efb7d00cbeec8fb08a16a8028f77229e141
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      SEMAPHORE_DB_DIALECT: sqlite
+      # Cloned repositories and per-template working directories (kept out of backups).
+      SEMAPHORE_TMP_PATH: /var/lib/semaphore/tmp
+      # The admin account is created on first start only.
+      SEMAPHORE_ADMIN: umbrel
+      SEMAPHORE_ADMIN_NAME: Umbrel
+      SEMAPHORE_ADMIN_EMAIL: umbrel@umbrel.local
+      SEMAPHORE_ADMIN_PASSWORD: ${APP_PASSWORD}
+      SEMAPHORE_COOKIE_HASH: ${APP_HKDKFIH_SEMAPHORE_COOKIE_HASH}
+      SEMAPHORE_COOKIE_ENCRYPTION: ${APP_HKDKFIH_SEMAPHORE_COOKIE_ENCRYPTION}
+      SEMAPHORE_ACCESS_KEY_ENCRYPTION: ${APP_HKDKFIH_SEMAPHORE_ACCESS_KEY_ENCRYPTION}
+      # SEMAPHORE_WEB_ROOT stays unset: it would pin the UI's base URL to one hostname.
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/etc/semaphore
+      - ${APP_DATA_DIR}/data/semaphore:/var/lib/semaphore
