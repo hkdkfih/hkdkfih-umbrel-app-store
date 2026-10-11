@@ -32,6 +32,17 @@ description: >-
 
   The JSON-RPC API and the RSS/iCal feeds are reachable without the Umbrel login so apps and calendars can
   use them; they are protected by Kanboard's own credentials and secret tokens.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with task attachments
 releaseNotes: ""
 
 developer: Frédéric Guillot
@@ -45,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/4.jpg
 path: ""
 
 defaultUsername: "admin"

@@ -31,6 +31,17 @@ description: >-
 
   Your status pages are behind the Umbrel login. Heartbeat URLs (/ext/heartbeat/…) and the REST API (/api/…,
   which needs a Kener API key) are reachable without it so your machines and scripts can report in.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with monitor history
 releaseNotes: ""
 
 developer: Raj Nandan Sharma
@@ -44,6 +55,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/4.jpg
 path: ""
 
 defaultUsername: ""

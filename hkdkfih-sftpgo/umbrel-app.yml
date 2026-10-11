@@ -42,6 +42,17 @@ description: >-
 
 
   Share links work for people without an Umbrel account as long as they can reach your Umbrel.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 1 GB → 50 GB
+
+  Note: Storage grows with the files your users upload
 releaseNotes: ""
 
 developer: Nicola Murino
@@ -55,6 +66,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/4.jpg
 path: "/web/admin"
 
 defaultUsername: "admin"

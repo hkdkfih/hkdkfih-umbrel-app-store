@@ -31,6 +31,15 @@ description: >-
   - GraphQL API for scripting
 
   - Low resource usage, with data stored in SQLite
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 128 MB
+
+  Storage: 100 MB → 500 MB
 releaseNotes: ""
 
 developer: lldap
@@ -42,6 +51,7 @@ support: https://github.com/lldap/lldap/issues
 port: 21202
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lldap/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lldap/2.jpg
 path: ""
 
 defaultUsername: "admin"

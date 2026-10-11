@@ -34,6 +34,17 @@ description: >-
   Downloaded chapters and backups are stored in the app's data on your Umbrel. Other Suwayomi clients and the
   Mihon extension need direct access to the server; they cannot get past the Umbrel login unless you turn it
   off in the app's settings, in which case enable a login in Suwayomi's server settings first.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 20 GB
+
+  Note: Storage grows with downloaded chapters
 releaseNotes: ""
 
 developer: Suwayomi
@@ -47,6 +58,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/4.jpg
 path: ""
 
 defaultUsername: ""

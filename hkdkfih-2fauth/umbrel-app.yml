@@ -34,6 +34,15 @@ description: >-
 
   Passkey login needs an HTTPS connection: on umbrelOS 2.0, open the app over HTTPS at its umbrel.local
   address, with Umbrel's certificate installed on your device (Settings → Advanced settings).
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 500 MB → 1 GB
 releaseNotes: ""
 
 developer: Bubka
@@ -47,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/4.jpg
 path: ""
 
 defaultUsername: ""

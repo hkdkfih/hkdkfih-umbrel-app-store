@@ -36,6 +36,15 @@ description: >-
 
 
   The dashboard is protected by your Umbrel login.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 500 MB
 releaseNotes: ""
 
 developer: Svilen Markov
@@ -50,6 +59,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/5.jpg
 path: ""
 
 defaultUsername: ""

@@ -36,6 +36,19 @@ description: >-
   On Umbrel, servers run as processes inside the app (without Docker), so Docker-based instances and templates
   are not available. Servers share your Umbrel's CPU and memory: a Minecraft server typically needs 2 to 4 GB
   of RAM.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 2 cores → 4 cores
+
+  Memory: 2 GB → 8 GB
+
+  Storage: 5 GB → 20 GB
+
+  Note: Each Minecraft server needs 2-4 GB of RAM
+
+  Note: Storage grows with worlds and backups
 releaseNotes: ""
 
 developer: MCSManager
@@ -49,6 +62,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/4.jpg
 path: ""
 
 defaultUsername: ""

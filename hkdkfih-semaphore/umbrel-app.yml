@@ -34,6 +34,17 @@ description: >-
 
   Webhook integrations are reachable at http://umbrel.local:21600/api/integrations/… without the Umbrel login,
   so protect each integration with a token or signature in Semaphore.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 2 GB
+
+  Storage: 2 GB → 10 GB
+
+  Note: CPU and memory scale with the tasks you run in parallel
 releaseNotes: ""
 
 developer: Semaphore UI
@@ -47,6 +58,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/4.jpg
 path: ""
 
 defaultUsername: "umbrel"

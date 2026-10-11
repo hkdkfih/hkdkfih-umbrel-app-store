@@ -32,6 +32,17 @@ description: >-
   To connect the mobile apps or the browser extension, create a client in wallabag under "API clients
   management" and use your Umbrel address with this app's port as the server URL. The API and RSS paths are
   reachable without the Umbrel login and are protected by wallabag's own credentials and tokens.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with saved articles and downloaded images
 releaseNotes: ""
 
 developer: wallabag
@@ -45,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/4.jpg
 path: ""
 
 defaultUsername: "wallabag"

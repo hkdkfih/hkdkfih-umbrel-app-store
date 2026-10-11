@@ -39,6 +39,17 @@ description: >-
 
   Ping URLs, badges and the API work without an Umbrel login, so your servers and scripts can reach them. Email
   alerts need an SMTP server; see the Healthchecks documentation for the settings.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with the number of checks and stored pings
 releaseNotes: ""
 
 developer: Healthchecks
@@ -53,6 +64,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/5.jpg
 path: ""
 
 defaultUsername: "umbrel@umbrel.local"

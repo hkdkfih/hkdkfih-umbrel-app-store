@@ -38,6 +38,17 @@ description: >-
 
   Native apps connect with Miniflux's own credentials or API keys; their API paths stay reachable without the
   Umbrel login, while the web interface remains protected by it.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with the number of feeds and how long entries are kept
 releaseNotes: ""
 
 developer: Frédéric Guillot
@@ -50,6 +61,7 @@ port: 21501
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/3.jpg
 path: ""
 
 defaultUsername: "umbrel"

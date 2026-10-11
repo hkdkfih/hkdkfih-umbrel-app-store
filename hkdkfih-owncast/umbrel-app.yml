@@ -33,6 +33,19 @@ description: >-
   The stream page is protected by your Umbrel login. To let others watch, turn off "Require Umbrel login" in the
   app's settings; the admin pages stay protected by the Owncast password. Video transcoding is CPU intensive,
   so start with a single video quality on smaller devices.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 2 cores → 4 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 10 GB
+
+  Note: Each extra video quality adds CPU load
+
+  Note: Passthrough mode needs almost no CPU
 releaseNotes: ""
 
 developer: Owncast
@@ -46,6 +59,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/4.jpg
 path: ""
 
 defaultUsername: "admin"

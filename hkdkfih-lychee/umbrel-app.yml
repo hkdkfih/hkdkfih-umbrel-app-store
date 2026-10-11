@@ -32,6 +32,17 @@ description: >-
   Photos are stored in the app's data on your Umbrel. To show public albums to people without an Umbrel
   account, turn off "Require Umbrel login" in the app's settings; your private albums stay protected by your
   Lychee login.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 50 GB
+
+  Note: Storage grows with your photo library
 releaseNotes: ""
 
 developer: LycheeOrg
@@ -45,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/4.jpg
 path: ""
 
 defaultUsername: ""

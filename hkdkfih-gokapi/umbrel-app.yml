@@ -41,6 +41,19 @@ description: >-
 
   Download links and file requests work for people without an Umbrel account as long as they can reach your
   Umbrel. The admin interface stays protected by your Umbrel login.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 1 GB → 20 GB
+
+  Note: Storage grows with the files you share
+
+  Note: An SSD is strongly recommended
 releaseNotes: ""
 
 developer: Marc Bulling
@@ -55,6 +68,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/5.jpg
 path: "/admin"
 
 defaultUsername: ""

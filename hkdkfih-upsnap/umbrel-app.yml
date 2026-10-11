@@ -37,6 +37,17 @@ description: >-
 
 
   Turn on Wake-on-LAN in each computer's BIOS/UEFI and network settings before adding it.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 500 MB
+
+  Note: Uses host networking for Wake-on-LAN
 releaseNotes: ""
 
 developer: seriousm4x
@@ -50,6 +61,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/4.jpg
 path: ""
 
 defaultUsername: ""

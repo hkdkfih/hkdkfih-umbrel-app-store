@@ -36,6 +36,17 @@ description: >-
 
 
   OPDS, Kobo sync and KOReader sync work without the Umbrel login and use your Calibre-Web accounts instead.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 3 GB → 20 GB
+
+  Note: Storage grows with your library
 releaseNotes: ""
 
 developer: crocodilestick
@@ -49,6 +60,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/4.jpg
 path: ""
 
 defaultUsername: "admin"

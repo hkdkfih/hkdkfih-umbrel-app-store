@@ -60,6 +60,19 @@ description: >-
 
   Files selected for backup are mounted read-only. To restore files, select a restore folder in the app's
   settings and restore to /restore.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 20 GB
+
+  Note: The cache grows with repository size
+
+  Note: Local backups need space on the destination drive
 releaseNotes: ""
 
 developer: Kopia Authors
@@ -74,6 +87,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/5.jpg
 path: ""
 
 defaultUsername: "umbrel"

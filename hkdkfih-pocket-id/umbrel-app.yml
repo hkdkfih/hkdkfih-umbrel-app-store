@@ -47,6 +47,17 @@ description: >-
   Apps that sign in with Pocket ID must be able to reach and trust its HTTPS address. Its sign-in pages are
   protected by your Umbrel login; on umbrelOS 2.0 you can turn off "Require Umbrel login" in the app's
   settings so people without an Umbrel account can sign in.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 256 MB
+
+  Storage: 200 MB → 1 GB
+
+  Note: Needs HTTPS with a trusted certificate for passkeys
 releaseNotes: ""
 
 developer: Pocket ID
@@ -60,6 +71,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/4.jpg
 path: ""
 
 defaultUsername: ""

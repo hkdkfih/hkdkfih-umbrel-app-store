@@ -37,6 +37,15 @@ description: >-
   Short links (http://umbrel.local:21105/<alias>) open for anyone who can reach your Umbrel, without an Umbrel
   login. Kutt's own pages stay protected by your Umbrel login. To share links outside your home network, make
   the app reachable through a tunnel or reverse proxy and set your domain in the app's settings.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 500 MB → 2 GB
 releaseNotes: ""
 
 developer: The Devs
@@ -49,6 +58,7 @@ port: 21105
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/3.jpg
 path: ""
 
 defaultUsername: ""

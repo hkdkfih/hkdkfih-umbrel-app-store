@@ -31,6 +31,17 @@ description: >-
 
   On Umbrel every package, including cached public ones, requires a login, and self-registration is
   turned off. Uplinks and package rules can be changed in config.yaml in the app's data folder (data/conf).
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 1 GB → 20 GB
+
+  Note: Storage grows with every package you publish or cache from npmjs.org
 releaseNotes: ""
 
 developer: Verdaccio contributors
@@ -43,6 +54,7 @@ port: 21601
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/3.jpg
 path: ""
 
 defaultUsername: "umbrel"

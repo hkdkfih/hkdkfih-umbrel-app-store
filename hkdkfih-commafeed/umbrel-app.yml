@@ -39,6 +39,17 @@ description: >-
 
   Native apps connect with CommaFeed's own credentials or API key; their API paths stay reachable without the
   Umbrel login, while the web interface remains protected by it.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Storage grows with the number of feeds and how long entries are kept
 releaseNotes: ""
 
 developer: Athou
@@ -51,6 +62,7 @@ port: 21502
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/3.jpg
 path: ""
 
 defaultUsername: ""

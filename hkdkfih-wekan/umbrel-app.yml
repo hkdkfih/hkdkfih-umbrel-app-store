@@ -32,6 +32,17 @@ description: >-
 
   WeKan stores its data in an embedded SQLite database (through FerretDB, upstream's default backend), so it
   needs no separate database server.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 10 GB
+
+  Note: Storage grows with card attachments
 releaseNotes: ""
 
 developer: WeKan Team
@@ -45,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/4.jpg
 path: ""
 
 defaultUsername: ""

@@ -32,6 +32,17 @@ description: >-
 
 
   Mailpit keeps the newest 500 messages by default.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 1 GB
+
+  Note: Storage grows with the number and size of messages kept (500 by default)
 releaseNotes: ""
 
 developer: Ralph Slooten
@@ -45,6 +56,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/4.jpg
 path: ""
 
 defaultUsername: "umbrel"
