@@ -35,6 +35,15 @@ description: >-
   Security note: the Spoolman REST API (/api/v1) is reachable without the Umbrel login so that printers can
   report usage, and Spoolman itself has no login. Anyone on your network can read and change the inventory
   through it; the web interface stays protected by your Umbrel login.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 500 MB → 1 GB
 releaseNotes: ""
 
 developer: Donkie
@@ -48,6 +57,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/4.jpg
 path: ""
 
 defaultUsername: ""

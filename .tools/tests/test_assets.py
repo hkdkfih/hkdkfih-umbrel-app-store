@@ -68,3 +68,21 @@ def test_white_logo_on_transparent_is_rejected():
     src.paste((255, 255, 255, 255), (20, 20, 80, 80))
     with pytest.raises(ValueError, match="invisible"):
         assets.make_icon(png(src))
+
+
+def test_downloads_are_retried(monkeypatch):
+    from store_updater.http import Response
+
+    calls = []
+
+    def flaky(url, headers=None):
+        calls.append(url)
+        if len(calls) == 1:
+            raise TimeoutError("read timed out")
+        if len(calls) == 2:
+            return Response(502, {}, b"")
+        return Response(200, {}, b"ok")
+
+    monkeypatch.setattr(assets.http, "get", flaky)
+    monkeypatch.setattr(assets, "RETRY_DELAY", 0)
+    assert assets._read_source(None, "https://x/y.png") == b"ok" and len(calls) == 3

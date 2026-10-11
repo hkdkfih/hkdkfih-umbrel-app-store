@@ -31,6 +31,17 @@ description: >-
   Your chats, settings and API keys are stored in your browser, not on the Umbrel, so each browser has its own
   history. Use the backup (Export All) option in the chat list menu to keep a copy or move to another device.
   Microphone input needs a secure connection, so open the app over https to use voice.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 2 GB
+
+  Note: Local models need the Ollama app and their own memory
 releaseNotes: ""
 
 developer: Enrico Ros
@@ -44,6 +55,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/4.jpg
 path: ""
 
 defaultUsername: ""

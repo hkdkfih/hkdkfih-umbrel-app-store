@@ -11,6 +11,7 @@ gradient from the icon, the caption as a headline, the screenshot in a Safari wi
 import argparse
 import io
 import sys
+import time
 from pathlib import Path
 
 from PIL import Image
@@ -58,14 +59,26 @@ def _fit(img: Image.Image, canvas_size, box, background) -> Image.Image:
     return canvas
 
 
+RETRIES, RETRY_DELAY = 4, 3.0
+
+
 def _read_source(root: Path, ref: str) -> bytes:
-    """Fetch an http(s) URL, or read a path relative to the repo root (own captures)."""
+    """Fetch an http(s) URL (retrying flaky downloads), or read a path relative to the repo root."""
     if not ref.startswith(("http://", "https://")):
         return (root / ref).read_bytes()
-    response = http.get(ref)
-    if response.status != 200:
-        raise RuntimeError(f"download failed ({response.status}): {ref}")
-    return response.body
+    problem = ""
+    for attempt in range(RETRIES):
+        try:
+            response = http.get(ref)
+            if response.status == 200:
+                return response.body
+            problem = f"HTTP {response.status}"
+            if response.status < 500 and response.status != 429:
+                break
+        except OSError as error:  # timeouts, connection resets
+            problem = str(error)
+        time.sleep(RETRY_DELAY * (attempt + 1))
+    raise RuntimeError(f"download failed ({problem}): {ref}")
 
 
 def build(root: Path, cfg: config.AppConfig) -> list[Path]:
