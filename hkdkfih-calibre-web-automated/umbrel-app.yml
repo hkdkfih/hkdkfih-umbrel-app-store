@@ -1,0 +1,61 @@
+manifestVersion: 1
+id: hkdkfih-calibre-web-automated
+storage:
+  dataRoot: data
+category: files
+name: Calibre-Web Automated
+version: "4.0.8"
+tagline: Calibre-Web with automatic ingest, conversion and metadata
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/icon.png
+description: >-
+  Log in with the username "admin" and the password "admin123", then change the password right away under
+  Admin → Edit Users. A new, empty Calibre library is created for you on first start.
+
+
+  To add books, copy them into the "cwa-book-ingest" folder in your Umbrel's Downloads (in the Files app).
+  Calibre-Web Automated imports them into the library, converts them to your preferred format and fetches
+  metadata. Imported files are deleted from the ingest folder, so copy books there rather than moving your only
+  copy, and only add files once they have finished downloading.
+
+
+  Calibre-Web Automated combines the polished Calibre-Web interface with a set of automations that keep your
+  ebook library tidy without ever opening the Calibre desktop app.
+
+
+  - Automatic ingest of 27 ebook formats, with optional conversion to EPUB or another target format
+
+  - Automatic metadata and cover fetching, plus bulk metadata editing
+
+  - EPUB fixer for reliable Send-to-Kindle delivery
+
+  - Kobo sync, KOReader progress sync and OPDS feeds for reading apps
+
+  - Read in the browser, send books to your e-reader by email, and magic shelves
+
+  - Multiple users with permissions, plus statistics about your library
+
+
+  OPDS, Kobo sync and KOReader sync work without the Umbrel login and use your Calibre-Web accounts instead.
+releaseNotes: ""
+
+developer: crocodilestick
+website: https://github.com/crocodilestick/Calibre-Web-Automated
+dependencies: []
+repo: https://github.com/crocodilestick/Calibre-Web-Automated
+support: https://github.com/crocodilestick/Calibre-Web-Automated/issues
+
+port: 21301
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-calibre-web-automated/3.jpg
+path: ""
+
+defaultUsername: "admin"
+defaultPassword: "admin123"
+
+permissions:
+  - STORAGE_DOWNLOADS
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

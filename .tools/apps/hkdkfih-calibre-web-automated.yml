@@ -1,0 +1,18 @@
+repo: crocodilestick/Calibre-Web-Automated
+images:
+  - image: crocodilestick/calibre-web-automated
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/crocodilestick/Calibre-Web-Automated/main/README_images/cwa-logo-round-light.svg
+# From upstream README_images/: 1 = CWA-Homepage.png, 2 = new-book-details-page.png (sidebar cropped), 3 = cwa-server-stats-page.png.
+screenshots:
+  - src: .tools/captures/hkdkfih-calibre-web-automated/1.png
+    caption: "Your ebooks, beautifully organised."
+  - src: .tools/captures/hkdkfih-calibre-web-automated/2.png
+    caption: "Rich metadata for every book."
+  - src: .tools/captures/hkdkfih-calibre-web-automated/3.png
+    caption: "Imports and conversions on autopilot."
+# Upstream documents no hardware requirements; estimate for home use (Calibre conversions are CPU and memory heavy).
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "3 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "20 GB"}
+  notes: ["Storage grows with your library"]

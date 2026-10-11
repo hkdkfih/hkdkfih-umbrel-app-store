@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-calibre-web-automated_web_1
+      APP_PORT: 8083
+      # E-readers and reading apps cannot send Umbrel login cookies. OPDS and KOReader sync use
+      # Calibre-Web's own user accounts; Kobo sync URLs contain a per-user secret token.
+      PROXY_AUTH_WHITELIST: "/opds*,/kobo/*,/kosync/*"
+
+  web:
+    image: crocodilestick/calibre-web-automated:v4.0.8@sha256:5e00373854247750cc3e4479b492ae09293ff5e06ed10177f226634d97888679
+    # container starts as root (s6-overlay), fixes ownership and runs the app as PUID/PGID
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Etc/UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/library:/calibre-library
+      # Books dropped here are imported into the library and then DELETED from this folder.
+      - ${UMBREL_ROOT}/data/storage/downloads/cwa-book-ingest:/cwa-book-ingest
