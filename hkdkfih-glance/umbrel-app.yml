@@ -7,7 +7,7 @@ environment:
     services:
       - server
     note: IANA time zone used by the clock and calendar widgets, such as America/New_York or Europe/London.
-category: social
+category: files
 name: Glance
 version: "0.8.6"
 tagline: A self-hosted dashboard that puts all your feeds in one place
