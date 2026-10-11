@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-owncast_server_1
+      APP_PORT: 8080
+      # Bots and integrations authenticate with Owncast access tokens and cannot send Umbrel cookies.
+      PROXY_AUTH_WHITELIST: "/api/integrations/*"
+
+  server:
+    image: owncast/owncast:0.3.0@sha256:0f35b568b1098d2badbde2dbf3c73a902009c95eb687c647edea04d6da079a78
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    # -adminpassword sets the password of the "admin" user on every start. -streamkey replaces the
+    # stream keys stored in Owncast (including the public default "abc123"), so the RTMP port
+    # published below only accepts streams that use the Umbrel app password as stream key.
+    command:
+      - -adminpassword
+      - ${APP_PASSWORD}
+      - -streamkey
+      - ${APP_PASSWORD}
+    ports:
+      - "21303:1935" # RTMP ingest for OBS and other broadcasting software
+    volumes:
+      - ${APP_DATA_DIR}/data/owncast:/app/data

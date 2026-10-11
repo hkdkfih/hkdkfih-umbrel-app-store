@@ -1,0 +1,19 @@
+repo: owncast/owncast
+images:
+  - image: owncast/owncast
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/owncast/owncast.github.io/HEAD/static/images/logo.svg
+# 2 and 3 are cropped from owncast.github.io static/docs/img/plugins-browse.png and admin-stream-health.png.
+screenshots:
+  - src: https://raw.githubusercontent.com/owncast/owncast.github.io/HEAD/static/docs/img/owncast-web-interface.png
+    caption: "Go live on your own terms."
+  - src: .tools/captures/hkdkfih-owncast/2.png
+    caption: "Extend your stream with plugins."
+  - src: .tools/captures/hkdkfih-owncast/3.png
+    caption: "Keep an eye on stream health."
+# Upstream documents no fixed hardware requirements; CPU use depends on the number of transcoded video
+# qualities (https://owncast.online/docs/video/). Estimate for one or two qualities at 720p.
+requirements:
+  minimum: {cpu: "2 cores", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "4 cores", memory: "2 GB", storage: "10 GB"}
+  notes: ["Each extra video quality adds CPU load", "Passthrough mode needs almost no CPU"]

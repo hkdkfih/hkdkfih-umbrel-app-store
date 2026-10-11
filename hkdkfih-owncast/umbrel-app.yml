@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-owncast
+storage:
+  dataRoot: data
+category: social
+name: Owncast
+version: "0.3.0"
+tagline: Your own self-hosted live streaming and chat server
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/icon.png
+description: >-
+  Open /admin in the app and log in with the username and password shown by Umbrel. To go live, point OBS (or
+  any RTMP software) at rtmp://umbrel.local:21303/live and use the same Umbrel password as the stream key.
+  Stream keys set in Owncast's admin are not used by this package.
+
+
+  Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software.
+  Take control over your content, interface and audience with a streaming page that is yours.
+
+
+  - Live video with adaptive quality, from passthrough to multiple transcoded variants
+
+  - Built-in web chat with moderation, emoji and custom usernames
+
+  - Customisable page with your logo, description, links, colours and CSS
+
+  - Fediverse integration: followers, live notifications and posts
+
+  - Notifications via Discord, browser push and webhooks
+
+  - Plugins, chat bots and a REST API for integrations
+
+
+  The stream page is protected by your Umbrel login. To let others watch, turn off "Require Umbrel login" in the
+  app's settings; the admin pages stay protected by the Owncast password. Video transcoding is CPU intensive,
+  so start with a single video quality on smaller devices.
+releaseNotes: ""
+
+developer: Owncast
+website: https://owncast.online/
+dependencies: []
+repo: https://github.com/owncast/owncast
+support: https://github.com/owncast/owncast/issues
+
+port: 21302
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/3.jpg
+path: ""
+
+defaultUsername: "admin"
+deterministicPassword: true
+
+backupIgnore:
+  - data/owncast/hls/*
+  - data/owncast/logs/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
