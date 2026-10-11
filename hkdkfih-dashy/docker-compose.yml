@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-dashy_server_1
+      APP_PORT: 8080
+
+  server:
+    image: lissy93/dashy:4.8.0@sha256:ae6a2b94c375438fd49ab1a923eb1c5ffc55e5053cd6561b7e080525ea34a82a
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ${APP_DATA_DIR}/data/user-data:/app/user-data

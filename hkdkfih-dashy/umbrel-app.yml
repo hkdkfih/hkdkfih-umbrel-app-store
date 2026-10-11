@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: hkdkfih-dashy
+storage:
+  dataRoot: data
+category: files
+name: Dashy
+version: "4.8.0"
+tagline: A self-hostable personal dashboard for your homelab
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/icon.png
+description: >-
+  Open Dashy and click the edit (pencil) icon to add your own sections and links, or edit conf.yml in the app's data folder via Files.
+
+
+  Dashy helps you organise your self-hosted services by making them accessible from a single place. Build a start page with sections, links, icons and widgets, then switch themes and layouts in one click.
+
+
+  - Status checks show which of your services are up
+
+  - 50+ widgets for weather, crypto, system stats and more
+
+  - Instant search, keyboard shortcuts and multiple pages
+
+  - Dozens of themes, plus a visual editor to customise everything
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 300 MB → 1 GB
+releaseNotes: ""
+
+developer: Alicia Sykes
+website: https://dashy.to/
+dependencies: []
+repo: https://github.com/Lissy93/dashy
+support: https://github.com/Lissy93/dashy/issues
+
+port: 22007
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

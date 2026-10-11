@@ -1,0 +1,14 @@
+repo: Lissy93/dashy
+images:
+  - image: lissy93/dashy
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/Lissy93/dashy/master/public/web-icons/dashy-logo.png
+screenshots:
+  - src: .tools/captures/hkdkfih-dashy/1.png
+    caption: "All your services, one start page."
+  - src: .tools/captures/hkdkfih-dashy/2.png
+    caption: "Find anything instantly."
+# Estimate: Node.js server serving a Vue app
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "300 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}

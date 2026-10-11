@@ -1,0 +1,19 @@
+pageInfo:
+  title: Umbrel
+  description: My home server dashboard
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: medium
+sections:
+  - name: Getting started
+    icon: fas fa-rocket
+    items:
+      - title: Dashy documentation
+        description: Configure sections, widgets and themes
+        icon: favicon
+        url: https://dashy.to/docs
+      - title: Umbrel
+        description: Back to your Umbrel
+        icon: favicon
+        url: http://umbrel.local
