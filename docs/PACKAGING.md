@@ -82,6 +82,10 @@ See `.tools/apps/README.md`. Check the image-tag template against the **last few
 - Every screenshot gets a `caption`: a short App Store headline (3–7 words, ends with a period, describes what the user gets, e.g. "Your bookmarks, beautifully organised."). Images that already contain a device/browser frame get `frame: none`.
 - Build and look at the result: `npm run build:assets -- --app <app-id>` then open the files in `gallery/<app-id>/`.
 
+## System requirements
+
+Every app config has a `requirements` block (cpu, memory, storage for `minimum` and `recommended`, optional short `notes`). Use upstream's documented requirements when they exist and cite them in a YAML comment; otherwise estimate for typical home use and say so. `npm run build:assets` turns it into a "System requirements" table slide at the end of the gallery and a plain-text block at the end of the description (community stores show descriptions as plain text), and keeps the manifest's `gallery` list in sync — don't edit those by hand.
+
 ## Verify before committing
 
 ```sh

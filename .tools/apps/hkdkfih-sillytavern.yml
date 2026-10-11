@@ -12,3 +12,9 @@ screenshots:
     caption: "Fine-tune every prompt."
   - src: https://raw.githubusercontent.com/SillyTavern/SillyTavern-Docs/main/static/screenshot4.jpg
     caption: "Make it look exactly how you like."
+
+# Estimate: Node.js frontend; models run elsewhere
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}
+  notes: ["AI models run elsewhere (API or Ollama)"]

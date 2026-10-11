@@ -12,3 +12,8 @@ screenshots:
     caption: "Organise knowledge your way."
   - src: https://raw.githubusercontent.com/siyuan-note/siyuan/v3.8.6/screenshots/feature5-1.png
     caption: "Write, reference and remember."
+
+# Estimate: Go kernel with SQLite index
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}

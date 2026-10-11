@@ -12,3 +12,8 @@ screenshots:
     caption: "Dashboards for every portfolio."
   - src: https://raw.githubusercontent.com/gristlabs/grist-help/master/help/en/docs/images/widget_chart_examples.png
     caption: "Charts that update themselves."
+
+# Source: support.getgrist.com/self-managed (200 MB RAM with sandboxing; known-good 8 GB, 2 CPUs, 20 GB)
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "8 GB", storage: "20 GB"}

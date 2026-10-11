@@ -15,4 +15,8 @@ screenshots:
   - src: https://…/shot.png   # URL, or a repo-relative path to your own capture
     caption: Your notes, everywhere.   # headline above the browser window
     frame: safari             # "safari" (default) or "none" if the image is already framed
+requirements:                 # rendered as a table slide + description block
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}
+  notes: ["Plus space for your library"]   # optional
 ```

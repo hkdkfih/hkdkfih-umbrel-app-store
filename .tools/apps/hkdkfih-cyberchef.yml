@@ -10,3 +10,9 @@ screenshots:  # captured from the official instance at gchq.github.io/CyberChef
     caption: "Look inside any data, byte by byte."
   - src: .tools/captures/hkdkfih-cyberchef/3.png
     caption: "Hash, encode and decode in a click."
+
+# Estimate: static site; everything runs in the browser
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  notes: ["Runs in your browser; server load is minimal"]

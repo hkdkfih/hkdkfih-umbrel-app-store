@@ -10,3 +10,8 @@ screenshots:
     caption: "Detailed history for every system."
   - src: https://beszel.dev/image/settings-notifications.png
     caption: "Get alerted before things break."
+
+# Estimate: PocketBase hub (Go + SQLite)
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "2 GB"}

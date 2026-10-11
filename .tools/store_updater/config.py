@@ -22,6 +22,13 @@ class Screenshot:
 
 
 @dataclass
+class Requirements:
+    minimum: dict[str, str]       # keys: cpu, memory, storage
+    recommended: dict[str, str]
+    notes: list[str] = field(default_factory=list)
+
+
+@dataclass
 class AppConfig:
     app_id: str
     repo: str                                 # GitHub "owner/name" the version comes from
@@ -31,6 +38,7 @@ class AppConfig:
     icon: str | None = None                   # upstream logo URL (svg/png)
     screenshots: list[Screenshot] = field(default_factory=list)
     icon_background: str = "auto"             # "auto" (white if transparent) or "white"
+    requirements: Requirements | None = None  # shown as a gallery slide and in the description
 
 
 APPS_DIR = Path(".tools") / "apps"
@@ -50,6 +58,7 @@ def load(root: str | Path = ".") -> dict[str, AppConfig]:
             icon=entry.get("icon"),
             screenshots=[_screenshot(s) for s in entry.get("screenshots", [])],
             icon_background=entry.get("icon_background", "auto"),
+            requirements=_requirements(entry.get("requirements")),
         )
     return apps
 
@@ -58,3 +67,10 @@ def _screenshot(value) -> Screenshot:
     if isinstance(value, str):
         return Screenshot(value)
     return Screenshot(value["src"], value.get("caption", ""), value.get("frame", "safari"))
+
+
+def _requirements(value) -> Requirements | None:
+    if not value:
+        return None
+    clean = lambda d: {k: str(v) for k, v in (d or {}).items()}  # noqa: E731
+    return Requirements(clean(value.get("minimum")), clean(value.get("recommended")), [str(n) for n in value.get("notes", [])])

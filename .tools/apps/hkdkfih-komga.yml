@@ -10,3 +10,9 @@ screenshots:
     caption: "Find and clean up duplicate pages."
   - src: https://raw.githubusercontent.com/gotson/komga-website/master/website/static/assets/media/guides/edit-metadata/edit-series-general-1.png
     caption: "Perfect metadata for every series."
+
+# Estimate: Java (Spring Boot) server
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}
+  notes: ["Plus space for your comics and ebooks"]

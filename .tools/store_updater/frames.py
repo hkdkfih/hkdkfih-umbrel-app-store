@@ -190,3 +190,68 @@ def _draw_toolbar(d, width, narrow):
     d.ellipse((dx - 8 * s, cy - 8 * s, dx + 8 * s, cy + 8 * s), outline=grey, width=int(1.6 * s))
     d.line((dx, cy - 4 * s, dx, cy + 4 * s), fill=grey, width=int(1.6 * s))
     d.line((dx - 3 * s, cy + 1 * s, dx, cy + 4 * s, dx + 3 * s, cy + 1 * s), fill=grey, width=int(1.6 * s))
+
+
+def render_requirements(app_name: str, req, brand: tuple[int, int, int]) -> Image.Image:
+    """A 'System requirements' gallery slide: minimum vs recommended in a table card."""
+    s = SCALE
+    W, H = (v * s for v in SIZE)
+    canvas = _gradient((W, H), brand)
+    draw = ImageDraw.Draw(canvas)
+    headline = ImageFont.truetype(str(HEADLINE_FONT), 76 * s)
+    draw.text((W // 2, 113 * s), "System requirements", font=headline, fill=TEXT, anchor="mt")
+    sub = ImageFont.truetype(str(UI_FONT), 26 * s)
+    draw.text((W // 2, 212 * s), f"What you need to run {app_name} on your Umbrel", font=sub, fill=(70, 70, 75), anchor="mt")
+
+    rows = [("CPU", "cpu"), ("Memory", "memory"), ("Storage", "storage")]
+    head_h, row_h, note_h = 84 * s, 92 * s, 40 * s
+    card_w = 960 * s
+    card_h = head_h + row_h * len(rows) + (len(req.notes) * note_h + 30 * s if req.notes else 0)
+    x0, y0 = (W - card_w) // 2, 290 * s
+    _shadow(canvas, (x0, y0, x0 + card_w, y0 + card_h), 24 * s)
+    draw = ImageDraw.Draw(canvas)
+    draw.rounded_rectangle((x0, y0, x0 + card_w, y0 + card_h), 24 * s, fill=(255, 255, 255))
+
+    bold = ImageFont.truetype(str(HEADLINE_FONT), 30 * s)
+    cell = ImageFont.truetype(str(UI_FONT), 30 * s)
+    small = ImageFont.truetype(str(UI_FONT), 22 * s)
+    cols = (x0 + 60 * s, x0 + 400 * s, x0 + 690 * s)
+    accent = _mix(brand, (0, 0, 0), 0.25)
+    draw.text((cols[1], y0 + head_h // 2), "Minimum", font=bold, fill=(110, 110, 115), anchor="lm")
+    draw.text((cols[2], y0 + head_h // 2), "Recommended", font=bold, fill=accent, anchor="lm")
+    for i, (label, key) in enumerate(rows):
+        top = y0 + head_h + i * row_h
+        draw.line((x0 + 40 * s, top, x0 + card_w - 40 * s, top), fill=(232, 232, 236), width=2 * s)
+        mid = top + row_h // 2
+        draw.text((cols[0], mid), label, font=bold, fill=TEXT, anchor="lm")
+        _cell(draw, (cols[1], mid), req.minimum.get(key, "—"), cols[2] - cols[1] - 24 * s, (60, 60, 65))
+        _cell(draw, (cols[2], mid), req.recommended.get(key, "—"), x0 + card_w - 40 * s - cols[2], TEXT)
+    if req.notes:
+        top = y0 + head_h + row_h * len(rows)
+        draw.line((x0 + 40 * s, top, x0 + card_w - 40 * s, top), fill=(232, 232, 236), width=2 * s)
+        for j, note in enumerate(req.notes):
+            draw.text((cols[0], top + 22 * s + j * note_h), f"• {note}", font=small, fill=(100, 100, 105), anchor="lt")
+    return canvas.convert("RGB").resize(SIZE, Image.LANCZOS)
+
+
+def _cell(draw, xy, text, width, fill):
+    """Draw table cell text: shrink to fit one line, else wrap onto two lines."""
+    for points in range(30, 21, -1):
+        font = ImageFont.truetype(str(UI_FONT), points * SCALE)
+        if draw.textlength(text, font=font) <= width:
+            draw.text(xy, text, font=font, fill=fill, anchor="lm")
+            return
+    lines, current = [], ""
+    for word in text.split():
+        trial = f"{current} {word}".strip()
+        if draw.textlength(trial, font=font) <= width or not current:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    lines.append(current)
+    lines = lines[:2]
+    step = round(font.size * 1.15)
+    x, mid = xy
+    for i, line in enumerate(lines):
+        draw.text((x, mid + (i - (len(lines) - 1) / 2) * step), line, font=font, fill=fill, anchor="lm")

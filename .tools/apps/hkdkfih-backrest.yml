@@ -10,3 +10,9 @@ screenshots:
     caption: "Browse and restore any snapshot."
   - src: https://media.githubusercontent.com/media/garethgeorge/backrest/main/docs/src/public/screenshots/add-plan-view.png
     caption: "Schedule backups your way."
+
+# Estimate: Go server driving restic
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}
+  notes: ["Plus space for local backup repositories"]

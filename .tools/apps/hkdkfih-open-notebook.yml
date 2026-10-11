@@ -6,3 +6,9 @@ icon: https://raw.githubusercontent.com/lfnovo/open-notebook/v1.15.0/docs/assets
 screenshots:
   - src: https://raw.githubusercontent.com/lfnovo/open-notebook/v1.15.0/docs/assets/asset_list.png
     caption: "Your private NotebookLM."
+
+# Estimate: Next.js + FastAPI + SurrealDB
+requirements:
+  minimum: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}
+  recommended: {cpu: "4 cores", memory: "4 GB", storage: "20 GB"}
+  notes: ["Plus an AI provider or Ollama for the models"]

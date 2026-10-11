@@ -12,3 +12,8 @@ screenshots:
     caption: "Live queries turn notes into views."
   - src: https://silverbullet.md/media/stills/tour-team-architecture.webp
     caption: "Map out anything, together."
+
+# Estimate: single binary, Markdown files on disk
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "200 MB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "2 GB"}

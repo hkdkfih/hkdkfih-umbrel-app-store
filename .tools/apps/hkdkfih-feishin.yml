@@ -12,3 +12,9 @@ screenshots:
     caption: "Lyrics that follow along."
   - src: https://raw.githubusercontent.com/jeffvli/feishin/development/media/preview_smart_playlist.png
     caption: "Playlists that build themselves."
+
+# Estimate: static web client served by nginx
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  notes: ["Needs a Navidrome, Jellyfin or Subsonic server"]

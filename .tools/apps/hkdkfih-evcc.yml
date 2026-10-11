@@ -16,3 +16,8 @@ screenshots:
   - src: https://evcc.io/img/screenshots/6_large_total_solar_light.webp
     caption: "See how much solar you really use."
     frame: none
+
+# Estimate: lightweight Go binary with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}

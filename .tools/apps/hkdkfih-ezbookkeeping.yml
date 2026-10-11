@@ -12,3 +12,8 @@ screenshots:  # cropped from ezbookkeeping.mayswind.net/images/en/desktop_screen
     caption: "Spending at a glance."
   - src: .tools/captures/hkdkfih-ezbookkeeping/4.png
     caption: "Dig deep into your finances."
+
+# Estimate: Go binary with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "2 GB"}

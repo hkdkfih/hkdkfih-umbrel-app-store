@@ -51,6 +51,11 @@ def problems(root: Path, official_ports: set[int] | None) -> list[str]:
             say(f"manifest id {manifest.get('id')!r} must equal the folder name")
         if app_id not in apps:
             say(f"missing app config .tools/apps/{app_id}.yml (updater and assets)")
+        elif not apps[app_id].requirements or not all(
+            apps[app_id].requirements.minimum.get(k) and apps[app_id].requirements.recommended.get(k)
+            for k in ("cpu", "memory", "storage")
+        ):
+            say("app config needs requirements with cpu, memory and storage for minimum and recommended")
         if manifest.get("category") not in CATEGORIES:
             say(f"category {manifest.get('category')!r} is not one of {sorted(CATEGORIES)}")
         compose_path = app_dir / "docker-compose.yml"

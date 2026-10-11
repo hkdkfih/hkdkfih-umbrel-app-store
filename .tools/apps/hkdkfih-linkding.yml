@@ -8,3 +8,8 @@ screenshots:
     caption: "Your bookmarks, beautifully organised."
   - src: https://linkding.link/linkding-screenshot-dark.png
     caption: "Easy on the eyes, day and night."
+
+# Estimate: Django + SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "1 core", memory: "1 GB", storage: "5 GB"}

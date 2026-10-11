@@ -5,12 +5,13 @@ import pytest
 from store_updater import check, readme
 
 BASE = check.ASSET_BASE
+REQS = "requirements:\n  minimum: {cpu: 1 core, memory: 1 GB, storage: 1 GB}\n  recommended: {cpu: 2 cores, memory: 2 GB, storage: 5 GB}\n"
 
 
 def make_store(tmp_path: Path, port=8123) -> Path:
     (tmp_path / "umbrel-app-store.yml").write_text('id: "hkdkfih"\nname: "hkdkfih\'s"\n')
     (tmp_path / ".tools" / "apps").mkdir(parents=True)
-    (tmp_path / ".tools" / "apps" / "hkdkfih-x.yml").write_text("repo: o/x\nimages: [{image: o/x, tag: 'v{version}'}]\n")
+    (tmp_path / ".tools" / "apps" / "hkdkfih-x.yml").write_text("repo: o/x\nimages: [{image: o/x, tag: 'v{version}'}]\n" + REQS)
     app = tmp_path / "hkdkfih-x"
     app.mkdir()
     gallery = tmp_path / "gallery" / "hkdkfih-x"
@@ -69,7 +70,7 @@ def test_duplicate_port_within_store(tmp_path):
     clone = root / "hkdkfih-y"
     clone.mkdir()
     (clone / "umbrel-app.yml").write_text((root / "hkdkfih-x/umbrel-app.yml").read_text().replace("hkdkfih-x", "hkdkfih-y"))
-    (root / ".tools/apps/hkdkfih-y.yml").write_text("repo: o/y\n")
+    (root / ".tools/apps/hkdkfih-y.yml").write_text("repo: o/y\n" + REQS)
     import shutil
     shutil.copytree(root / "gallery/hkdkfih-x", root / "gallery/hkdkfih-y")
     assert any("8123" in p and "hkdkfih-x" in p for p in check.problems(root, official_ports=set()))
@@ -137,3 +138,9 @@ def test_few_screenshots_is_a_notice_not_a_problem(tmp_path):
     full = tmp_path / "full"
     full.mkdir()
     assert check.notices(make_store(full)) == []
+
+
+def test_missing_requirements_is_a_problem(tmp_path):
+    root = make_store(tmp_path)
+    (root / ".tools/apps/hkdkfih-x.yml").write_text("repo: o/x\n")
+    assert any("requirements" in p for p in check.problems(root, official_ports=set()))

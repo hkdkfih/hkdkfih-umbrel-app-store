@@ -10,3 +10,9 @@ screenshots:
   - src: https://raw.githubusercontent.com/AlexxIT/go2rtc/master/website/images/webui-config.png
     caption: "Configure everything in the browser."
     frame: none
+
+# Estimate: lightweight Go binary; FFmpeg transcoding is the heavy part
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "100 MB"}
+  recommended: {cpu: "2 cores", memory: "512 MB", storage: "500 MB"}
+  notes: ["Transcoding with FFmpeg needs more CPU or a GPU"]

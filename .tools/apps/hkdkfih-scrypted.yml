@@ -12,3 +12,9 @@ screenshots:
     caption: "Know who's at the door."
   - src: https://docs.scrypted.app/img/scrypted-nvr/lpr.png
     caption: "Spot cars and number plates automatically."
+
+# Source: docs.scrypted.app/server-hardware (Linux: Intel 6th gen or newer)
+requirements:
+  minimum: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}
+  recommended: {cpu: "4 cores + Intel iGPU", memory: "8 GB", storage: "20 GB"}
+  notes: ["NVR recordings need a separate large drive"]

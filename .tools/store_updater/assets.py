@@ -15,7 +15,8 @@ from pathlib import Path
 
 from PIL import Image
 
-from . import config, frames, http
+from . import config, frames, http, requirements
+from .check import ASSET_BASE
 
 ICON_SIZE = 512
 WHITE = (255, 255, 255)
@@ -84,10 +85,28 @@ def build(root: Path, cfg: config.AppConfig) -> list[Path]:
         source.seek(0)
         frames.render(source, shot.caption, brand, shot.frame).save(path, "JPEG", quality=90, optimize=True, progressive=True)
         written.append(path)
+    count = len(cfg.screenshots)
+    if cfg.requirements:
+        count += 1
+        path = out_dir / f"{count}.jpg"
+        name = _app_name(root, cfg.app_id)
+        frames.render_requirements(name, cfg.requirements, brand).save(path, "JPEG", quality=90, optimize=True, progressive=True)
+        written.append(path)
     for stale in out_dir.glob("*.jpg"):
-        if stale.stem.isdigit() and int(stale.stem) > len(cfg.screenshots):
+        if stale.stem.isdigit() and int(stale.stem) > count:
             stale.unlink()
+    manifest_path = root / cfg.app_id / "umbrel-app.yml"
+    if manifest_path.exists():
+        gallery = [f"{ASSET_BASE}gallery/{cfg.app_id}/{i}.jpg" for i in range(1, count + 1)]
+        manifest_path.write_text(requirements.sync_manifest(manifest_path.read_text(), cfg.requirements, gallery))
     return written
+
+
+def _app_name(root: Path, app_id: str) -> str:
+    import yaml
+
+    path = root / app_id / "umbrel-app.yml"
+    return yaml.safe_load(path.read_text()).get("name", app_id) if path.exists() else app_id
 
 
 def main(argv=None) -> int:
