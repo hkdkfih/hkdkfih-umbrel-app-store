@@ -1,0 +1,19 @@
+repo: wallabag/wallabag
+images:
+  - image: wallabag/wallabag
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/wallabag/wallabag/2.6.14/web/img/appicon/apple-touch-icon-512.png
+screenshots:
+  - src: https://raw.githubusercontent.com/wallabag/website/HEAD/static/img/screenshot.png
+    caption: "Save the web, read it later."
+  - src: https://raw.githubusercontent.com/wallabag/website/HEAD/pages/news/20230620-new-release-wallabag-260/mass_tag.png
+    caption: "Tag and sort your reading list."
+  - src: https://raw.githubusercontent.com/wallabag/doc/HEAD/static/img/user/wallabagger/use-article.png
+    caption: "Save any page in one click."
+    frame: none
+# Upstream documents software requirements only (doc.wallabag.org); hardware is an estimate
+# for one user with the SQLite backend.
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Storage grows with saved articles and downloaded images"]

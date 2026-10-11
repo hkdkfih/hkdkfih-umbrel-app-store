@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-wallabag
+storage:
+  dataRoot: data
+category: files
+name: wallabag
+version: "2.6.14"
+tagline: Save and classify articles, read them later
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png
+description: >-
+  Log in with the username and password shown by Umbrel. The first start takes a minute while wallabag sets
+  up its database. You can change the password and add more users in wallabag's settings.
+
+
+  wallabag is a self-hosted read-it-later app. Save web articles with one click, and wallabag extracts the
+  content so you can read it later in a clean, distraction-free view, on any device, even offline.
+
+
+  - Clean reading view with estimated reading time, annotations and highlights
+
+  - Tags, tagging rules, starring, archiving and powerful filters
+
+  - Browser extensions for Firefox and Chrome, a bookmarklet and apps for Android and iOS
+
+  - Import from Pocket, Instapaper, Pinboard, Omnivore, browser bookmarks and more
+
+  - Export articles to EPUB, PDF, MOBI, CSV, JSON and more
+
+  - Per-user RSS feeds and a REST API
+
+
+  To connect the mobile apps or the browser extension, create a client in wallabag under "API clients
+  management" and use your Umbrel address with this app's port as the server URL. The API and RSS paths are
+  reachable without the Umbrel login and are protected by wallabag's own credentials and tokens.
+releaseNotes: ""
+
+developer: wallabag
+website: https://wallabag.org/
+dependencies: []
+repo: https://github.com/wallabag/wallabag
+support: https://github.com/wallabag/wallabag/issues
+
+port: 21500
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/3.jpg
+path: ""
+
+defaultUsername: "wallabag"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-wallabag_web_1
+      APP_PORT: 80
+      # Mobile apps and browser extensions use wallabag's OAuth API; RSS readers fetch the
+      # per-user feeds, which are secured by a token the user generates in wallabag.
+      PROXY_AUTH_WHITELIST: "/api/*,/oauth/v2/token,/feed/*"
+
+  web:
+    image: wallabag/wallabag:2.6.14@sha256:4a527e027e0d59e87c14225ef11e005af3d4890374202ad319ce5e63dfc66709
+    # container runs as root (upstream default); nginx and php-fpm serve as nobody
+    restart: on-failure
+    stop_grace_period: 1m
+    # On the first start, install wallabag (SQLite) the same way the upstream entrypoint does
+    # and replace the default wallabag/wallabag password with the Umbrel app password. Later
+    # password changes are kept. Then hand over to the upstream entrypoint.
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        cd /var/www/wallabag
+        chown nobody: data web/assets/images
+        if [ ! -s data/db/wallabag.sqlite ]; then
+          mkdir -p data/db && chown nobody: data/db
+          envsubst < /etc/wallabag/parameters.template.yml > app/config/parameters.yml
+          su -s /bin/sh -c "php bin/console wallabag:install --env=prod -n" nobody \
+            && su -s /bin/sh -c "php bin/console fos:user:change-password --env=prod wallabag ${APP_PASSWORD}" nobody
+        fi
+        exec /entrypoint.sh wallabag
+    environment:
+      SYMFONY__ENV__DATABASE_DRIVER: pdo_sqlite
+      SYMFONY__ENV__SECRET: ${APP_HKDKFIH_WALLABAG_SECRET}
+      SYMFONY__ENV__SERVER_NAME: wallabag
+      SYMFONY__ENV__FOSUSER_REGISTRATION: "false"
+      # wallabag prefixes every CSS/JS/image URL with this value, so a fixed URL breaks the
+      # page on any other hostname, IP or over https. "//" makes Symfony emit root-relative
+      # asset URLs instead (UrlPackage strips the slashes), so the app works on every address
+      # umbrelOS serves it on. Absolute URLs are then mainly missing from the API help page,
+      # the Android QR code and e-mails.
+      SYMFONY__ENV__DOMAIN_NAME: "//"
+    volumes:
+      # SQLite database and the site-credentials encryption key
+      - ${APP_DATA_DIR}/data/data:/var/www/wallabag/data
+      # Images downloaded into saved articles (when enabled in the internal settings)
+      - ${APP_DATA_DIR}/data/images:/var/www/wallabag/web/assets/images
