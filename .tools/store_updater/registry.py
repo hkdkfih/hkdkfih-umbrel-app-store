@@ -81,7 +81,12 @@ def main(argv=None) -> int:
     status = 0
     for ref in (argv if argv is not None else sys.argv[1:]):
         image, _, tag = ref.rpartition(":")
-        info = fetch_index(image, tag)
+        try:
+            info = fetch_index(image, tag)
+        except (RuntimeError, OSError) as error:
+            print(f"{ref}: {error}")
+            status = 1
+            continue
         if info is None or not REQUIRED_PLATFORMS <= info.platforms:
             print(f"{ref}: missing or not multi-arch ({sorted(info.platforms) if info else 'tag not found'})")
             status = 1
