@@ -1,0 +1,58 @@
+manifestVersion: 1
+id: hkdkfih-lychee
+storage:
+  dataRoot: data
+category: media
+name: Lychee
+version: "7.10.0"
+tagline: A great looking and easy-to-use photo management system
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png
+description: >-
+  On first launch, Lychee asks you to create the administrator account in the browser. Choose a username and a
+  password of at least 8 characters.
+
+
+  Lychee is a free photo-management tool that runs on your own server. Upload, manage and share photos like
+  from a native application, with everything stored on your Umbrel.
+
+
+  - Albums, nested albums and smart albums (recent, starred, on this day)
+
+  - Justified, masonry, grid and timeline layouts
+
+  - Photo details with EXIF data, tags, maps and live photos
+
+  - Share albums publicly, with a password or with other users
+
+  - Import from your computer, a URL or a server folder, with duplicate detection
+
+  - Multiple users with upload quotas and permissions
+
+
+  Photos are stored in the app's data on your Umbrel. To show public albums to people without an Umbrel
+  account, turn off "Require Umbrel login" in the app's settings; your private albums stay protected by your
+  Lychee login.
+releaseNotes: ""
+
+developer: LycheeOrg
+website: https://lycheeorg.dev/
+dependencies: []
+repo: https://github.com/LycheeOrg/Lychee
+support: https://github.com/LycheeOrg/Lychee/issues
+
+port: 21304
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/logs/*
+  - data/tmp/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

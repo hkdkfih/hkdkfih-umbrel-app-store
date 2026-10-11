@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-lychee_web_1
+      APP_PORT: 8000
+
+  web:
+    image: lycheeorg/lychee:v7.10.0@sha256:8bc127206d53b0e39674b9f142fc2d810c20862e81aaa56cd2d9232a9dfaf8ea
+    # container starts as root, fixes ownership of its data dirs and serves as www-data (PUID/PGID)
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      APP_KEY: ${APP_HKDKFIH_LYCHEE_APP_KEY}
+      APP_ENV: production
+      APP_TIMEZONE: UTC
+      # Image URLs are relative and proxy headers are trusted, so Lychee works over http and https
+      # with any hostname. APP_URL is only used for links outside a request (e.g. RSS, WebAuthn).
+      APP_URL: http://${DEVICE_DOMAIN_NAME}:21304
+      LYCHEE_UPLOADS_URL: /uploads
+      TRUSTED_PROXIES: "*"
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /data/database.sqlite
+      QUEUE_CONNECTION: sync
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/app/public/uploads
+      - ${APP_DATA_DIR}/data/database:/data
+      - ${APP_DATA_DIR}/data/logs:/app/storage/logs
+      - ${APP_DATA_DIR}/data/tmp:/app/storage/tmp

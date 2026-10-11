@@ -1,0 +1,20 @@
+repo: LycheeOrg/Lychee
+images:
+  - image: lycheeorg/lychee
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/LycheeOrg/Lychee/master/public/img/logo4.svg
+# 1 and 2: captures of the official public demo (https://demo.lycheeorg.dev, no login). 3: cropped from the
+# upstream blog screenshot LycheeOrg.github.io public/blog/v6/20240709-1.png (browser bar removed).
+screenshots:
+  - src: .tools/captures/hkdkfih-lychee/1.png
+    caption: "Your photos, beautifully presented."
+  - src: .tools/captures/hkdkfih-lychee/2.png
+    caption: "Beautiful layouts for every album."
+  - src: .tools/captures/hkdkfih-lychee/3.png
+    caption: "Organise and share with ease."
+# Upstream lists software requirements only (https://lycheeorg.dev/docs/#server-requirements); the image sets
+# PHP's memory_limit to 1 GB for image processing. Estimate for home use.
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "50 GB"}
+  notes: ["Storage grows with your photo library"]
