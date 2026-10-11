@@ -1,0 +1,13 @@
+repo: alexjustesen/speedtest-tracker
+images:
+  - image: ghcr.io/linuxserver/speedtest-tracker
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/alexjustesen/speedtest-tracker/1.x/public/img/speedtest-tracker-icon.png
+screenshots:
+  - src: https://raw.githubusercontent.com/alexjustesen/speedtest-tracker/1.x/.github/screenshots/dashboard.png
+    caption: "Is your internet as fast as promised?"
+# Estimate: PHP (Laravel) with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "2 GB"}
+  notes: ["Each test uses your full bandwidth for a few seconds"]
