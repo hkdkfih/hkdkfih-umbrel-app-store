@@ -1,0 +1,50 @@
+manifestVersion: 1
+id: hkdkfih-drawio
+category: files
+name: draw.io
+version: "32.4.1"
+tagline: Diagrams, flowcharts and whiteboards in your browser
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/icon.png
+description: >-
+  draw.io (diagrams.net) is a powerful diagramming app for flowcharts, network diagrams, UML, BPMN, architecture diagrams, mind maps and org charts. Your Umbrel serves the editor; diagrams are saved to your own computer.
+
+
+  - Thousands of shapes, including AWS, Azure, GCP, Cisco and Kubernetes libraries
+
+  - Templates for every kind of diagram
+
+  - Export to PNG, SVG, PDF and HTML, and import from Visio, Lucidchart and Gliffy
+
+  - Works completely privately: no account and no tracking
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 500 MB → 1 GB
+
+  Note: Diagrams are stored on your computer, not the server
+releaseNotes: ""
+
+developer: JGraph
+website: https://www.drawio.com/
+dependencies: []
+repo: https://github.com/jgraph/drawio
+support: https://github.com/jgraph/drawio/issues
+
+port: 22001
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

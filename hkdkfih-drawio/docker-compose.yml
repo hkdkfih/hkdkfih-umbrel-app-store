@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-drawio_server_1
+      APP_PORT: 8080
+
+  server:
+    image: jgraph/drawio:32.4.1@sha256:d2e7024e5e5a5d3ab3db6eb018ecb66849253ef95d7ee82d400facb3ca7c3384
+    # stateless Tomcat server; diagrams are saved in the browser or downloaded
+    restart: on-failure

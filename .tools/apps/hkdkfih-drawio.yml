@@ -1,0 +1,17 @@
+repo: jgraph/drawio
+images:
+  - image: jgraph/drawio
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/jgraph/drawio/dev/src/main/webapp/images/drawlogo-color.svg
+screenshots:
+  - src: .tools/captures/hkdkfih-drawio/1.png
+    caption: "Draw anything, from robots to racks."
+  - src: .tools/captures/hkdkfih-drawio/2.png
+    caption: "Model processes with BPMN."
+  - src: .tools/captures/hkdkfih-drawio/3.png
+    caption: "UML and sequence diagrams made easy."
+# Estimate: Java (Tomcat) static editor
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "500 MB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "1 GB"}
+  notes: ["Diagrams are stored on your computer, not the server"]
