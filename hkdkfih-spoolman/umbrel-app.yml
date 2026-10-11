@@ -1,0 +1,61 @@
+manifestVersion: 1
+id: hkdkfih-spoolman
+storage:
+  dataRoot: data
+category: automation
+name: Spoolman
+version: "0.27.0"
+tagline: Keep track of your 3D printer filament spools
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/icon.png
+description: >-
+  Spoolman has no accounts: open it and start adding your vendors, filaments and spools. To connect a Klipper
+  printer, add a [spoolman] section with server: http://umbrel.local:21400 to Moonraker's configuration; OctoPrint
+  and Home Assistant plugins use the same address.
+
+
+  Spoolman is a self-hosted inventory for your 3D printing filament. It knows every spool you own, how much
+  filament is left on each one and where it is stored, and your printers update it automatically as they print.
+
+
+  - Track vendors, filament types and individual spools, with remaining weight and length
+
+  - Live usage updates from Moonraker, so Fluidd, Mainsail and KlipperScreen show the active spool
+
+  - Integrations for OctoPrint, OctoEverywhere and Home Assistant
+
+  - Import filaments from the community SpoolmanDB database
+
+  - Search, group and filter by vendor, material, colour or location
+
+  - Design and print QR code labels for your spools
+
+  - Custom fields, a dashboard by storage location and a REST API
+
+
+  Security note: the Spoolman REST API (/api/v1) is reachable without the Umbrel login so that printers can
+  report usage, and Spoolman itself has no login. Anyone on your network can read and change the inventory
+  through it; the web interface stays protected by your Umbrel login.
+releaseNotes: ""
+
+developer: Donkie
+website: https://github.com/Donkie/Spoolman
+dependencies: []
+repo: https://github.com/Donkie/Spoolman
+support: https://github.com/Donkie/Spoolman/issues
+
+port: 21400
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/spoolman/logs/*
+  - data/spoolman/cache/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

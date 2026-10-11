@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-spoolman_web_1
+      APP_PORT: 8000
+      # Moonraker (Klipper, Fluidd, Mainsail), OctoPrint and Home Assistant talk to the REST API
+      # and websockets from other machines and cannot send Umbrel login cookies. Spoolman has no
+      # login of its own (upstream treats it as a LAN service), so anyone who can reach this port
+      # can read and edit the filament inventory through the API; the web UI itself stays behind
+      # the Umbrel login. Nothing outside the inventory API is exposed.
+      PROXY_AUTH_WHITELIST: "/api/v1/*"
+
+  web:
+    image: ghcr.io/donkie/spoolman:0.27.0@sha256:7aba565eff774c6dda212d4204de8fa30bf68d513127ef875cc7ef3197a4664e
+    # container starts as root, switches to PUID/PGID with gosu
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      SPOOLMAN_DIR_LOGS: /home/app/.local/share/spoolman/logs
+    volumes:
+      - ${APP_DATA_DIR}/data/spoolman:/home/app/.local/share/spoolman

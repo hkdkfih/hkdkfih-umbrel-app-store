@@ -1,0 +1,17 @@
+repo: Donkie/Spoolman
+images:
+  - image: ghcr.io/donkie/spoolman
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/Donkie/Spoolman/v0.27.0/client_v2/static/pwa-512x512.png
+screenshots:
+  - src: https://raw.githubusercontent.com/Donkie/Spoolman/v0.27.0/.github/media/client-screenshot.png
+    caption: "Every spool, accounted for."
+  - src: https://raw.githubusercontent.com/Donkie/Spoolman/v0.27.0/.github/media/dashboard-screenshot.png
+    caption: "See what's on every shelf."
+  - src: https://raw.githubusercontent.com/Donkie/Spoolman/v0.27.0/.github/media/label-designer-screenshot.png
+    caption: "Print QR labels for your spools."
+# Upstream documents no hardware requirements; estimate for a single-user SQLite install
+# (a small FastAPI service that also runs on Raspberry Pis next to Klipper).
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
