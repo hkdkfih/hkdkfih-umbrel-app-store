@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: hkdkfih-hedgedoc
+storage:
+  dataRoot: data
+category: files
+name: HedgeDoc
+version: "1.12.0"
+tagline: Collaborative Markdown notes in real time
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/icon.png
+description: >-
+  On first launch, click "Sign In" and register an account with any email address and password.
+
+
+  HedgeDoc lets you write notes, documentation and presentations together, in Markdown, in real time. Share a link and everyone sees changes instantly.
+
+
+  - Live collaborative editing with a split preview
+
+  - Diagrams (Mermaid, PlantUML), math, charts and syntax highlighting
+
+  - Turn any note into a slide deck
+
+  - Fine-grained permissions: private, locked, editable or published notes
+
+  - Revision history and image uploads
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+releaseNotes: ""
+
+developer: HedgeDoc
+website: https://hedgedoc.org/
+dependencies: []
+repo: https://github.com/hedgedoc/hedgedoc
+support: https://github.com/hedgedoc/hedgedoc/issues
+
+port: 22002
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/2.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

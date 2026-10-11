@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-hedgedoc_server_1
+      APP_PORT: 3000
+
+  server:
+    image: quay.io/hedgedoc/hedgedoc:1.12.0@sha256:89bd85d7817fb3e3a4aafdd85aefb0fbb20b848f6dbf1d9ee0d72fdcb76710cc
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      CMD_DB_URL: postgres://hedgedoc:${APP_HKDKFIH_HEDGEDOC_DB_PASSWORD}@hkdkfih-hedgedoc_db_1:5432/hedgedoc
+      CMD_SESSION_SECRET: ${APP_HKDKFIH_HEDGEDOC_SESSION_SECRET}
+      # No CMD_DOMAIN: HedgeDoc then uses relative URLs, so it works on any hostname, http or https.
+      CMD_ALLOW_ANONYMOUS: "false"
+      CMD_ALLOW_EMAIL_REGISTER: "true"
+      UID: 1000
+      GID: 1000
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/hedgedoc/public/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16.13-alpine@sha256:4e6e670bb069649261c9c18031f0aded7bb249a5b6664ddec29c013a89310d50
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      POSTGRES_USER: hedgedoc
+      POSTGRES_PASSWORD: ${APP_HKDKFIH_HEDGEDOC_DB_PASSWORD}
+      POSTGRES_DB: hedgedoc
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hedgedoc -d hedgedoc"]
+      interval: 10s
+      timeout: 5s
+      retries: 10

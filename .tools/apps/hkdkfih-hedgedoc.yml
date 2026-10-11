@@ -1,0 +1,12 @@
+repo: hedgedoc/hedgedoc
+images:
+  - image: quay.io/hedgedoc/hedgedoc
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/hedgedoc/hedgedoc/develop/frontend/src/app/icon.png
+screenshots:
+  - src: https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/docs/content/faq/interface_okay.png
+    caption: "Write together, in real time."
+# Estimate: Node.js app with PostgreSQL
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
