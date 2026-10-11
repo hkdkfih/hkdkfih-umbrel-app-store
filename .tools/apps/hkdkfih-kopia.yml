@@ -1,0 +1,22 @@
+repo: kopia/kopia
+images:
+  - image: kopia/kopia
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/kopia/kopia/v0.23.1/icons/kopia.svg
+# Upstream publishes no UI screenshots and no public demo; captured from the official
+# kopia 0.23.1 release binary (kopia server start) against a local demo repository.
+screenshots:
+  - src: .tools/captures/hkdkfih-kopia/1.png
+    caption: "Every folder, safely backed up."
+  - src: .tools/captures/hkdkfih-kopia/2.png
+    caption: "Go back to any snapshot."
+  - src: .tools/captures/hkdkfih-kopia/3.png
+    caption: "Schedules and retention, your way."
+  - src: .tools/captures/hkdkfih-kopia/4.png
+    caption: "Policies for every source."
+# Upstream documents no fixed requirements (memory depends on compression and parallelism,
+# see kopia.io/docs/faqs); estimate for typical home use.
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "20 GB"}
+  notes: ["The cache grows with repository size", "Local backups need space on the destination drive"]

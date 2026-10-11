@@ -1,0 +1,87 @@
+manifestVersion: 1
+id: hkdkfih-kopia
+storage:
+  dataRoot: data
+folderAccess:
+  - id: backup-source
+    name: Folders to back up
+    note: Select the folder you want to back up. It is available inside Kopia at /data (read-only).
+    mounts:
+      - service: server
+        targetPath: /data
+        readOnly: true
+  - id: backup-repository
+    name: Backup destination
+    note: Optional local destination, for example an external drive. Choose "Local Directory or NAS" in Kopia and enter /repository. Cloud destinations (S3, B2, SFTP, WebDAV, rclone) need no folder.
+    mounts:
+      - service: server
+        targetPath: /repository
+  - id: restore-target
+    name: Restore folder
+    note: Optional folder for restored files. It is available inside Kopia at /restore.
+    mounts:
+      - service: server
+        targetPath: /restore
+environment:
+  - name: TZ
+    services:
+      - server
+    note: IANA time zone used for snapshot schedules, such as America/New_York or Europe/London.
+category: files
+name: Kopia
+version: "0.23.1"
+tagline: Fast and secure open-source backup
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/icon.png
+description: >-
+  Log in with the username and password shown by Umbrel. Choose the folders to back up and an optional local
+  backup destination in the app's settings in umbrelOS, then create a repository in Kopia: use /repository
+  for a local destination, or a cloud provider. The repository password you choose encrypts your backups;
+  write it down, because your backups cannot be restored without it. It is also saved in the app's data so
+  Kopia can reconnect after a restart.
+
+
+  Kopia is a fast and secure open-source backup tool. It creates encrypted, compressed and deduplicated
+  snapshots of your files and keeps them on the storage of your choice, with flexible retention policies.
+
+
+  - End-to-end encryption, compression and content-defined deduplication
+
+  - Store backups on local disks, Amazon S3 and compatible services, Backblaze B2, Google Cloud Storage, Azure,
+  SFTP, WebDAV or any rclone remote
+
+  - Scheduled snapshots with daily, weekly, monthly and yearly retention
+
+  - Browse snapshots and restore single files or whole folders
+
+  - Policies per folder for schedules, compression, ignore rules and error handling
+
+  - Verify and maintain repositories from the browser
+
+
+  Files selected for backup are mounted read-only. To restore files, select a restore folder in the app's
+  settings and restore to /restore.
+releaseNotes: ""
+
+developer: Kopia Authors
+website: https://kopia.io/
+dependencies: []
+repo: https://github.com/kopia/kopia
+support: https://github.com/kopia/kopia/issues
+
+port: 21103
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/4.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+backupIgnore:
+  - data/cache/*
+  - data/logs/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

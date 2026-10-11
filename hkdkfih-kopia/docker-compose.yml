@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-kopia_server_1
+      APP_PORT: 51515
+
+  server:
+    image: kopia/kopia:0.23.1@sha256:89fd95ee2942880ca00eae964266958a394421ddbdf69bca62e38afc55f5900e
+    # container runs as root so Kopia can read every file selected for backup
+    # a fixed hostname keeps the snapshot owner (root@kopia) stable across container recreation
+    hostname: kopia
+    restart: on-failure
+    stop_grace_period: 1m
+    # --insecure only means plain HTTP inside Docker: umbrelOS serves the UI over http and https,
+    # and the UI still requires the username and password below (HTTP basic auth).
+    command:
+      - server
+      - start
+      - --insecure
+      - --address=0.0.0.0:51515
+    environment:
+      KOPIA_SERVER_USERNAME: umbrel
+      KOPIA_SERVER_PASSWORD: ${APP_PASSWORD}
+      # Store the repository password you choose in the UI in the config folder, so the server
+      # reconnects to the repository after a restart (the image disables this by default).
+      KOPIA_PERSIST_CREDENTIALS_ON_CONNECT: "true"
+      TZ: Etc/UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/app/config
+      - ${APP_DATA_DIR}/data/cache:/app/cache
+      - ${APP_DATA_DIR}/data/logs:/app/logs
+      - ${APP_DATA_DIR}/data/rclone:/app/rclone
