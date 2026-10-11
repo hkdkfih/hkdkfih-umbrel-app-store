@@ -1,0 +1,62 @@
+manifestVersion: 1
+id: hkdkfih-mcsmanager
+storage:
+  dataRoot: data
+category: media
+name: MCSManager
+version: "10.19.0"
+tagline: A web panel for running Minecraft and other game servers
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/icon.png
+description: >-
+  On first launch, create the administrator account in the browser. The Umbrel node is already connected, so you
+  can create your first server right away from the Instances page, for example with the Minecraft quick-install
+  templates.
+
+
+  Players connect to a Minecraft Java server at umbrel.local:21403 (server port 25565 inside the app) and to a
+  Bedrock server at umbrel.local:21404 (port 19132). For more servers, set the server's port to 21405, 21406 or
+  21407 and players use that same port.
+
+
+  MCSManager is a fast, multi-user web panel for game servers. Install Minecraft servers in a few clicks, watch
+  and type into their consoles live, edit their files and schedule restarts and backups, all from the browser.
+
+
+  - Quick-install templates for popular Minecraft Java and Bedrock servers
+
+  - Live web console, file manager with upload and download, and scheduled tasks
+
+  - Built-in Java manager to download the Java version a server needs
+
+  - Multiple users with per-instance permissions
+
+  - Run any other command-line server program as an instance
+
+
+  On Umbrel, servers run as processes inside the app (without Docker), so Docker-based instances and templates
+  are not available. Servers share your Umbrel's CPU and memory: a Minecraft server typically needs 2 to 4 GB
+  of RAM.
+releaseNotes: ""
+
+developer: MCSManager
+website: https://mcsmanager.com/
+dependencies: []
+repo: https://github.com/MCSManager/MCSManager
+support: https://github.com/MCSManager/MCSManager/issues
+
+port: 21402
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/web/logs/*
+  - data/daemon/logs/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

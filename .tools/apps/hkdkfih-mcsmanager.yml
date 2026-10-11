@@ -1,0 +1,26 @@
+repo: MCSManager/MCSManager
+images:
+  - image: githubyumao/mcsmanager-web
+    tag: "v{version}"
+  - image: githubyumao/mcsmanager-daemon
+    tag: "v{version}"
+# The repo only has a wide logo; this is the official square app icon from MCSManager's own
+# fnOS NAS package (512x512).
+icon: https://raw.githubusercontent.com/MCSManager/fnOS-Pack/0570a210b66cd695f1eb8f20db7a24b937850abf/mcsmanager/ICON_256.PNG
+screenshots:
+  # README screenshots (v10.19.0), already inside a browser window
+  - src: https://github.com/user-attachments/assets/570d2447-66dc-4c0b-b2d2-4c3176b51d67
+    caption: "All your game servers, one panel."
+    frame: none
+  - src: https://github.com/user-attachments/assets/7f6ed988-e402-4347-94ee-a0469f6658da
+    caption: "A live console in your browser."
+    frame: none
+  - src: https://github.com/user-attachments/assets/2722cf9f-de9b-4630-b0ea-c00283791d8d
+    caption: "Manage every file with ease."
+    frame: none
+# Upstream documents no hardware requirements; estimate for one or two small Minecraft servers.
+# The panel itself is light; each game server needs its own RAM (Minecraft: 2-4 GB).
+requirements:
+  minimum: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}
+  recommended: {cpu: "4 cores", memory: "8 GB", storage: "20 GB"}
+  notes: ["Each Minecraft server needs 2-4 GB of RAM", "Storage grows with worlds and backups"]

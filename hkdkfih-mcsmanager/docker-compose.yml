@@ -1,0 +1,104 @@
+version: "3.7"
+
+# MCSManager's browser UI talks to the panel (web) and, for consoles and file transfers, directly
+# to the daemon. Umbrel proxies one port per app, so a small Caddy gateway serves both on it: the
+# panel at / and the daemon under /daemon (the daemon's own path prefix). The panel shares the
+# gateway's network namespace so that the node address "localhost:21402/daemon" works both for
+# the panel (server side) and for the browser, which replaces "localhost" with the hostname it
+# used to open the app (http or https, any hostname or IP).
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-mcsmanager_gateway_1
+      APP_PORT: 21402
+
+  gateway:
+    image: caddy:2.11.7-alpine@sha256:d8542f48d34a9cf4e4c11a478865229840e87e4c96ea3f439101f31a5d35f75f
+    user: "1000:1000"
+    restart: on-failure
+    environment:
+      XDG_CONFIG_HOME: /tmp/caddy-config
+      XDG_DATA_HOME: /tmp/caddy-data
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        cat > /tmp/Caddyfile <<'EOF'
+        {
+          admin off
+          auto_https off
+        }
+        :21402 {
+          @daemon path /daemon /daemon/*
+          handle @daemon {
+            reverse_proxy hkdkfih-mcsmanager_daemon_1:24444
+          }
+          handle {
+            reverse_proxy 127.0.0.1:23333
+          }
+        }
+        EOF
+        exec caddy run --config /tmp/Caddyfile --adapter caddyfile
+
+  # One-shot: on first start, give the daemon a key derived by Umbrel and register it in the panel
+  # as the node "localhost:21402" with the path prefix /daemon. Existing files are never touched.
+  init:
+    image: githubyumao/mcsmanager-web:v10.19.0@sha256:e7330f671b9bf40c8e12412f93fca522aa7361eaee2a9bb9f509fc43a1c560ee
+    # container runs as root (upstream default)
+    restart: on-failure
+    environment:
+      DAEMON_KEY: ${APP_HKDKFIH_MCSMANAGER_DAEMON_KEY}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        mkdir -p /daemon-data/Config /web-data/RemoteServiceConfig
+        if [ ! -f /daemon-data/Config/global.json ]; then
+          printf '{"port": 24444, "prefix": "/daemon", "key": "%s"}\n' "$$DAEMON_KEY" > /daemon-data/Config/global.json
+        fi
+        if [ -z "$$(ls -A /web-data/RemoteServiceConfig)" ]; then
+          printf '{"ip": "localhost", "port": 21402, "prefix": "/daemon", "remarks": "Umbrel", "apiKey": "%s", "remoteMappings": []}\n' "$$DAEMON_KEY" > /web-data/RemoteServiceConfig/umbrel.json
+        fi
+    volumes:
+      - ${APP_DATA_DIR}/data/web/data:/web-data
+      - ${APP_DATA_DIR}/data/daemon/data:/daemon-data
+
+  web:
+    image: githubyumao/mcsmanager-web:v10.19.0@sha256:e7330f671b9bf40c8e12412f93fca522aa7361eaee2a9bb9f509fc43a1c560ee
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    network_mode: "service:gateway"
+    volumes:
+      - ${APP_DATA_DIR}/data/web/data:/opt/mcsmanager/web/data
+      - ${APP_DATA_DIR}/data/web/logs:/opt/mcsmanager/web/logs
+      - ${APP_DATA_DIR}/data/web/upload_files:/opt/mcsmanager/web/public/upload_files
+    depends_on:
+      gateway:
+        condition: service_started
+      init:
+        condition: service_completed_successfully
+
+  daemon:
+    image: githubyumao/mcsmanager-daemon:v10.19.0@sha256:d29f27dc6a6d05d53e573306ecd6a04605e19d0c253ef988322969f9805e90a1
+    # container runs as root (upstream default). No Docker socket: game servers run as processes
+    # inside this container (it ships Java 21; other Java versions can be added from the panel).
+    restart: on-failure
+    stop_grace_period: 1m
+    # Game server ports: players connect to these directly (Minecraft authenticates players itself).
+    ports:
+      - "21403:25565" # Minecraft Java Edition (default server port)
+      - "21404:19132/udp" # Minecraft Bedrock Edition (default server port)
+      # extra servers: set the server's port to one of these
+      - "21405:21405"
+      - "21405:21405/udp"
+      - "21406:21406"
+      - "21406:21406/udp"
+      - "21407:21407"
+      - "21407:21407/udp"
+    volumes:
+      - ${APP_DATA_DIR}/data/daemon/data:/opt/mcsmanager/daemon/data
+      - ${APP_DATA_DIR}/data/daemon/logs:/opt/mcsmanager/daemon/logs
+    depends_on:
+      init:
+        condition: service_completed_successfully
