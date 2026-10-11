@@ -1,0 +1,12 @@
+repo: jordan-dalby/ByteStash
+images:
+  - image: ghcr.io/jordan-dalby/bytestash
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/jordan-dalby/ByteStash/main/client/public/logo512.png
+screenshots:
+  - src: https://raw.githubusercontent.com/jordan-dalby/ByteStash/main/media/app-image.png
+    caption: "All your snippets, one place."
+# Estimate: Node.js with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}

@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: hkdkfih-bytestash
+storage:
+  dataRoot: data
+category: developer
+name: ByteStash
+version: "1.5.14"
+tagline: Store and organise your code snippets
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-bytestash/icon.png
+description: >-
+  On first launch, click "Register" to create your account.
+
+
+  ByteStash is a self-hosted home for your code snippets. Save, search and share the commands, scripts and configs you keep looking up.
+
+
+  - Syntax highlighting for hundreds of languages
+
+  - Multiple code fragments per snippet, with categories
+
+  - Fast search and filtering
+
+  - Public or private share links, with expiry
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 256 MB
+
+  Storage: 200 MB → 1 GB
+releaseNotes: ""
+
+developer: Jordan Dalby
+website: https://github.com/jordan-dalby/ByteStash
+dependencies: []
+repo: https://github.com/jordan-dalby/ByteStash
+support: https://github.com/jordan-dalby/ByteStash/issues
+
+port: 22005
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-bytestash/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-bytestash/2.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

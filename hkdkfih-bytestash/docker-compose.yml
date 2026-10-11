@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-bytestash_server_1
+      APP_PORT: 5000
+
+  server:
+    image: ghcr.io/jordan-dalby/bytestash:1.5.14@sha256:b684e4df3214594035f45c8f202cf9602ac80e4d2dc5c938a73cfcc0a0bb5d3f
+    # container runs as root (upstream default)
+    restart: on-failure
+    environment:
+      JWT_SECRET: ${APP_HKDKFIH_BYTESTASH_JWT_SECRET}
+      TOKEN_EXPIRY: 24h
+      ALLOW_NEW_ACCOUNTS: "true"
+    volumes:
+      - ${APP_DATA_DIR}/data/snippets:/data/snippets
