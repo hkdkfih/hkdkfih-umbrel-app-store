@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-commafeed_server_1
+      APP_PORT: 8082
+      # Fever and Google Reader APIs for native readers; they authenticate with CommaFeed's
+      # own API key / credentials. The first-run admin setup (/rest/user/initialSetup) stays
+      # behind the Umbrel login.
+      PROXY_AUTH_WHITELIST: "/rest/fever/*,/accounts/ClientLogin,/reader/api/0/*"
+
+  server:
+    image: athou/commafeed:7.3.2-h2@sha256:0e52f2a86c2ae36cb446401292c87ba6ca658fafda64c99bc7e8713ed433d8a3
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # Fixed key so logins survive restarts (upstream generates a random one at startup).
+      QUARKUS_HTTP_AUTH_SESSION_ENCRYPTION_KEY: ${APP_HKDKFIH_COMMAFEED_SESSION_KEY}
+    volumes:
+      # Embedded H2 database
+      - ${APP_DATA_DIR}/data/data:/commafeed/data

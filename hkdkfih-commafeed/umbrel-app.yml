@@ -1,0 +1,60 @@
+manifestVersion: 1
+id: hkdkfih-commafeed
+storage:
+  dataRoot: data
+environment:
+  - name: COMMAFEED_HTTP_CLIENT_BLOCK_LOCAL_ADDRESSES
+    services:
+      - server
+    default: "true"
+    note: Set to false to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
+category: social
+name: CommaFeed
+version: "7.3.2"
+tagline: A Google Reader inspired self-hosted RSS reader
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/icon.png
+description: >-
+  On first launch, CommaFeed asks you to create the administrator account. This page is protected by your
+  Umbrel login. Additional users can be added from CommaFeed's admin settings.
+
+
+  CommaFeed is a fast, Google Reader inspired feed reader. It is compiled to native code, so it starts in a
+  second and keeps up with thousands of feeds using very little memory.
+
+
+  - Four layouts, light and dark themes, and a fully responsive interface for phones
+
+  - Keyboard shortcuts for almost everything
+
+  - OPML import and export, categories, starring and full-text search
+
+  - Rules to mark articles as read automatically
+
+  - Push notifications when new articles are published
+
+  - Custom CSS and JavaScript, plus a browser extension
+
+  - Fever and Google Reader APIs for native apps such as Reeder, NetNewsWire and ReadYou
+
+
+  Native apps connect with CommaFeed's own credentials or API key; their API paths stay reachable without the
+  Umbrel login, while the web interface remains protected by it.
+releaseNotes: ""
+
+developer: Athou
+website: https://www.commafeed.com/
+dependencies: []
+repo: https://github.com/Athou/commafeed
+support: https://github.com/Athou/commafeed/issues
+
+port: 21502
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/2.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

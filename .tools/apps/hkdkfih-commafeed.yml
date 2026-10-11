@@ -1,0 +1,16 @@
+repo: Athou/commafeed
+images:
+  - image: athou/commafeed
+    tag: "{version}-h2"
+icon: https://raw.githubusercontent.com/Athou/commafeed/7.3.2/commafeed-client/src/assets/logo.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/Athou/commafeed/7.3.2/commafeed-client/src/assets/welcome_page_light.png
+    caption: "All your feeds in one place."
+  - src: https://raw.githubusercontent.com/Athou/commafeed/7.3.2/commafeed-client/src/assets/welcome_page_dark.png
+    caption: "Easy on the eyes after dark."
+# Upstream's Docker README runs the native image with a 256 MB memory limit
+# (commafeed-server/src/main/docker/README.md); storage is an estimate for one user.
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "512 MB", storage: "5 GB"}
+  notes: ["Storage grows with the number of feeds and how long entries are kept"]
