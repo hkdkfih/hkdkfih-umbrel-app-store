@@ -1,0 +1,17 @@
+repo: TwiN/gatus
+images:
+  - image: twinproduction/gatus
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/TwiN/gatus/v5.37.0/.github/assets/logo.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/TwiN/gatus/v5.37.0/.github/assets/dashboard-dark.jpg
+    caption: "All your services, one dashboard."
+  - src: https://raw.githubusercontent.com/TwiN/gatus/v5.37.0/.github/assets/endpoint-groups.jpg
+    caption: "Spot what's unhealthy instantly."
+  - src: https://raw.githubusercontent.com/TwiN/gatus/v5.37.0/.github/assets/dashboard-conditions.jpg
+    caption: "Know exactly why a check failed."
+# Upstream documents no hardware requirements; Gatus is a single small Go binary with SQLite storage.
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  notes: ["Storage grows with the number of endpoints and their check history"]

@@ -1,0 +1,53 @@
+# Gatus configuration for Umbrel.
+#
+# This file is yours: edit it (or add more *.yaml files next to it) and Gatus reloads it on the
+# fly. All options are documented at https://github.com/TwiN/gatus#configuration
+#
+# The examples below check that your Umbrel can reach the internet. Replace them with the
+# websites, APIs and devices you care about, e.g. a device on your network:
+#
+#   - name: Router
+#     group: Home network
+#     url: "icmp://192.168.1.1"
+#     interval: 1m
+#     conditions:
+#       - "[CONNECTED] == true"
+
+# Keep running with the previous configuration if an edit contains a mistake.
+skip-invalid-config-update: true
+
+# Keep the check history across restarts.
+storage:
+  type: sqlite
+  path: /data/data.db
+
+ui:
+  title: Gatus on Umbrel
+  header: Health dashboard
+
+endpoints:
+  - name: Cloudflare DNS
+    group: Internet
+    url: "1.1.1.1"
+    interval: 1m
+    dns:
+      query-name: "example.com"
+      query-type: "A"
+    conditions:
+      - "[DNS_RCODE] == NOERROR"
+
+  - name: Ping 1.1.1.1
+    group: Internet
+    url: "icmp://1.1.1.1"
+    interval: 1m
+    conditions:
+      - "[CONNECTED] == true"
+
+  - name: example.org
+    group: Websites
+    url: "https://example.org"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 2000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"

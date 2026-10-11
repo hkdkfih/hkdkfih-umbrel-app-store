@@ -1,0 +1,67 @@
+manifestVersion: 1
+id: hkdkfih-gatus
+storage:
+  dataRoot: data
+category: networking
+name: Gatus
+version: "5.37.0"
+tagline: A developer-oriented health dashboard and uptime monitor
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/icon.png
+description: >-
+  Gatus is configured with a YAML file. It starts with a few example checks of your internet connection; edit
+  data/config/config.yaml in the app's data folder (~/umbrel/app-data/hkdkfih-gatus) to add your own
+  websites, APIs and devices, and Gatus reloads it automatically.
+
+
+  Gatus is a health dashboard that lets you monitor your services using HTTP, ICMP, TCP and DNS queries, and
+  evaluate the results with conditions on the status code, response time, certificate expiry, body and more.
+  When something breaks, it alerts you on the channel of your choice.
+
+
+  - HTTP, ICMP, TCP, UDP, DNS, SSH, STARTTLS, TLS and WebSocket checks
+
+  - Conditions on status, response time, body (JSON path), certificate and domain expiry
+
+  - Alerts via Slack, Discord, Telegram, Gotify, ntfy, Matrix, email, PagerDuty and dozens more
+
+  - Groups, search, uptime badges, announcements and maintenance windows
+
+  - External endpoints that your scripts and CI jobs can push results to
+
+  - Check history kept in SQLite
+
+
+  The dashboard is protected by your Umbrel login. Pushes to external endpoints
+  (/api/v1/endpoints/…/external) are accepted without it and must carry the endpoint's token.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 1 GB
+
+  Note: Storage grows with the number of endpoints and their check history
+releaseNotes: ""
+
+developer: TwiN
+website: https://gatus.io/
+dependencies: []
+repo: https://github.com/TwiN/gatus
+support: https://github.com/TwiN/gatus/issues
+
+port: 21606
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

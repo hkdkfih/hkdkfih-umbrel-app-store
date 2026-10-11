@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-gatus_server_1
+      APP_PORT: 8080
+      # External endpoints are pushed by your own scripts and CI jobs, which cannot send Umbrel
+      # login cookies; each push must carry the endpoint's bearer token from config.yaml.
+      PROXY_AUTH_WHITELIST: "/api/v1/endpoints/*/external"
+
+  server:
+    image: twinproduction/gatus:v5.37.0@sha256:094eb186e55235db367e90e9d56140e5897b7044c41de23cde4cc18e6da1242e
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # A directory: every *.yaml file in it is merged, starting with the shipped config.yaml.
+      GATUS_CONFIG_PATH: /config
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/gatus:/data
