@@ -1,0 +1,20 @@
+repo: rajnandan1/kener
+images:
+  - image: rajnandan1/kener
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/rajnandan1/kener/v4.1.7/static/logo.png
+screenshots:
+  # Captured from the official status page at https://kener.ing (a public Kener instance, no login).
+  - src: .tools/captures/hkdkfih-kener/1.png
+    caption: "Uptime and latency at a glance."
+  - src: .tools/captures/hkdkfih-kener/2.png
+    caption: "Beautiful in light and dark."
+  # Social preview image from https://kener.ing/og.jpg (the site is slow to serve it).
+  - src: .tools/captures/hkdkfih-kener/3.png
+    caption: "Status pages your users will love."
+    frame: none
+# Upstream documents no hardware requirements; estimate for Kener (Node.js) plus its Redis sidecar.
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Storage grows with monitor history"]

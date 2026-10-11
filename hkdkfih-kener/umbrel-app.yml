@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: hkdkfih-kener
+storage:
+  dataRoot: data
+category: networking
+name: Kener
+version: "4.1.7"
+tagline: A stunning, modern status page for your services
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
+description: >-
+  On first launch, click Login and create your account: the first account becomes the admin. Then add
+  monitors under Manage → Monitors and put them on a page.
+
+
+  Kener is a sleek, lightweight status page system. Monitor your websites, APIs and servers, show their uptime
+  and latency on beautiful status pages, and keep everyone informed about incidents and maintenance.
+
+
+  - Website/API, ping, TCP, DNS, SSL certificate, SQL, gRPC, game server, Prometheus and heartbeat monitors
+
+  - 90-day uptime bars, latency charts and status history
+
+  - Incidents and scheduled maintenance with updates and comments
+
+  - Multiple pages, light and dark themes, custom branding and many languages
+
+  - Alerts through webhooks, email and chat services, plus email subscriptions for visitors
+
+  - Embeddable badges and widgets, RSS feeds and a REST API
+
+
+  Your status pages are behind the Umbrel login. Heartbeat URLs (/ext/heartbeat/…) and the REST API (/api/…,
+  which needs a Kener API key) are reachable without it so your machines and scripts can report in.
+releaseNotes: ""
+
+developer: Raj Nandan Sharma
+website: https://kener.ing/
+dependencies: []
+repo: https://github.com/rajnandan1/kener
+support: https://github.com/rajnandan1/kener/issues
+
+port: 21605
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

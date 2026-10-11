@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-kener_web_1
+      APP_PORT: 3000
+      # Heartbeat monitors are pinged by your own machines and scripts (the URL contains the
+      # monitor's secret); the REST API requires a Kener API key as a bearer token.
+      PROXY_AUTH_WHITELIST: "/ext/heartbeat/*,/api/*"
+
+  web:
+    image: rajnandan1/kener:4.1.7@sha256:b99d2b595f92b240d05e75176042542f14e8eb0e57d3f6b3f09794c6dd3c8fd8
+    # the image's "node" user is 1000:1000
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      KENER_SECRET_KEY: ${APP_HKDKFIH_KENER_SECRET_KEY}
+      # Used for absolute links (RSS, badges, emails) until a Site URL is set in Kener; any
+      # hostname works for browsing because Kener trusts all origins for form posts.
+      ORIGIN: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      REDIS_URL: redis://:${APP_HKDKFIH_KENER_REDIS_PASSWORD}@hkdkfih-kener_redis_1:6379
+    volumes:
+      - ${APP_DATA_DIR}/data/database:/app/database
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  redis:
+    image: redis:7.4.11-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    command: redis-server --requirepass ${APP_HKDKFIH_KENER_REDIS_PASSWORD} --appendonly yes
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      REDIS_PASSWORD: ${APP_HKDKFIH_KENER_REDIS_PASSWORD}
