@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-kutt_server_1
+      APP_PORT: 3000
+      # Short links live directly under the root (/<id>), so visitors without an Umbrel login can
+      # only be let through with a catch-all whitelist. Every page of Kutt's own UI, account
+      # creation and the login/auth API stay behind the Umbrel login via the blacklist; the rest
+      # of /api/* requires a Kutt API key.
+      PROXY_AUTH_WHITELIST: "*"
+      PROXY_AUTH_BLACKLIST: "/,/login,/login/*,/logout,/create-admin,/create-user,/settings,/admin,/admin/*,/stats,/reset-password,/reset-password/*,/verify/*,/verify-email/*,/confirm-*,/add-domain,/add-domain-form,/link/*,/get-report-email,/get-support-email,/api/auth/*,/api/v2/auth/*"
+
+  server:
+    image: kutt/kutt:v3.2.6@sha256:fa3d24a89b04e0feb542ed7d3c77993d58dbcc1406e5291a369595d543886146
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    # Upstream's "npm start" forces production mode, which marks the login cookie Secure so
+    # browsers drop it on http://umbrel.local. Development mode only changes that, the scheme of
+    # displayed short links (http) and error logging.
+    command:
+      - sh
+      - -c
+      - npm run migrate && exec node server/server.js
+    environment:
+      NODE_ENV: development
+      JWT_SECRET: ${APP_HKDKFIH_KUTT_JWT_SECRET}
+      DEFAULT_DOMAIN: ${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      DB_CLIENT: better-sqlite3
+      DB_FILENAME: /var/lib/kutt/data.sqlite
+      TRUST_PROXY: "true"
+    volumes:
+      - ${APP_DATA_DIR}/data/kutt:/var/lib/kutt

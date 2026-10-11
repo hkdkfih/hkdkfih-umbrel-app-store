@@ -1,0 +1,18 @@
+repo: thedevs-network/kutt
+images:
+  - image: kutt/kutt
+    tag: "{tag}"
+# the logo shown in the upstream README (pinned there to this commit)
+icon: https://raw.githubusercontent.com/thedevs-network/kutt/9d1c873897c3f5b9a1bd0c74dc5d23f2ed01f2ec/static/images/logo-github.png
+screenshots:
+  # captured from the official instance at kutt.to (homepage, no login)
+  - src: .tools/captures/hkdkfih-kutt/1.png
+    caption: "Shorter links in a second."
+  # illustration from the kutt.to homepage; already shows browser windows
+  - src: https://kutt.to/images/callout.png
+    caption: "See who clicks, and from where."
+    frame: none
+# Upstream documents no hardware requirements; a single Node.js process with SQLite.
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "2 cores", memory: "512 MB", storage: "2 GB"}

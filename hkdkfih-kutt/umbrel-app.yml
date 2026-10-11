@@ -1,0 +1,58 @@
+manifestVersion: 1
+id: hkdkfih-kutt
+storage:
+  dataRoot: data
+environment:
+  - name: DEFAULT_DOMAIN
+    services:
+      - server
+    default: umbrel.local:21105
+    note: Domain (and port) shown in your short links. Only change it if your Umbrel is reachable under your own domain through a tunnel or reverse proxy, for example s.example.com.
+category: networking
+name: Kutt
+version: "3.2.6"
+tagline: A modern URL shortener with stats and custom domains
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/icon.png
+description: >-
+  On first launch, create your Kutt admin account in the browser. You can add more users from the admin page.
+
+
+  Kutt is a free and open source URL shortener. Shorten links with custom aliases, protect them with a
+  password or an expiry time, and see how often they were opened, from where and with which browser.
+
+
+  - Custom short addresses, descriptions and expiry times
+
+  - Password-protected links
+
+  - Click statistics with referrers, browsers, countries and operating systems
+
+  - Custom domains for your short links
+
+  - Multiple users with an admin panel
+
+  - REST API and browser extensions for Chrome and Firefox
+
+
+  Short links (http://umbrel.local:21105/<alias>) open for anyone who can reach your Umbrel, without an Umbrel
+  login. Kutt's own pages stay protected by your Umbrel login. To share links outside your home network, make
+  the app reachable through a tunnel or reverse proxy and set your domain in the app's settings.
+releaseNotes: ""
+
+developer: The Devs
+website: https://kutt.to/
+dependencies: []
+repo: https://github.com/thedevs-network/kutt
+support: https://github.com/thedevs-network/kutt/issues
+
+port: 21105
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/2.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
