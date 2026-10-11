@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-big-agi_web_1
+      APP_PORT: 3000
+
+  web:
+    image: ghcr.io/enricoros/big-agi:v2.1.0@sha256:a9cae0e257709e9592675090b93cd8f48484fbb3b5ee7f0047aa45c9d2cd817e
+    # runs as the image's non-root "nextjs" user; chats, settings and API keys live in the browser,
+    # so the server keeps no state and needs no volume
+    restart: on-failure
+    stop_grace_period: 1m

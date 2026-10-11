@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: hkdkfih-big-agi
+category: ai
+name: Big-AGI
+version: "2.1.0"
+tagline: A multi-model AI workspace for chatting with many models at once
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/icon.png
+description: >-
+  Big-AGI needs at least one AI service. After launching it, open Models and add a service with your own API key
+  (OpenAI, Anthropic, Google Gemini, OpenRouter, Mistral, Groq and more). To use the Ollama app on your Umbrel,
+  add an Ollama service with the host http://ollama_ollama_1:11434.
+
+
+  Big-AGI is a fast, local-first AI workspace for people who think for a living. Talk to the latest models from
+  every major provider in one interface, compare their answers side by side, and merge the best parts into one.
+
+
+  - Beam: send one prompt to several models in parallel, then fuse, compare or pick the best reply
+
+  - 20+ AI services and hundreds of models, including fully local models through Ollama or LM Studio
+
+  - Personas, voice input and text-to-speech, image generation and diagrams
+
+  - Attach files, images and web pages, and paste code with syntax highlighting
+
+  - Chat folders, search, branching and export
+
+  - AI Inspector to see exactly what is sent to each model
+
+
+  Your chats, settings and API keys are stored in your browser, not on the Umbrel, so each browser has its own
+  history. Use the backup (Export All) option in the chat list menu to keep a copy or move to another device.
+  Microphone input needs a secure connection, so open the app over https to use voice.
+releaseNotes: ""
+
+developer: Enrico Ros
+website: https://big-agi.com/
+dependencies: []
+repo: https://github.com/enricoros/big-AGI
+support: https://github.com/enricoros/big-AGI/issues
+
+port: 21401
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

@@ -1,0 +1,22 @@
+repo: enricoros/big-AGI
+images:
+  - image: ghcr.io/enricoros/big-agi
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/enricoros/big-AGI/v2.1.0/public/icons/icon-512x512.png
+screenshots:
+  # README "Show me a screenshot" (already inside a window frame)
+  - src: https://github.com/user-attachments/assets/853f4160-27cb-4ac9-826b-402f1e63d4af
+    caption: "Ask every model at once."
+    frame: none
+  # big-agi.com product shots
+  - src: https://big-agi.com/_next/static/media/beam-run-axolotl.0a6f79c4.png
+    caption: "Merge the best of every answer."
+    frame: none
+  - src: https://big-agi.com/_next/static/media/big-agi-header-203.77125830.png
+    caption: "Chat and draw side by side."
+# Upstream documents no hardware requirements; estimate. The server is a stateless Next.js app
+# that relays requests to AI providers (models run elsewhere or in Ollama); chats live in the browser.
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "2 GB"}
+  notes: ["Local models need the Ollama app and their own memory"]
