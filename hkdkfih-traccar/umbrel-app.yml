@@ -31,6 +31,17 @@ description: >-
 
   Phones with the Traccar Client app connect to http://umbrel.local:15055. Dedicated GPS trackers that use other
   protocols need their protocol port published, which this package does not do by default.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 20 GB
+
+  Note: Storage grows with devices and history
 releaseNotes: ""
 
 developer: Anton Tananaev
@@ -44,6 +55,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/4.jpg
 path: ""
 
 defaultUsername: ""

@@ -26,6 +26,15 @@ description: >-
   - Two-factor authentication and app lock
 
   - Installable as a mobile web app (PWA)
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 512 MB
+
+  Storage: 200 MB → 2 GB
 releaseNotes: ""
 
 developer: MaysWind
@@ -40,6 +49,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/5.jpg
 path: ""
 
 defaultUsername: ""

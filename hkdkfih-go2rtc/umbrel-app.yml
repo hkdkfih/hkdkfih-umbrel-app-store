@@ -24,6 +24,17 @@ description: >-
 
   RTSP restreams are available at rtsp://admin:<password>@umbrel.local:18554/<stream-name>, using the password
   shown by Umbrel. WebRTC uses port 18555 (TCP and UDP). HomeKit camera discovery is not available, because the app does not use host networking.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 128 MB → 512 MB
+
+  Storage: 100 MB → 500 MB
+
+  Note: Transcoding with FFmpeg needs more CPU or a GPU
 releaseNotes: >-
   RTSP restreams now require a username and password (shown by Umbrel), and exec: sources are limited to
   ffmpeg.
@@ -38,6 +49,7 @@ port: 1985
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/3.jpg
 path: ""
 
 defaultUsername: "admin"

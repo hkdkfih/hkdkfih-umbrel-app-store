@@ -30,6 +30,15 @@ description: >-
 
   Log in with the username and password shown by Umbrel. You can change the password and add more users in
   linkding's settings.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 500 MB → 5 GB
 releaseNotes: >-
   The linkding browser extensions and apps can now reach the REST API with your linkding API token.
 
@@ -43,6 +52,7 @@ port: 9095
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/3.jpg
 path: ""
 
 defaultUsername: "umbrel"

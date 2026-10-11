@@ -26,6 +26,15 @@ description: >-
   - Multiple users, with systems shared between them
 
   - Agents connect over WebSocket to http://umbrel.local:8490, or the hub connects to them over SSH
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 512 MB
+
+  Storage: 200 MB → 2 GB
 releaseNotes: ""
 
 developer: henrygd
@@ -39,6 +48,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/4.jpg
 path: ""
 
 defaultUsername: "umbrel@umbrel.local"

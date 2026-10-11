@@ -37,6 +37,15 @@ description: >-
   Devices are added by IP address. OCPP wallboxes connect to ws://umbrel.local:18887/<station-id>. Discovery and
   devices that need UDP broadcasts (such as SMA Home Manager) are not available, because the app does not use
   host networking.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 256 MB → 512 MB
+
+  Storage: 200 MB → 1 GB
 releaseNotes: ""
 
 developer: evcc.io
@@ -51,6 +60,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/5.jpg
 path: ""
 
 defaultUsername: ""

@@ -19,6 +19,17 @@ description: >-
 
   Everything runs locally in your browser: the data you paste into CyberChef is never sent to the server, which
   makes running your own copy on Umbrel a great way to analyse sensitive data privately.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB
+
+  Storage: 100 MB
+
+  Note: Runs in your browser; server load is minimal
 releaseNotes: ""
 
 developer: GCHQ
@@ -32,6 +43,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/4.jpg
 path: ""
 
 defaultUsername: ""

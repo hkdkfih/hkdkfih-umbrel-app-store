@@ -26,6 +26,17 @@ description: >-
   password. To use Jellyfin or another server instead, choose it on the login screen. When you open Feishin over
   https or remotely, change the server address to one your browser can reach the same way. Feishin itself stores no
   data; your library stays on your music server.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB
+
+  Storage: 100 MB
+
+  Note: Needs a Navidrome, Jellyfin or Subsonic server
 releaseNotes: ""
 
 developer: jeffvli
@@ -40,6 +51,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/5.jpg
 path: ""
 
 defaultUsername: ""

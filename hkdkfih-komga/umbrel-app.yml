@@ -42,6 +42,17 @@ description: >-
   - Multiple users with per-library access and age restrictions
 
   - Duplicate file and page detection
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Plus space for your comics and ebooks
 releaseNotes: >-
   OPDS feeds and Kobo and KOReader sync now work from reader apps; they use your Komga account instead of the
   Umbrel login.
@@ -57,6 +68,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/4.jpg
 path: ""
 
 defaultUsername: ""

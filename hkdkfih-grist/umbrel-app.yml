@@ -27,6 +27,15 @@ description: >-
 
   Grist opens as a single-user workspace protected by your Umbrel login. Formulas run in a WebAssembly
   sandbox. To invite other people with their own accounts, configure authentication in Grist's Admin Panel.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 8 GB
+
+  Storage: 1 GB → 20 GB
 releaseNotes: >-
   Improvements
 
@@ -72,6 +81,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/5.jpg
 path: ""
 
 defaultUsername: ""

@@ -38,6 +38,17 @@ description: >-
   The optional Scrypted NVR plugin (a paid upstream add-on) adds 24/7 recording, a timeline, face
   recognition and license plate search. Recordings can be stored in a folder of your choice from the app's
   settings in umbrelOS.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 2 cores → 4 cores + Intel iGPU
+
+  Memory: 2 GB → 8 GB
+
+  Storage: 5 GB → 20 GB
+
+  Note: NVR recordings need a separate large drive
 releaseNotes: ""
 
 developer: Koushik Dutta
@@ -52,6 +63,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/5.jpg
 path: ""
 
 defaultUsername: ""

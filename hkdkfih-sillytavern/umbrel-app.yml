@@ -26,6 +26,17 @@ description: >-
   - Image generation, text-to-speech, translation and vector-storage extensions
 
   - Visual novel mode, themes and a highly customisable UI
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 2 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: AI models run elsewhere (API or Ollama)
 releaseNotes: ""
 
 developer: SillyTavern
@@ -40,6 +51,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/5.jpg
 path: ""
 
 defaultUsername: ""

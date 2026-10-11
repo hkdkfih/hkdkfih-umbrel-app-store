@@ -42,6 +42,17 @@ description: >-
   - Health checks, pruning and notifications (Discord, Slack, Gotify, healthchecks.io, …)
 
   - Import existing restic repositories
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 2 GB
+
+  Storage: 1 GB → 10 GB
+
+  Note: Plus space for local backup repositories
 releaseNotes: ""
 
 developer: Gareth George
@@ -55,6 +66,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-backrest/4.jpg
 path: ""
 
 defaultUsername: ""

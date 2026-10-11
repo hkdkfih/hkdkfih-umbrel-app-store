@@ -28,6 +28,15 @@ description: >-
 
 
   Over plain http, SilverBullet works online-only. Open it over https to enable offline mode.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 200 MB → 2 GB
 releaseNotes: ""
 
 developer: Zef Hemel
@@ -42,6 +51,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/5.jpg
 path: ""
 
 defaultUsername: ""

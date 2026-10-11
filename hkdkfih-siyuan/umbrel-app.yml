@@ -37,6 +37,15 @@ description: >-
 
   The Docker version runs in the browser only; exporting to PDF, HTML and Word and importing Markdown are not
   available.
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 2 GB
+
+  Storage: 1 GB → 10 GB
 releaseNotes: ""
 
 developer: SiYuan
@@ -51,6 +60,7 @@ gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/2.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/3.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/5.jpg
 path: ""
 
 defaultUsername: ""
