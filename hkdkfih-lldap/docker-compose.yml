@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-lldap_server_1
+      APP_PORT: 17170
+
+  server:
+    image: lldap/lldap:v0.6.3-alpine-rootless@sha256:ba2c50930ea998eefd5454aa678a7977448019248b1827da87d330df0b71c284
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      LLDAP_JWT_SECRET: ${APP_HKDKFIH_LLDAP_JWT_SECRET}
+      LLDAP_KEY_SEED: ${APP_HKDKFIH_LLDAP_KEY_SEED}
+      LLDAP_LDAP_USER_DN: admin
+      # Only used when the admin account is first created; later changes in the UI stick.
+      LLDAP_LDAP_USER_PASS: ${APP_PASSWORD}
+      # Used in password reset emails.
+      LLDAP_HTTP_URL: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+    ports:
+      # LDAP for other apps and devices. LLDAP has no anonymous access: every query needs a
+      # bind with a user's password.
+      - "21203:3890"
+    volumes:
+      - ${APP_DATA_DIR}/data/lldap:/data

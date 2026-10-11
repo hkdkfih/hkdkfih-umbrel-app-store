@@ -1,0 +1,14 @@
+repo: lldap/lldap
+images:
+  - image: lldap/lldap
+    tag: "v{version}-alpine-rootless"
+# Upstream has no logo; this is the LLDAP wordmark from the web UI header (homarr-labs/dashboard-icons).
+icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/lldap.png
+screenshots:
+  - src: https://raw.githubusercontent.com/lldap/lldap/v0.6.3/screenshot.png
+    caption: "Users and groups, the simple way."
+# Upstream documents no hardware requirements (README: "lightweight authentication server");
+# estimate for the single Rust binary with SQLite.
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "128 MB", storage: "500 MB"}

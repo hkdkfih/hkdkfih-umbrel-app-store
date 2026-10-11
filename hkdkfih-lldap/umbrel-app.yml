@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: hkdkfih-lldap
+storage:
+  dataRoot: data
+category: networking
+name: LLDAP
+version: "0.6.3"
+tagline: Light LDAP server with a friendly web UI for your users and groups
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lldap/icon.png
+description: >-
+  Log in with the username "admin" and the password shown by Umbrel. You can change the password in LLDAP
+  afterwards.
+
+
+  Connect your apps to ldap://umbrel.local:21203 (or hkdkfih-lldap_server_1:3890 from other Umbrel apps)
+  with the base DN dc=example,dc=com and the bind user uid=admin,ou=people,dc=example,dc=com. For everyday
+  use, create a separate read-only bind user in the lldap_strict_readonly group.
+
+
+  LLDAP is a lightweight authentication server with an opinionated, simplified LDAP interface. Manage the
+  users and groups of your home lab in one place and let apps such as Nextcloud, Jellyfin, Gitea, Authelia
+  or Keycloak use it as their source of logins.
+
+
+  - Simple web UI to create users, set passwords and manage groups
+
+  - Users can edit their own details and reset their password by email (SMTP optional)
+
+  - Custom user and group attributes
+
+  - GraphQL API for scripting
+
+  - Low resource usage, with data stored in SQLite
+releaseNotes: ""
+
+developer: lldap
+website: https://github.com/lldap/lldap
+dependencies: []
+repo: https://github.com/lldap/lldap
+support: https://github.com/lldap/lldap/issues
+
+port: 21202
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lldap/1.jpg
+path: ""
+
+defaultUsername: "admin"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
