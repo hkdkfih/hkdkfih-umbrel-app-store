@@ -1,0 +1,64 @@
+manifestVersion: 1
+id: hkdkfih-gokapi
+storage:
+  dataRoot: data
+environment:
+  - name: TZ
+    services:
+      - server
+    note: IANA time zone used for expiry dates and logs, such as America/New_York or Europe/London.
+category: files
+name: Gokapi
+version: "2.2.4"
+tagline: Lightweight self-hosted file sharing with expiring links
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/icon.png
+description: >-
+  First-run setup: while Gokapi shows "Server is in maintenance mode", open
+  http://umbrel.local:21104/setup and complete the wizard. Keep SQLite as the database, leave SSL off (umbrelOS
+  already serves the app over http and https), set "Public facing URL" to the address your recipients will use
+  (for example http://umbrel.local:21104/ or your own domain) and choose "Username / Password" to create your
+  admin account. Afterwards, log in at http://umbrel.local:21104/admin.
+
+
+  Gokapi is a lightweight server to share files that expire after a set number of downloads or days, similar to
+  the discontinued Firefox Send. Upload a file, send the link, and it disappears once it has served its purpose.
+
+
+  - Download links with download limits, expiry dates and optional passwords
+
+  - File requests: let others upload files to you through a link
+
+  - Optional end-to-end encryption, and hotlinks for images
+
+  - Multiple users with roles and permissions
+
+  - Deduplication of identical files
+
+  - Store files locally or in S3-compatible storage
+
+  - REST API, a CLI upload tool and ShareX support
+
+
+  Download links and file requests work for people without an Umbrel account as long as they can reach your
+  Umbrel. The admin interface stays protected by your Umbrel login.
+releaseNotes: ""
+
+developer: Marc Bulling
+website: https://gokapi.readthedocs.io/
+dependencies: []
+repo: https://github.com/Forceu/Gokapi
+support: https://github.com/Forceu/Gokapi/issues
+
+port: 21104
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/4.jpg
+path: "/admin"
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

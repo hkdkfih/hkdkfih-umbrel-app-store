@@ -1,0 +1,20 @@
+repo: Forceu/Gokapi
+images:
+  - image: f0rc3/gokapi
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/Forceu/Gokapi/v2.2.4/internal/webserver/web/static/defaultFavicon.png
+screenshots:  # from the upstream README
+  - src: https://github.com/user-attachments/assets/d805a88b-dc74-4c39-bed6-ec31b9c3e17f
+    caption: "Share files that expire on their own."
+  - src: https://github.com/user-attachments/assets/fd9c032b-733d-4657-9f42-f751b2634e02
+    caption: "One link, one click to download."
+  - src: https://github.com/user-attachments/assets/a6565cf8-bd2d-4027-a150-673aa93d4502
+    caption: "Let others send files to you."
+  - src: https://github.com/user-attachments/assets/70d5ab07-e60f-48d5-8739-fa038129e5ae
+    caption: "Everything at a glance."
+# Upstream README "System Requirements": minimum 1 core, 256 MB RAM, 100 MB + file storage;
+# recommended 2+ cores, 512 MB+ RAM, SSD storage.
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "512 MB", storage: "20 GB"}
+  notes: ["Storage grows with the files you share", "An SSD is strongly recommended"]

@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-gokapi_server_1
+      APP_PORT: 53842
+      # Recipients open download links, hotlinks and file requests without an Umbrel login. Each link
+      # uses a long random id (plus optional password and download limit); the API uses Gokapi API
+      # keys. The admin pages (/admin, /users, /logs, ...) and the setup stay behind the Umbrel login.
+      PROXY_AUTH_WHITELIST: "/d,/d/*,/dh/*,/downloadFile,/h/*,/hotlink/*,/publicUpload,/api/*,/main.wasm,/e2e.wasm,/error,/assets/*,/css/*,/js/*,/custom/*,/favicon*,/site.webmanifest"
+
+  server:
+    image: f0rc3/gokapi:v2.2.4@sha256:43cd93b9e1f02d760923f67f6e74e1c4d4a9cccb9b08fa42ad60770333f231eb
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      GOKAPI_CONFIG_DIR: /app/config
+      GOKAPI_DATA_DIR: /app/data
+      TZ: Etc/UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/app/config
+      - ${APP_DATA_DIR}/data/data:/app/data
