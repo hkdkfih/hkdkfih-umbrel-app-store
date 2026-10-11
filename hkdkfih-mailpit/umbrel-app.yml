@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-mailpit
+storage:
+  dataRoot: data
+category: developer
+name: Mailpit
+version: "1.31.5"
+tagline: Catch and inspect emails sent by your apps
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/icon.png
+description: >-
+  Point the app or script you are testing at the SMTP server umbrel.local, port 21604, and log in with the
+  username and password shown by Umbrel (no TLS). Every email it sends lands in Mailpit instead of a real
+  inbox. The web interface is protected by your Umbrel login.
+
+
+  Mailpit is an email and SMTP testing tool for developers. It acts as an SMTP server and gives you a fast,
+  modern web interface to view and test the messages it catches, so you can check your emails without
+  spamming real people.
+
+
+  - Real-time inbox with search, tags and read/unread state
+
+  - View HTML, source, text, headers and attachments, on desktop, tablet and phone sizes
+
+  - HTML check shows how well your email is supported across mail clients
+
+  - Link check finds broken links, plus optional SpamAssassin scoring
+
+  - Release a message to a real SMTP server when you need to
+
+  - REST API, webhooks and a sendmail replacement for automated tests
+
+
+  Mailpit keeps the newest 500 messages by default.
+releaseNotes: ""
+
+developer: Ralph Slooten
+website: https://mailpit.axllent.org/
+dependencies: []
+repo: https://github.com/axllent/mailpit
+support: https://github.com/axllent/mailpit/issues
+
+port: 21603
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/3.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

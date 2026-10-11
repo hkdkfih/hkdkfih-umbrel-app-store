@@ -1,0 +1,17 @@
+repo: axllent/mailpit
+images:
+  - image: axllent/mailpit
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/axllent/mailpit-website/5a60971e3d1de01acfa7e59db86fd843104e7b17/static/favicons/android-chrome-512x512.png
+screenshots:
+  - src: https://raw.githubusercontent.com/axllent/mailpit/v1.31.4/server/ui-src/screenshot.png
+    caption: "Every test email, caught."
+  - src: https://raw.githubusercontent.com/axllent/mailpit-website/5a60971e3d1de01acfa7e59db86fd843104e7b17/static/images/screenshots/light-1.png
+    caption: "Preview emails before anyone else."
+  - src: https://raw.githubusercontent.com/axllent/mailpit-website/5a60971e3d1de01acfa7e59db86fd843104e7b17/static/images/screenshots/light-3.png
+    caption: "Know which mail clients will break."
+# Upstream documents no hardware requirements; Mailpit is a single small Go binary with SQLite storage.
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  notes: ["Storage grows with the number and size of messages kept (500 by default)"]
