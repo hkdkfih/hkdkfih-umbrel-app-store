@@ -1,0 +1,61 @@
+manifestVersion: 1
+id: hkdkfih-suwayomi
+storage:
+  dataRoot: data
+category: media
+name: Suwayomi
+version: "2.4.2366"
+tagline: A free and open source manga reader server
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/icon.png
+description: >-
+  Suwayomi opens straight into its web interface, protected by your Umbrel login. To find manga, open
+  Settings → Browse and add an extension repository (Suwayomi does not ship any sources), then install
+  extensions from Browse → Extensions.
+
+
+  Suwayomi is a self-hosted manga reader server that runs Tachiyomi and Mihon extensions. Build a library from
+  hundreds of sources, keep it up to date automatically, download chapters for offline reading and read them
+  in any browser on your phone, tablet or computer.
+
+
+  - Runs Tachiyomi / Mihon extensions, plus a local source for your own files
+
+  - Library with categories, filters, sorting and automatic update checks
+
+  - Web reader with single page, double page, webtoon and continuous modes
+
+  - Chapter downloads, optionally as CBZ archives
+
+  - Tracking with AniList, MyAnimeList, Kitsu, MangaUpdates and more
+
+  - Scheduled backups compatible with Tachiyomi and Mihon
+
+
+  Downloaded chapters and backups are stored in the app's data on your Umbrel. Other Suwayomi clients and the
+  Mihon extension need direct access to the server; they cannot get past the Umbrel login unless you turn it
+  off in the app's settings, in which case enable a login in Suwayomi's server settings first.
+releaseNotes: ""
+
+developer: Suwayomi
+website: https://suwayomi.org/
+dependencies: []
+repo: https://github.com/Suwayomi/Suwayomi-Server
+support: https://github.com/Suwayomi/Suwayomi-Server/issues
+
+port: 21300
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/suwayomi/cache/*
+  - data/suwayomi/logs/*
+  - data/suwayomi/bin/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

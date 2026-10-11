@@ -1,0 +1,19 @@
+repo: Suwayomi/Suwayomi-Server
+images:
+  - image: ghcr.io/suwayomi/suwayomi-server
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/Suwayomi/Suwayomi-Server/master/server/src/main/resources/icon/faviconlogo.png
+# Upstream publishes no UI screenshots; these are cropped from screenshots in Suwayomi-WebUI pull requests
+# (#1159 library search and settings, #1165 download settings).
+screenshots:
+  - src: .tools/captures/hkdkfih-suwayomi/1.png
+    caption: "Your manga library, on your server."
+  - src: .tools/captures/hkdkfih-suwayomi/2.png
+    caption: "Download chapters, read offline."
+  - src: .tools/captures/hkdkfih-suwayomi/3.png
+    caption: "Automatic updates, your way."
+# Upstream documents no hardware requirements (Java server, ~1 GB RAM in typical use); estimate for home use.
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "20 GB"}
+  notes: ["Storage grows with downloaded chapters"]
