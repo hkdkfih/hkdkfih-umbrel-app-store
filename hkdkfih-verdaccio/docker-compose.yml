@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-verdaccio_server_1
+      APP_PORT: 4873
+
+  server:
+    image: verdaccio/verdaccio:6.10.5@sha256:560744912b640ddc0f23cd475d296b663b656c0fcfa0ba17cc5ca1cbcb620225
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      # Registry endpoint for npm, yarn and pnpm, which cannot send Umbrel login cookies. The
+      # config only serves packages to logged-in Verdaccio users and disables self-registration.
+      - "21602:4873"
+    volumes:
+      - ${APP_DATA_DIR}/data/conf:/verdaccio/conf
+      - ${APP_DATA_DIR}/data/storage:/verdaccio/storage
+      # Rendered from htpasswd.template on every start: the "umbrel" user with the Umbrel app password.
+      - ${APP_DATA_DIR}/htpasswd:/verdaccio/auth/htpasswd:ro

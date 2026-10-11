@@ -1,0 +1,17 @@
+repo: verdaccio/verdaccio
+images:
+  - image: verdaccio/verdaccio
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/verdaccio/verdaccio/726dd151240ded9dd1540f32ad4898d795065e81/packages/ui-components/src/components/Logo/img/logo.svg
+screenshots:
+  - src: https://cdn.verdaccio.dev/readme/readme-website.png
+    caption: "Your own private npm registry."
+    frame: none
+  # Cropped from the screenshot embedded in the image above.
+  - src: .tools/captures/hkdkfih-verdaccio/2.png
+    caption: "Every package, documented."
+# Upstream documents no hardware requirements; estimate for a home registry (Node.js process, cache on disk).
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "20 GB"}
+  notes: ["Storage grows with every package you publish or cache from npmjs.org"]

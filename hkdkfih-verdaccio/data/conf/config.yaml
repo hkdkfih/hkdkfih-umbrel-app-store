@@ -1,0 +1,47 @@
+# Verdaccio configuration for Umbrel. Edit it to add uplinks or package rules, then restart the app.
+# Reference: https://verdaccio.org/docs/configuration
+#
+# The registry is published on its own port for npm, yarn and pnpm, so every request needs a
+# Verdaccio login. The "umbrel" account is managed by Umbrel; its password is shown in the Umbrel
+# app details and the file below is regenerated on every start.
+
+storage: /verdaccio/storage/data
+plugins: /verdaccio/plugins
+
+web:
+  title: Verdaccio
+
+auth:
+  htpasswd:
+    file: /verdaccio/auth/htpasswd
+    # Self-registration is disabled.
+    max_users: -1
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  '@*/*':
+    access: $authenticated
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: npmjs
+
+  '**':
+    access: $authenticated
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: npmjs
+
+server:
+  keepAliveTimeout: 60
+
+middlewares:
+  audit:
+    enabled: true
+
+log: {type: stdout, format: pretty, level: http}
+
+i18n:
+  web: en-US
