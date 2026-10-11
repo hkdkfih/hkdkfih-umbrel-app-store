@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-kanboard
+storage:
+  dataRoot: data
+category: files
+name: Kanboard
+version: "1.2.54"
+tagline: Project management focused on the Kanban methodology
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png
+description: >-
+  Log in with the username and password shown by Umbrel. You can change the password and add more users in
+  Kanboard's user management.
+
+
+  Kanboard is a free and open source Kanban project management tool. It keeps things simple: a clear board to
+  visualize your work, limits on work in progress to stay focused, and just enough features to manage projects
+  for yourself or a small team.
+
+
+  - Boards with columns, swimlanes, colors, tags and WIP limits
+
+  - Calendar, list and Gantt views
+
+  - Subtasks, time tracking, attachments and comments
+
+  - Automatic actions to move, assign or close tasks for you
+
+  - Analytics such as cumulative flow and burndown charts
+
+  - RSS and iCal feeds, a JSON-RPC API and many plugins
+
+
+  The JSON-RPC API and the RSS/iCal feeds are reachable without the Umbrel login so apps and calendars can
+  use them; they are protected by Kanboard's own credentials and secret tokens.
+releaseNotes: ""
+
+developer: Frédéric Guillot
+website: https://kanboard.org/
+dependencies: []
+repo: https://github.com/kanboard/kanboard
+support: https://github.com/kanboard/kanboard/issues
+
+port: 21503
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/3.jpg
+path: ""
+
+defaultUsername: "admin"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

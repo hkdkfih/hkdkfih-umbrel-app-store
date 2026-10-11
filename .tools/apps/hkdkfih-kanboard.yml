@@ -1,0 +1,18 @@
+repo: kanboard/kanboard
+images:
+  - image: kanboard/kanboard
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/kanboard/kanboard/v1.2.54/assets/img/inkscape-optimized-icon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/kanboard/website/HEAD/assets/img/board.png
+    caption: "Visualize your work on a Kanban board."
+  - src: https://raw.githubusercontent.com/kanboard/website/HEAD/assets/img/releases/1.0.41/dashboard.png
+    caption: "Every task you own, in one place."
+  - src: https://raw.githubusercontent.com/kanboard/documentation/HEAD/static/images/v1/project-view.png
+    caption: "See where every project stands."
+# Upstream documents software prerequisites only (docs.kanboard.org/v1/admin/requirements/);
+# hardware is an estimate for a small team (PHP app + PostgreSQL).
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Storage grows with task attachments"]

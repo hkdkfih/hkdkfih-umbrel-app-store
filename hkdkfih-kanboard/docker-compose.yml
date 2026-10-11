@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-kanboard_web_1
+      APP_PORT: 80
+      # JSON-RPC API for apps and scripts (Kanboard user credentials or API token), and
+      # per-user/per-project RSS and iCal feeds secured by random tokens.
+      PROXY_AUTH_WHITELIST: "/jsonrpc.php,/feed/*,/ical/*"
+
+  web:
+    image: kanboard/kanboard:v1.2.54@sha256:8df6c4339134b6c196da9a262daa42ab8ce395f528a48d4a3dd7038c296f34c1
+    # container runs as root (upstream default); nginx and php-fpm serve as the nginx user
+    restart: on-failure
+    stop_grace_period: 1m
+    # Kanboard creates the account admin/admin with a new database. On the first start the
+    # database is created here and that password is replaced with the Umbrel app password,
+    # then the upstream entrypoint takes over. Later password changes are kept.
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        if [ ! -f /var/www/app/data/.umbrel-admin-password-set ]; then
+          php -r 'require "/var/www/app/app/common.php"; $$users = $$container["userModel"]; exit($$users->update(["id" => $$users->getIdByUsername("admin"), "password" => getenv("KANBOARD_ADMIN_PASSWORD")]) ? 0 : 1);' \
+            && touch /var/www/app/data/.umbrel-admin-password-set
+        fi
+        exec /usr/local/bin/entrypoint.sh
+    environment:
+      DATABASE_URL: postgres://kanboard:${APP_HKDKFIH_KANBOARD_DB_PASSWORD}@hkdkfih-kanboard_db_1:5432/kanboard
+      KANBOARD_ADMIN_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/var/www/app/data
+      - ${APP_DATA_DIR}/data/plugins:/var/www/app/plugins
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    # PostgreSQL is upstream's recommended database
+    image: postgres:18.6-alpine@sha256:77f585114c32fbca283dc835b0596f4e52b51b4c6662d7810b2f4084f60a1873
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      POSTGRES_USER: kanboard
+      POSTGRES_PASSWORD: ${APP_HKDKFIH_KANBOARD_DB_PASSWORD}
+      POSTGRES_DB: kanboard
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kanboard -d kanboard"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
