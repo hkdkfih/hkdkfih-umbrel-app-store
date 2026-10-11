@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-sqlpage_server_1
+      APP_PORT: 8080
+
+  server:
+    image: lovasoa/sqlpage:v0.46.3@sha256:354c683a50f541be01d427b3b664f1d5b36c28739f45bfb809be14b99b6ff649
+    user: "1000:1000"
+    restart: on-failure
+    environment:
+      DATABASE_URL: sqlite:///var/www/sqlpage.db?mode=rwc
+    volumes:
+      - ${APP_DATA_DIR}/data/www:/var/www

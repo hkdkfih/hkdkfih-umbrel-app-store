@@ -1,0 +1,50 @@
+manifestVersion: 1
+id: hkdkfih-sqlpage
+storage:
+  dataRoot: data
+category: developer
+name: SQLPage
+version: "0.46.3"
+tagline: Build web apps with nothing but SQL
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/icon.png
+description: >-
+  Put your .sql files in the www folder of the app's data folder (Files → Apps). index.sql is your home page.
+
+
+  SQLPage turns SQL queries into complete web applications: write a query, pick a component, and get a page with forms, tables, charts and maps. No HTML, CSS or JavaScript needed.
+
+
+  - Dozens of components: tables, charts, forms, maps, cards and more
+
+  - Works with SQLite (built in), PostgreSQL, MySQL and SQL Server
+
+  - Authentication, file uploads and JSON APIs
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 64 MB → 256 MB
+
+  Storage: 100 MB → 1 GB
+releaseNotes: ""
+
+developer: Ophir Lojkine
+website: https://sql-page.com/
+dependencies: []
+repo: https://github.com/sqlpage/SQLPage
+support: https://github.com/sqlpage/SQLPage/issues
+
+port: 22006
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

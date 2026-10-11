@@ -1,0 +1,14 @@
+repo: sqlpage/SQLPage
+images:
+  - image: lovasoa/sqlpage
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/sqlpage/SQLPage/main/docs/favicon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/sqlpage/SQLPage/main/docs/example-form-webpage-screenshot.png
+    caption: "Forms, tables and charts from SQL."
+  - src: https://raw.githubusercontent.com/sqlpage/SQLPage/main/docs/composite-form-screenshot.png
+    caption: "Complete apps, no front-end code."
+# Estimate: small Rust binary with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
