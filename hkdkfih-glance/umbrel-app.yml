@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-glance
+storage:
+  dataRoot: data
+environment:
+  - name: TZ
+    services:
+      - server
+    note: IANA time zone used by the clock and calendar widgets, such as America/New_York or Europe/London.
+category: social
+name: Glance
+version: "0.8.6"
+tagline: A self-hosted dashboard that puts all your feeds in one place
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/icon.png
+description: >-
+  Glance starts with a ready-made dashboard. To make it yours, edit glance.yml in the Files app under
+  Apps › hkdkfih-glance › data › config (or at /app/config/glance.yml in the app's terminal). Glance reloads the
+  page as soon as you save the file. The configuration guide on GitHub lists every widget and option.
+
+
+  Glance is a lightweight, highly customizable dashboard that displays your feeds in a beautiful, streamlined
+  interface. Bring news, videos, markets, weather and your own services together on one fast page.
+
+
+  - RSS feeds, Reddit, Hacker News and Lobsters
+
+  - YouTube and Twitch channels, and GitHub releases
+
+  - Weather, calendar, clocks and stock and crypto markets
+
+  - Bookmarks, search bar and site monitoring
+
+  - Custom API widgets to show data from your other apps
+
+  - Multiple pages, themes and a mobile-friendly layout
+
+
+  The dashboard is protected by your Umbrel login.
+releaseNotes: ""
+
+developer: Svilen Markov
+website: https://github.com/glanceapp/glance
+dependencies: []
+repo: https://github.com/glanceapp/glance
+support: https://github.com/glanceapp/glance/issues
+
+port: 21107
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

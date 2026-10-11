@@ -1,0 +1,18 @@
+repo: glanceapp/glance
+images:
+  - image: glanceapp/glance
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/glanceapp/glance/v0.8.6/internal/glance/static/app-icon.png
+screenshots:  # from the upstream README and docs
+  - src: https://raw.githubusercontent.com/glanceapp/glance/v0.8.6/docs/images/readme-main-image.png
+    caption: "All your feeds on one page."
+  - src: https://raw.githubusercontent.com/glanceapp/glance/v0.8.6/docs/images/markets-page-preview.png
+    caption: "Markets at a glance."
+  - src: https://raw.githubusercontent.com/glanceapp/glance/v0.8.6/docs/images/gaming-page-preview.png
+    caption: "A page for every interest."
+  - src: https://raw.githubusercontent.com/glanceapp/glance/v0.8.6/docs/images/themes-example.png
+    caption: "Make it yours with themes."
+# Upstream README: "Low memory usage", single <20 MB binary; estimate for typical home use.
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}

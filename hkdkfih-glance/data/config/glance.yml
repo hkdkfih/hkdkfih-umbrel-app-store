@@ -1,0 +1,78 @@
+# Glance configuration — https://github.com/glanceapp/glance/blob/main/docs/configuration.md
+# Glance reloads this file automatically when you save it.
+
+theme:
+  background-color: 225 14 15
+  primary-color: 157 47 65
+  contrast-multiplier: 1.1
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: bookmarks
+            groups:
+              - title: Umbrel
+                links:
+                  - title: umbrelOS
+                    url: http://umbrel.local
+                  - title: Umbrel Community
+                    url: https://community.umbrel.com
+              - title: Self-hosting
+                links:
+                  - title: selfh.st
+                    url: https://selfh.st
+                  - title: r/selfhosted
+                    url: https://www.reddit.com/r/selfhosted/
+
+          - type: rss
+            title: News
+            limit: 10
+            collapse-after: 4
+            cache: 12h
+            feeds:
+              - url: https://selfh.st/rss/
+                title: selfh.st
+              - url: https://github.blog/feed/
+                title: GitHub Blog
+
+      - size: full
+        widgets:
+          - type: search
+            search-engine: duckduckgo
+
+          - type: group
+            widgets:
+              - type: hacker-news
+              - type: lobsters
+
+          - type: reddit
+            subreddit: selfhosted
+            show-thumbnails: true
+
+      - size: small
+        widgets:
+          - type: weather
+            location: London, United Kingdom
+            units: metric
+            hour-format: 24h
+
+          - type: markets
+            markets:
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: ETH-USD
+                name: Ethereum
+              - symbol: SPY
+                name: S&P 500
+
+          - type: releases
+            cache: 1d
+            repositories:
+              - getumbrel/umbrel
+              - glanceapp/glance
+              - immich-app/immich
