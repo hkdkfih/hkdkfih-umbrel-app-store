@@ -1,0 +1,17 @@
+repo: Brandawg93/PeaNUT
+images:
+  - image: brandawg93/peanut
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/Brandawg93/PeaNUT/main/src/app/icon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/Brandawg93/PeaNUT/main/images/glance.png
+    caption: "Your UPS at a glance."
+  - src: https://raw.githubusercontent.com/Brandawg93/PeaNUT/main/images/charts.png
+    caption: "Watch power and voltage over time."
+  - src: https://raw.githubusercontent.com/Brandawg93/PeaNUT/main/images/table.png
+    caption: "Every value your UPS reports."
+# Estimate: small Next.js app polling a NUT server
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  notes: ["Needs a NUT server your UPS is connected to"]

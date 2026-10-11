@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-peanut_web_1
+      APP_PORT: 8080
+
+  web:
+    image: brandawg93/peanut:6.0.0@sha256:6629dce915da8b313f08b2e73dd2e54b60e7c0f642c21a8ebc37fe0a820bf41e
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      WEB_PORT: 8080
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config

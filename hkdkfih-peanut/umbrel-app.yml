@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-peanut
+storage:
+  dataRoot: data
+category: networking
+name: PeaNUT
+version: "6.0.0"
+tagline: A tiny dashboard for your UPS
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/icon.png
+description: >-
+  On first launch, add your NUT server (Network UPS Tools) in PeaNUT's settings, for example a Synology, a
+  Raspberry Pi or a NAS that your UPS is connected to.
+
+
+  PeaNUT is a small dashboard for Network UPS Tools. See battery charge, load, runtime and input voltage of
+  your uninterruptible power supplies at a glance, and keep an eye on several UPS devices at once.
+
+
+  - Live gauges for battery, load and runtime
+
+  - Charts of voltage and power over time
+
+  - Full table of every value your UPS reports
+
+  - Run UPS commands and edit variables
+
+  - Prometheus metrics and a Homepage/Glance-friendly API
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 256 MB
+
+  Storage: 200 MB → 500 MB
+
+  Note: Needs a NUT server your UPS is connected to
+releaseNotes: ""
+
+developer: Brandawg93
+website: https://github.com/Brandawg93/PeaNUT
+dependencies: []
+repo: https://github.com/Brandawg93/PeaNUT
+support: https://github.com/Brandawg93/PeaNUT/issues
+
+port: 21205
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
