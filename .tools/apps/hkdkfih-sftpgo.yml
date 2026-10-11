@@ -1,0 +1,17 @@
+repo: drakkan/sftpgo
+images:
+  - image: drakkan/sftpgo
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/drakkan/sftpgo/v2.7.6/img/logo.png
+screenshots:
+  - src: https://sftpgo.com/assets/img/webclient.png
+    caption: "Your files, from any browser."
+  - src: https://sftpgo.com/assets/img/webadmin.png
+    caption: "Simple users and permissions."
+  - src: https://raw.githubusercontent.com/sftpgo/docs/main/docs/assets/img/folders.png
+    caption: "Any storage, one server."
+# Upstream documents no hardware requirements; estimate for a few home users.
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "50 GB"}
+  notes: ["Storage grows with the files your users upload"]

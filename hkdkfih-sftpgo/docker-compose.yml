@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-sftpgo_server_1
+      APP_PORT: 8080
+      # Public share links are opened by people without an Umbrel login. Each share has a random
+      # id and optional password and expiry set in SFTPGo; the static files render its pages.
+      PROXY_AUTH_WHITELIST: "/web/client/pubshares/*,/api/v2/shares/*,/static/*"
+
+  server:
+    image: drakkan/sftpgo:v2.7.6@sha256:1edd28d80de2a008863fbfc58c8ff7db47b1b410bae48d4e6076192337809b11
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # The first start creates the WebAdmin account "admin" with the password shown by Umbrel.
+      SFTPGO_DATA_PROVIDER__CREATE_DEFAULT_ADMIN: "true"
+      SFTPGO_DEFAULT_ADMIN_USERNAME: admin
+      SFTPGO_DEFAULT_ADMIN_PASSWORD: ${APP_PASSWORD}
+      # A stable signing key keeps web sessions valid across restarts.
+      SFTPGO_HTTPD__SIGNING_PASSPHRASE: ${APP_HKDKFIH_SFTPGO_SIGNING_PASSPHRASE}
+      SFTPGO_WEBDAVD__BINDINGS__0__PORT: "10080"
+    ports:
+      - "21101:2022" # SFTP; every SFTPGo user logs in with their own password or SSH key
+      - "21102:10080" # WebDAV; same SFTPGo user accounts
+    volumes:
+      # SQLite database and SSH host keys
+      - ${APP_DATA_DIR}/data/config:/var/lib/sftpgo
+      # default home directories of SFTPGo users
+      - ${APP_DATA_DIR}/data/files:/srv/sftpgo/data
+      - ${APP_DATA_DIR}/data/backups:/srv/sftpgo/backups

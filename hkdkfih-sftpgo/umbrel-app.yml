@@ -1,0 +1,64 @@
+manifestVersion: 1
+id: hkdkfih-sftpgo
+storage:
+  dataRoot: data
+folderAccess:
+  - id: shared-storage
+    name: Shared folder
+    note: Optional. The selected folder is available inside SFTPGo at /srv/sftpgo/storage. Use it (or a subfolder) as a user's home directory or as a virtual folder in WebAdmin.
+    mounts:
+      - service: server
+        targetPath: /srv/sftpgo/storage
+category: files
+name: SFTPGo
+version: "2.7.6"
+tagline: A full-featured SFTP, WebDAV and web file server
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/icon.png
+description: >-
+  Log in to WebAdmin with the username and password shown by Umbrel, then create users for the people and
+  devices that should transfer files. Each user connects with their own password or SSH key over SFTP at
+  umbrel.local, port 21101, or over WebDAV at http://umbrel.local:21102. New users' files are stored in the
+  app's data folder; to use a folder of your own, select it in the app's settings in umbrelOS and set
+  /srv/sftpgo/storage as the user's home directory.
+
+
+  SFTPGo is a fully featured and highly configurable file server. It gives every user an isolated home
+  directory, fine-grained permissions and quotas, and a modern web interface to manage it all.
+
+
+  - SFTP (and SCP) with password and public key authentication
+
+  - WebDAV for Finder, Windows Explorer and mobile file managers
+
+  - WebClient to upload, download, edit and share files from any browser
+
+  - Share links with optional password, expiry and upload-only mode
+
+  - Storage on local disks, S3-compatible services, Google Cloud Storage, Azure Blob or another SFTP server
+
+  - Virtual folders, groups, roles, quotas and bandwidth limits
+
+  - Two-factor authentication, IP filters and an event manager for automations
+
+
+  Share links work for people without an Umbrel account as long as they can reach your Umbrel.
+releaseNotes: ""
+
+developer: Nicola Murino
+website: https://sftpgo.com/
+dependencies: []
+repo: https://github.com/drakkan/sftpgo
+support: https://github.com/drakkan/sftpgo/issues
+
+port: 21100
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/3.jpg
+path: "/web/admin"
+
+defaultUsername: "admin"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
