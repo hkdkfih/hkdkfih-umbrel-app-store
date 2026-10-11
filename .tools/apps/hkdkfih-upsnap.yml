@@ -1,0 +1,19 @@
+repo: seriousm4x/UpSnap
+images:
+  - image: ghcr.io/seriousm4x/upsnap
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/seriousm4x/UpSnap/5.7.2/frontend/static/gopher.svg
+# Cropped to 16:10 from upstream's README screenshots (assets/*.webp at tag 5.7.2).
+screenshots:
+  - src: .tools/captures/hkdkfih-upsnap/1.png
+    caption: "Wake any computer with one click."
+  - src: .tools/captures/hkdkfih-upsnap/2.png
+    caption: "See what's online at a glance."
+  - src: .tools/captures/hkdkfih-upsnap/3.png
+    caption: "Find devices with a network scan."
+# Upstream documents no hardware requirements; estimate for the Go/PocketBase binary with
+# SQLite, pinging a few dozen devices.
+requirements:
+  minimum: {cpu: "1 core", memory: "64 MB", storage: "100 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  notes: ["Uses host networking for Wake-on-LAN"]

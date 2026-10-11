@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  server:
+    image: ghcr.io/seriousm4x/upsnap:5.7.2@sha256:1e7c2345c493f9228a5dc2102be06b5a33331100f303fe0078502f4ef1068724
+    user: "1000:1000"
+    # Host networking is required: Wake-on-LAN magic packets are broadcasts to the local network,
+    # and device discovery (nmap) and ping must reach LAN hosts directly, which a Docker bridge
+    # network prevents. The web UI listens on the manifest port below.
+    network_mode: host
+    # As in upstream's compose: only NET_RAW, which the binary raises for privileged ping and
+    # network scans.
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_RAW
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      UPSNAP_HTTP_LISTEN: 0.0.0.0:21204
+    volumes:
+      - ${APP_DATA_DIR}/data/upsnap:/app/pb_data

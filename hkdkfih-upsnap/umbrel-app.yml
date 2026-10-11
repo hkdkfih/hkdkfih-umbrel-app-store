@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: hkdkfih-upsnap
+storage:
+  dataRoot: data
+environment:
+  - name: TZ
+    services:
+      - server
+    default: Etc/UTC
+    note: IANA time zone used for scheduled wake and shutdown times, such as Europe/London or America/New_York.
+category: networking
+name: UpSnap
+version: "5.7.2"
+tagline: Wake up your computers with one click
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png
+description: >-
+  ⚠️ Create your admin account right after installing: UpSnap opens a setup page on first launch. UpSnap uses
+  host networking so Wake-on-LAN packets and network scans reach your local network, which also means the
+  Umbrel login does not protect it; UpSnap's own login does.
+
+
+  UpSnap is a simple Wake-on-LAN web app. Add the PCs, servers and NAS boxes on your network and power them
+  on from any browser, see which ones are online, and schedule wake-ups and shutdowns.
+
+
+  - Wake devices with one click, or on a cron schedule
+
+  - Live online/offline status for every device and its ports
+
+  - Find devices automatically with a network scan
+
+  - Shut down devices with your own command
+
+  - Multiple users with per-device permissions
+
+  - 35 themes and many languages
+
+
+  Turn on Wake-on-LAN in each computer's BIOS/UEFI and network settings before adding it.
+releaseNotes: ""
+
+developer: seriousm4x
+website: https://github.com/seriousm4x/UpSnap
+dependencies: []
+repo: https://github.com/seriousm4x/UpSnap
+support: https://github.com/seriousm4x/UpSnap/issues
+
+port: 21204
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
