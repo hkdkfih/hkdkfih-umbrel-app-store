@@ -1,0 +1,60 @@
+manifestVersion: 1
+id: hkdkfih-2fauth
+storage:
+  dataRoot: data
+category: files
+name: 2FAuth
+version: "8.0.2"
+tagline: Your two-factor codes, in a web app you own
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
+description: >-
+  On first launch, click "Register" and create your account. The first account becomes the administrator.
+  If you don't want anyone else to sign up, turn off registrations in 2FAuth's admin settings.
+
+
+  2FAuth is a web app to manage your two-factor authentication (2FA) accounts and generate their security
+  codes. Keep your one-time passwords on your own server and use them from any device with a browser,
+  instead of locking them inside a single phone.
+
+
+  - TOTP, HOTP and Steam Guard codes
+
+  - Add accounts by scanning or uploading a QR code, or enter them manually
+
+  - Import from Google Authenticator, Aegis, 2FAS and plain otpauth links
+
+  - Groups, search, icons and light or dark themes
+
+  - Secrets are encrypted in the database
+
+  - Browser extension for Firefox and Chrome, plus a REST API with personal access tokens
+
+  - Multiple users, single sign-on (OpenID Connect) and passkey login
+
+
+  Passkey login needs an HTTPS connection: on umbrelOS 2.0, open the app over HTTPS at its umbrel.local
+  address, with Umbrel's certificate installed on your device (Settings → Advanced settings).
+releaseNotes: ""
+
+developer: Bubka
+website: https://docs.2fauth.app/
+dependencies: []
+repo: https://github.com/Bubka/2FAuth
+support: https://github.com/Bubka/2FAuth/issues
+
+port: 21200
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/2fauth/storage/logs/*
+  - data/2fauth/storage/framework/cache/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

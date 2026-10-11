@@ -1,0 +1,18 @@
+repo: Bubka/2FAuth
+images:
+  - image: 2fauth/2fauth
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/Bubka/2fauth-docs/HEAD/docs/static/2fauth_favicon.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/Bubka/2fauth-docs/HEAD/docs/static/2fauth_screenshots_light.png
+    caption: "Every 2FA code, one tap away."
+  - src: https://raw.githubusercontent.com/Bubka/2fauth-docs/HEAD/docs/static/2fauth_screenshots_dark.png
+    caption: "Scan, sort and manage with ease."
+  - src: https://raw.githubusercontent.com/Bubka/2fauth-docs/HEAD/docs/static/webextension_light.png
+    caption: "Codes right in your browser."
+    frame: none
+# Upstream documents no hardware requirements (only PHP 8.4 + extensions, docs.2fauth.app
+# "Self-hosted server"); estimate for a PHP-FPM + nginx container with SQLite.
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}

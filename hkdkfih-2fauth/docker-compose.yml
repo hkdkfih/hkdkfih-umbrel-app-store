@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-2fauth_web_1
+      APP_PORT: 8000
+      # The 2FAuth browser extension and other clients call the REST API with a 2FAuth
+      # personal access token; they cannot send Umbrel login cookies.
+      PROXY_AUTH_WHITELIST: "/api/*"
+
+  web:
+    image: 2fauth/2fauth:8.0.2@sha256:50421b873c7e5060e2560290bee39e0ff32ffed76949cdb8c12cd76a2d85fde7
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # Encryption key for the stored 2FA secrets; must be exactly 32 characters.
+      APP_KEY: ${APP_HKDKFIH_2FAUTH_APP_KEY}
+      # The web app uses relative URLs and works on any address. APP_URL is used for SSO
+      # callbacks, and its host is the passkey (WebAuthn) relying party.
+      APP_URL: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      # umbrelOS proxies the app from its Docker network; trust its X-Forwarded-* headers
+      # so login throttling sees real client IPs and HTTPS is detected.
+      TRUSTED_PROXIES: ${NETWORK_IP}/16
+    volumes:
+      - ${APP_DATA_DIR}/data/2fauth:/2fauth
