@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-pocket-id_server_1
+      APP_PORT: 1411
+      # Apps that sign in with Pocket ID call the OIDC discovery, token and userinfo endpoints
+      # server-to-server and cannot send Umbrel login cookies. Pocket ID protects them with
+      # client secrets and tokens; its admin API under /api/oidc requires a Pocket ID session.
+      PROXY_AUTH_WHITELIST: "/.well-known/*,/api/oidc/*"
+
+  server:
+    image: ghcr.io/pocket-id/pocket-id:v2.18.0@sha256:323e7ef5bfacf7cf32f22f3d10ccdf48e0c97c94d67e7e40b0b996830deb5165
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # Passkeys only work on this exact HTTPS origin. umbrelOS 2.0 serves the app port over
+      # HTTPS; users can change the address in the app's settings (see umbrel-app.yml).
+      APP_URL: https://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      ENCRYPTION_KEY: ${APP_HKDKFIH_POCKET_ID_ENCRYPTION_KEY}
+      # umbrelOS proxies the app from its Docker network; trust its X-Forwarded-* headers so
+      # rate limits and audit logs see real client IPs.
+      TRUST_PROXY: ${NETWORK_IP}/16
+      ANALYTICS_DISABLED: "true"
+    volumes:
+      - ${APP_DATA_DIR}/data/pocket-id:/app/data

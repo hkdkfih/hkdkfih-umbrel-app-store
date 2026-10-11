@@ -1,0 +1,18 @@
+repo: pocket-id/pocket-id
+images:
+  - image: ghcr.io/pocket-id/pocket-id
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/pocket-id/pocket-id/main/frontend/static/img/static-logo.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/pocket-id/website/HEAD/src/assets/screens/consent-light.jpg
+    caption: "Sign in everywhere with a passkey."
+  - src: https://raw.githubusercontent.com/pocket-id/website/HEAD/src/assets/screens/my-apps-light.jpg
+    caption: "All your apps, one login."
+  - src: https://raw.githubusercontent.com/pocket-id/website/HEAD/src/assets/screens/oidc-client-create-light.png
+    caption: "Connect a new app in seconds."
+# Upstream documents no hardware requirements (pocket-id.org/docs); estimate for a single Go
+# binary with SQLite serving a household.
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "1 GB"}
+  notes: ["Needs HTTPS with a trusted certificate for passkeys"]

@@ -1,0 +1,70 @@
+manifestVersion: 2.0
+id: hkdkfih-pocket-id
+storage:
+  dataRoot: data
+environment:
+  - name: APP_URL
+    services:
+      - server
+    default: https://umbrel.local:21201
+    note: >-
+      The exact HTTPS address you open Pocket ID at, without a trailing slash. Passkeys and sign-in only
+      work on this address. Change it if you use a Tailscale or reverse-proxy domain.
+category: networking
+name: Pocket ID
+version: "2.18.0"
+tagline: Passkey sign-in for all your self-hosted apps
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/icon.png
+description: >-
+  ⚠️ Pocket ID only works over HTTPS with a trusted certificate, because it signs you in with passkeys. On
+  umbrelOS 2.0, install Umbrel's certificate on each device you use (Settings → Advanced settings) and open
+  Pocket ID at https://umbrel.local:21201. If you reach your Umbrel through another HTTPS address, such as
+  Tailscale or a reverse proxy, set it as APP_URL in the app's settings.
+
+
+  On first launch, open /setup (https://umbrel.local:21201/setup), create your admin account and add a
+  passkey. The setup page only works until the first account exists.
+
+
+  Pocket ID is a simple OpenID Connect provider that lets you and your family sign in to your self-hosted
+  apps with passkeys instead of passwords. Connect apps like Immich, Jellyfin, Nextcloud, Paperless-ngx or
+  Grafana once, then sign in everywhere with your fingerprint, face or security key.
+
+
+  - OpenID Connect certified, with OAuth 2.0 and PKCE
+
+  - Passkeys only: no passwords to leak or forget
+
+  - Users, groups and per-app access restrictions
+
+  - Personal "My Apps" dashboard with one-click launch
+
+  - Audit log of sign-ins and passkey changes
+
+  - Email login codes, LDAP sync, SCIM and a REST API
+
+
+  Apps that sign in with Pocket ID must be able to reach and trust its HTTPS address. Its sign-in pages are
+  protected by your Umbrel login; on umbrelOS 2.0 you can turn off "Require Umbrel login" in the app's
+  settings so people without an Umbrel account can sign in.
+releaseNotes: ""
+
+developer: Pocket ID
+website: https://pocket-id.org/
+dependencies: []
+repo: https://github.com/pocket-id/pocket-id
+support: https://github.com/pocket-id/pocket-id/issues
+
+port: 21201
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+requiresHttps: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
