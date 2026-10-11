@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-wekan_web_1
+      APP_PORT: 8080
+
+  web:
+    image: ghcr.io/wekan/wekan:v12.28@sha256:70f1949792c1270a66dd44f5d3131890611ad8cd17e80a9779e0dc341518375c
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      # Upstream's default backend: the FerretDB v1 binary bundled in the image, storing
+      # everything in SQLite under WRITABLE_PATH. Unlike MongoDB 5+, it needs no AVX or
+      # ARMv8.2 CPU, so it also runs on Umbrel Home and Raspberry Pi 4.
+      WEKAN_DB: ferretdb
+      WRITABLE_PATH: /data
+      # Used for links in e-mails and attachment URLs. The UI itself works on any hostname.
+      ROOT_URL: http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}
+      WITH_API: "true"
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/data

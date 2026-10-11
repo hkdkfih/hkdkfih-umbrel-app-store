@@ -1,0 +1,57 @@
+manifestVersion: 1
+id: hkdkfih-wekan
+storage:
+  dataRoot: data
+category: files
+name: WeKan
+version: "12.28"
+tagline: Open source kanban boards for teams
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
+description: >-
+  On first launch, click "Register" and create your account: the first registered user becomes the
+  administrator. Afterwards you can turn off self-registration in Admin Panel → Settings → Registration and
+  invite other people instead.
+
+
+  WeKan is an open source kanban board inspired by Trello. Organise tasks into boards, swimlanes, lists and
+  cards, and collaborate with your team in real time.
+
+
+  - Boards with swimlanes, lists, cards, labels, checklists and due dates
+
+  - Calendar, table, Gantt and many more board views
+
+  - Card attachments, comments, custom fields, voting and time tracking
+
+  - Rules and automations triggered by board activity
+
+  - Import from Trello, Jira, CSV and other WeKan instances, and export to CSV and JSON
+
+  - Translated into dozens of languages
+
+
+  WeKan stores its data in an embedded SQLite database (through FerretDB, upstream's default backend), so it
+  needs no separate database server.
+releaseNotes: ""
+
+developer: WeKan Team
+website: https://wekan.fi/
+dependencies: []
+repo: https://github.com/wekan/wekan
+support: https://github.com/wekan/wekan/issues
+
+port: 21504
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+backupIgnore:
+  - data/data/files/db/backup/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

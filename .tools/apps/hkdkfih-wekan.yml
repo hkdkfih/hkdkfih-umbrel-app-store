@@ -1,0 +1,18 @@
+repo: wekan/wekan
+images:
+  - image: ghcr.io/wekan/wekan
+    tag: "v{version}"
+icon: https://raw.githubusercontent.com/wekan/wekan/v12.28/public/android/android-launchericon-512-512.png
+screenshots:
+  - src: https://wekan.fi/wekan-board-views.png
+    caption: "Every view your team needs."
+  - src: https://raw.githubusercontent.com/wekan/wekan/v12.28/public/screenshot1.webp
+    caption: "Swimlanes, labels and Markdown."
+  - src: https://raw.githubusercontent.com/wekan/wekan/v12.28/public/screenshot2.webp
+    caption: "Cards with dates, votes and timers."
+# Upstream lists no hardware requirements (wekan.fi/install); estimate for a small team running
+# the Node.js server with the bundled FerretDB/SQLite database.
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}
+  notes: ["Storage grows with card attachments"]
