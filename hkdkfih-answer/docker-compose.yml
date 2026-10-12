@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-answer_server_1
+      APP_PORT: 80
+
+  server:
+    image: apache/answer:2.0.3@sha256:0863470d8293294b899f8b39a373df6d6250c3f3e412ea0e483924b41e23428f
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/answer:/data

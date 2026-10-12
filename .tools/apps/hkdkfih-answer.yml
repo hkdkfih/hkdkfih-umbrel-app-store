@@ -1,0 +1,19 @@
+repo: apache/answer
+images:
+  - image: apache/answer
+    tag: "{version}"
+icon: https://answer.apache.org/img/favicon.ico
+screenshots:
+  - src: https://answer.apache.org/assets/images/home-laptop@2x-cd3ea1529effebae1298e2f1dc88da80.png
+    caption: "Your own Q&A community."
+    frame: none
+  - src: https://answer.apache.org/assets/images/answers-laptop@2x-38543673c2b976fdd73984a62c512066.png
+    caption: "Find the best answer fast."
+    frame: none
+  - src: https://answer.apache.org/assets/images/profile-laptop@2x-c4b7098e1429603fe6b8409621accf65.png
+    caption: "Reputation for great contributions."
+    frame: none
+# Estimate: Go binary with SQLite
+requirements:
+  minimum: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}

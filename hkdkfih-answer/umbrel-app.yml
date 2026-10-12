@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: hkdkfih-answer
+storage:
+  dataRoot: data
+category: social
+name: Apache Answer
+version: "2.0.3"
+tagline: A Q&A platform for teams and communities
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-answer/icon.png
+description: >-
+  On first launch, the installer asks for a database (choose SQLite), the site URL and your admin account.
+
+
+  Apache Answer is an open-source Q&A platform in the style of Stack Overflow. Use it as a knowledge base for your family, team or community: ask questions, answer them and vote on the best answers.
+
+
+  - Questions, answers, comments, voting and accepted answers
+
+  - Tags, search and reputation
+
+  - Markdown editor with code highlighting
+
+  - Plugins for login providers, search engines and more
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 256 MB → 1 GB
+
+  Storage: 500 MB → 5 GB
+releaseNotes: ""
+
+developer: Apache Software Foundation
+website: https://answer.apache.org/
+dependencies: []
+repo: https://github.com/apache/answer
+support: https://github.com/apache/answer/issues
+
+port: 22008
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-answer/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-answer/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-answer/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-answer/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
