@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: hkdkfih-huginn
+storage:
+  dataRoot: data
+category: automation
+name: Huginn
+version: "2026.10.04"
+tagline: Build agents that monitor and act on your behalf
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
+description: >-
+  Log in with the username "umbrel" and the password shown by Umbrel.
+
+
+  Huginn is a system for building agents that perform automated tasks for you online. They watch websites, feeds and APIs, wait for events, and act: send digests, post to chat, call webhooks or chain into other agents. Think of it as a hackable, self-hosted IFTTT or Zapier.
+
+
+  - Dozens of agent types: website scraping, RSS, weather, email, Twitter/X, MQTT, webhooks and more
+
+  - Chain agents into scenarios and share them
+
+  - Liquid templating to shape events and messages
+
+  - Schedules, event history and a dry-run mode
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 2 GB → 10 GB
+releaseNotes: ""
+
+developer: Huginn
+website: https://github.com/huginn/huginn
+dependencies: []
+repo: https://github.com/huginn/huginn
+support: https://github.com/huginn/huginn/issues
+
+port: 22010
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/3.jpg
+path: ""
+
+defaultUsername: "umbrel"
+deterministicPassword: true
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

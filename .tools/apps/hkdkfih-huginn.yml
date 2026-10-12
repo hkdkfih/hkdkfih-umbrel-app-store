@@ -1,0 +1,14 @@
+repo: huginn/huginn
+images:
+  - image: huginn/huginn
+    tag: "{tag}"
+icon: https://raw.githubusercontent.com/huginn/huginn/master/media/huginn-icon-square.svg
+screenshots:
+  - src: https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/your-agents.png
+    caption: "Agents that work for you."
+  - src: https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/peaks.png
+    caption: "Spot trends as they happen."
+# Estimate: Ruby on Rails with bundled MySQL
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}

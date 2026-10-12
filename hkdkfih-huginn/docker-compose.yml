@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-huginn_server_1
+      APP_PORT: 3000
+
+  server:
+    image: huginn/huginn:v2026.10.04@sha256:362e861956548828760a7c2958c5ece7530b1d89865279427509eb962f883c1b
+    # all-in-one image with its own MySQL; runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      APP_SECRET_TOKEN: ${APP_HKDKFIH_HUGINN_SECRET_TOKEN}
+      SEED_USERNAME: umbrel
+      SEED_PASSWORD: ${APP_PASSWORD}
+      SEED_EMAIL: umbrel@umbrel.local
+      TIMEZONE: UTC
+    volumes:
+      - ${APP_DATA_DIR}/data/mysql:/var/lib/mysql
