@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-cloudbeaver
+storage:
+  dataRoot: data
+category: developer
+name: CloudBeaver
+version: "25.3.5"
+tagline: A web database manager for every database
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/icon.png
+description: >-
+  On first launch, the setup wizard asks you to create the administrator account.
+
+
+  CloudBeaver is the web version of DBeaver: a database client in your browser. Connect to PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, Oracle, ClickHouse and many more, then browse data, run SQL and manage schemas from anywhere.
+
+
+  - SQL editor with autocomplete and execution plans
+
+  - Spreadsheet-like data editor with filters
+
+  - Visual ER diagrams and data export
+
+  - Multiple users and shared connections
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 1 GB → 2 GB
+
+  Storage: 1 GB → 5 GB
+releaseNotes: ""
+
+developer: DBeaver Corp
+website: https://dbeaver.com/
+dependencies: []
+repo: https://github.com/dbeaver/cloudbeaver
+support: https://github.com/dbeaver/cloudbeaver/issues
+
+port: 22011
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/4.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/5.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

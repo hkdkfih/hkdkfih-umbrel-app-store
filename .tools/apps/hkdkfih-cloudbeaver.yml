@@ -1,0 +1,19 @@
+repo: dbeaver/cloudbeaver
+source: tag
+images:
+  - image: dbeaver/cloudbeaver
+    tag: "{version}"
+icon: https://dbeaver.com/wp-content/themes/utouch/img/logo/logo_mobile.svg
+screenshots:
+  - src: https://github.com/dbeaver/cloudbeaver/wiki/images/sql-editor-demo.png
+    caption: "Run SQL from any browser."
+  - src: https://github.com/dbeaver/cloudbeaver/wiki/images/connection-creation-demo.png
+    caption: "Connect to almost any database."
+  - src: https://github.com/dbeaver/cloudbeaver/wiki/images/data-transfer-demo.png
+    caption: "Move data between databases."
+  - src: https://github.com/dbeaver/cloudbeaver/wiki/images/gis-demo.png
+    caption: "Even maps for spatial data."
+# Estimate: Java server
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "5 GB"}

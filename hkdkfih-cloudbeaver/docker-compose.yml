@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-cloudbeaver_server_1
+      APP_PORT: 8978
+
+  server:
+    image: dbeaver/cloudbeaver:25.3.5@sha256:f3cca49f00cab1c8878cf9d0431620ee51a7d52f8ece72b49d60195fdc709747
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/workspace:/opt/cloudbeaver/workspace
