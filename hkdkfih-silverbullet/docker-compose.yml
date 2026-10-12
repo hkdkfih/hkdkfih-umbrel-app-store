@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: ghcr.io/silverbulletmd/silverbullet:2.12.0-slim@sha256:af31fc55b735658aed827fff7f75acca1fff97516d1ac11cca40011b3622d345
+    image: ghcr.io/silverbulletmd/silverbullet:2.12.1-slim@sha256:7e24c16d31a3f4b4a4832ed64ec585e605a1e275b7c35917d385176f0b40415c
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m

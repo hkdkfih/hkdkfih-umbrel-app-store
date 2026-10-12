@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: SilverBullet
-version: "2.12.0"
+version: "2.12.1"
 tagline: Programmable, private, personal knowledge in Markdown
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-silverbullet/icon.png
 description: >-
@@ -37,7 +37,23 @@ description: >-
   Memory: 256 MB → 1 GB
 
   Storage: 200 MB → 2 GB
-releaseNotes: ""
+releaseNotes: >-
+  - Security: the filesystem API refuses access to dot-prefixed files and directories, consistent with space listings.
+
+  - Fix: HTTP file validators respect If-None-Match precedence, and file reads and conditional writes tolerate proxies that weaken or transform ETags.
+
+  - Fix: YAML data blocks split only on standalone --- lines; X-Ray includes attributes added during indexing.
+
+  - Fix: system.reboot() preserves external edits and clears cached widgets. Reopening a page restores a remembered scroll position of zero.
+
+  - Fix: the [[Runtime API]] returns JSON for query rows, null values, dates and other Lua values without serialization crashes, and remains usable after the client reloads its UI.
+
+  - SLIQ errors offer more specific explanations for common mistakes.
+
+  - …
+
+
+  Full release notes: https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1
 
 developer: Zef Hemel
 website: https://silverbullet.md/
