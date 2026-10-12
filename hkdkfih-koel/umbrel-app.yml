@@ -1,0 +1,69 @@
+manifestVersion: 1
+id: hkdkfih-koel
+storage:
+  dataRoot: data
+folderAccess:
+  - id: umbrel-downloads
+    name: Music
+    note: Your music library. Koel scans it at /music; start a scan from Settings in Koel.
+    mounts:
+      - service: server
+        targetPath: /music
+        readOnly: true
+category: media
+name: Koel
+version: "9.15.0"
+tagline: A personal music streaming server that works
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/icon.png
+description: >-
+  Log in with admin@koel.dev and the password KoelIsCool, then change both in your profile. Add music to your Downloads folder or choose a music folder in the app's settings in umbrelOS, then scan it from Settings in Koel.
+
+
+  Koel is a simple, beautiful web-based music streaming server. Stream your library from any browser with a polished, Spotify-like interface.
+
+
+  - Fast search, playlists, smart playlists and favourites
+
+  - Equalizer, visualizer and lyrics
+
+  - Multiple users with their own playlists
+
+  - Mobile apps and Last.fm scrobbling
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core → 2 cores
+
+  Memory: 512 MB → 1 GB
+
+  Storage: 1 GB → 5 GB
+
+  Note: Plus space for your music library
+releaseNotes: ""
+
+developer: Phan An
+website: https://koel.dev/
+dependencies: []
+repo: https://github.com/koel/koel
+support: https://github.com/koel/koel/issues
+
+port: 22013
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/4.jpg
+path: ""
+
+defaultUsername: "admin@koel.dev"
+defaultPassword: "KoelIsCool"
+
+permissions:
+  - STORAGE_DOWNLOADS
+
+backupIgnore:
+  - data/search-indexes/*
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

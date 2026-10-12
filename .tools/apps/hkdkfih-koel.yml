@@ -1,0 +1,17 @@
+repo: koel/koel
+images:
+  - image: phanan/koel
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/koel/koel/master/public/img/icon.png
+screenshots:
+  - src: https://koel.dev/_nuxt/home.CO2TBZEa.webp
+    caption: "Your music, beautifully streamed."
+  - src: https://koel.dev/_nuxt/artists.C8i_Z8Od.webp
+    caption: "Browse every artist and album."
+  - src: https://koel.dev/_nuxt/edit-song.DthpfQKs.webp
+    caption: "Fix tags right in the browser."
+# Estimate: PHP (Laravel) with PostgreSQL
+requirements:
+  minimum: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  recommended: {cpu: "2 cores", memory: "1 GB", storage: "5 GB"}
+  notes: ["Plus space for your music library"]

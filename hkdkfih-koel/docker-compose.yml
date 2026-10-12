@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-koel_server_1
+      APP_PORT: 80
+
+  server:
+    image: phanan/koel:9.15.0@sha256:e0d4d466d8be93970395943d9b708ef32a67eedecfb226a32a31320bf2d62641
+    # container runs as root (upstream default)
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: hkdkfih-koel_db_1
+      DB_USERNAME: koel
+      DB_PASSWORD: ${APP_HKDKFIH_KOEL_DB_PASSWORD}
+      DB_DATABASE: koel
+      APP_KEY: ${APP_HKDKFIH_KOEL_APP_KEY}
+    volumes:
+      - ${UMBREL_ROOT}/data/storage/downloads:/music
+      - ${APP_DATA_DIR}/data/images:/var/www/html/storage/app/public/images
+      - ${APP_DATA_DIR}/data/search-indexes:/var/www/html/storage/search-indexes
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16.13-alpine@sha256:4e6e670bb069649261c9c18031f0aded7bb249a5b6664ddec29c013a89310d50
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      POSTGRES_USER: koel
+      POSTGRES_PASSWORD: ${APP_HKDKFIH_KOEL_DB_PASSWORD}
+      POSTGRES_DB: koel
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U koel -d koel"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
