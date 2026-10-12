@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.28.1-patch.1"
+version: "1.29.0"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -54,8 +54,27 @@ description: >-
 
   Note: Plus space for your comics and ebooks
 releaseNotes: >-
-  OPDS feeds and Kobo and KOReader sync now work from reader apps; they use your Komga account instead of the
-  Umbrel login.
+  Notable Entities
+
+
+  - Notable Entities bring a flexible way to store additional metadata at book level. It works similarly to authors in the way you can create any kind of notable entity, and associate it with a list of values.
+
+  - Komga will fetch the following directly from : Teams, Characters, and Locations.
+
+  - Note that Notable Entities are only available in Nextui.
+
+
+  NextUI features
+
+
+  - A new toggle has been added in the NextUI Server Settings screen that allows you to configure NextUI as the default UI to be loaded. This is a server-wide setting that will apply to every user.
+
+  - A link has also been added in the NextUI sidebar to go back to the classic UI, and now the UI switch from the sidebar will always be done in the same window/tab, which is more friendly when used inside a PWA.
+
+  - …
+
+
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.0
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
