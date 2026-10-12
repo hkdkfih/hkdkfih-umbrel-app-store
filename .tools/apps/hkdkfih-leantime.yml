@@ -1,0 +1,16 @@
+repo: Leantime/leantime
+images:
+  - image: leantime/leantime
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/Leantime/leantime/master/public/assets/images/icon-512.png
+screenshots:
+  - src: https://raw.githubusercontent.com/Leantime/leantime/master/public/assets/images/Screenshots/projectDashboard.png
+    caption: "Every project at a glance."
+  - src: https://raw.githubusercontent.com/Leantime/leantime/master/public/assets/images/Screenshots/kanban.png
+    caption: "Plan with simple boards."
+  - src: https://raw.githubusercontent.com/Leantime/leantime/master/public/assets/images/Screenshots/timeline.png
+    caption: "See the whole timeline."
+# Estimate: PHP app with MySQL
+requirements:
+  minimum: {cpu: "1 core", memory: "1 GB", storage: "2 GB"}
+  recommended: {cpu: "2 cores", memory: "2 GB", storage: "10 GB"}

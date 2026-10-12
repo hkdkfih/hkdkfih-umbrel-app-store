@@ -1,0 +1,52 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-leantime_server_1
+      APP_PORT: 8080
+
+  server:
+    image: leantime/leantime:3.11.0@sha256:6180c0965be475ae7cfabd1baf26befaeede99d4335d858107dc1b570d8e2f6e
+    restart: on-failure
+    stop_grace_period: 1m
+    security_opt:
+      - no-new-privileges:true
+    # upstream's entrypoint fixes file ownership before dropping privileges
+    cap_add:
+      - CAP_CHOWN
+      - CAP_SETGID
+      - CAP_SETUID
+    environment:
+      LEAN_DB_HOST: hkdkfih-leantime_db_1
+      LEAN_DB_USER: lean
+      LEAN_DB_PASSWORD: ${APP_HKDKFIH_LEANTIME_DB_PASSWORD}
+      LEAN_DB_DATABASE: leantime
+      LEAN_DB_PORT: 3306
+      LEAN_SESSION_PASSWORD: ${APP_HKDKFIH_LEANTIME_SESSION_PASSWORD}
+      LEAN_SESSION_SECURE: "false"
+    volumes:
+      - ${APP_DATA_DIR}/data/userfiles:/var/www/html/userfiles
+      - ${APP_DATA_DIR}/data/public-userfiles:/var/www/html/public/userfiles
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.4@sha256:6ea90827b1100f8f2ae306a539f86d2c264a26ed435a2a9f75551dd5c3aeb242
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    command: --character-set-server=UTF8MB4 --collation-server=UTF8MB4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${APP_HKDKFIH_LEANTIME_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: leantime
+      MYSQL_USER: lean
+      MYSQL_PASSWORD: ${APP_HKDKFIH_LEANTIME_DB_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
