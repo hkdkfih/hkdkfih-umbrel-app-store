@@ -1,0 +1,54 @@
+manifestVersion: 1
+id: hkdkfih-pulse
+storage:
+  dataRoot: data
+category: networking
+name: Pulse
+version: "6.5.0"
+tagline: Real-time monitoring for Proxmox, Docker and more
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/icon.png
+description: >-
+  On first launch, Pulse asks for a one-time setup token. Find it in the app's logs in umbrelOS (right-click the app → Troubleshoot), then set your admin password and add your Proxmox servers.
+
+
+  Pulse is a fast, good-looking dashboard for Proxmox VE, Proxmox Backup Server and Docker hosts. See every node, VM, container and backup at a glance and get alerted when something goes wrong.
+
+
+  - Live CPU, memory, disk and network for nodes, VMs and containers
+
+  - Backup and snapshot overview
+
+  - Alerts by email, Discord, ntfy, Gotify, webhooks and more
+
+  - Read-only API tokens; nothing to install on your Proxmox hosts
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 512 MB
+
+  Storage: 200 MB → 1 GB
+
+  Note: Needs Proxmox, PBS or Docker hosts to monitor
+releaseNotes: ""
+
+developer: Richard Courtman
+website: https://github.com/rcourtman/Pulse
+dependencies: []
+repo: https://github.com/rcourtman/Pulse
+support: https://github.com/rcourtman/Pulse/issues
+
+port: 22009
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/3.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store

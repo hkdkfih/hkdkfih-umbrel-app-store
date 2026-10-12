@@ -1,0 +1,15 @@
+repo: rcourtman/Pulse
+images:
+  - image: rcourtman/pulse
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/rcourtman/Pulse/main/docs/images/pulse-logo.png
+screenshots:
+  - src: https://raw.githubusercontent.com/rcourtman/Pulse/main/docs/images/pulse-workspace.png
+    caption: "Your whole homelab at a glance."
+  - src: https://raw.githubusercontent.com/rcourtman/Pulse/main/docs/images/pulse-patrol.png
+    caption: "Know about problems first."
+# Estimate: Go binary
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "512 MB", storage: "1 GB"}
+  notes: ["Needs Proxmox, PBS or Docker hosts to monitor"]

@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-pulse_server_1
+      APP_PORT: 7655
+
+  server:
+    image: rcourtman/pulse:6.5.0@sha256:bd6ce95f6e29a9663c38ac4d4596192ecd9cb925e0670a2e33772003e100954f
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/pulse:/data
