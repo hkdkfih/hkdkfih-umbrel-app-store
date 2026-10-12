@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hkdkfih-apprise-api_server_1
+      APP_PORT: 8000
+      PROXY_AUTH_WHITELIST: "/notify/*"
+
+  server:
+    image: caronc/apprise:2.0.1@sha256:0b2913b15c8eb47c25345722985ffbfae701326edde21909c205d296d62dd52c
+    restart: on-failure
+    environment:
+      PUID: 1000
+      PGID: 1000
+      APPRISE_STATEFUL_MODE: simple
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/attach:/attach

@@ -1,0 +1,16 @@
+repo: caronc/apprise-api
+images:
+  - image: caronc/apprise
+    tag: "{version}"
+icon: https://raw.githubusercontent.com/caronc/apprise-api/master/apprise_api/static/logo.png
+screenshots:
+  - src: https://raw.githubusercontent.com/caronc/apprise-api/master/Screenshot-1.png
+    caption: "One API, 100+ notification services."
+  - src: https://raw.githubusercontent.com/caronc/apprise-api/master/Screenshot-2.png
+    caption: "Configure targets in the browser."
+  - src: https://raw.githubusercontent.com/caronc/apprise-api/master/Screenshot-3.png
+    caption: "Test before you automate."
+# Estimate: Python (Django) + nginx
+requirements:
+  minimum: {cpu: "1 core", memory: "128 MB", storage: "200 MB"}
+  recommended: {cpu: "1 core", memory: "256 MB", storage: "500 MB"}

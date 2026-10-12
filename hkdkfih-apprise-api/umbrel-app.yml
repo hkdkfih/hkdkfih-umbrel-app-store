@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: hkdkfih-apprise-api
+storage:
+  dataRoot: data
+category: automation
+name: Apprise API
+version: "2.0.1"
+tagline: Send notifications to 100+ services from one API
+icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/icon.png
+description: >-
+  Save a configuration (your notification URLs) under a key in the web UI, then send notifications to http://umbrel.local:22012/notify/<key> from your scripts, Home Assistant or other apps.
+
+
+  Apprise API puts the Apprise notification library behind a simple web API. One request reaches Telegram, Discord, Slack, email, ntfy, Gotify, Pushover, Matrix, Signal and more than 100 other services.
+
+
+  - Store notification targets under keys and tags
+
+  - Simple REST API, compatible with Home Assistant
+
+  - Attachments and Markdown formatting
+
+  - Test notifications from the browser
+
+
+  System requirements (minimum → recommended)
+
+  CPU: 1 core
+
+  Memory: 128 MB → 256 MB
+
+  Storage: 200 MB → 500 MB
+releaseNotes: ""
+
+developer: Chris Caron
+website: https://github.com/caronc/apprise-api
+dependencies: []
+repo: https://github.com/caronc/apprise-api
+support: https://github.com/caronc/apprise-api/issues
+
+port: 22012
+gallery:
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/1.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/2.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/3.jpg
+  - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/4.jpg
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+
+submitter: hkdkfih
+submission: https://github.com/hkdkfih/hkdkfih-umbrel-app-store
