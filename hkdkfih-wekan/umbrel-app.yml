@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.28"
+version: "12.37"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -43,7 +43,22 @@ description: >-
   Storage: 2 GB → 10 GB
 
   Note: Storage grows with card attachments
-releaseNotes: ""
+releaseNotes: >-
+  In short
+
+
+  - Bun release builds explicitly install the compiler tools
+
+  - needed to create the application bundle. A missing Rspack installation is
+
+  - reported before compilation starts.
+
+  - Thanks to above GitHub users for their contributions.
+
+  - More details at ChangeLog
+
+
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.37
 
 developer: WeKan Team
 website: https://wekan.fi/
