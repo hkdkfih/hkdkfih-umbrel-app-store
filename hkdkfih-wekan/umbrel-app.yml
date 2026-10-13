@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.37"
+version: "12.39"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,26 @@ releaseNotes: >-
   In short
 
 
-  - Bun release builds explicitly install the compiler tools
+  - the Docker image's vulnerability scans on Quay and Artifact
 
-  - needed to create the application bundle. A missing Rspack installation is
+  - Hub are cut down to what has no fix yet. The image no longer carries
 
-  - reported before compilation starts.
+  - docker-cli and its old Go, the bundled FerretDB and MongoDB tools
+
+  - are built with Go 1.27.2, and eight npm packages inside Meteor's own
+
+  - packages are raised to fixed releases. The Android and FreeBSD Bun
+
+  - builds are fixed, the Docker job checks the bundle version again, and SAML
+
+  - logs in users whose binding lacks the optional qualifiers.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.37
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.39
 
 developer: WeKan Team
 website: https://wekan.fi/
