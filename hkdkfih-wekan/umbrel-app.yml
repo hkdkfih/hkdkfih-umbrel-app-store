@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.39"
+version: "12.41"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,26 +47,28 @@ releaseNotes: >-
   In short
 
 
-  - the Docker image's vulnerability scans on Quay and Artifact
+  - custom board roles, per-list permissions and boards
 
-  - Hub are cut down to what has no fix yet. The image no longer carries
+  - every signed-in user may edit; board keys (DEV-7) and shared
 
-  - docker-cli and its old Go, the bundled FerretDB and MongoDB tools
+  - labels; WeKan serves HTTPS itself; Bun single files and musl
 
-  - are built with Go 1.27.2, and eight npm packages inside Meteor's own
+  - bundles and AppImages for Alpine; on Sandstorm, webhooks and list sync
 
-  - packages are raised to fixed releases. The Android and FreeBSD Bun
+  - leave through the Powerbox and the REST API takes a grain API key. Seventeen
 
-  - builds are fixed, the Docker job checks the bundle version again, and SAML
+  - locale files that held another
 
-  - logs in users whose binding lacks the optional qualifiers.
+  - language, and six full of machine-fill prefixes, are rewritten in their
+
+  - own, and fourteen GitHub CodeQL alerts are fixed.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.39
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.41
 
 developer: WeKan Team
 website: https://wekan.fi/
