@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Huginn
-version: "2026.10.04"
+version: "2026.10.14"
 tagline: Build agents that monitor and act on your behalf
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
 description: >-
@@ -30,7 +30,28 @@ description: >-
   Memory: 1 GB → 2 GB
 
   Storage: 2 GB → 10 GB
-releaseNotes: ""
+releaseNotes: >-
+  v2026.10.14
+
+
+  - Show maps of location Events with OpenStreetMap and Leaflet when UserLocationAgent has no Google Maps api_key, instead of showing no map.
+
+  - Upgrade the PostgreSQL Docker Compose example from PostgreSQL 9.5 to 18.
+
+  - Move the Heroku setup to the heroku-24 stack and Heroku's native multi-buildpack support.
+
+  - Remove the OpenShift and Cloud Foundry deployment files, whose platforms are no longer available.
+
+  - Rewrite the README and deployment documentation around Docker, and add a security policy, a contributing guide, and a sponsors page.
+
+  - Stop the bundled MySQL server in the multi-process image together with its child processes, so that leftover socket locks no longer prevent the next start.
+
+  - Run the Docker specs against a release's images before tagging them with the release version.
+
+  - …
+
+
+  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.10.14
 
 developer: Huginn
 website: https://github.com/huginn/huginn
