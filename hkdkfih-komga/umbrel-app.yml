@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.29.0"
+version: "1.29.1"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -54,27 +54,41 @@ description: >-
 
   Note: Plus space for your comics and ebooks
 releaseNotes: >-
-  Notable Entities
+  🐛 Fixes
 
 
-  - Notable Entities bring a flexible way to store additional metadata at book level. It works similarly to authors in the way you can create any kind of notable entity, and associate it with a list of values.
+  - komga
 
-  - Komga will fetch the following directly from : Teams, Characters, and Locations.
+  - nextui reader links would not open properly if nextui is set as default
 
-  - Note that Notable Entities are only available in Nextui.
+  - nextui
+
+  - apply overflow in match table to avoid scrolling
+
+  - harmonize dialog closing controls
+
+  - remove Server > User Interface page
+
+  - harmonize table behaviour on mobile
+
+  - ordering values were inverted in the collection/readlist edit dialogs
 
 
-  NextUI features
+  🌐 Translation
 
 
-  - A new toggle has been added in the NextUI Server Settings screen that allows you to configure NextUI as the default UI to be loaded. This is a server-wide setting that will apply to every user.
-
-  - A link has also been added in the NextUI sidebar to go back to the classic UI, and now the UI switch from the sidebar will always be done in the same window/tab, which is more friendly when used inside a PWA.
-
-  - …
+  - extract strings
 
 
-  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.0
+  Contributors
+
+
+  - We'd like to thank the following people for their contributions:
+
+  - Gauthier Roebroeck
+
+
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.1
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
