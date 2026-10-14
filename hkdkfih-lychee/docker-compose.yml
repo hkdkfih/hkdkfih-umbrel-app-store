@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   web:
-    image: lycheeorg/lychee:v7.11.0@sha256:69e851e9e3cf36379cea1d29249e7b97dc27aa26c96c07f29a2f1692f3c7d49e
+    image: lycheeorg/lychee:v7.11.1@sha256:51d867c272c26d2a6a4c6a200e26ed888a35a7ad4652c1871953a85519a78eba
     # container starts as root, fixes ownership of its data dirs and serves as www-data (PUID/PGID)
     restart: on-failure
     stop_grace_period: 1m

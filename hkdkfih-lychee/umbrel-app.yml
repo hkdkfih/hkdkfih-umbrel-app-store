@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: Lychee
-version: "7.11.0"
+version: "7.11.1"
 tagline: A great looking and easy-to-use photo management system
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png
 description: >-
@@ -47,59 +47,10 @@ releaseNotes: >-
   🏕 Features
 
 
-  - Laravel 13
-
-  - Fixes and speed improvements
-
-  - Fix concurency on album creation ordering
-
-  - Fix: Don't show sensitive photos in landing
-
-  - fix(frontend): let the browser pick 1x/2x variants by rendered size
-
-  - Fix unsanized description of photos
-
-  - Fixes
-
-  - Refactoring Live Metrics
-
-  - Update endpoint refactoring
-
-  - Clarify settings requirements
-
-  - fix: make PDF /MediaBox match limit configurable
-
-  - Fix Tag renaming & listing
-
-  - Fix 360 tests
-
-  - Insert missing statistics
-
-  - Improved insights
-
-  - Show album names in browser tab titles
-
-  - Fix frame not showing photo on v8
-
-  - Add Pocket ID OAuth provider
-
-  - Map as header
-
-  - Adding OpenTelemetry and provide traces
-
-  - Fix sprintf vulnerability
-
-  - Improve the album unlock dialog
-
-  - Fix memory leak when uploading 3000 photos at the same time
-
-  - Jobs: change processing priorities
+  - Version 7.11.1
 
 
-  👒 Dependencies
-
-
-  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.11.0
+  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.11.1
 
 developer: LycheeOrg
 website: https://lycheeorg.dev/
