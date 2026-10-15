@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Mailpit
-version: "1.31.5"
+version: "1.31.6"
 tagline: Catch and inspect emails sent by your apps
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/icon.png
 description: >-
@@ -43,7 +43,14 @@ description: >-
   Storage: 100 MB → 1 GB
 
   Note: Storage grows with the number and size of messages kept (500 by default)
-releaseNotes: ""
+releaseNotes: >-
+  Fix
+
+
+  - Remove expired envelope cache entries and clear them on auto-prune
+
+
+  Full release notes: https://github.com/axllent/mailpit/releases/tag/v1.31.6
 
 developer: Ralph Slooten
 website: https://mailpit.axllent.org/
