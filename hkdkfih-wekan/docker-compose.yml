@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/wekan/wekan:v12.41@sha256:4ab22ca8cb1210698acdf02a041d86c35a9506495d5f83b5d8e893b85b4ea198
+    image: ghcr.io/wekan/wekan:v12.46@sha256:6fb38353e1daee304197e1ab6db9ae0d36c9b836ec358673736504506ab5b8fc
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m

@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.41"
+version: "12.46"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,28 +47,28 @@ releaseNotes: >-
   In short
 
 
-  - custom board roles, per-list permissions and boards
+  - Accounts can be locked to SQRL, Windows domains can sign in
 
-  - every signed-in user may edit; board keys (DEV-7) and shared
+  - with Windows single sign-on, List Sync writes back to GitLab, and boards
 
-  - labels; WeKan serves HTTPS itself; Bun single files and musl
+  - import straight from Planka, Microsoft To Do, KanbanFlow, Basecamp, Google
 
-  - bundles and AppImages for Alpine; on Sandstorm, webhooks and list sync
+  - Tasks and Google Keep. The Chat view lists every conversation with unread
 
-  - leave through the Powerbox and the REST API takes a grain API key. Seventeen
+  - counts, and titles render as Markdown in more views. Two changes at once
 
-  - locale files that held another
+  - no longer fork a board's History, and large sprint undo is faster.
 
-  - language, and six full of machine-fill prefixes, are rewritten in their
+  - Bosnian says Tabla
 
-  - own, and fourteen GitHub CodeQL alerts are fixed.
+  - for board throughout, and Tsonga has its own word for the Archive.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.41
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.46
 
 developer: WeKan Team
 website: https://wekan.fi/
