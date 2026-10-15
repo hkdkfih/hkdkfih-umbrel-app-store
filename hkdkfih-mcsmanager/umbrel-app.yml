@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: MCSManager
-version: "10.19.0"
+version: "10.21.2"
 tagline: A web panel for running Minecraft and other game servers
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/icon.png
 description: >-
@@ -49,7 +49,17 @@ description: >-
   Note: Each Minecraft server needs 2-4 GB of RAM
 
   Note: Storage grows with worlds and backups
-releaseNotes: ""
+releaseNotes: >-
+  - Fix abnormal cases in the version number check
+
+
+  Corresponding Daemon version
+
+
+  - v4.19.X
+
+
+  Full release notes: https://github.com/MCSManager/MCSManager/releases/tag/v10.21.2
 
 developer: MCSManager
 website: https://mcsmanager.com/
