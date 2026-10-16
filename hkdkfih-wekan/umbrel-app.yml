@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.46"
+version: "12.48"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,28 +47,32 @@ releaseNotes: >-
   In short
 
 
-  - Accounts can be locked to SQRL, Windows domains can sign in
+  - an AssignedBleed follow-up keeps assigned-only members to
 
-  - with Windows single sign-on, List Sync writes back to GitLab, and boards
+  - their own cards' files and document text on every remaining read path, and the
 
-  - import straight from Planka, Microsoft To Do, KanbanFlow, Basecamp, Google
+  - release workflows are hardened against injection. The Windows and
 
-  - Tasks and Google Keep. The Chat view lists every conversation with unread
+  - NetBSD bundles build again: the release scripts read their files as UTF-8 on
 
-  - counts, and titles render as Markdown in more views. Two changes at once
+  - every runner, and the NetBSD build finds pkgsrc's Python. LDAP background
 
-  - no longer fork a board's History, and large sprint undo is faster.
+  - sync imports new users again and keeps the interval it is given, and every
 
-  - Bosnian says Tabla
+  - Caddyfile example is Caddy 2, so the snap no longer renames a Caddyfile
 
-  - for board throughout, and Tsonga has its own word for the Archive.
+  - copied from the docs.
+
+
+  Security
+
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.46
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.48
 
 developer: WeKan Team
 website: https://wekan.fi/
