@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: finance
 name: ezBookkeeping
-version: "2.0.1"
+version: "2.1.0"
 tagline: A lightweight personal bookkeeping app
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/icon.png
 description: >-
@@ -35,7 +35,33 @@ description: >-
   Memory: 128 MB → 512 MB
 
   Storage: 200 MB → 2 GB
-releaseNotes: ""
+releaseNotes: >-
+  - [Breaking]
+
+  - Rename the configuration section llm to ai
+
+  - The daily total amounts on the Transaction Calendar widget are displayed as total inflows and total outflows by default
+
+  - Not roll back the entire import if some transactions fail to be created during import
+
+  - [Features]
+
+  - Add Polish translation (#698, #699, #718, thanks @mnowok)
+
+  - Support AI generated custom charts in Insights Explorer
+
+  - Add Account Unreconciled Transactions widget
+
+  - Add National Bank of Belarus, Bank of Italy and Central Bank of Malaysia exchange rates data source
+
+  - The monthly and daily total amounts on the Transaction List page can be set to total inflows and total outflows, or total income and total expenses
+
+  - The daily total amounts on the Transaction Calendar widget can be set to total inflows and total outflows, or total income and total expenses
+
+  - …
+
+
+  Full release notes: https://github.com/mayswind/ezbookkeeping/releases/tag/v2.1.0
 
 developer: MaysWind
 website: https://ezbookkeeping.mayswind.net/
