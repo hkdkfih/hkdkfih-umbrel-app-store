@@ -9,7 +9,7 @@ environment:
     note: IANA time zone used by the clock and calendar widgets, such as America/New_York or Europe/London.
 category: files
 name: Glance
-version: "0.8.6"
+version: "0.8.7"
 tagline: A self-hosted dashboard that puts all your feeds in one place
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/icon.png
 description: >-
@@ -45,7 +45,26 @@ description: >-
   Memory: 64 MB → 256 MB
 
   Storage: 100 MB → 500 MB
-releaseNotes: ""
+releaseNotes: >-
+  Fixes
+
+
+  - Fixed Reddit widget not fetching data after recent API changes (thanks @Partha-dev01)
+
+  - Note: due to this change, the search property no longer works without app-auth being configured
+
+  - Fixed DNS stats widget showing 0 blocked domains for AdGuard Home instances if latency was less than 1ms (thanks @ultravioletcatastrophe)
+
+  - Fixed channel and post links in the RSS widget when the feeds returned them as relative URLs (thanks @subfission)
+
+  - Fixed the mountpoint:info command not working (thanks @Goshya, @Rlucien)
+
+  - Improved accessiblity for the monitor widget and theme picker (thanks @REASON-labs)
+
+  - Limit authentication request bodies to 512 KB to prevent unbounded memory reads (thanks @jankesec)
+
+
+  Full release notes: https://github.com/glanceapp/glance/releases/tag/v0.8.7
 
 developer: Svilen Markov
 website: https://github.com/glanceapp/glance
