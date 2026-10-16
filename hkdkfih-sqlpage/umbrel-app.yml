@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: SQLPage
-version: "0.46.3"
+version: "0.47.0"
 tagline: Build web apps with nothing but SQL
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/icon.png
 description: >-
@@ -28,7 +28,8 @@ description: >-
   Memory: 64 MB → 256 MB
 
   Storage: 100 MB → 1 GB
-releaseNotes: ""
+releaseNotes: >-
+  Full release notes: https://github.com/sqlpage/SQLPage/releases/tag/v0.47.0
 
 developer: Ophir Lojkine
 website: https://sql-page.com/
