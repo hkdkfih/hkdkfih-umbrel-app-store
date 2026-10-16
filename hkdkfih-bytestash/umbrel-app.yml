@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: ByteStash
-version: "1.5.14"
+version: "1.6.0"
 tagline: Store and organise your code snippets
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-bytestash/icon.png
 description: >-
@@ -30,7 +30,19 @@ description: >-
   Memory: 128 MB → 256 MB
 
   Storage: 200 MB → 1 GB
-releaseNotes: ""
+releaseNotes: >-
+  - [feat] optional postgres support with sqlite migration
+
+  - [bug] keep search bar and url in sync when selecting a hashtag category
+
+  - [feat] word wrap
+
+  - [feat] secure session cookie
+
+  - [sec] stop exposing recycled snippets on the public api
+
+
+  Full release notes: https://github.com/jordan-dalby/ByteStash/releases/tag/v1.6.0
 
 developer: Jordan Dalby
 website: https://github.com/jordan-dalby/ByteStash
