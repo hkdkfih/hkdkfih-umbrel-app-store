@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for daily notes and timestamps, such as Europe/London or America/New_York.
 category: files
 name: SiYuan
-version: "3.8.6"
+version: "3.8.7"
 tagline: A privacy-first, self-hosted personal knowledge base
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png
 description: >-
@@ -46,7 +46,28 @@ description: >-
   Memory: 512 MB → 2 GB
 
   Storage: 1 GB → 10 GB
-releaseNotes: ""
+releaseNotes: >-
+  Overview
+
+
+  - This release introduces database automations, lunar dates, and location fields, expands image recognition and mind map capabilities, and further improves editing, mobile, and AI agent experiences.
+
+
+  Databases and everyday editing
+
+
+  - Databases now support automations, lunar date input and display, and location fields, while rollups gain relation item and context filters. Field visibility can be configured individually in attribute panels, and daily notes can be created and referenced by date.
+
+
+  Images and mind maps
+
+
+  - Image file names can be displayed and renamed, and OCR text can be copied and edited. Local OCR offers a choice of Tesseract or PaddleOCR, and the image menu gains AI OCR. Mind map nodes support inserting and pasting images, with improved relationship arrows, zooming, and summary operations.
+
+  - …
+
+
+  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.7
 
 developer: SiYuan
 website: https://b3log.org/siyuan/en/
