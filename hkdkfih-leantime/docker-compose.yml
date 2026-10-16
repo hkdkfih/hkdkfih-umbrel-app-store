@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   server:
-    image: leantime/leantime:3.11.0@sha256:6180c0965be475ae7cfabd1baf26befaeede99d4335d858107dc1b570d8e2f6e
+    image: leantime/leantime:3.12.0@sha256:8b2133d02640d618cb002fca4fe03a046d074bbb81388d4cb035152cef008905
     restart: on-failure
     stop_grace_period: 1m
     security_opt:

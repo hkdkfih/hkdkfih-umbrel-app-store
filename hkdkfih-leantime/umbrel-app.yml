@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Leantime
-version: "3.11.0"
+version: "3.12.0"
 tagline: Project management for the rest of us
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png
 description: >-
@@ -30,7 +30,25 @@ description: >-
   Memory: 1 GB → 2 GB
 
   Storage: 2 GB → 10 GB
-releaseNotes: ""
+releaseNotes: >-
+  Version: 3.12.0
+
+
+  Safer, self-updating plugins
+
+
+  - Plugins now update from right inside Leantime: update notices surface available versions, a one-click update applies them with automatic rollback if something goes wrong, and you can opt in to fully automatic plugin updates. A new version guard and crash breaker keep an incompatible or failing plugin from taking down the rest of your workspace. (#3920, #3921, #3922)
+
+
+  A refreshed, consistent interface
+
+
+  - A new shared component library brings cards, dialogs, forms, menus, tabs and more onto one consistent look and type scale across the whole app - from reports and My Work to kanban boards, goals, ideas and plugin screens. Dialog titles, close buttons and Delete actions now live in a standard modal header, and menus, filters and panels all use one dropdown. (#3887, #3900, #3901, #3881, #3884)
+
+  - …
+
+
+  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.12.0
 
 developer: Leantime
 website: https://leantime.io/
