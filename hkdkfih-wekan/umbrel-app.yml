@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.48"
+version: "12.50"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,21 +47,19 @@ releaseNotes: >-
   In short
 
 
-  - an AssignedBleed follow-up keeps assigned-only members to
+  - a LockoutBleed follow-up loads the web login's timing
 
-  - their own cards' files and document text on every remaining read path, and the
+  - equalizer, which was finished but never imported. Admin Panel / Problems gains
 
-  - release workflows are hardened against injection. The Windows and
+  - Memory Usage and Disk usage reports, and the board menu Original
 
-  - NetBSD bundles build again: the release scripts read their files as UTF-8 on
+  - positions. Cloning, calendars, notification attachments and failed-call
 
-  - every runner, and the NetBSD build finds pkgsrc's Python. LDAP background
+  - messages work as they should. Removing duplicated and unreachable code
 
-  - sync imports new users again and keeps the interval it is given, and every
+  - leaves the app over 1,700 lines smaller even with the new reports, and
 
-  - Caddyfile example is Caddy 2, so the snap no longer renames a Caddyfile
-
-  - copied from the docs.
+  - docs/Features is filed by the WeKan menus.
 
 
   Security
@@ -72,7 +70,7 @@ releaseNotes: >-
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.48
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.50
 
 developer: WeKan Team
 website: https://wekan.fi/
