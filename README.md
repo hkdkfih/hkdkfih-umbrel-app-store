@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 6.10.5 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.14 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.48 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.50 |
 
 ## How updates work
 
