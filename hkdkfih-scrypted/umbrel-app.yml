@@ -57,7 +57,7 @@ dependencies: []
 repo: https://github.com/koush/scrypted
 support: https://github.com/koush/scrypted/issues
 
-port: 11080
+port: 11080, 10443
 gallery:
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/1.jpg
   - https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/2.jpg
