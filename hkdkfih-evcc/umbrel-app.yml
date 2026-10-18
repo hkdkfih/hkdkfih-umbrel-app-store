@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.317.1"
+version: "0.317.2"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -50,16 +50,28 @@ releaseNotes: >-
   Other Changes ☀️
 
 
-  - Energy: build overview slots from all series
+  - Kia/Hyundai EU: sign OneApp/CCI auth calls with X-Fingerprint
 
-  - Kostal Plenticore: restore manual maxacpower configuration
+  - Phases: project the 1p switch from the actual draw
 
-  - SunSpec: nan option to substitute the not-implemented sentinel
+  - Phases: stop 3p min charging within one disable delay when 1p not sustainable
 
-  - Tariffs (Ostrom): accept fractional numbers in static price response
+  - SHM: persist device serial
+
+  - WARP (WebSocket): ignore non power manager topics from energy manager
 
 
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.317.1
+  Bug Fixes 🐞
+
+
+  - Forecast: fix price chart drawing prices one slot early
+
+  - Huawei SmartLogger: fix swapped grid import/export energy registers
+
+  - Loadpoint: fix fractional min current on circuit
+
+
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.317.2
 
 developer: evcc.io
 website: https://evcc.io/
