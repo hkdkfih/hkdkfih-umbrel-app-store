@@ -27,7 +27,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cyberchef/icon.png" width="40" height="40" alt=""> | [CyberChef](https://github.com/gchq/CyberChef) | The Cyber Swiss Army Knife for encoding, decoding and data analysis | 11.5.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/icon.png" width="40" height="40" alt=""> | [Dashy](https://github.com/Lissy93/dashy) | A self-hostable personal dashboard for your homelab | 4.8.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/icon.png" width="40" height="40" alt=""> | [draw.io](https://github.com/jgraph/drawio) | Diagrams, flowcharts and whiteboards in your browser | 32.4.1 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png" width="40" height="40" alt=""> | [evcc](https://github.com/evcc-io/evcc) | Solar charging for your electric vehicle | 0.317.1 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png" width="40" height="40" alt=""> | [evcc](https://github.com/evcc-io/evcc) | Solar charging for your electric vehicle | 0.317.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/icon.png" width="40" height="40" alt=""> | [ezBookkeeping](https://github.com/mayswind/ezbookkeeping) | A lightweight personal bookkeeping app | 2.1.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-feishin/icon.png" width="40" height="40" alt=""> | [Feishin](https://github.com/jeffvli/feishin) | A modern music player for Navidrome, Jellyfin and Subsonic | 1.17.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/icon.png" width="40" height="40" alt=""> | [Gatus](https://github.com/TwiN/gatus) | A developer-oriented health dashboard and uptime monitor | 5.37.0 |
@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 6.10.5 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.14 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.50 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.52 |
 
 ## How updates work
 
