@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.52"
+version: "12.55"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,22 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - the release builds that failed in v12.51 work again: the
+  - the 32-bit ARM single files are injected outside the 32-bit
 
-  - Android bundles, the musl AppImages and the i386 and
+  - Node.js that ran out of memory doing it, and each musl AppImage is built
 
-  - freebsd-x64 single files. Nine dependency updates, among them
-
-  - qrcode-generator 2 and actions/download-artifact 8, were checked
-
-  - against how WeKan uses them.
+  - once, under a name of its own.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.52
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.55
 
 developer: WeKan Team
 website: https://wekan.fi/
