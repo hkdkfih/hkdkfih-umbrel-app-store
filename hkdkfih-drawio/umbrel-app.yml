@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hkdkfih-drawio
 category: files
 name: draw.io
-version: "32.4.1"
+version: "32.5.5"
 tagline: Diagrams, flowcharts and whiteboards in your browser
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-drawio/icon.png
 description: >-
@@ -27,7 +27,8 @@ description: >-
   Storage: 500 MB → 1 GB
 
   Note: Diagrams are stored on your computer, not the server
-releaseNotes: ""
+releaseNotes: >-
+  Full release notes: https://github.com/jgraph/drawio/releases/tag/v32.5.5
 
 developer: JGraph
 website: https://www.drawio.com/
