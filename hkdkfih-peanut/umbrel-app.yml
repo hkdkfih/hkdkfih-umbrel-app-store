@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: PeaNUT
-version: "6.1.0"
+version: "6.1.1"
 tagline: A tiny dashboard for your UPS
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/icon.png
 description: >-
@@ -37,30 +37,10 @@ description: >-
 
   Note: Needs a NUT server your UPS is connected to
 releaseNotes: >-
-  - Parallelize metrics fetch and consolidate Influx points
-
-  - Fix auth.yaml writing to wrong location
-
-  - Consolidate e2e tests and scope API tests to a single project
-
-  - Raise unit test coverage and enforce a CI floor
-
-  - Add Korean (ko) translation
-
-  - Update dependencies (low-risk batch + individually-vetted major bumps)
-
-  - Tune Jest/Playwright CI and add e2e coverage
-
-  - Fix deploy:test Docker build by pinning pnpm version
-
-  - Add Indonesian (id) translation
-
-  - Add Japanese (ja) translation
-
-  - Fix #464: forward NUT credentials through getCachedRWVars so LIST RW is sent
+  - fix: degrade dashboard per NUT command instead of failing the whole page
 
 
-  Full release notes: https://github.com/Brandawg93/PeaNUT/releases/tag/v6.1.0
+  Full release notes: https://github.com/Brandawg93/PeaNUT/releases/tag/v6.1.1
 
 developer: Brandawg93
 website: https://github.com/Brandawg93/PeaNUT
