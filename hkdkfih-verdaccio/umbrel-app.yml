@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Verdaccio
-version: "6.10.5"
+version: "6.10.6"
 tagline: A lightweight private npm proxy registry
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png
 description: >-
@@ -42,7 +42,22 @@ description: >-
   Storage: 1 GB → 20 GB
 
   Note: Storage grows with every package you publish or cache from npmjs.org
-releaseNotes: ""
+releaseNotes: >-
+  Patch Changes
+
+
+  - Disable dependency lifecycle scripts and require third-party dependencies to be at least three days old when installing Verdaccio in the final Docker image stage.
+
+  - The production installation now uses npm's --ignore-scripts and --min-release-age=3 options. Verdaccio and packages matching @verdaccio/* or verdaccio-* are excluded from the age restriction so new Verdaccio releases can be built immediately. The final stage updates npm to support these exclusions and disables installation audit and funding output. Image builds still fail if another required dependency has no eligible version. No configuration changes are required for operators.
+
+  - Update verdaccio dependencies to the latest npm dist-tag (@verdaccio/ui-theme tracks next-9):
+
+  - @verdaccio/ui-theme: 9.0.0-next-9.34 → 9.0.0-next-9.36
+
+  - …
+
+
+  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v6.10.6
 
 developer: Verdaccio contributors
 website: https://verdaccio.org/
