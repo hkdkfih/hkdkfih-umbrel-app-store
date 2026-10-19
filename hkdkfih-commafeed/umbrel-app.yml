@@ -10,7 +10,7 @@ environment:
     note: Set to false to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
 category: social
 name: CommaFeed
-version: "7.3.2"
+version: "7.4.0"
 tagline: A Google Reader inspired self-hosted RSS reader
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/icon.png
 description: >-
@@ -50,7 +50,19 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with the number of feeds and how long entries are kept
-releaseNotes: ""
+releaseNotes: >-
+  - Add support for HTTP/2 when fetching feeds
+
+  - Send more default headers when fetching feeds, to avoid being rejected by some servers
+
+  - Harden the content cleaning of feed entries by only allowing http/https protocols in iframe src attributes
+
+  - Fix the header in mobile mode being wrapped/cut off when too wide, even above the mobile breakpoint
+
+  - Document how to configure Quarkus host validation when running CommaFeed behind a reverse proxy
+
+
+  Full release notes: https://github.com/Athou/commafeed/releases/tag/7.4.0
 
 developer: Athou
 website: https://www.commafeed.com/
