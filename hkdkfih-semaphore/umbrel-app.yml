@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Semaphore UI
-version: "2.19.16"
+version: "2.19.17"
 tagline: A modern web UI for Ansible, Terraform, OpenTofu and scripts
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/icon.png
 description: >-
@@ -45,7 +45,11 @@ description: >-
   Storage: 2 GB → 10 GB
 
   Note: CPU and memory scale with the tasks you run in parallel
-releaseNotes: ""
+releaseNotes: >-
+  - feat(runner): add check interval configuration for job polling
+
+
+  Full release notes: https://github.com/semaphoreui/semaphore/releases/tag/v2.19.17
 
 developer: Semaphore UI
 website: https://semaphoreui.com/
