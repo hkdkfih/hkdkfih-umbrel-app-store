@@ -7,7 +7,7 @@ services:
       APP_PORT: 6806
 
   server:
-    image: b3log/siyuan:v3.8.7@sha256:aced5ce847dc0a6bd33033176533e7c0954a0f043c95806f6831b7a351a952c9
+    image: b3log/siyuan:v3.8.8@sha256:92aa9c361b09657141011ca57c02cccb21ba9f3ddc2c0759a99acd52f29b3f70
     # entrypoint starts as root, chowns the workspace to PUID/PGID and drops privileges
     restart: on-failure
     stop_grace_period: 1m
