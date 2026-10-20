@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: PeaNUT
-version: "6.1.1"
+version: "6.1.2"
 tagline: A tiny dashboard for your UPS
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/icon.png
 description: >-
@@ -37,10 +37,10 @@ description: >-
 
   Note: Needs a NUT server your UPS is connected to
 releaseNotes: >-
-  - fix: degrade dashboard per NUT command instead of failing the whole page
+  - Fix unsupported NUT discovery commands breaking the dashboard
 
 
-  Full release notes: https://github.com/Brandawg93/PeaNUT/releases/tag/v6.1.1
+  Full release notes: https://github.com/Brandawg93/PeaNUT/releases/tag/v6.1.2
 
 developer: Brandawg93
 website: https://github.com/Brandawg93/PeaNUT
