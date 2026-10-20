@@ -10,7 +10,7 @@ environment:
     note: Set to 1 to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
 category: social
 name: Miniflux
-version: "2.3.3"
+version: "2.3.4"
 tagline: A minimalist and opinionated feed reader
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-miniflux/icon.png
 description: >-
@@ -49,7 +49,40 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with the number of feeds and how long entries are kept
-releaseNotes: ""
+releaseNotes: >-
+  New features
+
+
+  - Added Gotify push notification support.
+
+  - Added Steam scraper rules.
+
+  - Added validation with helpful error messages when saving rewrite rules.
+
+
+  Performance improvements
+
+
+  - Reduced database storage used by enclosure and entry indexes.
+
+  - Reduced memory used by internal data structures.
+
+
+  Security
+
+
+  - Blocked reserved IP address ranges to further protect against server-side request forgery.
+
+  - Hardened WebAuthn redirects against open-redirect attacks, including redirect URLs containing surrounding whitespace.
+
+  - Prevented per-feed proxy URLs from bypassing private-network restrictions by default. Set FETCHER_ALLOW_PRIVATE_FEED_PROXY=1 to retain access to private per-feed proxies.
+
+  - Enforced DISABLE_LOCAL_AUTH for API password authentication and password changes; API clients must use an API key when local authentication is disabled.
+
+  - …
+
+
+  Full release notes: https://github.com/miniflux/v2/releases/tag/2.3.4
 
 developer: Frédéric Guillot
 website: https://miniflux.app/
