@@ -10,7 +10,7 @@ environment:
     note: Base URL used in ping URLs, badges and links. Only change it if your Umbrel is reachable under your own address, for example https://hc.example.com (no trailing slash).
 category: developer
 name: Healthchecks
-version: "4.4"
+version: "5.0"
 tagline: Get notified when your cron jobs and scheduled tasks fail
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/icon.png
 description: >-
@@ -50,7 +50,35 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with the number of checks and stored pings
-releaseNotes: ""
+releaseNotes: >-
+  - This release changes the web server included in docker images from uWSGI to
+
+  - gunicorn. This change may affect existing setups, hence the major version bump.
+
+  - If you use a customized docker-compose.yml file, the command parameter
+
+  - needs to updated to execute /opt/healthchecks/run.sh instead of uwsgi.
+
+  - See the docker-compose.yml file in the repository
+
+  - for an example.
+
+  - The docker image now uses the GUNICORN_WORKERS environment variable to determine
+
+  - how many worker processes to launch. For backwards compatibility, if GUNICORN_WORKERS
+
+  - is not set, the docker image then falls back to the UWSGI_PROCESSES environment
+
+  - variable. If neither is set, it defaults to 4 workers.
+
+  - The handling of crashes in child processes has changed. Before v5.0, if any child
+
+  - process (sendalerts, sendreports, smtpd) inside the container crashes,
+
+  - …
+
+
+  Full release notes: https://github.com/healthchecks/healthchecks/releases/tag/v5.0
 
 developer: Healthchecks
 website: https://healthchecks.io/

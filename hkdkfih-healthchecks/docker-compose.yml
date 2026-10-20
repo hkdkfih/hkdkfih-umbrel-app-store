@@ -11,7 +11,7 @@ services:
       PROXY_AUTH_WHITELIST: "/ping/*,/badge/*,/api/*"
 
   web:
-    image: healthchecks/healthchecks:v4.4@sha256:aa08a61b0dcfd83f1332eab195d5cec1b595ae076eb8388cadf8a3d597114f9b
+    image: healthchecks/healthchecks:v5.0@sha256:ba6276c008de510930749f61646ba21f52413c211248297eb4896e4b0d1a8d2e
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
