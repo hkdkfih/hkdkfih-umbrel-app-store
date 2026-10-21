@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.56"
+version: "12.57"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,22 +47,22 @@ releaseNotes: >-
   In short
 
 
-  - accounts nobody uses can be disabled after a set number of
+  - attachments can be deleted after a set time and deleted ones
 
-  - days, from the Admin Panel or the environment, and LDAP background sync
+  - purged, every backup is recorded with failures and overdue runs shown,
 
-  - disables what the directory disabled. Admin Panel / People shows everyone's
+  - and the newest features' settings are on every platform and in the Admin
 
-  - Last active, check marks are check marks in right-to-left languages,
+  - Panel. Adding a board member by email works whatever the letter case, and the
 
-  - and restored list swimlanes survive the next upgrade.
+  - Security report stops crying wolf.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.56
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.57
 
 developer: WeKan Team
 website: https://wekan.fi/
