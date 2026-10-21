@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Kanboard
-version: "1.2.54"
+version: "1.2.55"
 tagline: Project management focused on the Kanban methodology
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png
 description: >-
@@ -43,7 +43,42 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with task attachments
-releaseNotes: ""
+releaseNotes: >-
+  Security fixes
+
+
+  - Prevent spoofed client IP addresses in trusted-proxy headers from bypassing IP-based CAPTCHA and login lockouts
+
+  - Restrict dashboard and overdue-task queries to projects a user can still access
+
+  - Enforce project authorization when closing board columns, reordering subtasks, and duplicating tasks between projects
+
+  - Require the project-manager role to modify project metadata through the API
+
+  - Validate and escape color IDs and project names to prevent cross-site scripting
+
+  - Limit iCalendar start-date fields to supported task columns
+
+
+  Improvements
+
+
+  - Add support for uploading and previewing WebP image attachments
+
+  - Allow API clients to set a validated project member as the creator of task and project attachments
+
+  - Add Azerbaijani interface translations and improve Swedish translations
+
+
+  Bug fixes
+
+
+  - Preserve session cookies when Kanboard is installed in a subdirectory
+
+  - …
+
+
+  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.55
 
 developer: Frédéric Guillot
 website: https://kanboard.org/
