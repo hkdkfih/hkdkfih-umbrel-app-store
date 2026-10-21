@@ -38,7 +38,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/icon.png" width="40" height="40" alt=""> | [Healthchecks](https://github.com/healthchecks/healthchecks) | Get notified when your cron jobs and scheduled tasks fail | 5.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/icon.png" width="40" height="40" alt=""> | [HedgeDoc](https://github.com/hedgedoc/hedgedoc) | Collaborative Markdown notes in real time | 1.12.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png" width="40" height="40" alt=""> | [Huginn](https://github.com/huginn/huginn) | Build agents that monitor and act on your behalf | 2026.10.14 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png" width="40" height="40" alt=""> | [Kanboard](https://github.com/kanboard/kanboard) | Project management focused on the Kanban methodology | 1.2.54 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png" width="40" height="40" alt=""> | [Kanboard](https://github.com/kanboard/kanboard) | Project management focused on the Kanban methodology | 1.2.55 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png" width="40" height="40" alt=""> | [Kener](https://github.com/rajnandan1/kener) | A stunning, modern status page for your services | 4.1.7 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-koel/icon.png" width="40" height="40" alt=""> | [Koel](https://github.com/koel/koel) | A personal music streaming server that works | 9.15.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png" width="40" height="40" alt=""> | [Komga](https://github.com/gotson/komga) | A media server for your comics, mangas, BDs and ebooks | 1.29.1 |
@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 6.10.6 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.14 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.56 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.57 |
 
 ## How updates work
 
