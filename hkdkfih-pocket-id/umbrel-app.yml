@@ -12,7 +12,7 @@ environment:
       work on this address. Change it if you use a Tailscale or reverse-proxy domain.
 category: networking
 name: Pocket ID
-version: "2.18.0"
+version: "2.19.1"
 tagline: Passkey sign-in for all your self-hosted apps
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/icon.png
 description: >-
@@ -58,7 +58,14 @@ description: >-
   Storage: 200 MB → 1 GB
 
   Note: Needs HTTPS with a trusted certificate for passkeys
-releaseNotes: ""
+releaseNotes: >-
+  Bug Fixes
+
+
+  Other
+
+
+  Full release notes: https://github.com/pocket-id/pocket-id/releases/tag/v2.19.1
 
 developer: Pocket ID
 website: https://pocket-id.org/
