@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Kener
-version: "4.1.7"
+version: "4.1.8"
 tagline: A stunning, modern status page for your services
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
 description: >-
@@ -42,7 +42,35 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with monitor history
-releaseNotes: ""
+releaseNotes: >-
+  - fix(ci): keep publishing release images when one variant fails
+
+  - fix(ui): keep incident and maintenance duration below the navbar
+
+  - feat(heartbeat): let users set the heartbeat secret
+
+  - fix(api): run the proxy URL check on v4 monitor create and update
+
+  - Test the live demo at kener.ing with surface
+
+  - Remove the surface trial
+
+  - feat(subscriptions): state and impact flags for subscriber mail templates
+
+  - Shrink the agent docs from 183 always-loaded lines to 28, and fix 8 wrong facts
+
+  - Show hidden monitors to signed-in users with monitors.read, and stop inline incidents leaking them
+
+  - fix(monitors): warn when $SECRET is sent over plain http
+
+  - Stop maintenance emails and /maintenances/{id} page data from leaking hidden monitors
+
+  - Stop emailing events that affect only hidden monitors, and count only visible monitors in the incident impact
+
+  - …
+
+
+  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.8
 
 developer: Raj Nandan Sharma
 website: https://kener.ing/
