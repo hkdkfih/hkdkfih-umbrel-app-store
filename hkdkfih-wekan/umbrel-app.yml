@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.57"
+version: "12.60"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,22 +47,22 @@ releaseNotes: >-
   In short
 
 
-  - attachments can be deleted after a set time and deleted ones
+  - sanitize-html 2.18.1 fixes a stack overflow that nested
 
-  - purged, every backup is recorded with failures and overdue runs shown,
+  - tags caused in WeKan's import and export sanitizer, and a failed
 
-  - and the newest features' settings are on every platform and in the Admin
+  - import or export no longer disables the account of whoever ran it unless it
 
-  - Panel. Adding a board member by email works whatever the letter case, and the
+  - was an attempt. The forked Meteor dynamic-import and meteor shell keys
 
-  - Security report stops crying wolf.
+  - come from the crypto RNG.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.57
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.60
 
 developer: WeKan Team
 website: https://wekan.fi/
