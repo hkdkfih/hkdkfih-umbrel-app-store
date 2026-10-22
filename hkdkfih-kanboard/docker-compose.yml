@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_WHITELIST: "/jsonrpc.php,/feed/*,/ical/*"
 
   web:
-    image: kanboard/kanboard:v1.2.55@sha256:0bbfc38baede494115d35c669e084e185c38b8919a7b36bb939e3caf63f34c01
+    image: kanboard/kanboard:v1.2.56@sha256:871435323da40b359baa64e41a58ba1c2ab14869c8e412d507cf7c3c3aeaf006
     # container runs as root (upstream default); nginx and php-fpm serve as the nginx user
     restart: on-failure
     stop_grace_period: 1m

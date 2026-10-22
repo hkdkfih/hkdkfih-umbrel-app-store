@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Kanboard
-version: "1.2.55"
+version: "1.2.56"
 tagline: Project management focused on the Kanban methodology
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png
 description: >-
@@ -47,38 +47,14 @@ releaseNotes: >-
   Security fixes
 
 
-  - Prevent spoofed client IP addresses in trusted-proxy headers from bypassing IP-based CAPTCHA and login lockouts
+  - Upgrade the Docker image and runtime configuration from PHP 8.4 to PHP 8.5.
 
-  - Restrict dashboard and overdue-task queries to projects a user can still access
+  - The current Alpine package resolves to PHP 8.5.12, which fixes CVE-2026-109618 and CVE-2026-109619.
 
-  - Enforce project authorization when closing board columns, reordering subtasks, and duplicating tasks between projects
-
-  - Require the project-manager role to modify project metadata through the API
-
-  - Validate and escape color IDs and project names to prevent cross-site scripting
-
-  - Limit iCalendar start-date fields to supported task columns
+  - See:
 
 
-  Improvements
-
-
-  - Add support for uploading and previewing WebP image attachments
-
-  - Allow API clients to set a validated project member as the creator of task and project attachments
-
-  - Add Azerbaijani interface translations and improve Swedish translations
-
-
-  Bug fixes
-
-
-  - Preserve session cookies when Kanboard is installed in a subdirectory
-
-  - …
-
-
-  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.55
+  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.56
 
 developer: Frédéric Guillot
 website: https://kanboard.org/
