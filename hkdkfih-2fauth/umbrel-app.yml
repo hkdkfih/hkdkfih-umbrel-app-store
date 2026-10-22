@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: 2FAuth
-version: "8.0.2"
+version: "8.0.3"
 tagline: Your two-factor codes, in a web app you own
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
 description: >-
@@ -43,7 +43,11 @@ description: >-
   Memory: 256 MB → 512 MB
 
   Storage: 500 MB → 1 GB
-releaseNotes: ""
+releaseNotes: >-
+  - The sole purpose of this release is to push an updated docker image containing PHP 8.4.27, in order to have CVEs GHSA-w8hw-w9fx-j79w and GHSA-6wmf-4rv5-p3rp fixed.
+
+
+  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v8.0.3
 
 developer: Bubka
 website: https://docs.2fauth.app/
