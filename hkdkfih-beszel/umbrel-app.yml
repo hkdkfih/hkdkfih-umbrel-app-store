@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Beszel
-version: "0.21.0"
+version: "0.21.1"
 tagline: Lightweight server monitoring with history and alerts
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/icon.png
 description: >-
@@ -35,7 +35,27 @@ description: >-
   Memory: 128 MB → 512 MB
 
   Storage: 200 MB → 2 GB
-releaseNotes: ""
+releaseNotes: >-
+  - For developers using the agent as a Go package, Agent.Start now requires a context.Context.
+
+  - For authors of integrations, existing memory fields other than memory percentage are deprecated in favor of new fields which provide raw byte values. The deprecated fields are still populated, but will be removed from the API in a future version.
+
+  - type Stats struct {
+
+  - // Deprecated fields (populated on hubs <= 0.21.1; will be removed in a future version)
+
+  - Mem float64 json:"m" cbor:"2,keyasint" // Deprecated: GB, use MemBytes. Memory GB fields are kept for older hubs and integrations.
+
+  - MaxMem float64 json:"mm,omitzero" cbor:"-" // Deprecated: GB, use MaxMemBytes.
+
+  - MemUsed float64 json:"mu" cbor:"3,keyasint" // Deprecated: GB, use MemBytes.
+
+  - MemBuffCache float64 json:"mb" cbor:"5,keyasint" // Deprecated: GB, use MemBytes.
+
+  - …
+
+
+  Full release notes: https://github.com/henrygd/beszel/releases/tag/v0.21.1
 
 developer: henrygd
 website: https://beszel.dev/
