@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.60"
+version: "12.63"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,22 +47,20 @@ releaseNotes: >-
   In short
 
 
-  - sanitize-html 2.18.1 fixes a stack overflow that nested
+  - copying a card, linking it to another board or making one from a
 
-  - tags caused in WeKan's import and export sanitizer, and a failed
+  - card template no longer fails when the card carries values of another
 
-  - import or export no longer disables the account of whoever ran it unless it
+  - board's custom fields, and no longer records AdminFieldBleed against the
 
-  - was an attempt. The forked Meteor dynamic-import and meteor shell keys
-
-  - come from the crypto RNG.
+  - user who tried.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.60
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.63
 
 developer: WeKan Team
 website: https://wekan.fi/
