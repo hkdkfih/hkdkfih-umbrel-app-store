@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: huginn/huginn:v2026.10.14@sha256:3b92454d115fd7ddb6c06461b41d4659d113cfd489f36178cd0f0d8bc596ddce
+    image: huginn/huginn:v2026.10.24@sha256:f4ab80f26143ad442e37b8e29861ba3a6a52628f246c2d2db79b35301fa1d66b
     # all-in-one image with its own MySQL; runs as root (upstream default)
     restart: on-failure
     stop_grace_period: 1m

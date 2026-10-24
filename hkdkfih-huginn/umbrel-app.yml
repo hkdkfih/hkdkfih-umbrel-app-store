@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Huginn
-version: "2026.10.14"
+version: "2026.10.24"
 tagline: Build agents that monitor and act on your behalf
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
 description: >-
@@ -31,27 +31,31 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  v2026.10.14
+  v2026.10.24
 
 
-  - Show maps of location Events with OpenStreetMap and Leaflet when UserLocationAgent has no Google Maps api_key, instead of showing no map.
+  - Ruby 4.0.9 includes fixes for memory corruption when compiling attacker-controlled regular expressions. See the Ruby advisory for details.
 
-  - Upgrade the PostgreSQL Docker Compose example from PostgreSQL 9.5 to 18.
+  - Upgrade Ruby to 4.0.9, including the official Docker images.
 
-  - Move the Heroku setup to the heroku-24 stack and Heroku's native multi-buildpack support.
+  - Upgrade the bundled MySQL server to 8.4.13.
 
-  - Remove the OpenShift and Cloud Foundry deployment files, whose platforms are no longer available.
+  - Select the web interface language with the LOCALE environment variable. Translations come from an additional gem, with English fallbacks for missing translations.
 
-  - Rewrite the README and deployment documentation around Docker, and add a security policy, a contributing guide, and a sponsors page.
+  - Update Docker latest tags only after a release passes the Docker specs. Builds from the development branch use the master tag instead.
 
-  - Stop the bundled MySQL server in the multi-process image together with its child processes, so that leftover socket locks no longer prevent the next start.
+  - Refresh Smokescreen, Ruby gems, and npm dependencies, including JSON 3.1.0, OmniAuth 2.3.1, and janeway-jsonpath 1.2.0.
 
-  - Run the Docker specs against a release's images before tagging them with the release version.
+
+  Upgrading
+
+
+  - For a manual installation, install Ruby 4.0.9 before updating the bundle. The official Docker images include the updated runtime.
 
   - …
 
 
-  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.10.14
+  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.10.24
 
 developer: Huginn
 website: https://github.com/huginn/huginn
