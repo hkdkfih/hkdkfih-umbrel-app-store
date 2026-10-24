@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.317.2"
+version: "0.318.0"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -47,31 +47,59 @@ description: >-
 
   Storage: 200 MB → 1 GB
 releaseNotes: >-
-  Other Changes ☀️
+  Breaking Changes 🚨
 
 
-  - Kia/Hyundai EU: sign OneApp/CCI auth calls with X-Fingerprint
+  - Battery limits: expose plugin errors
 
-  - Phases: project the 1p switch from the actual draw
+  - Home Assistant: fix battery direction help
 
-  - Phases: stop 3p min charging within one disable delay when 1p not sustainable
+  - SofarSolar G3: write max charge/discharge power for battery modes
 
-  - SHM: persist device serial
-
-  - WARP (WebSocket): ignore non power manager topics from energy manager
+  - mDNS: stable instance name per installation
 
 
-  Bug Fixes 🐞
+  New Features 💫
 
 
-  - Forecast: fix price chart drawing prices one slot early
+  - Add A-Tronix AX Plus
 
-  - Huawei SmartLogger: fix swapped grid import/export energy registers
+  - Add CHINT DTSU666 meters
 
-  - Loadpoint: fix fractional min current on circuit
+  - Add Frank Energie tariff
+
+  - Add Grizzl-E Mini Connect charger
+
+  - Add Tuya chargers
+
+  - Bender: add vehicle SoC for Mennekes 4You/4Business
+
+  - Config UI: add onboarding flow and setup checklist
+
+  - Home Assistant charger: add temperature entity for heating devices
+
+  - Kathrein: add watchdog
+
+  - Messenger (ntfy): add schema option to allow http
+
+  - MySkoda: add wake-up via charging/start
+
+  - Optimizer: add automatic mode
+
+  - RCT: add S0 external energy
+
+  - SENEC Connect: add .Home V4 product
+
+  - Sofar G3: add battery discharge mode
+
+  - Stiebel WPM: add target temperature
+
+  - Sungrow Hybrid: Add voltage and power registers for Modbus
+
+  - …
 
 
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.317.2
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.318.0
 
 developer: evcc.io
 website: https://evcc.io/
