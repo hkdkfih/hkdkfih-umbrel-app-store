@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   server:
-    image: lissy93/dashy:4.8.0@sha256:ae6a2b94c375438fd49ab1a923eb1c5ffc55e5053cd6561b7e080525ea34a82a
+    image: lissy93/dashy:4.9.0@sha256:e8725dc24acc9a1d6f09c2ed0499b596af5a1b4eac8c83e912c213da06011356
     # container runs as root (upstream default)
     restart: on-failure
     stop_grace_period: 1m

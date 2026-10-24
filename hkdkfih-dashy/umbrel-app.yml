@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Dashy
-version: "4.8.0"
+version: "4.9.0"
 tagline: A self-hostable personal dashboard for your homelab
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-dashy/icon.png
 description: >-
@@ -30,7 +30,53 @@ description: >-
   Memory: 256 MB → 512 MB
 
   Storage: 300 MB → 1 GB
-releaseNotes: ""
+releaseNotes: >-
+  ✨ New Features
+
+
+  - Add option to open workspace sidebar items in new tab
+
+  - Shiny new workspace view
+
+
+  🦋 Bug Fixes
+
+
+  - Fix config files being readable without login via encoded URLs
+
+  - Fix Firefix col counting, and rss in sample config
+
+
+  🎨 Themes and Styling
+
+
+  - feat(theme): add liquid-glass built-in theme
+
+
+  🌐 Localization
+
+
+  - Complete Arabic translation and fix broken Hindi placeholders
+
+  - Complete and polish Chinese (zh-CN) translations
+
+
+  📕 Documentation
+
+
+  - Add warning guest access http auth
+
+  - Updates troubleshooting guide
+
+  - Adds translation credits to the readme
+
+  - Update sponsors in readme
+
+
+  📦 Dependencies
+
+
+  Full release notes: https://github.com/lissy93/dashy/releases/tag/4.9.0
 
 developer: Alicia Sykes
 website: https://dashy.to/
