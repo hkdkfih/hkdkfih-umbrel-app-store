@@ -9,7 +9,7 @@ environment:
     note: Cron expression for automatic tests, for example "0 */2 * * *" for every two hours.
 category: networking
 name: Speedtest Tracker
-version: "1.15.0"
+version: "1.15.1"
 tagline: Keep an eye on your internet speed
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-speedtest-tracker/icon.png
 description: >-
@@ -37,7 +37,15 @@ description: >-
   Storage: 500 MB → 2 GB
 
   Note: Each test uses your full bandwidth for a few seconds
-releaseNotes: ""
+releaseNotes: >-
+  - fix: correct server ID filter returning no results on SQLite
+
+  - task: 2026-10-22 dependency updates
+
+  - release: v1.15.1
+
+
+  Full release notes: https://github.com/alexjustesen/speedtest-tracker/releases/tag/v1.15.1
 
 developer: Alex Justesen
 website: https://docs.speedtest-tracker.dev/
