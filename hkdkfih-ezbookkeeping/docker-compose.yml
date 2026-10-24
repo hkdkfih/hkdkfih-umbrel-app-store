@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   server:
-    image: mayswind/ezbookkeeping:2.1.0@sha256:96093e4bd1892dc0010942d71539a1088a6cde075607ef6589f54cd65738b906
+    image: mayswind/ezbookkeeping:2.1.1@sha256:584e4d7f6fc1642773e840b56296f8782912e3bb17abfe3c49097508b198cdb7
     # image runs as 1000:1000
     restart: on-failure
     stop_grace_period: 1m
