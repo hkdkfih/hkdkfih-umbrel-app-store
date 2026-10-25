@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hkdkfih-big-agi
 category: ai
 name: Big-AGI
-version: "2.1.0"
+version: "2.1.2"
 tagline: A multi-model AI workspace for chatting with many models at once
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/icon.png
 description: >-
@@ -42,7 +42,31 @@ description: >-
   Storage: 1 GB → 2 GB
 
   Note: Local models need the Ollama app and their own memory
-releaseNotes: ""
+releaseNotes: >-
+  Big-AGI 2.1.2 - Render Tree
+
+
+  Edit anything, run the newest models, and a security fix you should not skip.
+
+
+  - Two months of work since 2.1.1: the chat message becomes fully editable as a session, the model catalog jumps a generation, Meta AI joins as a vendor, and a privately reported key disclosure is closed. Self-hosters with a server-side Gemini key should upgrade and rotate it.
+
+
+  Security
+
+
+  - Server-side GEMINI_API_KEY could be read through the AI Inspector request echo on deployments that set it; fixed, see the advisory. Rotate the key after upgrading.
+
+  - Next.js 15.5.28 (closes CVE-2025-29927 and the other open 15.1 advisories), Node 24.22.1 base image (CVE-2026-111497, the Brotli decoder fix)
+
+  - Opt-in HTTP Basic Auth middleware hardened: passwords with colons, UTF-8, constant-time comparison
+
+  - SECURITY.md with a private reporting channel
+
+  - …
+
+
+  Full release notes: https://github.com/enricoros/big-AGI/releases/tag/v2.1.2
 
 developer: Enrico Ros
 website: https://big-agi.com/
