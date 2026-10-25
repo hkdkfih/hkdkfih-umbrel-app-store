@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Verdaccio
-version: "6.10.7"
+version: "6.11.1"
 tagline: A lightweight private npm proxy registry
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png
 description: >-
@@ -46,14 +46,12 @@ releaseNotes: >-
   Patch Changes
 
 
-  - The Docker image no longer trusts certificates issued through the compromised eMudhra (emSign) intermediate CAs.
+  - Update verdaccio dependencies to the latest npm dist-tag (@verdaccio/ui-theme tracks next-9):
 
-  - In October 2026, eMudhra disclosed that the private keys of several of its intermediate certificate authorities had been compromised. Anyone holding those keys can issue a TLS certificate that a client trusting the eMudhra chain accepts as valid, for any host. Verdaccio connects to its uplinks (such as registry.npmjs.org) over HTTPS, so an attacker able to intercept that traffic could impersonate an uplink and serve tampered metadata or tarballs, which Verdaccio would then cache.
-
-  - …
+  - @verdaccio/ui-theme: 9.0.0-next-9.39 → 9.0.0-next-9.40
 
 
-  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v6.10.7
+  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v6.11.1
 
 developer: Verdaccio contributors
 website: https://verdaccio.org/
