@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Apprise API
-version: "2.0.1"
+version: "2.0.2"
 tagline: Send notifications to 100+ services from one API
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/icon.png
 description: >-
@@ -30,7 +30,29 @@ description: >-
   Memory: 128 MB → 256 MB
 
   Storage: 200 MB → 500 MB
-releaseNotes: ""
+releaseNotes: >-
+  - A small release to point against the new Apprise v2.1.0 release
+
+
+  bulb: Features
+
+
+  - Accept plain text message bodies and X-Apprise-* headers on notify in
+
+  - reduce restrictions on saving config entries in
+
+
+  heart: Life-Cycle Support
+
+
+  - Docker support for AMQP v1.0 and v0.9.1 in
+
+  - Updated to support terramaster privacy req in
+
+  - Centralize Apprise API version for runtime and package metadata
+
+
+  Full release notes: https://github.com/caronc/apprise-api/releases/tag/v2.0.2
 
 developer: Chris Caron
 website: https://github.com/caronc/apprise-api
