@@ -7,7 +7,7 @@ services:
       APP_PORT: 1337
 
   server:
-    image: jamesread/olivetin:3000.20.0@sha256:f3066e207efd35ab8f9ffd71cf7e2abb78d2b1edaf77ea924113bdbe6ef4f989
+    image: jamesread/olivetin:3000.21.0@sha256:74e9364a1915ede4547361b7571b0a83c031bd16d71ea55264e7a28db9029aec
     user: "1000:1000"
     restart: on-failure
     volumes:

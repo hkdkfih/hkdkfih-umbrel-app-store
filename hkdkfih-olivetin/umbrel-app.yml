@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: OliveTin
-version: "3000.20.0"
+version: "3000.21.0"
 tagline: Safe, simple buttons for your shell commands
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/icon.png
 description: >-
@@ -30,7 +30,66 @@ description: >-
   Memory: 64 MB → 256 MB
 
   Storage: 100 MB → 500 MB
-releaseNotes: ""
+releaseNotes: >-
+  Features
+
+
+  - feat(cli): add -syntaxcheck and -startuptrace
+
+
+  Bug fixes
+
+
+  - fix: hold MapActionBindingsLock while building the default dashboard
+
+  - fix: keep choice combobox input within narrow form columns
+
+  - fix: let the argument form grid shrink on narrow screens
+
+  - fix: publish config decode failures to the live issue list
+
+  - fix: release EventStream slots when the client disconnects
+
+  - fix: report config decode and include parse failures as config issues
+
+  - fix: skip nil actions when rebuilding the action map
+
+  - fix: style count and other fields
+
+
+  Others
+
+
+  - Next
+
+
+  Container images (from GitHub)
+
+
+  - docker pull ghcr.io/olivetin/olivetin:3000.21.0
+
+
+  Container images (on Docker Hub)
+
+
+  - docker pull docker.io/jamesread/olivetin:3000.21.0
+
+
+  Upgrade warnings, or breaking changes
+
+
+  - No such issues between the last release and this version.
+
+
+  Useful links
+
+
+  - Which download do I need?
+
+  - …
+
+
+  Full release notes: https://github.com/OliveTin/OliveTin/releases/tag/3000.21.0
 
 developer: James Read
 website: https://www.olivetin.app/
