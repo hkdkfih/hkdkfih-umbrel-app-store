@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.63"
+version: "12.64"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,26 @@ releaseNotes: >-
   In short
 
 
-  - copying a card, linking it to another board or making one from a
+  - a database speed test times the common WeKan queries on every
 
-  - card template no longer fails when the card carries values of another
+  - database WeKan runs on, with twice a production WeKan of data, and checks they
 
-  - board's custom fields, and no longer records AdminFieldBleed against the
+  - all answer the same; its findings made FerretDB several times faster and
 
-  - user who tried.
+  - stopped MariaDB losing edits. Every platform runs the prebuilt
+
+  - ferretdb-sqlite
+
+  - FerretDB, the Sandstorm .spk carries only what a grain runs, and every build
+
+  - loads collection2 before the models.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.63
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.64
 
 developer: WeKan Team
 website: https://wekan.fi/
