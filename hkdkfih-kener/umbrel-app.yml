@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Kener
-version: "4.1.9"
+version: "4.1.10"
 tagline: A stunning, modern status page for your services
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
 description: >-
@@ -43,14 +43,10 @@ description: >-
 
   Note: Storage grows with monitor history
 releaseNotes: >-
-  - > [!IMPORTANT]
-
-  - > Security fix. In v4.0.0 to v4.1.8, a request with a percent-encoded path, for example /%61pi/v4/monitors, reached every /api/v4 route without an API key. Upgrade now, then follow the steps in the v4.1.9 changelog.
-
-  - fix(api): decide the API key check from the matched route, not the raw path
+  - fix(auth): drop the hardcoded fallback secret and warn on example secrets
 
 
-  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.9
+  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.10
 
 developer: Raj Nandan Sharma
 website: https://kener.ing/
