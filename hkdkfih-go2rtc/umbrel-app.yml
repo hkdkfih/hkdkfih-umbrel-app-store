@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: go2rtc
-version: "1.9.14-patch.1"
+version: "1.9.15"
 tagline: Ultimate camera streaming application
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/icon.png
 description: >-
@@ -36,8 +36,49 @@ description: >-
 
   Note: Transcoding with FFmpeg needs more CPU or a GPU
 releaseNotes: >-
-  RTSP restreams now require a username and password (shown by Umbrel), and exec: sources are limited to
-  ffmpeg.
+  Main
+
+
+  - Update go build version to 1.27 (1cff2562)
+
+  - Update dependencies (eb75edcb)
+
+
+  Other
+
+
+  - Add support xiaomi lumi.camera.gwagl01 (7793a558)
+
+  - Add support xiaomi isa.camera.isc5c1 (06cbbe55)
+
+  - Add support xiaomi chuangmi.camera.v2 on old firmwares (a37fdf38)
+
+  - Add support xiaomi chuangmi.camera.ipc019e (8f68f80b)
+
+  - Add support xiaomi isa.camera.df3 on old firmwares (6374366d)
+
+  - Add trace log for xiaomi devices list (6f75b2f7)
+
+  - Add support PCMATapo for MPEG-TS source #2159 (dc1685e9)
+
+  - Add camera.ui link to projects #2349 (c245815e)
+
+  - Add support pet feeder to xiaomi source #2078 (e5bb0334)
+
+  - Move kasa source to separate module (44f6f111)
+
+  - Restore fix audio sample rate for some xiaomi cameras #2006 (01c74515)
+
+  - Improve packet loss on old TUTK proto (75bd1f1b)
+
+  - Strip Userinfo from log entries and errors #2051 (de157eb1)
+
+  - Rename mpegts module to mpeg (2735bafd)
+
+  - …
+
+
+  Full release notes: https://github.com/AlexxIT/go2rtc/releases/tag/v1.9.15
 
 developer: Alexey Khit
 website: https://go2rtc.org/
