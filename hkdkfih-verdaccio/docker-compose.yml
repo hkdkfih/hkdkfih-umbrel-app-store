@@ -7,7 +7,7 @@ services:
       APP_PORT: 4873
 
   server:
-    image: verdaccio/verdaccio:6.11.1@sha256:82f4decaf1c9eff885bf7a1227335f78581ff715288d5f38898e67e28b3bfbdd
+    image: verdaccio/verdaccio:7.0.1@sha256:73213603d3f9d3b68b4fbd0b9a0daba6e272f6393ae0ec84af4a6367aec1d274
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m

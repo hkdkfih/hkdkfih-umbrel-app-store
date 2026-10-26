@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Verdaccio
-version: "6.11.1"
+version: "7.0.1"
 tagline: A lightweight private npm proxy registry
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png
 description: >-
@@ -46,12 +46,14 @@ releaseNotes: >-
   Patch Changes
 
 
-  - Update verdaccio dependencies to the latest npm dist-tag (@verdaccio/ui-theme tracks next-9):
+  - Restore the @verdaccio/package-filter plugin in the verdaccio 7 package so the filter configuration works again.
 
-  - @verdaccio/ui-theme: 9.0.0-next-9.39 → 9.0.0-next-9.40
+  - Verdaccio 7.0.0 shipped a default config.yaml (also the one inside the verdaccio/verdaccio:7 Docker image) with the filters: '@verdaccio/package-filter' section enabled, but the package no longer declared the plugin as a dependency: it was dropped when the 7.x line moved to the published @verdaccio/* modules. On startup the plugin loader logged package not found, try to install @verdaccio/package-filter with a package manager and continued without it, so any minAgeDays, dateThreshold or block rules configured under filters were silently not enforced.
+
+  - …
 
 
-  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v6.11.1
+  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v7.0.1
 
 developer: Verdaccio contributors
 website: https://verdaccio.org/
