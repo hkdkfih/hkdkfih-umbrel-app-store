@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.318.0"
+version: "0.318.1"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -47,59 +47,17 @@ description: >-
 
   Storage: 200 MB → 1 GB
 releaseNotes: >-
-  Breaking Changes 🚨
+  Other Changes ☀️
 
 
-  - Battery limits: expose plugin errors
+  - Sungrow-hybrid: correct grid voltages and currents
 
-  - Home Assistant: fix battery direction help
+  - Tesla: fall back to vehicle_data without location when scope is missing
 
-  - SofarSolar G3: write max charge/discharge power for battery modes
-
-  - mDNS: stable instance name per installation
+  - UI: revert intra-word underscore handling in markdown renderer
 
 
-  New Features 💫
-
-
-  - Add A-Tronix AX Plus
-
-  - Add CHINT DTSU666 meters
-
-  - Add Frank Energie tariff
-
-  - Add Grizzl-E Mini Connect charger
-
-  - Add Tuya chargers
-
-  - Bender: add vehicle SoC for Mennekes 4You/4Business
-
-  - Config UI: add onboarding flow and setup checklist
-
-  - Home Assistant charger: add temperature entity for heating devices
-
-  - Kathrein: add watchdog
-
-  - Messenger (ntfy): add schema option to allow http
-
-  - MySkoda: add wake-up via charging/start
-
-  - Optimizer: add automatic mode
-
-  - RCT: add S0 external energy
-
-  - SENEC Connect: add .Home V4 product
-
-  - Sofar G3: add battery discharge mode
-
-  - Stiebel WPM: add target temperature
-
-  - Sungrow Hybrid: Add voltage and power registers for Modbus
-
-  - …
-
-
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.318.0
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.318.1
 
 developer: evcc.io
 website: https://evcc.io/
