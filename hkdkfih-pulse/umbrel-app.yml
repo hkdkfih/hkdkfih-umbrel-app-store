@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Pulse
-version: "6.5.0"
+version: "6.6.0"
 tagline: Real-time monitoring for Proxmox, Docker and more
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/icon.png
 description: >-
@@ -32,7 +32,44 @@ description: >-
   Storage: 200 MB → 1 GB
 
   Note: Needs Proxmox, PBS or Docker hosts to monitor
-releaseNotes: ""
+releaseNotes: >-
+  ✅ Release Asset Validation: PASSED
+
+
+  - The required release asset checks passed.
+
+  - Status: Release asset checks passed ✅
+
+  - Validated: 2026-10-25 09:46:24 UTC
+
+  - Workflow: Pulse Release Pipeline #439
+
+
+  Validation Summary
+
+
+  - All required assets present ✓
+
+  - Checksums verified ✓
+
+  - Version strings correct ✓
+
+  - Binary architectures validated ✓
+
+  - Asset validation alone does not establish installed-service health,
+
+  - release convergence, clean soak or approval for stable publication.
+
+
+  Pulse v6.6.0 Release Notes
+
+
+  - v6.6.0 is a stable minor release. It promotes the v6.6.0-rc.6 release candidate and replaces stable v6.5.0.
+
+  - …
+
+
+  Full release notes: https://github.com/rcourtman/Pulse/releases/tag/v6.6.0
 
 developer: Richard Courtman
 website: https://github.com/rcourtman/Pulse
