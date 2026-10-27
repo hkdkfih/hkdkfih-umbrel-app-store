@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Huginn
-version: "2026.10.24"
+version: "2026.10.26"
 tagline: Build agents that monitor and act on your behalf
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
 description: >-
@@ -31,31 +31,27 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  v2026.10.24
+  v2026.10.26
 
 
-  - Ruby 4.0.9 includes fixes for memory corruption when compiling attacker-controlled regular expressions. See the Ruby advisory for details.
+  - This release updates certificate trust following the eMudhra intermediate CA incident. Docker builds now require Ubuntu's corrected CA package, and gRPC connections prefer the OS trust store over the gem's bundled certificates.
 
-  - Upgrade Ruby to 4.0.9, including the official Docker images.
+  - Require ca-certificates version 20260816ubuntu0.24.04.1 or later in the Ubuntu 24.04 Docker images. Builds fail if the update is unavailable. See USN-8944-1.
 
-  - Upgrade the bundled MySQL server to 8.4.13.
+  - Prefer OS CA certificates for gRPC connections. Explicit gRPC trust settings remain supported.
 
-  - Select the web interface language with the LOCALE environment variable. Translations come from an additional gem, with English fallbacks for missing translations.
+  - Use Active Record validation for service-name sort directions.
 
-  - Update Docker latest tags only after a release passes the Docker specs. Builds from the development branch use the master tag instead.
+  - Add responsive scenario and service filters to the Agents page, including agents without a scenario.
 
-  - Refresh Smokescreen, Ruby gems, and npm dependencies, including JSON 3.1.0, OmniAuth 2.3.1, and janeway-jsonpath 1.2.0.
+  - Pass through events when DeDuplicationAgent's configured property renders to an empty string, without remembering them as duplicates.
 
-
-  Upgrading
-
-
-  - For a manual installation, install Ruby 4.0.9 before updating the bundle. The official Docker images include the updated runtime.
+  - Interpolate Basic Authentication values during web request validation.
 
   - …
 
 
-  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.10.24
+  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.10.26
 
 developer: Huginn
 website: https://github.com/huginn/huginn
