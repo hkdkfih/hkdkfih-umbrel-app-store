@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: 2FAuth
-version: "8.0.3"
+version: "9.0.0"
 tagline: Your two-factor codes, in a web app you own
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
 description: >-
@@ -44,10 +44,27 @@ description: >-
 
   Storage: 500 MB → 1 GB
 releaseNotes: >-
-  - The sole purpose of this release is to push an updated docker image containing PHP 8.4.27, in order to have CVEs GHSA-w8hw-w9fx-j79w and GHSA-6wmf-4rv5-p3rp fixed.
+  Added
 
 
-  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v8.0.3
+  - Brand new Table layout for desktop resolution and higher.
+
+  - Favorite system: Frequently used 2FA accounts can be marked as favorite, regardless of whether they belong to a group. You can easily find your favorites again thanks to a brand new toggle in the filter bar.
+
+  - New quick-select buttons when managing 2FA accounts to make it easier to select accounts that are likely to be targeted by the action buttons (Move, Unshared, Delete, Export)
+
+  - Support of Ente Auth export format
+
+
+  Fixed
+
+
+  - issue #571 Docker image: large API responses truncated (Network Error) when container runs as non-root user - fastcgi_temp_path not writable
+
+  - issue #575 Composer advisory block (enshrined/svg-sanitize) causes setup failure
+
+
+  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.0
 
 developer: Bubka
 website: https://docs.2fauth.app/
