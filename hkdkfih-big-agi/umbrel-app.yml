@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hkdkfih-big-agi
 category: ai
 name: Big-AGI
-version: "2.1.2"
+version: "2.1.3"
 tagline: A multi-model AI workspace for chatting with many models at once
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-big-agi/icon.png
 description: >-
@@ -43,30 +43,34 @@ description: >-
 
   Note: Local models need the Ollama app and their own memory
 releaseNotes: >-
-  Big-AGI 2.1.2 - Render Tree
+  Big-AGI 2.1.3 - Doxy Foxy
 
 
-  Edit anything, run the newest models, and a security fix you should not skip.
+  The docs move into the app, and every reply says how it ended.
 
 
-  - Two months of work since 2.1.1: the chat message becomes fully editable as a session, the model catalog jumps a generation, Meta AI joins as a vendor, and a privately reported key disclosure is closed. Self-hosters with a server-side Gemini key should upgrade and rotate it.
+  - The Big-AGI docs and changelog now open inside the app, read live from big-agi.com. Each reply carries one outcome - completed, out of tokens, failed or stopped - and Chat, Beam and Call all read it. This release also fixes a Next.js 15.5 minifier bug that broke outcome reporting in builds from main.
 
 
-  Security
+  Docs and What's New
 
 
-  - Server-side GEMINI_API_KEY could be read through the AI Inspector request echo on deployments that set it; fixed, see the advisory. Rotate the key after upgrading.
+  - Docs reader: the big-agi.com docs in a window, with contents tree and search; docs links in the app open there
 
-  - Next.js 15.5.28 (closes CVE-2025-29927 and the other open 15.1 advisories), Node 24.22.1 base image (CVE-2026-111497, the Brotli decoder fix)
+  - What's New: the big-agi.com changelog, with what is new since your last visit
 
-  - Opt-in HTTP Basic Auth middleware hardened: passwords with colons, UTF-8, constant-time comparison
+  - Self-hosters can disable both at build time with NEXT_PUBLIC_BIG_AGI_REMOTE_FEEDS=off; the app then never contacts big-agi.com on its own
 
-  - SECURITY.md with a private reporting channel
+
+  Outcomes
+
+
+  - Replies that ran out of tokens are marked apart from failures, in Chat and Beam
 
   - …
 
 
-  Full release notes: https://github.com/enricoros/big-AGI/releases/tag/v2.1.2
+  Full release notes: https://github.com/enricoros/big-AGI/releases/tag/v2.1.3
 
 developer: Enrico Ros
 website: https://big-agi.com/

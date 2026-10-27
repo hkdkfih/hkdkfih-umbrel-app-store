@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   web:
-    image: ghcr.io/enricoros/big-agi:v2.1.2@sha256:174492f7d895fc3d1b20ea05048b5791b60ec160f964cd5f26f475a4c39308cb
+    image: ghcr.io/enricoros/big-agi:v2.1.3@sha256:9932746ce1c5545a4ec494b7c9c28ca8f1d6067c4d1b3715547ab98fb9e54285
     # runs as the image's non-root "nextjs" user; chats, settings and API keys live in the browser,
     # so the server keeps no state and needs no volume
     restart: on-failure
