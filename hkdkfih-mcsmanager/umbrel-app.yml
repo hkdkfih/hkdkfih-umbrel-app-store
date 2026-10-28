@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: MCSManager
-version: "10.21.2"
+version: "10.22.0"
 tagline: A web panel for running Minecraft and other game servers
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mcsmanager/icon.png
 description: >-
@@ -50,16 +50,33 @@ description: >-
 
   Note: Storage grows with worlds and backups
 releaseNotes: >-
-  - Fix abnormal cases in the version number check
+  - Added a panel relay data mode. Once enabled, you can run directly without exposing a Daemon port, so a distributed panel needs only one port
+
+  - Improved the auto-update feature: the default source is now the GitHub release API, with mcsmanager.com as a fallback
+
+  - Streamlined the app market flow for simplicity
 
 
-  Corresponding Daemon version
+  Required Daemon Version
 
 
-  - v4.19.X
+  - > 4.19.X
 
 
-  Full release notes: https://github.com/MCSManager/MCSManager/releases/tag/v10.21.2
+  更改
+
+
+  - 新增面板中转数据模式，设置后可无需在开放 Daemon 端口即可直接运行，只需要一个端口即可运行分布式面板
+
+  - 优化自动更新功能，默认源切换为 github release API，备用源 mcsmanager.com
+
+  - 优化应用市场流程，确保简易化
+
+
+  所需的 Daemon 版本
+
+
+  Full release notes: https://github.com/MCSManager/MCSManager/releases/tag/v10.22.0
 
 developer: MCSManager
 website: https://mcsmanager.com/
