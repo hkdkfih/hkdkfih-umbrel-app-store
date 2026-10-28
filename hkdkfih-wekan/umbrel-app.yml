@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.65"
+version: "12.67"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,28 +47,26 @@ releaseNotes: >-
   In short
 
 
-  - an opened card shows only the fields it has, with + Add
+  - a list's Add card form closes once the card is added, unless
 
-  - for the rest. Drawing works with a pen on the whole window - from Add Card
+  - Member Settings keeps it open for the next one. And the v12.66 release build
 
-  - and Add attachment, saved as SVG, with an eraser, palm rejection and a lasso
+  - is whole again: the emulated-CPU Linux bundles and win32, FreeBSD,
 
-  - that moves, resizes, groups and layers lines - and SVG is an image again,
+  - OpenBSD, the Mac app, the Sandstorm .spk, the Ondra and Gantt
 
-  - sanitized whole at any size, streaming, on upload and on every serve.
+  - GPL snaps and the Bun bundles had failed to build or to start - most
 
-  - FerretDB answers WeKan's queries in the database on every backend, and
+  - because build scripts had moved their files into .tools/ and some callers had
 
-  - SQLite stores documents as JSONB. Right-to-left checkboxes and list
-
-  - resizing are fixed.
+  - not.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.65
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.67
 
 developer: WeKan Team
 website: https://wekan.fi/
