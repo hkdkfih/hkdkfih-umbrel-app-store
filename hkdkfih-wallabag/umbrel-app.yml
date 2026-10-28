@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: wallabag
-version: "2.6.14"
+version: "2.6.15"
 tagline: Save and classify articles, read them later
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png
 description: >-
@@ -43,7 +43,35 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: Storage grows with saved articles and downloaded images
-releaseNotes: ""
+releaseNotes: >-
+  - Support PHP 8.4 while retaining compatibility with PHP 7.4 and the locked legacy dependencies. Deprecation notices may still be emitted.
+
+  - Read the blog post about that release.
+
+  - Backport documentation monorepo merge to 2.6
+
+  - Introduce a REDIS_URL (backport)
+
+  - Hide delete public link item if not necessary
+
+  - Update graby and php-readability dependencies
+
+  - Backport #8020 Fix volatile tests to 2.6
+
+  - Backport #8585 Prefetch content ISO to fetch URL content to 2.6
+
+  - Backport to 2.6: Bump phpseclib/phpseclib to 3.0.55
+
+  - Escape dynamic data in the ePub export
+
+  - Fix content and fetchedContent merging
+
+  - Backport translations from master
+
+  - Prepare 2.6.15 release
+
+
+  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.15
 
 developer: wallabag
 website: https://wallabag.org/
