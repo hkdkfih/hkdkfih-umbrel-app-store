@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.29.1"
+version: "1.29.2"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -59,25 +59,48 @@ releaseNotes: >-
 
   - komga
 
-  - nextui reader links would not open properly if nextui is set as default
+  - uncorrect page count returned in some cases , closes
 
-  - nextui
+  - incorrect koreader hash in some cases , closes
 
-  - apply overflow in match table to avoid scrolling
 
-  - harmonize dialog closing controls
+  🔄️ Changes
 
-  - remove Server > User Interface page
 
-  - harmonize table behaviour on mobile
+  - opds
 
-  - ordering values were inverted in the collection/readlist edit dialogs
+  - replace deprecated method call
+
+
+  🛠  Build
+
+
+  - deps
+
+  - deps-dev
 
 
   🌐 Translation
 
 
-  - extract strings
+  - komga-tray
+
+  - translated using Weblate (Hungarian)
+
+  - translated using Weblate (Croatian)
+
+  - nextui
+
+  - translated using Weblate (Chinese (Simplified Han script))
+
+  - translated using Weblate (Korean)
+
+  - translated using Weblate
+
+  - webui
+
+
+  ⚙️ Dependencies
 
 
   Contributors
@@ -85,10 +108,10 @@ releaseNotes: >-
 
   - We'd like to thank the following people for their contributions:
 
-  - Gauthier Roebroeck
+  - Automatic translation add-on, Dániel Vadon, Felix_SANA, Gauthier, Gauthier Roebroeck, Milo Ivir, on9686, 無情天, 高坂京介
 
 
-  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.1
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.2
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
