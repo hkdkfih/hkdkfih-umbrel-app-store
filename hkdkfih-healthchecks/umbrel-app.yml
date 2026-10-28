@@ -10,7 +10,7 @@ environment:
     note: Base URL used in ping URLs, badges and links. Only change it if your Umbrel is reachable under your own address, for example https://hc.example.com (no trailing slash).
 category: developer
 name: Healthchecks
-version: "5.0.2"
+version: "5.0.3"
 tagline: Get notified when your cron jobs and scheduled tasks fail
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/icon.png
 description: >-
@@ -54,20 +54,10 @@ releaseNotes: >-
   Improvements
 
 
-  - In the docker image, move gunicorn configuration to gunicorn.conf.py
-
-  - In the the docker image, tighten the secure_scheme_headers gunicorn setting
+  - Update Docker base image to python:3.14.10-slim-trixie
 
 
-  Bug Fixes
-
-
-  - Fix a race condition in Profile.for_user()
-
-  - Upgrade minismtpd to v0.5 to enable concurrent SMTP sessions
-
-
-  Full release notes: https://github.com/healthchecks/healthchecks/releases/tag/v5.0.2
+  Full release notes: https://github.com/healthchecks/healthchecks/releases/tag/v5.0.3
 
 developer: Healthchecks
 website: https://healthchecks.io/
