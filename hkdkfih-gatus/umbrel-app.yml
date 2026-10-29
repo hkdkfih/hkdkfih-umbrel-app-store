@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Gatus
-version: "5.37.0"
+version: "5.38.0"
 tagline: A developer-oriented health dashboard and uptime monitor
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gatus/icon.png
 description: >-
@@ -44,7 +44,25 @@ description: >-
   Storage: 100 MB → 1 GB
 
   Note: Storage grows with the number of endpoints and their check history
-releaseNotes: ""
+releaseNotes: >-
+  - feat(alerting): add Resend alerting provider
+
+  - fix(maintenance): validate maintenance windows for external, DNS and SSH endpoints
+
+  - fix(alerting): Redact telegram token from errors on send failure
+
+  - fix(websocket): apply the client timeout to reads and writes
+
+  - fix(ssh): support keyboard-interactive authentication for endpoints and tunnels
+
+  - fix(security): add comprehensive logging and diagnostics for OIDC
+
+  - fix(jsonpath): support object keys containing dots via quoted accessors
+
+  - fix: Honor minimum-reminder-interval for external endpoints
+
+
+  Full release notes: https://github.com/TwiN/gatus/releases/tag/v5.38.0
 
 developer: TwiN
 website: https://gatus.io/
