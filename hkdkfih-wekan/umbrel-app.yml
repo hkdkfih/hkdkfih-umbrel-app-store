@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.67"
+version: "12.68"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,26 +47,30 @@ releaseNotes: >-
   In short
 
 
-  - a list's Add card form closes once the card is added, unless
+  - Card Settings, in Board Settings / Card, becomes two panes of
 
-  - Member Settings keeps it open for the next one. And the v12.66 release build
+  - checklists - the minicard's and the card's - with a checkbox per section and
 
-  - is whole again: the emulated-CPU Linux bundles and win32, FreeBSD,
+  - the board's custom fields as items, and the opened card and the minicard
 
-  - OpenBSD, the Mac app, the Sandstorm .spk, the Ondra and Gantt
+  - follow its sections and order; every opened card shows every field its board
 
-  - GPL snaps and the Bun bundles had failed to build or to start - most
+  - allows, empty or not. WeKan moves to Meteor 3.6-rc.1, keeping its own
 
-  - because build scripts had moved their files into .tools/ and some callers had
+  - security additions to Meteor's packages. Data health in Admin Panel /
 
-  - not.
+  - Problems can now clean up custom fields whose boards were all deleted, and
+
+  - empty fields no longer show Scrum sections on boards that have Scrum
+
+  - turned off.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.67
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.68
 
 developer: WeKan Team
 website: https://wekan.fi/
