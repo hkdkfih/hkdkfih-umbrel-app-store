@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for daily notes and timestamps, such as Europe/London or America/New_York.
 category: files
 name: SiYuan
-version: "3.8.8"
+version: "3.8.9"
 tagline: A privacy-first, self-hosted personal knowledge base
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png
 description: >-
@@ -47,27 +47,25 @@ description: >-
 
   Storage: 1 GB → 10 GB
 releaseNotes: >-
+  Upgrade notice
+
+
+  - This release automatically migrates notebooks to the new document title mode and supports / in document titles.
+
+  - Before opening a workspace with this version, quit all older clients and upgrade every device that accesses or syncs the same data, including offline devices before they reconnect. Check plugin compatibility before upgrading.
+
+  - After migration, do not use older versions to open, edit, restore, or sync the same data: changes may be overwritten or lost and propagated through sync. Older clients rejecting some documents does not protect the entire notebook. See the compatibility details.
+
+
   Overview
 
 
-  - This release expands database automations, introduces a compact desktop interface, and improves mobile editing, mind maps, AI integrations, and Linux compatibility.
-
-
-  Databases and editing
-
-
-  - Database automations can collect blocks and assign field values using templates. Locked views support temporary sorting, and database attribute panels adopt a single-column layout. Block reference input, outline navigation, callout conversion, and PDF page breaks are also improved.
-
-
-  Desktop, mobile, and mind maps
-
-
-  - The desktop interface gains a compact mode, menus support scrolling with mouse movement, and mind maps offer multiple connector styles and improved layout density. Mobile database panels, table features, and long-press block dragging are improved. iOS Live Photos can be imported, with metadata display and playback available across platforms.
+  - This release adds support for / in document titles and improves mind maps, database automations, mobile editing, and file change detection.
 
   - …
 
 
-  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8
+  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.9
 
 developer: SiYuan
 website: https://b3log.org/siyuan/en/
