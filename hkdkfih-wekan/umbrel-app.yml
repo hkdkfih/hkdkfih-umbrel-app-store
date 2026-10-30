@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.68"
+version: "12.74"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,30 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - Card Settings, in Board Settings / Card, becomes two panes of
+  - Caddy and FerretDB, the Go servers WeKan ships, no longer
 
-  - checklists - the minicard's and the card's - with a checkbox per section and
+  - open MPTCP listeners, which Linux kernel bug CVE-2026-98432 is reachable
 
-  - the board's custom fields as items, and the opened card and the minicard
-
-  - follow its sections and order; every opened card shows every field its board
-
-  - allows, empty or not. WeKan moves to Meteor 3.6-rc.1, keeping its own
-
-  - security additions to Meteor's packages. Data health in Admin Panel /
-
-  - Problems can now clean up custom fields whose boards were all deleted, and
-
-  - empty fields no longer show Scrum sections on boards that have Scrum
-
-  - turned off.
+  - through. The real fix is a patched host kernel.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.68
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.74
 
 developer: WeKan Team
 website: https://wekan.fi/
