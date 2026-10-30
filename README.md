@@ -34,7 +34,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/icon.png" width="40" height="40" alt=""> | [Glance](https://github.com/glanceapp/glance) | A self-hosted dashboard that puts all your feeds in one place | 0.8.7 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-go2rtc/icon.png" width="40" height="40" alt=""> | [go2rtc](https://github.com/AlexxIT/go2rtc) | Ultimate camera streaming application | 1.9.15 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-gokapi/icon.png" width="40" height="40" alt=""> | [Gokapi](https://github.com/Forceu/Gokapi) | Lightweight self-hosted file sharing with expiring links | 2.2.4 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/icon.png" width="40" height="40" alt=""> | [Grist](https://github.com/gristlabs/grist-core) | The evolution of spreadsheets | 1.7.21 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-grist/icon.png" width="40" height="40" alt=""> | [Grist](https://github.com/gristlabs/grist-core) | The evolution of spreadsheets | 1.7.22 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-healthchecks/icon.png" width="40" height="40" alt=""> | [Healthchecks](https://github.com/healthchecks/healthchecks) | Get notified when your cron jobs and scheduled tasks fail | 5.0.3 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/icon.png" width="40" height="40" alt=""> | [HedgeDoc](https://github.com/hedgedoc/hedgedoc) | Collaborative Markdown notes in real time | 1.12.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png" width="40" height="40" alt=""> | [Huginn](https://github.com/huginn/huginn) | Build agents that monitor and act on your behalf | 2026.10.26 |
@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 7.0.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.15 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.68 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 12.74 |
 
 ## How updates work
 
