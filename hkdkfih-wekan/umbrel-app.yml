@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.74"
+version: "12.75"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,16 @@ releaseNotes: >-
   In short
 
 
-  - Caddy and FerretDB, the Go servers WeKan ships, no longer
+  - Changing a password signs the account out in every other browser,
 
-  - open MPTCP listeners, which Linux kernel bug CVE-2026-98432 is reachable
-
-  - through. The real fix is a patched host kernel.
+  - and now a test proves it in two real browsers.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.74
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.75
 
 developer: WeKan Team
 website: https://wekan.fi/
