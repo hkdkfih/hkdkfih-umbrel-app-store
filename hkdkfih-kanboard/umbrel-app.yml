@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Kanboard
-version: "1.2.56"
+version: "1.2.57"
 tagline: Project management focused on the Kanban methodology
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png
 description: >-
@@ -47,14 +47,40 @@ releaseNotes: >-
   Security fixes
 
 
-  - Upgrade the Docker image and runtime configuration from PHP 8.4 to PHP 8.5.
+  - Disable PHP session upload progress in the Docker image to mitigate CVE-2026-115560.
 
-  - The current Alpine package resolves to PHP 8.5.12, which fixes CVE-2026-109618 and CVE-2026-109619.
+  - Check that the user can access the opposite task's project before adding internal links with bulk changes.
 
-  - See:
+  - Hide projects the caller cannot access from the API procedures getProjectByName, getProjectByIdentifier, and getProjectByEmail:
+
+  - They now return false instead of a 403 error that revealed the project exists.
 
 
-  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.56
+  Improvements
+
+
+  - Allow searching users by their exact email address:
+
+  - Emails are matched exactly and case-insensitively, so partial searches cannot be used to discover other users' addresses.
+
+
+  Bug fixes
+
+
+  - Make text searches case-insensitive for non-ASCII characters with SQLite.
+
+  - Fix PHP 8.5 and PHP-FPM configuration issues in the Docker image.
+
+  - Remove PHP 8.5 deprecation warnings.
+
+
+  Dependencies and build
+
+
+  - Update several GitHub Actions.
+
+
+  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.57
 
 developer: Frédéric Guillot
 website: https://kanboard.org/
