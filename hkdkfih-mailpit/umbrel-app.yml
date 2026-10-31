@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Mailpit
-version: "1.32.0"
+version: "1.33.0"
 tagline: Catch and inspect emails sent by your apps
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/icon.png
 description: >-
@@ -44,35 +44,41 @@ description: >-
 
   Note: Storage grows with the number and size of messages kept (500 by default)
 releaseNotes: >-
-  This release includes security fixes, so upgrading is strongly recommended.
-
-
-  - A maliciously crafted image attached to an email could make the thumbnail generator (used by the web UI and API) spin in an infinite loop. The exif reader has been replaced with a minimal in-tree EXIF orientation reader that only reads the first block and never follows pointers.
-
-  - This release also strips and meta refresh tags from /view/{ID}.html output, and limits concurrent HTTP, SMTP and POP3 connections to 1000 each.
-
-  - Due to timing, these security fixes have released together with new UI features in this release.
-
-
-  Security
-
-
-  - Replace goexif with minimal EXIF orientation reader
-
-  - Strip base and meta refresh tags from /view/{ID}.html output
-
-  - Limit concurrent SMTP, POP3 and HTTP connections to 1000 each
-
-
   Feature
 
 
-  - Autocomplete search suggestions and history
+  - Add optional Subject prefix for SMTP relay & forward
 
-  - …
+  - Add optional Rspamd integration for spam checking
 
 
-  Full release notes: https://github.com/axllent/mailpit/releases/tag/v1.32.0
+  Chore
+
+
+  - Implement dynamic check tabs for HTML, Link, and Spam checks in message view
+
+  - Update Go dependencies
+
+  - Update node dependencies
+
+  - Update Github Actions dependencies
+
+
+  Fix
+
+
+  - Limit envelope cache to messages with images and bound its memory
+
+  - Negated size and date searches miss or duplicate boundary messages
+
+  - Detect a link at the very start of a text/plain body in link check
+
+  - Detect a link at the very start of a text/plain body in Mailpit UI
+
+  - Allow downloads from links in the HTML message preview
+
+
+  Full release notes: https://github.com/axllent/mailpit/releases/tag/v1.33.0
 
 developer: Ralph Slooten
 website: https://mailpit.axllent.org/
