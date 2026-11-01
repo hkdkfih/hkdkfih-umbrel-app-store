@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.318.1"
+version: "0.318.2"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -50,14 +50,18 @@ releaseNotes: >-
   Other Changes ☀️
 
 
-  - Sungrow-hybrid: correct grid voltages and currents
+  - FoxESS H3-Pro/Smart: don't overwrite Off-Grid (EPS) min SoC
 
-  - Tesla: fall back to vehicle_data without location when scope is missing
-
-  - UI: revert intra-word underscore handling in markdown renderer
+  - sonnenBatterie: repeat charge setpoint while charging
 
 
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.318.1
+  Bug Fixes 🐞
+
+
+  - fix(eudataact): support Auth0 Universal Login Page for CUPRA/VW
+
+
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.318.2
 
 developer: evcc.io
 website: https://evcc.io/
