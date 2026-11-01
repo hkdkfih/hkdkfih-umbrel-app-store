@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Spoolman
-version: "0.27.0"
+version: "0.27.1"
 tagline: Keep track of your 3D printer filament spools
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/icon.png
 description: >-
@@ -44,7 +44,23 @@ description: >-
   Memory: 256 MB → 512 MB
 
   Storage: 500 MB → 1 GB
-releaseNotes: ""
+releaseNotes: >-
+  - Many fixes and some new features!
+
+  - If your standalone install refused to start after updating to v0.27.0, this fixes it. It was being installed on Python 3.15, which one of our dependencies doesn't support yet, and updating moves it back to Python 3.14.
+
+  - A spool tare of 0 is now kept as 0 instead of falling back to the filament or manufacturer's empty spool weight. If you have spools with a tare of 0 that relied on that fallback, check their remaining weight after updating.
+
+  - Added filament and manufacturer lists, this was highly requested in the new client, hope it fits the needs!
+
+  - OpenPrintTag tags can now be decoded. /tag/scan with format openprinttag returns what's on the tag, and can create the manufacturer, filament and spool for a tag it doesn't know yet (#1112, with help from @Ricky1966).
+
+  - The QR scanner lets you pick which camera to use .
+
+  - …
+
+
+  Full release notes: https://github.com/Donkie/Spoolman/releases/tag/v0.27.1
 
 developer: Donkie
 website: https://github.com/Donkie/Spoolman
