@@ -43,7 +43,7 @@ services:
   # One-shot: on first start, give the daemon a key derived by Umbrel and register it in the panel
   # as the node "localhost:21402" with the path prefix /daemon. Existing files are never touched.
   init:
-    image: githubyumao/mcsmanager-web:v10.22.0@sha256:c3de64da162927a2386f9b036791f2eaeb610129d8742395fed4baad24678c64
+    image: githubyumao/mcsmanager-web:v10.22.1@sha256:ab1bb06ab6df8e5a545b073b4a8936c8ed7f193e3ee58de633b6d1f1406b9761
     # container runs as root (upstream default)
     restart: on-failure
     environment:
@@ -64,7 +64,7 @@ services:
       - ${APP_DATA_DIR}/data/daemon/data:/daemon-data
 
   web:
-    image: githubyumao/mcsmanager-web:v10.22.0@sha256:c3de64da162927a2386f9b036791f2eaeb610129d8742395fed4baad24678c64
+    image: githubyumao/mcsmanager-web:v10.22.1@sha256:ab1bb06ab6df8e5a545b073b4a8936c8ed7f193e3ee58de633b6d1f1406b9761
     # container runs as root (upstream default)
     restart: on-failure
     stop_grace_period: 1m
@@ -80,7 +80,7 @@ services:
         condition: service_completed_successfully
 
   daemon:
-    image: githubyumao/mcsmanager-daemon:v10.22.0@sha256:f6fd2facb03029a12b86c6c836d37f57b1608c68d8dc8abbc8e1539e5d12fae3
+    image: githubyumao/mcsmanager-daemon:v10.22.1@sha256:936023ca9f2ede735faf8be06f5fec01c71bb98228e0105e08786093bddc5472
     # container runs as root (upstream default). No Docker socket: game servers run as processes
     # inside this container (it ships Java 21; other Java versions can be added from the panel).
     restart: on-failure
