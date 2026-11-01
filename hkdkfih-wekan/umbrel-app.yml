@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.75"
+version: "12.77"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,16 +47,16 @@ releaseNotes: >-
   In short
 
 
-  - Changing a password signs the account out in every other browser,
+  - Two node test guards follow the movable popups and the date
 
-  - and now a test proves it in two real browsers.
+  - picker of v12.76.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.75
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.77
 
 developer: WeKan Team
 website: https://wekan.fi/
