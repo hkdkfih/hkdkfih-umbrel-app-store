@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Traccar
-version: "6.16.0"
+version: "6.17.0"
 tagline: Modern GPS tracking platform
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/icon.png
 description: >-
@@ -42,7 +42,8 @@ description: >-
   Storage: 2 GB → 20 GB
 
   Note: Storage grows with devices and history
-releaseNotes: ""
+releaseNotes: >-
+  Full release notes: https://github.com/traccar/traccar/releases/tag/v6.17.0
 
 developer: Anton Tananaev
 website: https://www.traccar.org/
