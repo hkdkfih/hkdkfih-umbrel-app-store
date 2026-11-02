@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Kener
-version: "4.1.10"
+version: "4.1.11"
 tagline: A stunning, modern status page for your services
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
 description: >-
@@ -43,10 +43,14 @@ description: >-
 
   Note: Storage grows with monitor history
 releaseNotes: >-
-  - fix(auth): drop the hardcoded fallback secret and warn on example secrets
+  - fix: mask stored monitor and trigger secrets in API and dashboard reads
+
+  - fix(deps): update vulnerable dependencies with npm audit fix
+
+  - fix(api): check v4 write bodies against the API spec
 
 
-  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.10
+  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.11
 
 developer: Raj Nandan Sharma
 website: https://kener.ing/
