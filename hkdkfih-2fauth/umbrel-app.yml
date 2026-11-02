@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: 2FAuth
-version: "9.0.0"
+version: "9.0.1"
 tagline: Your two-factor codes, in a web app you own
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
 description: >-
@@ -44,27 +44,34 @@ description: >-
 
   Storage: 500 MB → 1 GB
 releaseNotes: >-
-  Added
-
-
-  - Brand new Table layout for desktop resolution and higher.
-
-  - Favorite system: Frequently used 2FA accounts can be marked as favorite, regardless of whether they belong to a group. You can easily find your favorites again thanks to a brand new toggle in the filter bar.
-
-  - New quick-select buttons when managing 2FA accounts to make it easier to select accounts that are likely to be targeted by the action buttons (Move, Unshared, Delete, Export)
-
-  - Support of Ente Auth export format
+  - ⚠️ This release includes several security fixes
 
 
   Fixed
 
 
-  - issue #571 Docker image: large API responses truncated (Network Error) when container runs as non-root user - fastcgi_temp_path not writable
+  - issue #579 Upgrading to v9.0.0 (docker latest) does not create the twofaccount_user_favorites table
 
-  - issue #575 Composer advisory block (enshrined/svg-sanitize) causes setup failure
+  - issue #580 Transfer ownership doesn't work when initiated from an openid user
+
+  - issue #581 Login page always displays in English despite browser language being set to Chinese
 
 
-  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.0
+  Security fix
+
+
+  - Fix an Observable Response Discrepancy on user account.
+
+  - Fix possible host header injection in password reset and WebAuthn recovery emails (thx @akash111-hue).
+
+  - Fix previously issued Personal Access Tokens being authorized when SSO-only mode is enabled and PAT usage is not allowed (thx @JimmypageLedz).
+
+  - Fix the Auto-logout being bypassed on web routes (thx @d3do-23).
+
+  - Fix SSRF protection bypass of the remote icon fetching guard using IPv4-mapped IPv6 addresses (thx @xHacktivist).
+
+
+  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.1
 
 developer: Bubka
 website: https://docs.2fauth.app/
