@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.77"
+version: "12.87"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,16 +47,16 @@ releaseNotes: >-
   In short
 
 
-  - Two node test guards follow the movable popups and the date
+  - A REST API "get one" that finds nothing answers 404
 
-  - picker of v12.76.
+  - instead of 200 with an empty body.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.77
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.87
 
 developer: WeKan Team
 website: https://wekan.fi/
