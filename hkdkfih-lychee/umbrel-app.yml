@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: Lychee
-version: "7.12.0"
+version: "7.12.1"
 tagline: A great looking and easy-to-use photo management system
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png
 description: >-
@@ -47,47 +47,29 @@ releaseNotes: >-
   🏕 Features
 
 
-  - Ensure that config always have translation keys
+  - Fixes
 
-  - Add support for email login
+  - fix(auth): clear front-end stores on login and logout instead of Clear-Site-Data
 
-  - Worktree moderation history
+  - feat(lightbox): play live photos from a dock button in v7 and v8
 
-  - Translations [AI GENERATED] - if you are native speaker, we do accept pull requests ;)
+  - fix(album): show the applied value and thumbnails in v8 album edit
 
-  - Bucketing refactor
+  - Make caching on client side optional
 
-  - Translations update from LycheeOrg - Weblate
+  - feat(smart-albums): index On This Day by month and day
 
-  - Support Vite+
+  - feat(diagnostics): check album size statistics and taken date ranges
 
-  - open-new-tab
+  - Fix Person take over
 
-  - Add tag-person album section
-
-  - fix(photo): scroll PDF pages instead of changing photo
-
-  - Fixes the link in CONTRIBUTING.md
-
-  - Claude is just a tool, however we expect you to understand what you write
-
-  - Google Motion Photos: Android 11+ format and grid hover playback
-
-  - Jxl support
-
-  - Fixes PHP RCE CVE-2026-109618 and CVE-2026-109619 in the Docker image
-
-  - speed up thumb loading
-
-  - Migrate from debian-slim to php base image
-
-  - Version 7.11.2
+  - Version 7.12.1
 
 
   👒 Dependencies
 
 
-  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.12.0
+  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.12.1
 
 developer: LycheeOrg
 website: https://lycheeorg.dev/
