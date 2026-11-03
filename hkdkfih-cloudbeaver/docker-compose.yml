@@ -7,7 +7,7 @@ services:
       APP_PORT: 8978
 
   server:
-    image: dbeaver/cloudbeaver:25.3.5@sha256:f3cca49f00cab1c8878cf9d0431620ee51a7d52f8ece72b49d60195fdc709747
+    image: dbeaver/cloudbeaver:26.2.0@sha256:c06c1859700bd9202d9d49ebc10ee2512d745997d05e7ca6423267b227af1ca7
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m

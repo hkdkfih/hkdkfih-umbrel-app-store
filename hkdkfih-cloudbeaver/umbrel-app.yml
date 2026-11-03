@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: CloudBeaver
-version: "25.3.5"
+version: "26.2.0"
 tagline: A web database manager for every database
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-cloudbeaver/icon.png
 description: >-
@@ -30,7 +30,8 @@ description: >-
   Memory: 1 GB → 2 GB
 
   Storage: 1 GB → 5 GB
-releaseNotes: ""
+releaseNotes: >-
+  Full release notes: https://github.com/dbeaver/cloudbeaver/releases/tag/26.2.0
 
 developer: DBeaver Corp
 website: https://dbeaver.com/
