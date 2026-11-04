@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.29.2"
+version: "1.30.0"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -54,64 +54,54 @@ description: >-
 
   Note: Plus space for your comics and ebooks
 releaseNotes: >-
-  🐛 Fixes
+  - This release brings the 4th beta of NetxtUI:
+
+  - Organization feature to edit elements of read lists and collections.
+
+  - Ability to edit multiple series and books at the same time, in sequence and in bulk.
+
+  - The following will be persisted and restored: filters, sort, and library sub-view
+
+  - User settings have been moved in a dedicated user menu
+
+  - Feature to toggle poster display (fill/fit)
+
+
+  🚀 Features
 
 
   - komga
 
-  - uncorrect page count returned in some cases , closes
-
-  - incorrect koreader hash in some cases , closes
-
-
-  🔄️ Changes
-
-
-  - opds
-
-  - replace deprecated method call
-
-
-  🛠  Build
-
-
-  - deps
-
-  - deps-dev
-
-
-  🌐 Translation
-
-
-  - komga-tray
-
-  - translated using Weblate (Hungarian)
-
-  - translated using Weblate (Croatian)
+  - default to storing HTTP sessions in database
 
   - nextui
 
-  - translated using Weblate (Chinese (Simplified Han script))
+  - add user settings to fill poster containers
 
-  - translated using Weblate (Korean)
+  - add user menu and relocate some actions into it
 
-  - translated using Weblate
+  - persist/restore library sub-view
 
-  - webui
+  - persist/restore sort
+
+  - persist/restore non-transient filters
+
+  - edit books in bulk
+
+  - edit series in bulk
+
+  - edit multiple series
+
+  - edit multiple books
+
+  - remove series from collection action in multi select bar
+
+  - remove series from collection action in series menu
+
+  - …
 
 
-  ⚙️ Dependencies
-
-
-  Contributors
-
-
-  - We'd like to thank the following people for their contributions:
-
-  - Automatic translation add-on, Dániel Vadon, Felix_SANA, Gauthier, Gauthier Roebroeck, Milo Ivir, on9686, 無情天, 高坂京介
-
-
-  Full release notes: https://github.com/gotson/komga/releases/tag/1.29.2
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.30.0
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
