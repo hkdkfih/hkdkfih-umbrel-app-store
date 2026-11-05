@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Kener
-version: "4.1.11"
+version: "4.2.0"
 tagline: A stunning, modern status page for your services
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
 description: >-
@@ -43,14 +43,18 @@ description: >-
 
   Note: Storage grows with monitor history
 releaseNotes: >-
-  - fix: mask stored monitor and trigger secrets in API and dashboard reads
+  - fix: French translation
 
-  - fix(deps): update vulnerable dependencies with npm audit fix
+  - Add ZopDay deploy button
 
-  - fix(api): check v4 write bodies against the API spec
+  - fix(deps): move nodemailer, sharp and glob past their advisories
+
+  - fix: restore native agent proxy routing with Axios 1.21
+
+  - feat(monitors): run custom eval code in a QuickJS sandbox
 
 
-  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.1.11
+  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.2.0
 
 developer: Raj Nandan Sharma
 website: https://kener.ing/
