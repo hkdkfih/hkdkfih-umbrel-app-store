@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: HedgeDoc
-version: "1.12.0"
+version: "1.12.2"
 tagline: Collaborative Markdown notes in real time
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-hedgedoc/icon.png
 description: >-
@@ -32,7 +32,19 @@ description: >-
   Memory: 512 MB → 1 GB
 
   Storage: 1 GB → 5 GB
-releaseNotes: ""
+releaseNotes: >-
+  - > [!CAUTION]
+
+  - > DO NOT UPDATE TO THIS RELEASE, IT MIGHT BREAK YOUR INSTANCE
+
+
+  Bugfixes
+
+
+  - Fixed the profile provider migration failing on PostgreSQL
+
+
+  Full release notes: https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.2
 
 developer: HedgeDoc
 website: https://hedgedoc.org/
