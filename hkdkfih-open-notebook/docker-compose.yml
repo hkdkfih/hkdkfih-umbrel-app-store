@@ -7,7 +7,7 @@ services:
       APP_PORT: 8502
 
   web:
-    image: lfnovo/open_notebook:1.15.0@sha256:54b2025a4a4853c188f74b9b8246eca8c5480e5dd1babfa92db1038ff2f30212
+    image: lfnovo/open_notebook:1.15.1@sha256:e4e18f12653df5bf48674b7b187c4252be52238b4d706330fd30d9b177b95812
     # container runs as root (upstream default)
     restart: on-failure
     stop_grace_period: 1m

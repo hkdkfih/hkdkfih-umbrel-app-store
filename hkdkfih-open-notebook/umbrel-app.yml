@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: ai
 name: Open Notebook
-version: "1.15.0"
+version: "1.15.1"
 tagline: A private, open source alternative to Google NotebookLM
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-open-notebook/icon.png
 description: >-
@@ -42,7 +42,23 @@ description: >-
   Storage: 5 GB → 20 GB
 
   Note: Plus an AI provider or Ollama for the models
-releaseNotes: ""
+releaseNotes: >-
+  - Security release — we recommend all users upgrade. v1.15.1 closes gaps in how sources are processed and requires content-core 2.2.1, which hardens URL fetching. It also ships the documentation rewrite and a handful of small fixes. Validated with the backend and frontend suites and a hands-on pass over the published 1.15.1 image.
+
+
+  🔒 Security
+
+
+  - Source processing now enforces the uploads-directory and URL checks in the background worker itself, so they apply on every path that processes a source, not only when a source is created.
+
+  - Requires content-core 2.2.1 or later, which refuses link-local and cloud-metadata addresses on every redirect hop when fetching URLs.
+
+  - POST /api/commands/jobs, the generic "submit any background command" endpoint, is removed. Nothing in Open Notebook used it; every operation has its own endpoint. Job status (GET /api/commands/jobs/{job_id}) is unchanged.
+
+  - …
+
+
+  Full release notes: https://github.com/lfnovo/open-notebook/releases/tag/v1.15.1
 
 developer: Luis Novo
 website: https://www.open-notebook.ai/
