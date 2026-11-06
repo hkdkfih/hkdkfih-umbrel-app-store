@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.94"
+version: "12.97"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,20 @@ releaseNotes: >-
   In short
 
 
-  - On an iPad the opened card covers the header bar instead of
+  - build.sh and the releases/ scripts now work on Arch Linux
 
-  - sitting
+  - and Omarchy, and the release builds no longer lose the OpenBSD arm64
 
-  - behind it, and the speed test measures where the time goes when a WeKan board is
+  - bundle to a smoke test that left WeKan running, or the s390x snap to
 
-  - opened, on FerretDB and on MongoDB.
+  - Launchpad outages that were counted as build failures.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.94
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.97
 
 developer: WeKan Team
 website: https://wekan.fi/
