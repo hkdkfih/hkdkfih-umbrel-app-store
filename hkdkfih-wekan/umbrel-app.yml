@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "12.97"
+version: "13.00"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,26 @@ releaseNotes: >-
   In short
 
 
-  - build.sh and the releases/ scripts now work on Arch Linux
+  - CreateBleed is fixed: "Only admins can create boards" now
 
-  - and Omarchy, and the release builds no longer lose the OpenBSD arm64
+  - holds on every path that creates a board - the browser console, the REST API,
 
-  - bundle to a smoke test that left WeKan running, or the s390x snap to
+  - imports, copies, clones and cards - not only on the Add Board form. The REST
 
-  - Launchpad outages that were counted as build failures.
+  - API documentation spells the name WeKan, so the API pages published on
+
+  - wekan.fi pass its brand-spelling check again.
+
+
+  Security
+
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v12.97
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.00
 
 developer: WeKan Team
 website: https://wekan.fi/
