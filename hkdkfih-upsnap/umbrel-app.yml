@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for scheduled wake and shutdown times, such as Europe/London or America/New_York.
 category: networking
 name: UpSnap
-version: "5.7.2"
+version: "5.7.3"
 tagline: Wake up your computers with one click
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png
 description: >-
@@ -48,7 +48,22 @@ description: >-
   Storage: 100 MB → 500 MB
 
   Note: Uses host networking for Wake-on-LAN
-releaseNotes: ""
+releaseNotes: >-
+  Bug fixes
+
+
+  - fix: wait for custom wake commands before accepting online status
+
+
+  Others
+
+
+  - Update README to add FQDN info
+
+  - update deps, migrate pocketbase to ganigeorgiev.com/pocketbase
+
+
+  Full release notes: https://github.com/seriousm4x/UpSnap/releases/tag/5.7.3
 
 developer: seriousm4x
 website: https://github.com/seriousm4x/UpSnap
