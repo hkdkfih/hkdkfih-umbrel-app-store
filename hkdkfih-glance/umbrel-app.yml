@@ -9,7 +9,7 @@ environment:
     note: IANA time zone used by the clock and calendar widgets, such as America/New_York or Europe/London.
 category: files
 name: Glance
-version: "0.8.7"
+version: "0.8.8"
 tagline: A self-hosted dashboard that puts all your feeds in one place
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-glance/icon.png
 description: >-
@@ -49,22 +49,40 @@ releaseNotes: >-
   Fixes
 
 
-  - Fixed Reddit widget not fetching data after recent API changes (thanks @Partha-dev01)
+  - Fixed issue with release widget when specifying repositories with include-prereleases (thanks @kevin9327)
 
-  - Note: due to this change, the search property no longer works without app-auth being configured
+  - Fixed the search widget preventing shortcuts including the S key from working (thanks @idpfaff)
 
-  - Fixed DNS stats widget showing 0 blocked domains for AdGuard Home instances if latency was less than 1ms (thanks @ultravioletcatastrophe)
+  - Fixed markets chart rendering when all history values are 0 (thanks @HocVoNgThai)
 
-  - Fixed channel and post links in the RSS widget when the feeds returned them as relative URLs (thanks @subfission)
+  - Fixed the "SHOW MORE" arrow icon when using custom fonts (thanks @hafizahmedzia)
 
-  - Fixed the mountpoint:info command not working (thanks @Goshya, @Rlucien)
+  - Fixed the URL which opens when clicking on entries in the change detection widget (thanks @drshajul)
 
-  - Improved accessiblity for the monitor widget and theme picker (thanks @REASON-labs)
+  - Fixed IPv6 addresses in sock-path not working for the docker-containers widget (thanks @cuishuang)
 
-  - Limit authentication request bodies to 512 KB to prevent unbounded memory reads (thanks @jankesec)
+  - Fixed docker container children getting filtered when no category is specified (thanks @ethanstoner)
 
 
-  Full release notes: https://github.com/glanceapp/glance/releases/tag/v0.8.7
+  Fixed vulnerabilities
+
+
+  - A number of vulnerabilities have been fixed in this release, thanks to the following contributors:
+
+  - @Partha-dev01
+
+  - @akash111-hue
+
+  - @kishi78
+
+  - @AARUSHGAUR
+
+  - @Fluxmux
+
+  - @senti-man
+
+
+  Full release notes: https://github.com/glanceapp/glance/releases/tag/v0.8.8
 
 developer: Svilen Markov
 website: https://github.com/glanceapp/glance
