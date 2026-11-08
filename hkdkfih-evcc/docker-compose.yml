@@ -7,7 +7,7 @@ services:
       APP_PORT: 7070
 
   server:
-    image: evcc/evcc:0.318.2@sha256:7ef9bcb15a4fdbfe3bf75d7a0857c40b6272b8783ea833fcbb22f8f134b336c7
+    image: evcc/evcc:0.319.0@sha256:2df76d18442b135b60d2b0e56b200056dd75605f9bef8f658731f6fd59f0ea5c
     # container runs as root (upstream default)
     restart: on-failure
     stop_grace_period: 1m
