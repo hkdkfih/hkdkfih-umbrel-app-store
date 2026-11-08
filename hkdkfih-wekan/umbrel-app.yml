@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.00"
+version: "13.01"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,26 +47,20 @@ releaseNotes: >-
   In short
 
 
-  - CreateBleed is fixed: "Only admins can create boards" now
+  - Translations: the strings still in English are written in 33
 
-  - holds on every path that creates a board - the browser console, the REST API,
+  - more languages, Sardinian is Sardinian instead of Italian and Moroccan
 
-  - imports, copies, clones and cards - not only on the Add Board form. The REST
+  - isomorphic-git, pdfjs-dist and the S3 libraries are checked and kept,
 
-  - API documentation spells the name WeKan, so the API pages published on
-
-  - wekan.fi pass its brand-spelling check again.
-
-
-  Security
-
+  - with the S3 client brought to the version the upload library needs.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.00
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.01
 
 developer: WeKan Team
 website: https://wekan.fi/
