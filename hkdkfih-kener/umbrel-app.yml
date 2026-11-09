@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Kener
-version: "4.2.0"
+version: "4.2.1"
 tagline: A stunning, modern status page for your services
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kener/icon.png
 description: >-
@@ -43,18 +43,14 @@ description: >-
 
   Note: Storage grows with monitor history
 releaseNotes: >-
-  - fix: French translation
+  - feat(monitors): add an inline member display for group monitors
 
-  - Add ZopDay deploy button
+  - fix(maintenances): keep the local time of a recurring maintenance across clock changes
 
-  - fix(deps): move nodemailer, sharp and glob past their advisories
-
-  - fix: restore native agent proxy routing with Axios 1.21
-
-  - feat(monitors): run custom eval code in a QuickJS sandbox
+  - fix(monitors): run each custom eval in its own process so evals stop hanging
 
 
-  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.2.0
+  Full release notes: https://github.com/rajnandan1/kener/releases/tag/v4.2.1
 
 developer: Raj Nandan Sharma
 website: https://kener.ing/

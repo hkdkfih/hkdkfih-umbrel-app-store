@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_WHITELIST: "/ext/heartbeat/*,/api/*"
 
   web:
-    image: rajnandan1/kener:4.2.0@sha256:8b102f00cc8f8c7654c49e7cee6a3dadd84111809594cc286546096a8cd3c0bc
+    image: rajnandan1/kener:4.2.1@sha256:116af4895e8054e6855eb9cee49bf1c09528d0204881639790515250e743636c
     # the image's "node" user is 1000:1000
     user: "1000:1000"
     restart: on-failure
