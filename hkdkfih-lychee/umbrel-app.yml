@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: Lychee
-version: "7.12.2"
+version: "7.13.0"
 tagline: A great looking and easy-to-use photo management system
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png
 description: >-
@@ -47,18 +47,16 @@ releaseNotes: >-
   🏕 Features
 
 
-  - fix(v8): cancel touchmove in the lightbox so Android flings
+  - feat(v8): Use Struct-of-Arrays approach by default.
 
-  - fix(v8): size UMain with dvh so mobile toolbars do not hide content
+  - feat(v8): configurable album tile size and gap with live size preview
 
-  - feat(webauthn): replace abandoned webauthn with web-webauthn-lib
+  - fix(auth): show inline feedback for throttled password logins
 
-  - perf(insights): make every Insights query linear on large libraries
-
-  - feat(v8): Update index to speed up insights
+  - fix(ssrf): avoid obscure IP scenarios
 
 
-  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.12.2
+  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.13.0
 
 developer: LycheeOrg
 website: https://lycheeorg.dev/
