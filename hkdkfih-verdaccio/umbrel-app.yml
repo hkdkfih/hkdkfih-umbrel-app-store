@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Verdaccio
-version: "7.0.2"
+version: "7.1.0"
 tagline: A lightweight private npm proxy registry
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png
 description: >-
@@ -43,37 +43,21 @@ description: >-
 
   Note: Storage grows with every package you publish or cache from npmjs.org
 releaseNotes: >-
-  Patch Changes
+  Minor Changes
 
 
-  - Remove the HEALTHCHECK from the Docker image.
+  - Update the @verdaccio/* modules to the next-9 npm dist-tag.
 
-  - The probe used localhost, which resolves to ::1 on Alpine, while the image listens on IPv4 only by default. The container was always reported as unhealthy even though it served requests normally. The image no longer declares a health check, as in 6.x.
+  - Minor changes
 
-  - If you need one, add it yourself probing 127.0.0.1, for example in docker-compose.yaml:
+  - @verdaccio/config, @verdaccio/store, @verdaccio/tarball, @verdaccio/web: Add the experimental flags.tarballMetadata option, which lets the web UI show the README of the exact version being viewed and fills missing dist.fileCount/dist.unpackedSize from the tarball itself.
 
-  - yaml
+  - The npm registry does not always include READMEs in package metadata: for some large packages (for example react) the README field is empty for every version, and Verdaccio by default keeps only the latest README for locally published packages (publish.keep_readmes). The web UI then showed "No README data found" or the README of a different version.
 
-  - services:
-
-  - verdaccio:
-
-  - image: verdaccio/verdaccio
-
-  - healthcheck:
-
-  - interval: 30s
-
-  - timeout: 5s
-
-  - start_period: 10s
-
-  - retries: 3
-
-  - See Health check in the Docker documentation for the docker run and HTTPS variants.
+  - …
 
 
-  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v7.0.2
+  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v7.1.0
 
 developer: Verdaccio contributors
 website: https://verdaccio.org/
