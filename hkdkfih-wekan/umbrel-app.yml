@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.01"
+version: "13.03"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,16 @@ releaseNotes: >-
   In short
 
 
-  - Translations: the strings still in English are written in 33
+  - The amd64 snaps no longer fail the release when the Ubuntu
 
-  - more languages, Sardinian is Sardinian instead of Italian and Moroccan
-
-  - isomorphic-git, pdfjs-dist and the S3 libraries are checked and kept,
-
-  - with the S3 client brought to the version the upload library needs.
+  - archive is briefly unreachable: the build waits for it and retries once.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.01
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.03
 
 developer: WeKan Team
 website: https://wekan.fi/
