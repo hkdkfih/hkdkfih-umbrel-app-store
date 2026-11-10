@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.30.0"
+version: "1.30.1"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -54,54 +54,57 @@ description: >-
 
   Note: Plus space for your comics and ebooks
 releaseNotes: >-
-  - This release brings the 4th beta of NetxtUI:
-
-  - Organization feature to edit elements of read lists and collections.
-
-  - Ability to edit multiple series and books at the same time, in sequence and in bulk.
-
-  - The following will be persisted and restored: filters, sort, and library sub-view
-
-  - User settings have been moved in a dedicated user menu
-
-  - Feature to toggle poster display (fill/fit)
+  🐛 Fixes
 
 
-  🚀 Features
+  - api
 
+  - add CSP headers
 
   - komga
 
-  - default to storing HTTP sessions in database
+  - temp table concurrency , closes
 
   - nextui
 
-  - add user settings to fill poster containers
-
-  - add user menu and relocate some actions into it
-
-  - persist/restore library sub-view
-
-  - persist/restore sort
-
-  - persist/restore non-transient filters
-
-  - edit books in bulk
-
-  - edit series in bulk
-
-  - edit multiple series
-
-  - edit multiple books
-
-  - remove series from collection action in multi select bar
-
-  - remove series from collection action in series menu
-
-  - …
+  - add padding after user menu avatar
 
 
-  Full release notes: https://github.com/gotson/komga/releases/tag/1.30.0
+  🔄️ Changes
+
+
+  - clarify logs when no thumbnail is found when analyzing book , closes
+
+
+  🌐 Translation
+
+
+  - komga-tray
+
+  - translated using Weblate (Spanish)
+
+  - translated using Weblate (Chinese (Simplified Han script))
+
+  - translated using Weblate (Korean)
+
+  - translated using Weblate (French)
+
+  - translated using Weblate (Turkish)
+
+  - webui
+
+  - translated using Weblate (Czech)
+
+
+  Contributors
+
+
+  - We'd like to thank the following people for their contributions:
+
+  - Automatic translation add-on, Gauthier, Gauthier Roebroeck, Haza Gonzalez, Koray HATIRNAZ, Petr Šimek, on9686, tchirou, 無情天
+
+
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.30.1
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
