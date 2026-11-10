@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Semaphore UI
-version: "2.19.17"
+version: "2.20.23"
 tagline: A modern web UI for Ansible, Terraform, OpenTofu and scripts
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/icon.png
 description: >-
@@ -46,10 +46,42 @@ description: >-
 
   Note: CPU and memory scale with the tasks you run in parallel
 releaseNotes: >-
+  - Semaphore UI one-click deployment on Cloudzy
+
+  - Persist per-user language selection in user options with @Copilot in
+
+  - fix/delete user error
+
+  - fix(ui): prevent Enter in CLI args dialog from submitting parent form
+
+  - fix: add missing env tag for SEMAPHORE_RUNNER_EXECUTOR
+
+  - Sem 212 git clone retry
+
+  - fix(config): add backward-compatible top-level secrets_path fallback
+
+  - fix(tasks): preserve output from short shell commands
+
+  - feat(TaskDetails, TaskLogView): link to schedule or integration details and handle deleted origins
+
+  - feat(git): parallelize submodule fetches with git --jobs flag
+
+  - feat(tasks): support and test Ansible forks concurrency
+
+  - fix/jwt for docker executor
+
   - feat(runner): add check interval configuration for job polling
 
+  - refactor(api): function parseInt returns bool instead of error
 
-  Full release notes: https://github.com/semaphoreui/semaphore/releases/tag/v2.19.17
+  - Feat: add delay node
+
+  - fix(web): remove trailing spaces that break the build
+
+  - …
+
+
+  Full release notes: https://github.com/semaphoreui/semaphore/releases/tag/v2.20.23
 
 developer: Semaphore UI
 website: https://semaphoreui.com/
