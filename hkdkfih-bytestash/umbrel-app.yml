@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: ByteStash
-version: "1.6.1"
+version: "1.6.2"
 tagline: Store and organise your code snippets
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-bytestash/icon.png
 description: >-
@@ -31,14 +31,15 @@ description: >-
 
   Storage: 200 MB → 1 GB
 releaseNotes: >-
-  - feat(i18n): add German (de) translation
-
-  - [bug] make oidc setup work out of the box and explain failures
-
-  - [sec] OIDC hardening
+  Important
 
 
-  Full release notes: https://github.com/jordan-dalby/ByteStash/releases/tag/v1.6.1
+  - This version introduces a couple of security patches, update immediately. The ADMIN_USERNAMES environment variable has been removed, to regain admin, use the new CLI as described in the README file.
+
+  - [sec] admin grants via CLI, revoke deactivated users' API keys
+
+
+  Full release notes: https://github.com/jordan-dalby/ByteStash/releases/tag/v1.6.2
 
 developer: Jordan Dalby
 website: https://github.com/jordan-dalby/ByteStash
