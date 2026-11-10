@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for daily notes and timestamps, such as Europe/London or America/New_York.
 category: files
 name: SiYuan
-version: "3.8.9"
+version: "3.8.10"
 tagline: A privacy-first, self-hosted personal knowledge base
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png
 description: >-
@@ -47,25 +47,37 @@ description: >-
 
   Storage: 1 GB → 10 GB
 releaseNotes: >-
-  Upgrade notice
-
-
-  - This release automatically migrates notebooks to the new document title mode and supports / in document titles.
-
-  - Before opening a workspace with this version, quit all older clients and upgrade every device that accesses or syncs the same data, including offline devices before they reconnect. Check plugin compatibility before upgrading.
-
-  - After migration, do not use older versions to open, edit, restore, or sync the same data: changes may be overwritten or lost and propagated through sync. Older clients rejecting some documents does not protect the entire notebook. See the compatibility details.
-
-
   Overview
 
 
-  - This release adds support for / in document titles and improves mind maps, database automations, mobile editing, and file change detection.
+  - This release adds rich document titles, database sub-items and related views, workspace-level AI long-term memory, and a built-in lightweight Markdown editor.
+
+  - Document trees handle large directories more efficiently, while unified document and block breadcrumbs make navigation more consistent. Other improvements include mobile bottom sheets, HTTP requests in templates, custom PDF page sizes, LAN sync address selection, and bazaar compatibility filtering.
+
+
+  Changelogs
+
+
+  - Below are the detailed changes in this version.
+
+
+  Enhancement
+
+
+  - Support unified document and block breadcrumbs
+
+  - Support rich document titles and preserve slashes in notebook names
+
+  - Improve document tree browsing performance and access to large directories
+
+  - Support breadcrumb button visibility and ordering in appearance profiles
+
+  - Support converting embed blocks to regular blocks or block references
 
   - …
 
 
-  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.9
+  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.10
 
 developer: SiYuan
 website: https://b3log.org/siyuan/en/
