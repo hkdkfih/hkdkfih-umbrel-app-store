@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.03"
+version: "13.05"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,16 +47,20 @@ releaseNotes: >-
   In short
 
 
-  - The amd64 snaps no longer fail the release when the Ubuntu
+  - WeKan is updated to Meteor 3.6. The Android bundles
 
-  - archive is briefly unreachable: the build waits for it and retries once.
+  - build again, after v13.04's npm retry broke their install, and the Super
+
+  - Productivity export no longer fails for a board with a card whose list is
+
+  - archived.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.03
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.05
 
 developer: WeKan Team
 website: https://wekan.fi/
