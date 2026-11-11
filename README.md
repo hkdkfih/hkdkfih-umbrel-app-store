@@ -44,7 +44,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png" width="40" height="40" alt=""> | [Komga](https://github.com/gotson/komga) | A media server for your comics, mangas, BDs and ebooks | 1.30.1 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kopia/icon.png" width="40" height="40" alt=""> | [Kopia](https://github.com/kopia/kopia) | Fast and secure open-source backup | 0.23.1 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kutt/icon.png" width="40" height="40" alt=""> | [Kutt](https://github.com/thedevs-network/kutt) | A modern URL shortener with stats and custom domains | 3.2.6 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png" width="40" height="40" alt=""> | [Leantime](https://github.com/Leantime/leantime) | Project management for the rest of us | 3.13.2 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png" width="40" height="40" alt=""> | [Leantime](https://github.com/Leantime/leantime) | Project management for the rest of us | 3.14.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-linkding/icon.png" width="40" height="40" alt=""> | [linkding](https://github.com/sissbruecker/linkding) | A minimal, fast bookmark manager | 1.47.0-patch.1 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lldap/icon.png" width="40" height="40" alt=""> | [LLDAP](https://github.com/lldap/lldap) | Light LDAP server with a friendly web UI for your users and groups | 0.6.3 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png" width="40" height="40" alt=""> | [Lychee](https://github.com/LycheeOrg/Lychee) | A great looking and easy-to-use photo management system | 7.13.0 |
@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.3 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 7.1.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.15 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.05 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.06 |
 
 ## How updates work
 
