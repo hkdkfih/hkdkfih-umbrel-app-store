@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Leantime
-version: "3.13.2"
+version: "3.14.0"
 tagline: Project management for the rest of us
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png
 description: >-
@@ -31,32 +31,28 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  Version: 3.13.2
+  Version: 3.14.0
+
+
+  Granular permission checks across the app
+
+
+  - Projects, Timesheets, Users, API keys, to-dos, milestones, sprints, the dashboard, and menu items now check specific permissions rather than relying on role rank, giving administrators finer control over what each user can access (#3985, #3988, #3992).
 
 
   New Features
 
 
-  - Marketplace install reporting - Plugin installations now report their results and server details back to the marketplace
+  - Calendar plugin extensibility - Calendar events and filters are now class-based, so calendar plugins can hook in reliably. Moving or resizing an event in the calendar now also notifies plugins
 
-  - Email digest: "New" and "Already seen" - Notifications already read in the inbox move under an "Already seen" heading, and a digest with nothing new is no longer sent
+  - CalDAV Calendar Sync plugin - New on the marketplace and requires this release: two-way sync with Nextcloud, ownCloud, Baikal or Radicale, and Leantime as a calendar account in Apple Calendar, Thunderbird or DAVx⁵
 
-  - Company email frequency is a floor - The company setting no longer overrides a person's own choice; people can make email quieter for themselves, but not more frequent than the company setting
-
-
-  Bug Fixes
-
-
-  - Top loader clears after Save & Close - The loading indicator no longer stays active after using Save & Close in a modal
-
-  - Resume owner setup during install - The /install flow can now resume owner setup even after the post-install redirect is lost
-
-  - Correct calendar event times - Event times now follow the user's current time format instead of a stale session copy
+  - Domain-driven client events - Timesheets and Projects client events are now derived from domain events
 
   - …
 
 
-  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.13.2
+  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.14.0
 
 developer: Leantime
 website: https://leantime.io/
