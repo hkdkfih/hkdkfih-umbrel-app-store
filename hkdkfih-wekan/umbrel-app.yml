@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.05"
+version: "13.06"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,24 @@ releaseNotes: >-
   In short
 
 
-  - WeKan is updated to Meteor 3.6. The Android bundles
+  - CodeQL alert #601 in a test is fixed, with two more tests
 
-  - build again, after v13.04's npm retry broke their install, and the Super
+  - that had the same fault. A card's overtime set through the REST API is
 
-  - Productivity export no longer fails for a board with a card whose list is
+  - saved where WeKan reads it, and cards that lost it before are repaired at
 
-  - archived.
+  - startup. Card members and assignees whose account was deleted can be removed
+
+  - and added without an error, and clearing a card date no longer passes as a
+
+  - date set to the rules, the due date count and the activity feed.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.05
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.06
 
 developer: WeKan Team
 website: https://wekan.fi/
