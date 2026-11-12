@@ -65,13 +65,13 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png" width="40" height="40" alt=""> | [SiYuan](https://github.com/siyuan-note/siyuan) | A privacy-first, self-hosted personal knowledge base | 3.8.10 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-speedtest-tracker/icon.png" width="40" height="40" alt=""> | [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker) | Keep an eye on your internet speed | 1.15.1 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-spoolman/icon.png" width="40" height="40" alt=""> | [Spoolman](https://github.com/Donkie/Spoolman) | Keep track of your 3D printer filament spools | 0.27.1 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/icon.png" width="40" height="40" alt=""> | [SQLPage](https://github.com/sqlpage/SQLPage) | Build web apps with nothing but SQL | 0.47.0 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/icon.png" width="40" height="40" alt=""> | [SQLPage](https://github.com/sqlpage/SQLPage) | Build web apps with nothing but SQL | 0.48.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-suwayomi/icon.png" width="40" height="40" alt=""> | [Suwayomi](https://github.com/Suwayomi/Suwayomi-Server) | A free and open source manga reader server | 2.4.2366 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-traccar/icon.png" width="40" height="40" alt=""> | [Traccar](https://github.com/traccar/traccar) | Modern GPS tracking platform | 6.17.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.3 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 7.1.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.15 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.06 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.07 |
 
 ## How updates work
 
