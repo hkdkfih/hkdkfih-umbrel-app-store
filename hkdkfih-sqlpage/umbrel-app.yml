@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: SQLPage
-version: "0.47.0"
+version: "0.48.0"
 tagline: Build web apps with nothing but SQL
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sqlpage/icon.png
 description: >-
@@ -29,7 +29,29 @@ description: >-
 
   Storage: 100 MB → 1 GB
 releaseNotes: >-
-  Full release notes: https://github.com/sqlpage/SQLPage/releases/tag/v0.47.0
+  SQLPage 0.48: click a status, open its report
+
+
+  - Click a day in an uptime tracker to read its incident report. Open a card in a new tab while keeping your dashboard in place. Give a table its own title with one property. SQLPage 0.48 adds these small connections and fixes details across navigation, modals, and dark mode.
+
+  - > [!IMPORTANT]
+
+  - > This release also removes compromised eMudhra certificates from the bundled trust store and updates ApexCharts to fix script injection through chart labels. Upgrade if your charts display names or labels supplied by users.
+
+
+  Go from a status to its report
+
+
+  - Each row of a tracking component now accepts a link. The block keeps its color and tooltip, and opens the URL when clicked. Use it for incident histories, daily reports, or the records behind a status.
+
+  - sql
+
+  - select 'tracking' as component, 'Checkout API' as title,
+
+  - …
+
+
+  Full release notes: https://github.com/sqlpage/SQLPage/releases/tag/v0.48.0
 
 developer: Ophir Lojkine
 website: https://sql-page.com/
