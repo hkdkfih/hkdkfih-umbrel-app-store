@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Beszel
-version: "0.21.1"
+version: "0.21.2"
 tagline: Lightweight server monitoring with history and alerts
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-beszel/icon.png
 description: >-
@@ -36,26 +36,34 @@ description: >-
 
   Storage: 200 MB → 2 GB
 releaseNotes: >-
-  - For developers using the agent as a Go package, Agent.Start now requires a context.Context.
+  - Add an actions menu with alert settings to the system detail page
 
-  - For authors of integrations, existing memory fields other than memory percentage are deprecated in favor of new fields which provide raw byte values. The deprecated fields are still populated, but will be removed from the API in a future version.
+  - Add FAN_SENSORS to include or exclude fan sensors
 
-  - type Stats struct {
+  - Add styled HTML alert emails
 
-  - // Deprecated fields (populated on hubs <= 0.21.1; will be removed in a future version)
+  - Add no_self_update build tag to disable hub and agent self-updates
 
-  - Mem float64 json:"m" cbor:"2,keyasint" // Deprecated: GB, use MemBytes. Memory GB fields are kept for older hubs and integrations.
+  - Add warnings for missing automatic login users and trusted proxy configuration (#2824, #2812)
 
-  - MaxMem float64 json:"mm,omitzero" cbor:"-" // Deprecated: GB, use MaxMemBytes.
+  - Add video encode/decode engine usage to GPU metrics when using nvtop
 
-  - MemUsed float64 json:"mu" cbor:"3,keyasint" // Deprecated: GB, use MemBytes.
+  - Limit sign-in attempts to 10 per minute per address
 
-  - MemBuffCache float64 json:"mb" cbor:"5,keyasint" // Deprecated: GB, use MemBytes.
+  - Improve GPU collection retries and back off slow or repeatedly failing reads (#2705, #2687, #2709, #2656)
+
+  - Fix hub crashes caused by null entries in agent data
+
+  - Fix agent health checks incorrectly reporting disconnected agents as healthy
+
+  - Fix agent connections timing out while waiting for a slow hub
+
+  - Fix container requests being canceled by requests for other systems
 
   - …
 
 
-  Full release notes: https://github.com/henrygd/beszel/releases/tag/v0.21.1
+  Full release notes: https://github.com/henrygd/beszel/releases/tag/v0.21.2
 
 developer: henrygd
 website: https://beszel.dev/
