@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: Pulse
-version: "6.7.0"
+version: "6.8.0"
 tagline: Real-time monitoring for Proxmox, Docker and more
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/icon.png
 description: >-
@@ -40,9 +40,9 @@ releaseNotes: >-
 
   - Status: Release asset checks passed ✅
 
-  - Validated: 2026-11-02 01:54:11 UTC
+  - Validated: 2026-11-13 01:29:27 UTC
 
-  - Workflow: Pulse Release Pipeline #446
+  - Workflow: Pulse Release Pipeline #454
 
 
   Validation Summary
@@ -61,17 +61,17 @@ releaseNotes: >-
   - release convergence, clean soak or approval for stable publication.
 
 
-  Pulse v6.7.0 Release Notes
+  Pulse v6.8.0 Release Notes
 
 
-  - v6.7.0 is a stable minor release. It promotes the v6.7.0-rc.1 release candidate and replaces stable v6.6.0.
+  - v6.8.0 is a stable minor release. It promotes the v6.8.0-rc.2 release candidate and replaces stable v6.7.0.
 
-  - Pulse v6.7.0 makes backup status clearer when reads fail, dates are uncertain or tasks disagree. It strengthens configuration recovery, restores TrueNAS CORE readings, reduces chart processing and lets external agents read fleet changes and metric history.
+  - Pulse v6.8.0 makes backup problems easier to identify, adds individual sensor limits and improves notification recovery after restarts. It keeps same-named systems separate, reduces routine polling and disk writes, and makes Patrol investigations and settings recovery clearer.
 
   - …
 
 
-  Full release notes: https://github.com/rcourtman/Pulse/releases/tag/v6.7.0
+  Full release notes: https://github.com/rcourtman/Pulse/releases/tag/v6.8.0
 
 developer: Richard Courtman
 website: https://github.com/rcourtman/Pulse
