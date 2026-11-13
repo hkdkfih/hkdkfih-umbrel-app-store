@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: OliveTin
-version: "3000.21.0"
+version: "3000.22.0"
 tagline: Safe, simple buttons for your shell commands
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-olivetin/icon.png
 description: >-
@@ -31,65 +31,49 @@ description: >-
 
   Storage: 100 MB → 500 MB
 releaseNotes: >-
+  Security
+
+
+  - security: GHSA-fxmj-cjvj-x372 (HIGH) separate oauth state from session
+
+  - security: GHSA-fxmj-cjvj-x372 harden oauth session issuance
+
+  - security: GHSA-gp3q-q8qg-j4xf (HIGH) keep JWKS refresh alive
+
+
   Features
 
 
-  - feat(cli): add -syntaxcheck and -startuptrace
+  - feat(api): deprecate StartActionByGet* and warn on Diagnostics when called
+
+  - feat(api): mark StartActionByGet and StartActionByGetAndWait as deprecated
+
+  - feat(api): warn on Diagnostics when deprecated StartActionByGet* is called
+
+  - feat(docker): add healthcheck
 
 
   Bug fixes
 
 
-  - fix: hold MapActionBindingsLock while building the default dashboard
+  - fix(api): demote EventStream disconnect log to debug
 
-  - fix: keep choice combobox input within narrow form columns
+  - fix(auth): address oauth review findings
 
-  - fix: let the argument form grid shrink on narrow screens
+  - fix(auth): hide nav when login required
 
-  - fix: publish config decode failures to the live issue list
+  - fix(deps): align engines.node with stylelint 18's supported Node range
 
-  - fix: release EventStream slots when the client disconnects
+  - fix(deps): update picocrank to 1.40.0
 
-  - fix: report config decode and include parse failures as config issues
+  - fix(deps): update picocrank to 1.41.0 and move banners into AppShell
 
-  - fix: skip nil actions when rebuilding the action map
-
-  - fix: style count and other fields
-
-
-  Others
-
-
-  - Next
-
-
-  Container images (from GitHub)
-
-
-  - docker pull ghcr.io/olivetin/olivetin:3000.21.0
-
-
-  Container images (on Docker Hub)
-
-
-  - docker pull docker.io/jamesread/olivetin:3000.21.0
-
-
-  Upgrade warnings, or breaking changes
-
-
-  - No such issues between the last release and this version.
-
-
-  Useful links
-
-
-  - Which download do I need?
+  - fix(webhooks): log match and no-match outcomes
 
   - …
 
 
-  Full release notes: https://github.com/OliveTin/OliveTin/releases/tag/3000.21.0
+  Full release notes: https://github.com/OliveTin/OliveTin/releases/tag/3000.22.0
 
 developer: James Read
 website: https://www.olivetin.app/
