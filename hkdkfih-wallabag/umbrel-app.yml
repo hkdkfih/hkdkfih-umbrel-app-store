@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: wallabag
-version: "2.6.15"
+version: "2.6.17"
 tagline: Save and classify articles, read them later
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png
 description: >-
@@ -44,34 +44,22 @@ description: >-
 
   Note: Storage grows with saved articles and downloaded images
 releaseNotes: >-
-  - Support PHP 8.4 while retaining compatibility with PHP 7.4 and the locked legacy dependencies. Deprecation notices may still be emitted.
+  - Earlier today, we published wallabag 2.7.0-alpha.1. On instances running wallabag 2.6.15 or older, make update picked this alpha instead of the latest stable release. The upgrade then failed, and the instance stopped working.
 
-  - Read the blog post about that release.
+  - wallabag 2.6.17 fixes it: make update installs 2.6.17 again. Sorry for the trouble!
 
-  - Backport documentation monorepo merge to 2.6
+  - Your instance is broken after make update? Run these commands in the wallabag folder:
 
-  - Introduce a REDIS_URL (backport)
+  - git checkout 2.6.17 --force
 
-  - Hide delete public link item if not necessary
+  - make update
 
-  - Update graby and php-readability dependencies
+  - Your data should be safe: the upgrade stopped before the database migrations.
 
-  - Backport #8020 Fix volatile tests to 2.6
-
-  - Backport #8585 Prefetch content ISO to fetch URL content to 2.6
-
-  - Backport to 2.6: Bump phpseclib/phpseclib to 3.0.55
-
-  - Escape dynamic data in the ePub export
-
-  - Fix content and fetchedContent merging
-
-  - Backport translations from master
-
-  - Prepare 2.6.15 release
+  - This release also includes a small fix for the Pocket CSV import.
 
 
-  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.15
+  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.17
 
 developer: wallabag
 website: https://wallabag.org/
