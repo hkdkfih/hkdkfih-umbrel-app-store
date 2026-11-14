@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.10"
+version: "13.11"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,16 +47,24 @@ releaseNotes: >-
   In short
 
 
-  - The release's Snap Store credential check bounds each
+  - The file-integrity scan stops reporting attachments and
 
-  - snapcraft install attempt, so a Snap Store that hangs no longer stops a release.
+  - avatars that WeKan deleted itself as missing, which had buried real
+
+  - StorageBleed findings under thousands of false ones. The recurring-checklist
+
+  - reset no longer scans every checklist on each tick. In the REST API, a
+
+  - refused custom-field update changes nothing, ownership transfer takes only the
+
+  - boards the user administers, and deleting a missing integration answers 404.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.10
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.11
 
 developer: WeKan Team
 website: https://wekan.fi/
