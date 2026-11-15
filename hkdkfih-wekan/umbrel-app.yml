@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.11"
+version: "13.13"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,24 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - The file-integrity scan stops reporting attachments and
+  - Copy Checklist and the other destination pickers list the
 
-  - avatars that WeKan deleted itself as missing, which had buried real
+  - cards of a large board again: a board that loads its cards lazily used to leave
 
-  - StorageBleed findings under thousands of false ones. The recurring-checklist
-
-  - reset no longer scans every checklist on each tick. In the REST API, a
-
-  - refused custom-field update changes nothing, ownership transfer takes only the
-
-  - boards the user administers, and deleting a missing integration answers 404.
+  - the mongodb driver 7.8.0, are kept.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.11
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.13
 
 developer: WeKan Team
 website: https://wekan.fi/
