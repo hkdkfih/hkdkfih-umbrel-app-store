@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Leantime
-version: "3.14.0"
+version: "3.15.0"
 tagline: Project management for the rest of us
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png
 description: >-
@@ -31,28 +31,30 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  Version: 3.14.0
-
-
-  Granular permission checks across the app
-
-
-  - Projects, Timesheets, Users, API keys, to-dos, milestones, sprints, the dashboard, and menu items now check specific permissions rather than relying on role rank, giving administrators finer control over what each user can access (#3985, #3988, #3992).
+  Version: 3.15.0
 
 
   New Features
 
 
-  - Calendar plugin extensibility - Calendar events and filters are now class-based, so calendar plugins can hook in reliably. Moving or resizing an event in the calendar now also notifies plugins
+  - Permission-based controls for canvas boards, ideas and docs - Blueprint boards, goals, ideas and Docs show their create, edit and delete controls by the permissions of the item's own project, so custom roles see only what they can use
 
-  - CalDAV Calendar Sync plugin - New on the marketplace and requires this release: two-way sync with Nextcloud, ownCloud, Baikal or Radicale, and Leantime as a calendar account in Apple Calendar, Thunderbird or DAVx⁵
+  - Permission checks for comments, files, tokens and imports - Comments, files, personal access tokens, CSV imports and integrations check specific permissions instead of role rank
 
-  - Domain-driven client events - Timesheets and Projects client events are now derived from domain events
+  - forms.field component - A new forms.field component bundles label, control and help text; user, client, API key and 22 dialog forms use it (#4003, #4004)
+
+
+  Improvements
+
+
+  - Clearer board and table styling - Kanban headers, lanes, group boxes and table headers now stand off the white card for better contrast
+
+  - Accessible field help - Help text under a form field is announced by screen readers with its control
 
   - …
 
 
-  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.14.0
+  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.15.0
 
 developer: Leantime
 website: https://leantime.io/
