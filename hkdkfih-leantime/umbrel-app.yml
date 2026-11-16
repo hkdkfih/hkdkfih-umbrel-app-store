@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Leantime
-version: "3.15.0"
+version: "3.15.3"
 tagline: Project management for the rest of us
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-leantime/icon.png
 description: >-
@@ -31,30 +31,34 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  Version: 3.15.0
+  Version: 3.15.3
 
 
-  New Features
+  Bug Fixes
 
 
-  - Permission-based controls for canvas boards, ideas and docs - Blueprint boards, goals, ideas and Docs show their create, edit and delete controls by the permissions of the item's own project, so custom roles see only what they can use
+  - Unfinished onboarding - A new owner or invited user who left the welcome steps before the end could not log in ("Username or password incorrect!" with the right password). Logging in with the chosen password now takes them back to the welcome steps to finish
 
-  - Permission checks for comments, files, tokens and imports - Comments, files, personal access tokens, CSV imports and integrations check specific permissions instead of role rank
+  - Onboarding across sessions - Finishing the welcome steps in a different browser session no longer fails with a server error. It sends the person to log in and finish instead
 
-  - forms.field component - A new forms.field component bundles label, control and help text; user, client, API key and 22 dialog forms use it (#4003, #4004)
-
-
-  Improvements
+  - Onboarding messages - Notifications on welcome steps 2–5 no longer show as escaped HTML
 
 
-  - Clearer board and table styling - Kanban headers, lanes, group boxes and table headers now stand off the white card for better contrast
-
-  - Accessible field help - Help text under a form field is announced by screen readers with its control
-
-  - …
+  Upgrade Notes
 
 
-  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.15.0
+  - No database changes.
+
+
+  Other Changes
+
+
+  - fix(auth): finish an onboarding that was left or split across sessions
+
+  - Release v3.15.3
+
+
+  Full release notes: https://github.com/Leantime/leantime/releases/tag/v3.15.3
 
 developer: Leantime
 website: https://leantime.io/
