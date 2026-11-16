@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Verdaccio
-version: "7.1.0"
+version: "7.1.1"
 tagline: A lightweight private npm proxy registry
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png
 description: >-
@@ -43,21 +43,25 @@ description: >-
 
   Note: Storage grows with every package you publish or cache from npmjs.org
 releaseNotes: >-
-  Minor Changes
+  Patch Changes
 
 
   - Update the @verdaccio/* modules to the next-9 npm dist-tag.
 
-  - Minor changes
+  - Patch changes
 
-  - @verdaccio/config, @verdaccio/store, @verdaccio/tarball, @verdaccio/web: Add the experimental flags.tarballMetadata option, which lets the web UI show the README of the exact version being viewed and fills missing dist.fileCount/dist.unpackedSize from the tarball itself.
+  - @verdaccio/ui-theme: chore(ui-theme): type clean-up
 
-  - The npm registry does not always include READMEs in package metadata: for some large packages (for example react) the README field is empty for every version, and Verdaccio by default keeps only the latest README for locally published packages (publish.keep_readmes). The web UI then showed "No README data found" or the README of a different version.
+  - @verdaccio/store: chore(store): type clean-up
 
-  - …
+  - @verdaccio/api: Abort the storage read of a tarball download when the client disconnects before the response finishes.
+
+  - @verdaccio/proxy: Fix the via header sent to an uplink growing with every request when the uplink has a headers option in the config.
+
+  - @verdaccio/store: chore(store): skip storing secret if it's not changed
 
 
-  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v7.1.0
+  Full release notes: https://github.com/verdaccio/verdaccio/releases/tag/v7.1.1
 
 developer: Verdaccio contributors
 website: https://verdaccio.org/
