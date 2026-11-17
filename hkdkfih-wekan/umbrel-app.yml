@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.13"
+version: "13.14"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,22 @@ releaseNotes: >-
   In short
 
 
-  - Copy Checklist and the other destination pickers list the
+  - a checklist folded on a minicard stays folded, and every
 
-  - cards of a large board again: a board that loads its cards lazily used to leave
+  - profile preference survives a reconnect. The card shortcuts open only their
 
-  - the mongodb driver 7.8.0, are kept.
+  - popup, one shared list header row really hides the other swimlanes'
 
-  - Thanks to above GitHub users for their contributions.
+  - headers, and the editors no longer show "comment-placeholder" after the
+
+  - i18next 27 update. Deleting a card keeps its attachments recoverable.
+
+  - Thanks to above GitHub users for their contributions and translators for their translations.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.13
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.14
 
 developer: WeKan Team
 website: https://wekan.fi/
