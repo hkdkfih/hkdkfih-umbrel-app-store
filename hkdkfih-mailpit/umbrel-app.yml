@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: developer
 name: Mailpit
-version: "1.33.1"
+version: "1.34.0"
 tagline: Catch and inspect emails sent by your apps
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-mailpit/icon.png
 description: >-
@@ -44,45 +44,20 @@ description: >-
 
   Note: Storage grows with the number and size of messages kept (500 by default)
 releaseNotes: >-
-  Chore
+  - This release fixes a security vulnerability : a specially crafted message could crash Mailpit's SMTP server. Updating is recommended.
+
+  - It also includes a large number of smaller fixes and hardening changes from a review of the codebase. Almost all of them are under the hood: tighter limits on memory and CPU use, more careful parsing of messages and headers, and better handling of edge cases. For most users nothing should look or behave differently.
 
 
-  - Resolve the latest message ID in a single helper
-
-  - Update Go dependencies
-
-  - Update node dependencies
+  A few changes may need attention when upgrading
 
 
-  Fix
+  - Flags and environment variables that have been deprecated for over two years have been removed. A relay config that still uses recipient-allowlist will now stop Mailpit from starting: rename it to allowed-recipients.
+
+  - …
 
 
-  - Parse address headers with non-UTF-8 display names
-
-  - Append missing recipients to an existing Bcc header
-
-  - Keep address parsing strict when decoding non-UTF-8 display names
-
-  - Guard against an empty Sender address list when releasing a message
-
-  - Reject messages that cannot be parsed instead of discarding them silently
-
-  - Return 400 for an invalid DELETE /api/v1/messages body
-
-  - Decode RFC 2231 attachment file names in non-UTF-8 charsets
-
-  - Accept latest as the ID in the release and thumbnail endpoints
-
-  - Limit the number & total size of remote stylesheets fetched by HTML check (Kiseob Hong @Minerv4)
-
-
-  Test
-
-
-  - Enhance thumbnail tests for latest ID handling and add empty case
-
-
-  Full release notes: https://github.com/axllent/mailpit/releases/tag/v1.33.1
+  Full release notes: https://github.com/axllent/mailpit/releases/tag/v1.34.0
 
 developer: Ralph Slooten
 website: https://mailpit.axllent.org/
