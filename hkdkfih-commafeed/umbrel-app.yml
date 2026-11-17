@@ -10,7 +10,7 @@ environment:
     note: Set to false to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
 category: social
 name: CommaFeed
-version: "7.5.0"
+version: "7.5.1"
 tagline: A Google Reader inspired self-hosted RSS reader
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/icon.png
 description: >-
@@ -51,34 +51,10 @@ description: >-
 
   Note: Storage grows with the number of feeds and how long entries are kept
 releaseNotes: >-
-  - Empty categories are now restored when importing OPML files
-
-  - Speed up the building of the subscription tree by looking up unread counts in batches
-
-  - Fix "mark all as read" ignoring the active search filter
-
-  - Fix "mark all as read" in tag views marking the wrong entries
-
-  - Fix infinite scroll not loading more search results when entries are already read
-
-  - Fix the loading state not being reset after failed entry requests
-
-  - Fix feed discovery when the subscription URL redirects to an HTML page
-
-  - Prevent moving a category into one of its own descendants
-
-  - Fix quadratic processing time when removing doctype declarations from feeds
-
-  - Apply the query timeout to all database queries
-
-  - Replace the custom context menu library with the Mantine context menu
-
-  - Use a settings icon for the feed controls button
-
-  - …
+  - Fix multiple entry context menus being open at the same time
 
 
-  Full release notes: https://github.com/Athou/commafeed/releases/tag/7.5.0
+  Full release notes: https://github.com/Athou/commafeed/releases/tag/7.5.1
 
 developer: Athou
 website: https://www.commafeed.com/
