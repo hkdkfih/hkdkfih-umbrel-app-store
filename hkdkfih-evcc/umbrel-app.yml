@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.319.0"
+version: "0.319.1"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -47,53 +47,19 @@ description: >-
 
   Storage: 200 MB → 1 GB
 releaseNotes: >-
-  Breaking Changes 🚨
+  Other Changes ☀️
 
 
-  - Huawei SmartLogger: remove battery
+  - Dacia: control Spring charging via pause-resume
 
-  - Huawei: move curtailment to separate devices
+  - Huawei SmartLogger: accept stale storageunit and maxsoc params
 
-  - Optimizer: leave home battery its planned charge when vehicle follows pv surplus
+  - Loadpoint: clear vehicle soc on disconnect
 
-  - Volvo Connected: OAuth2 migration
-
-
-  New Features 💫
+  - Open-Meteo jq null values handling
 
 
-  - Add Mennekes Amtron 4Business 600
-
-  - Add OCI labels to Dockerfile
-
-  - Add Rheidon PC200 Pro
-
-  - Charger (FoxESS EVC): add mDNS discovery hint
-
-  - Charger (Weidmüller): add MAC discovery hint
-
-  - Config UI: add nested device support
-
-  - Deye: add SUN-EVSE11K01/22K01 charger
-
-  - EEBus: add Buderus and Bosch OHPCF heat pumps
-
-  - Energyflow: add "Others" row for unmetered home consumption
-
-  - HEMS: add FNN template for Modbus I/O modules
-
-  - HEMS: add FNN templates for Shelly i3 and i4
-
-  - Home Assistant: add notification icon and color
-
-  - HomeAssistant charger: add identify
-
-  - Loadpoint: add energy counted after charge stop to session
-
-  - …
-
-
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.319.0
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.319.1
 
 developer: evcc.io
 website: https://evcc.io/
