@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.14"
+version: "13.15"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,22 +47,26 @@ releaseNotes: >-
   In short
 
 
-  - a checklist folded on a minicard stays folded, and every
+  - RaceBleed is fixed: deleting a card while somebody moves it
 
-  - profile preference survives a reconnect. The card shortcuts open only their
+  - to another board no longer destroys its checklists, comments and attachments
 
-  - popup, one shared list header row really hides the other swimlanes'
+  - while the card itself survives there, and a member deleting a card that was
 
-  - headers, and the editors no longer show "comment-placeholder" after the
+  - just moved keeps their account. REST handlers now answer 404, not 500, for
 
-  - i18next 27 update. Deleting a card keeps its attachments recoverable.
+  - a swimlane, user or board that is not there.
 
-  - Thanks to above GitHub users for their contributions and translators for their translations.
+
+  Security
+
+
+  - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.14
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.15
 
 developer: WeKan Team
 website: https://wekan.fi/
