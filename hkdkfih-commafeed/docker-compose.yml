@@ -11,7 +11,7 @@ services:
       PROXY_AUTH_WHITELIST: "/rest/fever/*,/accounts/ClientLogin,/reader/api/0/*"
 
   server:
-    image: athou/commafeed:7.5.1-h2@sha256:a731554d2b79139f20dc4603c2dbf288c306bc96709e274355a41e43c7e29238
+    image: athou/commafeed:7.5.2-h2@sha256:ce30c12212c1125cd8275d516fbac458fcd256025d85a56871e1847697ed3a3b
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
