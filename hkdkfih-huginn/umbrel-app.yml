@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Huginn
-version: "2026.11.18"
+version: "2026.11.19"
 tagline: Build agents that monitor and act on your behalf
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
 description: >-
@@ -31,22 +31,12 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  - This security release restricts how Agents use instance credentials and what non-admin Agents can serve from the Huginn domain.
+  - This security release upgrades Huginn's Docker images to Ruby 4.0.10. Ruby 4.0.10 fixes vulnerabilities in Regexp and String case conversion. Ruby 4.0.10 release announcement ·
+
+  - Upgrade to this release to pick up the fixes in Docker. For source installations, upgrade the Ruby runtime to 4.0.10 or a later security-patched version on the Ruby 4.0 series. Source upgrade instructions
 
 
-  Security fixes
-
-
-  - Send the instance-wide OPENAI_API_KEY only to the origin configured by OPENAI_BASE_URL, which defaults to the OpenAI API. Use an Agent-specific key for another origin that requires authentication. If untrusted users could configure OpenAI Agents while the instance key was set, rotate that key.
-
-  - Restrict active web responses and external redirects to administrator-owned Agents by default, including Webhook and Liquid Output Agents. Non-admin Agent responses keep plain text, JSON, and same-origin redirects. RSS, Atom, and XML are served as attachments.
-
-  - Give each Google Calendar Publish Agent its own service account credentials. Agents that used the worker's default Google credentials or an unrestricted server-side key file need to migrate.
-
-  - …
-
-
-  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.11.18
+  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.11.19
 
 developer: Huginn
 website: https://github.com/huginn/huginn
