@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.15"
+version: "13.18"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,26 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - RaceBleed is fixed: deleting a card while somebody moves it
+  - Admin Panel / Problems says what its numbers count - "New
 
-  - to another board no longer destroys its checklists, comments and attachments
+  - problems: 1" and "Checks with findings: 8 / 31", in every language - and a
 
-  - while the card itself survives there, and a member deleting a card that was
-
-  - just moved keeps their account. REST handlers now answer 404, not 500, for
-
-  - a swimlane, user or board that is not there.
-
-
-  Security
-
+  - report row's address, location and user always belong to the same occurrence.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.15
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.18
 
 developer: WeKan Team
 website: https://wekan.fi/
