@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: media
 name: Lychee
-version: "7.13.0"
+version: "7.13.1"
 tagline: A great looking and easy-to-use photo management system
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-lychee/icon.png
 description: >-
@@ -47,16 +47,27 @@ releaseNotes: >-
   🏕 Features
 
 
-  - feat(v8): Use Struct-of-Arrays approach by default.
+  - Fixes search header disappearing on mobile after hard-refreshing a search results URL
 
-  - feat(v8): configurable album tile size and gap with live size preview
+  - Fix vp
 
-  - fix(auth): show inline feedback for throttled password logins
+  - Fix s3 loading on Version 8
 
-  - fix(ssrf): avoid obscure IP scenarios
+  - Fix view clear at version update
+
+  - deps updates
+
+  - fix(jobs): treat duplicate skips as handled outcome instead of failure
+
+  - feat(upload): query the outcome of async uploads by provisional ID
+
+  - fix translation
 
 
-  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.13.0
+  👒 Dependencies
+
+
+  Full release notes: https://github.com/LycheeOrg/Lychee/releases/tag/v7.13.1
 
 developer: LycheeOrg
 website: https://lycheeorg.dev/
