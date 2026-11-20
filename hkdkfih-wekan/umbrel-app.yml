@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.18"
+version: "13.20"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,20 @@ releaseNotes: >-
   In short
 
 
-  - Admin Panel / Problems says what its numbers count - "New
+  - The REST API card lists of a list and of a swimlane now carry
 
-  - problems: 1" and "Checks with findings: 8 / 31", in every language - and a
+  - what a syncing client needs - when a card changed, its labels, members and
 
-  - report row's address, location and user always belong to the same occurrence.
+  - custom field values - so syncing a board needs no request per card. build.sh
+
+  - and build.bat can run a single Playwright spec.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.18
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.20
 
 developer: WeKan Team
 website: https://wekan.fi/
