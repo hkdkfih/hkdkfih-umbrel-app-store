@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: ai
 name: SillyTavern
-version: "1.19.0"
+version: "1.19.1"
 tagline: LLM frontend for power users
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sillytavern/icon.png
 description: >-
@@ -37,7 +37,26 @@ description: >-
   Storage: 1 GB → 5 GB
 
   Note: AI models run elsewhere (API or Ollama)
-releaseNotes: ""
+releaseNotes: >-
+  SillyTavern 1.19.1
+
+
+  - A small patch release with security and robustness fixes. Updating is recommended for everyone.
+
+
+  Fixes
+
+
+  - Fixed the handling of blocks in chat messages and creator notes, which could let crafted content from a character card, an imported chat or a model response run scripts in the app.
+
+  - Fixed CharX and BYAF imports of characters with an unusable name placing asset files next to other character cards, where they could replace them.
+
+  - Fixed the user backup and delete endpoints accepting handles that are not existing users.
+
+  - Security advisories with details will be published alongside this release. Thanks to the researchers who reported these issues.
+
+
+  Full release notes: https://github.com/SillyTavern/SillyTavern/releases/tag/1.19.1
 
 developer: SillyTavern
 website: https://sillytavern.app/

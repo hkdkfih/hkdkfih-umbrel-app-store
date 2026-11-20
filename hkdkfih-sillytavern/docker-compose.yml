@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   server:
-    image: ghcr.io/sillytavern/sillytavern:1.19.0@sha256:eef27ff0c7961f1a2f488400f581f48ff38f8b910c5d3b8d389138d71791bb14
+    image: ghcr.io/sillytavern/sillytavern:1.19.1@sha256:660d1a23c70517fa6d5b9b76f4456ee11f002cd911007d838569e4a771a096bc
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
