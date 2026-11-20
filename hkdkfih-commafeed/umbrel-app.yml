@@ -10,7 +10,7 @@ environment:
     note: Set to false to subscribe to feeds on your local network, such as RSSHub running on this Umbrel.
 category: social
 name: CommaFeed
-version: "7.5.2"
+version: "7.5.3"
 tagline: A Google Reader inspired self-hosted RSS reader
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-commafeed/icon.png
 description: >-
@@ -51,10 +51,10 @@ description: >-
 
   Note: Storage grows with the number of feeds and how long entries are kept
 releaseNotes: >-
-  - Fix Youtube embeds not loading and stealing focus
+  - Use ntfy JSON API so notification titles support non-ASCII characters
 
 
-  Full release notes: https://github.com/Athou/commafeed/releases/tag/7.5.2
+  Full release notes: https://github.com/Athou/commafeed/releases/tag/7.5.3
 
 developer: Athou
 website: https://www.commafeed.com/
