@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: finance
 name: ezBookkeeping
-version: "2.1.1"
+version: "2.2.0"
 tagline: A lightweight personal bookkeeping app
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-ezbookkeeping/icon.png
 description: >-
@@ -36,12 +36,40 @@ description: >-
 
   Storage: 200 MB → 2 GB
 releaseNotes: >-
-  - [Bug Fixes]
+  - [Breaking]
 
-  - Fix the issue where the current week date range in overview widgets does not follow the user's settings after the first login (#726, thanks @LudwigJMarx)
+  - Use the new token format (support for the legacy token format will be removed in v2.3.0)
+
+  - Clear all session tokens by default when disabling a user
+
+  - Clear all session tokens when deleting a user
+
+  - Disable automatic login after email verification
+
+  - Delete temporary tokens before performing verification during password recovery and OAuth 2.0 authentication
+
+  - Change the default value of forget_password_require_email_verify to true
+
+  - Load language resources asynchronously
+
+  - [Features]
+
+  - Add Hindi translation (#746, #747, thanks @rahul05ranjan)
+
+  - Add Slovak translation (#753, thanks @Laybr1990)
+
+  - Support adding multiple transactions at once on desktop version
+
+  - Add user custom import presets
+
+  - Support filtering scheduled transactions by status and displaying them in a calendar view
+
+  - Support selecting which MCP tools are enabled for an MCP token
+
+  - …
 
 
-  Full release notes: https://github.com/mayswind/ezbookkeeping/releases/tag/v2.1.1
+  Full release notes: https://github.com/mayswind/ezbookkeeping/releases/tag/v2.2.0
 
 developer: MaysWind
 website: https://ezbookkeeping.mayswind.net/
