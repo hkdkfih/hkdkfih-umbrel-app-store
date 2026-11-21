@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: 2FAuth
-version: "9.0.1"
+version: "9.0.2"
 tagline: Your two-factor codes, in a web app you own
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
 description: >-
@@ -44,34 +44,26 @@ description: >-
 
   Storage: 500 MB → 1 GB
 releaseNotes: >-
-  - ⚠️ This release includes several security fixes
+  - ⚠️ This is a security release for both 2FAuth and the official Docker image
 
 
   Fixed
 
 
-  - issue #579 Upgrading to v9.0.0 (docker latest) does not create the twofaccount_user_favorites table
+  - PHP2AfterShell: CVE-2026-109618 & CVE-2026-109619
 
-  - issue #580 Transfer ownership doesn't work when initiated from an openid user
+  - nginx2root: CVE-2026-123007 & CVE-2026-123633
 
-  - issue #581 Login page always displays in English despite browser language being set to Chinese
+  - Security advisory GHSA-3xgg-3487-6cg6 : Cross-site scripting vulnerability in 2FAuth (moderate)
 
+  - Security advisory GHSA-5j97-34rm-v5cp : host-header poisoning still reaches share/transfer notification email links (moderate)
 
-  Security fix
+  - Security advisory GHSA-3c3f-fvc4-87rh : SSRF guard does not decode 6to4 (2002::/16) / Teredo (2001::/32) embedded IPv4 in otpauth image= fetch validator (low)
 
-
-  - Fix an Observable Response Discrepancy on user account.
-
-  - Fix possible host header injection in password reset and WebAuthn recovery emails (thx @akash111-hue).
-
-  - Fix previously issued Personal Access Tokens being authorized when SSO-only mode is enabled and PAT usage is not allowed (thx @JimmypageLedz).
-
-  - Fix the Auto-logout being bypassed on web routes (thx @d3do-23).
-
-  - Fix SSRF protection bypass of the remote icon fetching guard using IPv4-mapped IPv6 addresses (thx @xHacktivist).
+  - Security advisory GHSA-7j9c-p3v3-74xp : Unvalidated icon field: stored path-traversal string persistently breaks account views for owner and share recipients (moderate)
 
 
-  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.1
+  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.2
 
 developer: Bubka
 website: https://docs.2fauth.app/
