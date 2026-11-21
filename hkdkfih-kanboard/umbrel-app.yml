@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Kanboard
-version: "1.2.57"
+version: "1.2.58"
 tagline: Project management focused on the Kanban methodology
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-kanboard/icon.png
 description: >-
@@ -47,40 +47,26 @@ releaseNotes: >-
   Security fixes
 
 
-  - Disable PHP session upload progress in the Docker image to mitigate CVE-2026-115560.
+  - Strengthen SSRF protection for webhooks and web link previews:
 
-  - Check that the user can access the opposite task's project before adding internal links with bulk changes.
+  - Connect to the IP address that passed validation, so a DNS change between the check and the request (DNS rebinding) can no longer reach a private network.
 
-  - Hide projects the caller cannot access from the API procedures getProjectByName, getProjectByIdentifier, and getProjectByEmail:
+  - Block more non-public address ranges, such as carrier-grade NAT, benchmarking, and documentation networks.
 
-  - They now return false instead of a 403 error that revealed the project exists.
+  - The WEBHOOK_ALLOW_PRIVATE_NETWORKS and EXTERNAL_LINK_ALLOW_PRIVATE_NETWORKS options still turn off these checks.
 
+  - Reject empty LDAP passwords. Active Directory accepts them as unauthenticated binds, which allowed LDAP users without two-factor authentication to be logged in through the API without a password.
 
-  Improvements
+  - Apply brute-force protection to two-factor authentication codes:
 
+  - Invalid codes count toward account lockout.
 
-  - Allow searching users by their exact email address:
+  - The failed login counter is reset only after a valid code is entered.
 
-  - Emails are matched exactly and case-insensitively, so partial searches cannot be used to discover other users' addresses.
-
-
-  Bug fixes
-
-
-  - Make text searches case-insensitive for non-ASCII characters with SQLite.
-
-  - Fix PHP 8.5 and PHP-FPM configuration issues in the Docker image.
-
-  - Remove PHP 8.5 deprecation warnings.
+  - …
 
 
-  Dependencies and build
-
-
-  - Update several GitHub Actions.
-
-
-  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.57
+  Full release notes: https://github.com/kanboard/kanboard/releases/tag/v1.2.58
 
 developer: Frédéric Guillot
 website: https://kanboard.org/
