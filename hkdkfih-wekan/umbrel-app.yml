@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.20"
+version: "13.24"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,20 +47,24 @@ releaseNotes: >-
   In short
 
 
-  - The REST API card lists of a list and of a swimlane now carry
+  - Six more of Microsoft's tools are imported and exported under
 
-  - what a syncing client needs - when a card changed, its labels, members and
+  - the Microsoft heading: Azure DevOps Boards, Microsoft Lists,
 
-  - custom field values - so syncing a board needs no request per card. build.sh
+  - Microsoft Project (XML), Outlook (.msg in, .eml out), Teams and
 
-  - and build.bat can run a single Playwright spec.
+  - OneNote, the last two also fetched from Microsoft Graph. Sandstorm grain
+
+  - backups of twelve apps are imported and nine exported, and Vietnamese no
+
+  - longer shows Malay text.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.20
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.24
 
 developer: WeKan Team
 website: https://wekan.fi/
