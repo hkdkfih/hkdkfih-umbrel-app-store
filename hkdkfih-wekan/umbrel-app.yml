@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.24"
+version: "13.27"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,24 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - Six more of Microsoft's tools are imported and exported under
+  - CodeQL alert #611 is fixed: the autolink rules find the
 
-  - the Microsoft heading: Azure DevOps Boards, Microsoft Lists,
+  - links already in a card's text in linear time, so a description built of
 
-  - Microsoft Project (XML), Outlook (.msg in, .eml out), Teams and
-
-  - OneNote, the last two also fetched from Microsoft Graph. Sandstorm grain
-
-  - backups of twelve apps are imported and nine exported, and Vietnamese no
-
-  - longer shows Malay text.
+  - thousands of brackets no longer takes seconds to render.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.24
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.27
 
 developer: WeKan Team
 website: https://wekan.fi/
