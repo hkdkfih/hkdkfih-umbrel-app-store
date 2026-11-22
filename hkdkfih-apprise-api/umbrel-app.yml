@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Apprise API
-version: "2.1.0"
+version: "2.2.0"
 tagline: Send notifications to 100+ services from one API
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-apprise-api/icon.png
 description: >-
@@ -31,26 +31,32 @@ description: >-
 
   Storage: 200 MB → 500 MB
 releaseNotes: >-
-  - A small release to point against the new Apprise v2.2.0 release
+  - This release introduces Reminders :clock10: ! You can now set and forget your reminders. The mobile app being launched soon will also help support these scheduled reminders at the palm of your hand from anywhere.
+
+  - Added Reminder/Task support to Apprise - Set it and Forget it! :slightly_smiling_face:
+
+  - By Date
+
+  - Date Range (recurring notifications)
+
+  - By Holiday too!
 
 
-  lady_beetle:: Bug Fixes
+  bulb: Features
 
 
-  - Provide APPRISE_API_DESCRIPTION and APPRISE_API_KEYWORDS to templates
+  - Updated to reflect new iOS/Apple Mobile support in
 
-  - Handle YAML RecursionError if thrown
+  - :fire: Reminders/Tasks Support Added /reminder/ in
 
-  - Load APPRISE_PLUGIN_PATHS on config UI AppriseAsset paths
+  - Refresh reminder buttons and update libraries in
 
+  - Add an auto theme that follows the system light or dark setting in
 
-  heart: Life-Cycle Support
-
-
-  - Remove git from the Docker runtime image
+  - Allow APPRISE_ASSET_* variables to set any Apprise asset option in
 
 
-  Full release notes: https://github.com/caronc/apprise-api/releases/tag/v2.1.0
+  Full release notes: https://github.com/caronc/apprise-api/releases/tag/v2.2.0
 
 developer: Chris Caron
 website: https://github.com/caronc/apprise-api
