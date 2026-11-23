@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.27"
+version: "13.28"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,30 @@ releaseNotes: >-
   In short
 
 
-  - CodeQL alert #611 is fixed: the autolink rules find the
+  - A board can be a Shop with invoices and order email, the
 
-  - links already in a card's text in linear time, so a description built of
+  - Admin Panel can be
 
-  - thousands of brackets no longer takes seconds to render.
+  - limited to chosen addresses, all webhooks can be turned off at once, the
+
+  - Cloud Panel exists only in a
+
+  - Cloud Admin container with the CLOUD variable (CloudPanelBleed), a forged
+
+  - bounce report can no longer stop email (BounceBleed), and every setting that
+
+  - turns something off is refused on the server. The audit log, sign-in
+
+  - address retention and a personal-data inventory begin the missing law and
+
+  - standard features, and every feature page of the docs has one shape.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.27
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.28
 
 developer: WeKan Team
 website: https://wekan.fi/
