@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: wallabag
-version: "2.6.17"
+version: "2.6.18"
 tagline: Save and classify articles, read them later
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png
 description: >-
@@ -44,22 +44,26 @@ description: >-
 
   Note: Storage grows with saved articles and downloaded images
 releaseNotes: >-
-  - Earlier today, we published wallabag 2.7.0-alpha.1. On instances running wallabag 2.6.15 or older, make update picked this alpha instead of the latest stable release. The upgrade then failed, and the instance stopped working.
+  - ⚠️ This is a security release. After upgrading, clear the cache (var/cache) and review the tagging rules of your users.
 
-  - wallabag 2.6.17 fixes it: make update installs 2.6.17 again. Sorry for the trouble!
-
-  - Your instance is broken after make update? Run these commands in the wallabag folder:
-
-  - git checkout 2.6.17 --force
-
-  - make update
-
-  - Your data should be safe: the upgrade stopped before the database migrations.
-
-  - This release also includes a small fix for the Pocket CSV import.
+  - Read the blog post about that release.
 
 
-  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.17
+  Security fixes
+
+
+  - Validate the imported tagging rules, and ignore the invalid rules already stored, see GHSA-2cfc-5mg3-74jc]
+
+  - Only link to http(s) URLs on the public share page, see GHSA-52xm-74j7-7j7f
+
+  - Do not let the EPUB export read files or fetch URLs found in the content of an entry, see GHSA-gr83-54pj-xch4
+
+  - Update enshrined/svg-sanitize to reject SVG images with a root outside the SVG namespace, see GHSA-rvg4-ph3q-9x5g
+
+  - The EPUB export does not embed remote images anymore, they stay as links. Images stored by wallabag are still embedded.
+
+
+  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.18
 
 developer: wallabag
 website: https://wallabag.org/
