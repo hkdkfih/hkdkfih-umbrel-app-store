@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: 2FAuth
-version: "9.0.2"
+version: "9.0.3"
 tagline: Your two-factor codes, in a web app you own
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-2fauth/icon.png
 description: >-
@@ -44,26 +44,20 @@ description: >-
 
   Storage: 500 MB → 1 GB
 releaseNotes: >-
-  - ⚠️ This is a security release for both 2FAuth and the official Docker image
+  - ⚠️ This is a security release
 
 
   Fixed
 
 
-  - PHP2AfterShell: CVE-2026-109618 & CVE-2026-109619
+  - Security advisory GHSA-r66h-vhqv-h27f : SSO-only PAT lockout is bypassed by an authorization flaw at Passport's token-refresh route (high)
 
-  - nginx2root: CVE-2026-123007 & CVE-2026-123633
-
-  - Security advisory GHSA-3xgg-3487-6cg6 : Cross-site scripting vulnerability in 2FAuth (moderate)
-
-  - Security advisory GHSA-5j97-34rm-v5cp : host-header poisoning still reaches share/transfer notification email links (moderate)
+  - Security advisory GHSA-835v-w4x6-rh9j : Shared 2FA accounts: a share recipient can pre-compute future OTP codes (moderate)
 
   - Security advisory GHSA-3c3f-fvc4-87rh : SSRF guard does not decode 6to4 (2002::/16) / Teredo (2001::/32) embedded IPv4 in otpauth image= fetch validator (low)
 
-  - Security advisory GHSA-7j9c-p3v3-74xp : Unvalidated icon field: stored path-traversal string persistently breaks account views for owner and share recipients (moderate)
 
-
-  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.2
+  Full release notes: https://github.com/Bubka/2FAuth/releases/tag/v9.0.3
 
 developer: Bubka
 website: https://docs.2fauth.app/

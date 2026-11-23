@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: 2fauth/2fauth:9.0.2@sha256:6774efa7c612e424eb17a54e2373524d9a04af6cad7e38d85d76fed87f6a48bd
+    image: 2fauth/2fauth:9.0.3@sha256:fb421b40072f9b1412fa954798bc2e2acb755dd312ce6b21c1d004ce15c2a562
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
