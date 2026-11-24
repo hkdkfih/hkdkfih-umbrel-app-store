@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: wallabag
-version: "2.6.18"
+version: "2.6.19"
 tagline: Save and classify articles, read them later
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png
 description: >-
@@ -44,26 +44,20 @@ description: >-
 
   Note: Storage grows with saved articles and downloaded images
 releaseNotes: >-
-  - ⚠️ This is a security release. After upgrading, clear the cache (var/cache) and review the tagging rules of your users.
+  - Fix Pocket HTML import crash when an entry has no date
 
-  - Read the blog post about that release.
+  - Fix EPUB export crash on an element too big to be split
 
+  - Download the cover of the EPUB export when it is not stored by wallabag
 
-  Security fixes
+  - Fix N+1 queries and slow pagination in API entries list
 
+  - Replace the Guardian article used in the tests
 
-  - Validate the imported tagging rules, and ignore the invalid rules already stored, see GHSA-2cfc-5mg3-74jc]
-
-  - Only link to http(s) URLs on the public share page, see GHSA-52xm-74j7-7j7f
-
-  - Do not let the EPUB export read files or fetch URLs found in the content of an entry, see GHSA-gr83-54pj-xch4
-
-  - Update enshrined/svg-sanitize to reject SVG images with a root outside the SVG namespace, see GHSA-rvg4-ph3q-9x5g
-
-  - The EPUB export does not embed remote images anymore, they stay as links. Images stored by wallabag are still embedded.
+  - Prepare 2.6.19 release
 
 
-  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.18
+  Full release notes: https://github.com/wallabag/wallabag/releases/tag/2.6.19
 
 developer: wallabag
 website: https://wallabag.org/
