@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for daily notes and timestamps, such as Europe/London or America/New_York.
 category: files
 name: SiYuan
-version: "3.8.11"
+version: "3.8.12"
 tagline: A privacy-first, self-hosted personal knowledge base
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-siyuan/icon.png
 description: >-
@@ -50,19 +50,36 @@ releaseNotes: >-
   Upgrade notice
 
 
-  Database formats
+  - Plugins that rely on the desktop main menu’s previous identifier, barWorkspace, should use barMainMenu for the button ID and menu events. Details
 
 
-  - Primary-key rich text (formats 15 and 16). Inline rich text saved in format 15 by earlier preview builds remains readable. Saving new block rich text in a primary key, including text with images, upgrades the database to at least format 16. Primary-key compatibility
+  Overview
 
-  - Inline images in ordinary text fields (format 17). Saving the first inline image in an ordinary text field upgrades that database to format 17. Text field compatibility
 
-  - Simply opening a database does not trigger these upgrades. Version 3.8.10 supports database formats up to 14. A client can only open databases in formats it supports. Update every device that syncs or accesses the same data before using the new formats. Back up your workspace beforehand. To roll back, restore a complete pre-upgrade snapshot.
+  - This release adds manual ordering for sibling tags and sorting by most recent addition in the tag panel. Mobile image preview gestures and controls are improved, and asset files can now be shared from mobile.
+
+  - The desktop Markdown editor supports relative document links, and database cell editors are better aligned. This release also adds a Vietnamese interface and a built-in Russian user guide, and introduces the official SiYuan connector for WorkBuddy.
+
+  - Watch the release overview: YouTube
+
+
+  Changelogs
+
+
+  - Below are the detailed changes in this version.
+
+
+  Enhancement
+
+
+  - Support manual sorting of sibling tags in the tag panel
+
+  - Support sorting the tag panel by most recent addition
 
   - …
 
 
-  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.11
+  Full release notes: https://github.com/siyuan-note/siyuan/releases/tag/v3.8.12
 
 developer: SiYuan
 website: https://b3log.org/siyuan/en/
