@@ -18,7 +18,7 @@ folderAccess:
         readOnly: true
 category: media
 name: Komga
-version: "1.30.1"
+version: "1.30.2"
 tagline: A media server for your comics, mangas, BDs and ebooks
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-komga/icon.png
 description: >-
@@ -59,41 +59,36 @@ releaseNotes: >-
 
   - api
 
-  - add CSP headers
+  - honor properties in server.servlet.session.cookie , closes
 
   - komga
 
-  - temp table concurrency , closes
+  - bind spring session transaction manager to the correct datasource , closes
 
-  - nextui
-
-  - add padding after user menu avatar
+  - make ICU collators thread safe , closes
 
 
-  🔄️ Changes
+  🛠  Build
 
 
-  - clarify logs when no thumbnail is found when analyzing book , closes
+  - fix syntax
+
+  - cleanup obsolete release artifacts
 
 
   🌐 Translation
 
 
-  - komga-tray
-
-  - translated using Weblate (Spanish)
+  - nextui
 
   - translated using Weblate (Chinese (Simplified Han script))
 
-  - translated using Weblate (Korean)
-
-  - translated using Weblate (French)
-
-  - translated using Weblate (Turkish)
+  - translated using Weblate (Croatian)
 
   - webui
 
-  - translated using Weblate (Czech)
+
+  ⚙️ Dependencies
 
 
   Contributors
@@ -101,10 +96,10 @@ releaseNotes: >-
 
   - We'd like to thank the following people for their contributions:
 
-  - Automatic translation add-on, Gauthier, Gauthier Roebroeck, Haza Gonzalez, Koray HATIRNAZ, Petr Šimek, on9686, tchirou, 無情天
+  - Automatic translation add-on, Felix_SANA, Gauthier, Gauthier Roebroeck, Milo Ivir
 
 
-  Full release notes: https://github.com/gotson/komga/releases/tag/1.30.1
+  Full release notes: https://github.com/gotson/komga/releases/tag/1.30.2
 
 developer: Gauthier Roebroeck
 website: https://komga.org/
