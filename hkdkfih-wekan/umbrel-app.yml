@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.28"
+version: "13.30"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,30 +47,24 @@ releaseNotes: >-
   In short
 
 
-  - A board can be a Shop with invoices and order email, the
+  - The wekan-ondra and wekan-gantt-gpl snaps are published on
 
-  - Admin Panel can be
+  - every architecture the wekan snap has, on all four channels, and each Snap
 
-  - limited to chosen addresses, all webhooks can be turned off at once, the
+  - Store page shows what is new in the newest release. Time tracking
 
-  - Cloud Panel exists only in a
+  - works again on imported cards whose spent time was stored empty, and the
 
-  - Cloud Admin container with the CLOUD variable (CloudPanelBleed), a forged
+  - Admin Panel recovery list no longer fills up with old cancelled
 
-  - bounce report can no longer stop email (BounceBleed), and every setting that
-
-  - turns something off is refused on the server. The audit log, sign-in
-
-  - address retention and a personal-data inventory begin the missing law and
-
-  - standard features, and every feature page of the docs has one shape.
+  - notifications.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.28
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.30
 
 developer: WeKan Team
 website: https://wekan.fi/
