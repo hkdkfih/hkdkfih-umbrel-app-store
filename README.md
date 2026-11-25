@@ -56,7 +56,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-owncast/icon.png" width="40" height="40" alt=""> | [Owncast](https://github.com/owncast/owncast) | Your own self-hosted live streaming and chat server | 0.3.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-peanut/icon.png" width="40" height="40" alt=""> | [PeaNUT](https://github.com/Brandawg93/PeaNUT) | A tiny dashboard for your UPS | 6.1.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pocket-id/icon.png" width="40" height="40" alt=""> | [Pocket ID](https://github.com/pocket-id/pocket-id) | Passkey sign-in for all your self-hosted apps | 2.19.3 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/icon.png" width="40" height="40" alt=""> | [Pulse](https://github.com/rcourtman/Pulse) | Real-time monitoring for Proxmox, Docker and more | 6.8.0 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-pulse/icon.png" width="40" height="40" alt=""> | [Pulse](https://github.com/rcourtman/Pulse) | Real-time monitoring for Proxmox, Docker and more | 6.9.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-scrypted/icon.png" width="40" height="40" alt=""> | [Scrypted](https://github.com/koush/scrypted) | Bring any camera to HomeKit, Google Home and Alexa | 0.147.0 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-semaphore/icon.png" width="40" height="40" alt=""> | [Semaphore UI](https://github.com/semaphoreui/semaphore) | A modern web UI for Ansible, Terraform, OpenTofu and scripts | 2.20.23 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-sftpgo/icon.png" width="40" height="40" alt=""> | [SFTPGo](https://github.com/drakkan/sftpgo) | A full-featured SFTP, WebDAV and web file server | 2.7.6 |
@@ -71,7 +71,7 @@ and is **updated automatically** when a new upstream version is released.
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-upsnap/icon.png" width="40" height="40" alt=""> | [UpSnap](https://github.com/seriousm4x/UpSnap) | Wake up your computers with one click | 5.7.3 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-verdaccio/icon.png" width="40" height="40" alt=""> | [Verdaccio](https://github.com/verdaccio/verdaccio) | A lightweight private npm proxy registry | 7.1.2 |
 | <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wallabag/icon.png" width="40" height="40" alt=""> | [wallabag](https://github.com/wallabag/wallabag) | Save and classify articles, read them later | 2.6.19 |
-| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.30 |
+| <img src="https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png" width="40" height="40" alt=""> | [WeKan](https://github.com/wekan/wekan) | Open source kanban boards for teams | 13.32 |
 
 ## How updates work
 
