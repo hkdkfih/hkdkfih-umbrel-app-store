@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.30"
+version: "13.32"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,24 +47,30 @@ releaseNotes: >-
   In short
 
 
-  - The wekan-ondra and wekan-gantt-gpl snaps are published on
+  - Every bundle, snap and Docker image is about 220 MiB
 
-  - every architecture the wekan snap has, on all four channels, and each Snap
+  - smaller: translations are one copy on the server, and neither a test build's
 
-  - Store page shows what is new in the newest release. Time tracking
+  - files, the TypeScript compiler nor Azure's sign-in libraries ship any more.
 
-  - works again on imported cards whose spent time was stored empty, and the
+  - Languages that are a copy of another, such as en-IT, no longer fail on the
 
-  - Admin Panel recovery list no longer fills up with old cancelled
+  - server. Minicards are compact again, and their caret and menu can be
 
-  - notifications.
+  - hidden; the health checks survive odd data and a nightly mongodump. The
+
+  - Docker image's start no longer logs paths read
+
+  - from the environment, as GitHub CodeQL found, and the documentation says
+
+  - the license rule plainly: permissive licenses, no GPL.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.30
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.32
 
 developer: WeKan Team
 website: https://wekan.fi/
