@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.33"
+version: "13.35"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,24 +47,18 @@ releaseNotes: >-
   In short
 
 
-  - The Docker entrypoint logs no value read from the environment
+  - A due date that is not due soon is grey again, on the card
 
-  - (two GitHub CodeQL alerts). A board export without archived items moves a
+  - and the minicard, instead of a yellow that looked almost like the amber of
 
-  - board to another WeKan without its archive, the UCS App Center publisher
+  - "due soon".
 
-  - works with the distroless FerretDB image again, and Walloon is Walloon
-
-  - instead of French and invented words. Omi gets its Gitea orphan strings in every
-
-  - language, and the Azure Blob test no longer hangs.
-
-  - Thanks to above GitHub users for their contributions and translators for their translations.
+  - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.33
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.35
 
 developer: WeKan Team
 website: https://wekan.fi/
