@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Huginn
-version: "2026.11.19"
+version: "2026.11.27"
 tagline: Build agents that monitor and act on your behalf
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-huginn/icon.png
 description: >-
@@ -31,12 +31,14 @@ description: >-
 
   Storage: 2 GB → 10 GB
 releaseNotes: >-
-  - This security release upgrades Huginn's Docker images to Ruby 4.0.10. Ruby 4.0.10 fixes vulnerabilities in Regexp and String case conversion. Ruby 4.0.10 release announcement ·
+  - This security release makes SlackAgent send webhook requests through OUTBOUND_PROXY when configured, including when Smokescreen is enabled in the official Docker images. Previously, SlackAgent could send requests directly despite that setting. This matters most on shared instances where users can configure Agents and the proxy blocks access to internal services.
 
-  - Upgrade to this release to pick up the fixes in Docker. For source installations, upgrade the Ruby runtime to 4.0.10 or a later security-patched version on the Ruby 4.0 series. Source upgrade instructions
+  - Upgrade to this release if you rely on OUTBOUND_PROXY to restrict outbound requests. No new proxy settings or database migration are required.
+
+  - This release also updates Ruby and JavaScript dependencies and uses the npm lockfile for Docker builds.
 
 
-  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.11.19
+  Full release notes: https://github.com/huginn/huginn/releases/tag/v2026.11.27
 
 developer: Huginn
 website: https://github.com/huginn/huginn
