@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: brandawg93/peanut:6.1.2@sha256:13e99d1fd1b599c41f18c51483c53a8ee4f5a1da64c1a67b6e66d6a265be111b
+    image: brandawg93/peanut:6.2.0@sha256:b6bf626143cff8bc2797dd42cb7b231de833fa9fda9b770321c623c71433ec28
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
