@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: WeKan
-version: "13.35"
+version: "13.36"
 tagline: Open source kanban boards for teams
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-wekan/icon.png
 description: >-
@@ -47,18 +47,16 @@ releaseNotes: >-
   In short
 
 
-  - A due date that is not due soon is grey again, on the card
+  - Filtering a board by yourself as assignee now survives a page
 
-  - and the minicard, instead of a yellow that looked almost like the amber of
-
-  - "due soon".
+  - refresh, as filtering by anybody else already did.
 
   - Thanks to above GitHub users for their contributions.
 
   - More details at ChangeLog
 
 
-  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.35
+  Full release notes: https://github.com/wekan/wekan/releases/tag/v13.36
 
 developer: WeKan Team
 website: https://wekan.fi/
