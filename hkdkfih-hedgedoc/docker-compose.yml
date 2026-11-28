@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: quay.io/hedgedoc/hedgedoc:1.12.2@sha256:4bd609f660c886f1beb7f11455269cb1c83118a490485e055bada62156ffa653
+    image: quay.io/hedgedoc/hedgedoc:1.12.3@sha256:9e5b57ef05b476d2e849042d7915872410a667380c1c29231ff17456e78897a2
     restart: on-failure
     stop_grace_period: 1m
     environment:
