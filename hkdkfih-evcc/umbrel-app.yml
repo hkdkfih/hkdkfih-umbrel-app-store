@@ -10,7 +10,7 @@ environment:
     note: IANA time zone used for charging plans and dynamic tariffs, such as Europe/London or America/New_York.
 category: automation
 name: evcc
-version: "0.319.1"
+version: "0.320.0"
 tagline: Solar charging for your electric vehicle
 icon: https://raw.githubusercontent.com/hkdkfih/hkdkfih-umbrel-app-store/master/gallery/hkdkfih-evcc/icon.png
 description: >-
@@ -47,19 +47,51 @@ description: >-
 
   Storage: 200 MB → 1 GB
 releaseNotes: >-
-  Other Changes ☀️
+  Breaking Changes 🚨
 
 
-  - Dacia: control Spring charging via pause-resume
+  - Anker SOLIX X1: add battery charge mode
 
-  - Huawei SmartLogger: accept stale storageunit and maxsoc params
+  - Battery: rename hold mode to holddischarge
 
-  - Loadpoint: clear vehicle soc on disconnect
+  - Loadpoint UI: time-based values instead of session values for integrated devices
 
-  - Open-Meteo jq null values handling
+  - MQTT: migrate to paho.golang (MQTT 5)
+
+  - SAJ H2: restore grid energy sum register, add single-phase option
+
+  - Sonnen: require minsoc of 0 or at least 5
+
+  - Sungrow iHM: move curtailment to separate device
+
+  - Tariffs (energyforecast.de): use API v2, respect profile costs and VAT
 
 
-  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.319.1
+  New Features 💫
+
+
+  - Add Edimax switch socket
+
+  - Add KACO NH3 hybrid template
+
+  - Add Matismart MPM4000
+
+  - Add Niko smart plug
+
+  - Add Sonoff Pro-3PCT120
+
+  - Cardata: add Neue Klasse soc, range and odometer fallbacks
+
+  - Charger (Home Assistant): add request timeout parameter
+
+  - Energy: hatch forecast deviation in both themes, add legend entry
+
+  - GPIO: add active low and bias options
+
+  - …
+
+
+  Full release notes: https://github.com/evcc-io/evcc/releases/tag/0.320.0
 
 developer: evcc.io
 website: https://evcc.io/
